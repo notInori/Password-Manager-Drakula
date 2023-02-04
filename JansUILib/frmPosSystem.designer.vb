@@ -68,6 +68,7 @@ Partial Class POSSystem
         Me.Panel270 = New System.Windows.Forms.Panel()
         Me.Panel271 = New System.Windows.Forms.Panel()
         Me.Panel272 = New System.Windows.Forms.Panel()
+        Me.Panel273 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel13 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel84 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel19 = New System.Windows.Forms.TableLayoutPanel()
@@ -115,10 +116,13 @@ Partial Class POSSystem
         Me.Panel253 = New System.Windows.Forms.Panel()
         Me.Panel254 = New System.Windows.Forms.Panel()
         Me.Panel83 = New System.Windows.Forms.Panel()
+        Me.Label41 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Panel255 = New System.Windows.Forms.Panel()
+        Me.Label37 = New System.Windows.Forms.Label()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Panel260 = New System.Windows.Forms.Panel()
+        Me.Label35 = New System.Windows.Forms.Label()
         Me.Label39 = New System.Windows.Forms.Label()
         Me.Panel265 = New System.Windows.Forms.Panel()
         Me.Label34 = New System.Windows.Forms.Label()
@@ -381,10 +385,6 @@ Partial Class POSSystem
         Me.Panel88 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.tmrMain = New System.Windows.Forms.Timer(Me.components)
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.Panel273 = New System.Windows.Forms.Panel()
         Me.pnlBackground.SuspendLayout()
         Me.tblMain.SuspendLayout()
         Me.pnlTopBar.SuspendLayout()
@@ -885,7 +885,7 @@ Partial Class POSSystem
         Me.TableLayoutPanel24.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24.0!))
         Me.TableLayoutPanel24.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel24.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel24.Size = New System.Drawing.Size(410, 155)
+        Me.TableLayoutPanel24.Size = New System.Drawing.Size(997, 155)
         Me.TableLayoutPanel24.TabIndex = 16
         '
         'Panel229
@@ -898,7 +898,7 @@ Partial Class POSSystem
         Me.Panel229.Location = New System.Drawing.Point(0, 0)
         Me.Panel229.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel229.Name = "Panel229"
-        Me.Panel229.Size = New System.Drawing.Size(410, 24)
+        Me.Panel229.Size = New System.Drawing.Size(997, 24)
         Me.Panel229.TabIndex = 15
         '
         'TableLayoutPanel25
@@ -916,7 +916,7 @@ Partial Class POSSystem
         Me.TableLayoutPanel25.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.99999!))
         Me.TableLayoutPanel25.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1.0!))
         Me.TableLayoutPanel25.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel25.Size = New System.Drawing.Size(294, 24)
+        Me.TableLayoutPanel25.Size = New System.Drawing.Size(881, 24)
         Me.TableLayoutPanel25.TabIndex = 19
         '
         'Panel230
@@ -928,7 +928,7 @@ Partial Class POSSystem
         Me.Panel230.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel230.Name = "Panel230"
         Me.Panel230.Padding = New System.Windows.Forms.Padding(0, 0, 1, 0)
-        Me.Panel230.Size = New System.Drawing.Size(294, 12)
+        Me.Panel230.Size = New System.Drawing.Size(881, 12)
         Me.Panel230.TabIndex = 8
         '
         'Panel231
@@ -940,7 +940,7 @@ Partial Class POSSystem
         Me.Panel231.Location = New System.Drawing.Point(0, 0)
         Me.Panel231.Name = "Panel231"
         Me.Panel231.Padding = New System.Windows.Forms.Padding(0, 0, 1, 0)
-        Me.Panel231.Size = New System.Drawing.Size(293, 12)
+        Me.Panel231.Size = New System.Drawing.Size(880, 12)
         Me.Panel231.TabIndex = 9
         '
         'Panel232
@@ -952,7 +952,7 @@ Partial Class POSSystem
         Me.Panel232.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel232.Name = "Panel232"
         Me.Panel232.Padding = New System.Windows.Forms.Padding(0, 1, 1, 0)
-        Me.Panel232.Size = New System.Drawing.Size(292, 12)
+        Me.Panel232.Size = New System.Drawing.Size(879, 12)
         Me.Panel232.TabIndex = 0
         '
         'Panel233
@@ -961,7 +961,7 @@ Partial Class POSSystem
         Me.Panel233.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel233.Location = New System.Drawing.Point(0, 1)
         Me.Panel233.Name = "Panel233"
-        Me.Panel233.Size = New System.Drawing.Size(291, 11)
+        Me.Panel233.Size = New System.Drawing.Size(878, 11)
         Me.Panel233.TabIndex = 0
         '
         'Panel234
@@ -971,7 +971,7 @@ Partial Class POSSystem
         Me.Panel234.Location = New System.Drawing.Point(0, 10)
         Me.Panel234.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel234.Name = "Panel234"
-        Me.Panel234.Size = New System.Drawing.Size(294, 1)
+        Me.Panel234.Size = New System.Drawing.Size(881, 1)
         Me.Panel234.TabIndex = 1
         '
         'Panel235
@@ -983,7 +983,7 @@ Partial Class POSSystem
         Me.Panel235.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel235.Name = "Panel235"
         Me.Panel235.Padding = New System.Windows.Forms.Padding(0, 0, 1, 0)
-        Me.Panel235.Size = New System.Drawing.Size(294, 1)
+        Me.Panel235.Size = New System.Drawing.Size(881, 1)
         Me.Panel235.TabIndex = 0
         '
         'Panel256
@@ -992,7 +992,7 @@ Partial Class POSSystem
         Me.Panel256.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel256.Location = New System.Drawing.Point(0, 0)
         Me.Panel256.Name = "Panel256"
-        Me.Panel256.Size = New System.Drawing.Size(293, 1)
+        Me.Panel256.Size = New System.Drawing.Size(880, 1)
         Me.Panel256.TabIndex = 0
         '
         'Label29
@@ -1110,7 +1110,7 @@ Partial Class POSSystem
         Me.Panel266.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel266.Name = "Panel266"
         Me.Panel266.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel266.Size = New System.Drawing.Size(410, 131)
+        Me.Panel266.Size = New System.Drawing.Size(997, 131)
         Me.Panel266.TabIndex = 16
         '
         'Panel267
@@ -1122,7 +1122,7 @@ Partial Class POSSystem
         Me.Panel267.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel267.Name = "Panel267"
         Me.Panel267.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel267.Size = New System.Drawing.Size(408, 130)
+        Me.Panel267.Size = New System.Drawing.Size(995, 130)
         Me.Panel267.TabIndex = 17
         '
         'Panel268
@@ -1134,7 +1134,7 @@ Partial Class POSSystem
         Me.Panel268.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel268.Name = "Panel268"
         Me.Panel268.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel268.Size = New System.Drawing.Size(406, 129)
+        Me.Panel268.Size = New System.Drawing.Size(993, 129)
         Me.Panel268.TabIndex = 17
         '
         'Panel269
@@ -1149,7 +1149,7 @@ Partial Class POSSystem
         Me.Panel269.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel269.Name = "Panel269"
         Me.Panel269.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel269.Size = New System.Drawing.Size(404, 128)
+        Me.Panel269.Size = New System.Drawing.Size(991, 128)
         Me.Panel269.TabIndex = 17
         '
         'Panel270
@@ -1175,6 +1175,14 @@ Partial Class POSSystem
         Me.Panel272.Name = "Panel272"
         Me.Panel272.Size = New System.Drawing.Size(384, 24)
         Me.Panel272.TabIndex = 16
+        '
+        'Panel273
+        '
+        Me.Panel273.Location = New System.Drawing.Point(10, 5)
+        Me.Panel273.Margin = New System.Windows.Forms.Padding(5, 5, 5, 0)
+        Me.Panel273.Name = "Panel273"
+        Me.Panel273.Size = New System.Drawing.Size(384, 24)
+        Me.Panel273.TabIndex = 15
         '
         'TableLayoutPanel13
         '
@@ -1743,6 +1751,21 @@ Partial Class POSSystem
         Me.Panel83.Size = New System.Drawing.Size(384, 24)
         Me.Panel83.TabIndex = 18
         '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.Label41.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Label41.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label41.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.Label41.Location = New System.Drawing.Point(314, 0)
+        Me.Label41.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(70, 24)
+        Me.Label41.TabIndex = 11
+        Me.Label41.Text = "£0.00"
+        Me.Label41.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'Label25
         '
         Me.Label25.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
@@ -1767,6 +1790,21 @@ Partial Class POSSystem
         Me.Panel255.Size = New System.Drawing.Size(384, 24)
         Me.Panel255.TabIndex = 17
         '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.Label37.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Label37.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.Label37.Location = New System.Drawing.Point(314, 0)
+        Me.Label37.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(70, 24)
+        Me.Label37.TabIndex = 11
+        Me.Label37.Text = "£0.00"
+        Me.Label37.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'Label38
         '
         Me.Label38.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
@@ -1790,6 +1828,21 @@ Partial Class POSSystem
         Me.Panel260.Name = "Panel260"
         Me.Panel260.Size = New System.Drawing.Size(384, 24)
         Me.Panel260.TabIndex = 16
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.Label35.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Label35.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.Label35.Location = New System.Drawing.Point(314, 0)
+        Me.Label35.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(70, 24)
+        Me.Label35.TabIndex = 11
+        Me.Label35.Text = "£0.00"
+        Me.Label35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label39
         '
@@ -4953,59 +5006,6 @@ Partial Class POSSystem
         'tmrMain
         '
         Me.tmrMain.Enabled = True
-        '
-        'Label35
-        '
-        Me.Label35.AutoSize = True
-        Me.Label35.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Label35.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Label35.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.Label35.Location = New System.Drawing.Point(314, 0)
-        Me.Label35.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(70, 24)
-        Me.Label35.TabIndex = 11
-        Me.Label35.Text = "£0.00"
-        Me.Label35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Label37.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Label37.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.Label37.Location = New System.Drawing.Point(314, 0)
-        Me.Label37.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(70, 24)
-        Me.Label37.TabIndex = 11
-        Me.Label37.Text = "£0.00"
-        Me.Label37.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label41
-        '
-        Me.Label41.AutoSize = True
-        Me.Label41.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Label41.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Label41.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.Label41.Location = New System.Drawing.Point(314, 0)
-        Me.Label41.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(70, 24)
-        Me.Label41.TabIndex = 11
-        Me.Label41.Text = "£0.00"
-        Me.Label41.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Panel273
-        '
-        Me.Panel273.Location = New System.Drawing.Point(10, 5)
-        Me.Panel273.Margin = New System.Windows.Forms.Padding(5, 5, 5, 0)
-        Me.Panel273.Name = "Panel273"
-        Me.Panel273.Size = New System.Drawing.Size(384, 24)
-        Me.Panel273.TabIndex = 15
         '
         'POSSystem
         '
