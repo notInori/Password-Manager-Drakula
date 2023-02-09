@@ -22,6 +22,7 @@ Partial Class AuthLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AuthLogin))
         Me.pnlBackground = New System.Windows.Forms.Panel()
         Me.tblWindow = New System.Windows.Forms.TableLayoutPanel()
@@ -67,6 +68,7 @@ Partial Class AuthLogin
         Me.pnlTitleIcons = New System.Windows.Forms.Panel()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.pnlBlackOutline = New System.Windows.Forms.Panel()
+
         Me.pnlBackground.SuspendLayout()
         Me.tblWindow.SuspendLayout()
         Me.pnlTopBar.SuspendLayout()
@@ -97,6 +99,7 @@ Partial Class AuthLogin
         Me.Panel4.SuspendLayout()
         Me.pnlTitleIcons.SuspendLayout()
         Me.pnlBlackOutline.SuspendLayout()
+
         Me.SuspendLayout()
         '
         'pnlBackground
@@ -550,7 +553,6 @@ Partial Class AuthLogin
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(446, 32)
         Me.ComboBox1.TabIndex = 13
-        Me.ComboBox1.Text = " [...]"
         '
         'Panel3
         '
@@ -649,6 +651,7 @@ Partial Class AuthLogin
         Me.pnlBlackOutline.Padding = New System.Windows.Forms.Padding(1)
         Me.pnlBlackOutline.Size = New System.Drawing.Size(496, 396)
         Me.pnlBlackOutline.TabIndex = 1
+
         '
         'AuthLogin
         '
@@ -697,6 +700,7 @@ Partial Class AuthLogin
         Me.Panel4.ResumeLayout(False)
         Me.pnlTitleIcons.ResumeLayout(False)
         Me.pnlBlackOutline.ResumeLayout(False)
+
         Me.ResumeLayout(False)
 
     End Sub

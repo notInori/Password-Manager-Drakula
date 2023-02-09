@@ -10,7 +10,7 @@ Public Class AuthLogin
     Private Property MoveForm_MousePositiion As Point
 
     'Winforms Init' 
-    Private Sub UserLogin_OnLoad(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub UserLogin_OnLoad(ByVal qsender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         btnDummy.Focus()
     End Sub
 
@@ -53,7 +53,6 @@ Public Class AuthLogin
     Private Sub WindowExit(sender As Object, e As EventArgs) Handles btnExit.Click
         Close()
     End Sub
-
 
     'Application Code'
 
