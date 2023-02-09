@@ -11,8 +11,14 @@ Public Class AuthLogin
 
     'Winforms Init' 
     Private Sub UserLogin_OnLoad(ByVal qsender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        ComboBox1.DataSource = getUsernames()
         btnDummy.Focus()
     End Sub
+
+    Private Function getUsernames() As DataTable
+        Dim dtUsers As New DataTable
+        Return dtUsers
+    End Function
 
     'Winforms Borderless Dragging'
 

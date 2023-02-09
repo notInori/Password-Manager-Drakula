@@ -544,6 +544,7 @@ Partial Class AuthLogin
         'ComboBox1
         '
         Me.ComboBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+
         Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBox1.Font = New System.Drawing.Font("Consolas", 15.75!)
         Me.ComboBox1.ForeColor = System.Drawing.Color.White
@@ -748,4 +749,5 @@ Partial Class AuthLogin
     Friend WithEvents Panel4 As Panel
     Friend WithEvents btnLogin As Button
     Friend WithEvents btnDummy As Button
+
 End Class
