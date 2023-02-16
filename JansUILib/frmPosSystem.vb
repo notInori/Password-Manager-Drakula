@@ -179,8 +179,8 @@ Public Class POSSystem
         Panel111.BackColor = accentColor
         Panel46.BackColor = accentColor
         Panel39.BackColor = accentColor
-        Panel243.BackColor = accentColor
-        Panel250.BackColor = accentColor
+        Panel309.BackColor = accentColor
+        Panel300.BackColor = accentColor
         Panel179.BackColor = accentColor
         Panel186.BackColor = accentColor
         Panel213.BackColor = accentColor
@@ -189,6 +189,8 @@ Public Class POSSystem
         Panel201.BackColor = accentColor
         Panel264.BackColor = accentColor
         Panel256.BackColor = accentColor
+        Panel287.BackColor = accentColor
+        Panel294.BackColor = accentColor
         'Toggle Accent Updating
 
         If toggle2 Then
@@ -256,7 +258,7 @@ Public Class POSSystem
 
 
     Private Sub tmrMain_Tick(sender As Object, e As EventArgs) Handles tmrMain.Tick
-        lblTitle.Text = "POS SYSTEM | [BUILD] | [USER] | " & DateTime.Now.ToString("HH:mm:ss")
+        lblTitle.Text = "POS SYSTEM | [BUILD] | [USER] | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
