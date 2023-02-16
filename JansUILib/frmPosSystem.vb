@@ -169,6 +169,9 @@ Public Class POSSystem
 
     End Sub
 
+
+    'Updates the accent colour in the UI
+
     Private Sub updateAccent()
         Panel8.BackColor = accentColor
         Panel25.BackColor = accentColor
@@ -191,8 +194,8 @@ Public Class POSSystem
         Panel256.BackColor = accentColor
         Panel287.BackColor = accentColor
         Panel294.BackColor = accentColor
-        'Toggle Accent Updating
 
+        'Toggle Accent Updating
         If toggle2 Then
             Panel96.BackColor = accentColor
         End If
@@ -222,8 +225,7 @@ Public Class POSSystem
 
 
 
-    'Application Code'
-
+    'Application Code
     Private Sub btnButton_Click(sender As Object, e As EventArgs) Handles btnButton.Click
         AntiFocus()
         If ListBox1.Items.Contains(input.Text) Or input.TextLength < 1 Then
@@ -231,7 +233,6 @@ Public Class POSSystem
             ListBox1.Items.Add(input.Text)
         End If
     End Sub
-
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         AntiFocus()
@@ -256,7 +257,7 @@ Public Class POSSystem
         AuthLogin.Show()
     End Sub
 
-
+    'Keeps watermark updated
     Private Sub tmrMain_Tick(sender As Object, e As EventArgs) Handles tmrMain.Tick
         lblTitle.Text = "POS SYSTEM | [BUILD] | [USER] | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
     End Sub
@@ -272,6 +273,7 @@ Public Class POSSystem
         ListBox1.Items.Remove(input.Text)
     End Sub
 
+    'UI Accent Colour Picker
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         AntiFocus()
         If (cDialog.ShowDialog() = DialogResult.OK) Then
@@ -280,6 +282,7 @@ Public Class POSSystem
         updateAccent()
     End Sub
 
+    'Example Toggle Switches
     Private Sub Toggle2_Click(sender As Object, e As EventArgs) Handles Panel93.Click, Panel94.Click, Panel95.Click, Panel96.Click, Label3.Click
         btnDummy.Focus()
         If toggle2 Then
