@@ -49,7 +49,7 @@ Public Class POSSystem
         input.Text = ""
     End Sub
 
-    Public Sub AntiFocus() Handles ListBox1.Click, pnlMiscPage.Click, pnlSettingsPage.Click, Panel79.Click, Panel224.Click, Panel38.Click, Panel36.Click, Label28.Click, Label4.Click
+    Public Sub AntiFocus() Handles ListBox1.Click, pnlMiscPage.Click, pnlSettingsPage.Click, Panel38.Click, Panel36.Click, Label4.Click
         Panel169.Visible = False
         btnDummy.Focus()
         Panel33.BackColor = Color.FromArgb(0, 0, 0)
@@ -60,7 +60,7 @@ Public Class POSSystem
 
     'UI Library Functions'
 
-    Private Sub input_MouseEnter(sender As Object, e As EventArgs) Handles input.MouseEnter, Panel35.MouseEnter, Panel34.MouseEnter, Panel33.MouseEnter, Panel32.MouseEnter, btnButton.MouseEnter, Button1.MouseEnter, btnClear.MouseEnter, ListBox1.MouseEnter, Button3.MouseEnter, Panel93.MouseEnter, Panel94.MouseEnter, Panel95.MouseEnter, Panel96.MouseEnter, Label3.MouseEnter
+    Private Sub input_MouseEnter(sender As Object, e As EventArgs) Handles input.MouseEnter, Panel35.MouseEnter, Panel34.MouseEnter, Panel33.MouseEnter, Panel32.MouseEnter, btnButton.MouseEnter, Button1.MouseEnter, btnClear.MouseEnter, ListBox1.MouseEnter, Panel93.MouseEnter, Panel94.MouseEnter, Panel95.MouseEnter, Panel96.MouseEnter, Label3.MouseEnter
 
         If sender Is input Or sender Is Panel35 Or sender Is Panel34 Or sender Is Panel33 Or sender Is Panel32 Then
             Panel33.BackColor = accentColor
@@ -72,15 +72,14 @@ Public Class POSSystem
             Panel51.BackColor = accentColor
         ElseIf sender Is ListBox1 Or sender Is Panel58 Or sender Is Panel57 Then
             Panel56.BackColor = accentColor
-        ElseIf sender Is Button3 Then
-            Panel80.BackColor = accentColor
+
         ElseIf sender Is Panel93 Or sender Is Panel94 Or sender Is Panel95 Or sender Is Panel96 Or sender Is Label3 Then
             Panel93.BackColor = accentColor
 
         End If
     End Sub
 
-    Private Sub input_MouseLeave(sender As Object, e As EventArgs) Handles input.MouseLeave, Panel35.MouseLeave, Panel34.MouseLeave, Panel33.MouseLeave, Panel32.MouseLeave, btnButton.MouseLeave, Button1.MouseLeave, btnClear.MouseLeave, ListBox1.MouseLeave, Button3.MouseLeave, Panel93.MouseLeave, Panel94.MouseLeave, Panel95.MouseLeave, Panel96.MouseLeave, Label3.MouseLeave
+    Private Sub input_MouseLeave(sender As Object, e As EventArgs) Handles input.MouseLeave, Panel35.MouseLeave, Panel34.MouseLeave, Panel33.MouseLeave, Panel32.MouseLeave, btnButton.MouseLeave, Button1.MouseLeave, btnClear.MouseLeave, ListBox1.MouseLeave, Panel93.MouseLeave, Panel94.MouseLeave, Panel95.MouseLeave, Panel96.MouseLeave, Label3.MouseLeave
         If sender Is input Or sender Is Panel35 Or sender Is Panel34 Or sender Is Panel33 Or sender Is Panel32 Then
             If input.Focused() Then
             Else
@@ -94,14 +93,12 @@ Public Class POSSystem
             Panel51.BackColor = Color.FromArgb(0, 0, 0)
         ElseIf sender Is ListBox1 Or sender Is Panel58 Or sender Is Panel57 Then
             Panel56.BackColor = Color.FromArgb(0, 0, 0)
-        ElseIf sender Is Button3 Then
-            Panel80.BackColor = Color.FromArgb(0, 0, 0)
         ElseIf sender Is Panel93 Or sender Is Panel94 Or sender Is Panel95 Or sender Is Panel96 Or sender Is Label3 Then
             Panel93.BackColor = Color.FromArgb(0, 0, 0)
         End If
     End Sub
 
-    Private Sub panel_MouseEnter(sender As Object, e As EventArgs) Handles Panel164.MouseEnter, Panel165.MouseEnter, Panel166.MouseEnter, Panel167.MouseEnter, Panel134.MouseEnter, Panel133.MouseEnter, Panel91.MouseEnter, Panel90.MouseEnter, Label12.MouseEnter, Panel136.MouseEnter, Panel137.MouseEnter, Panel138.MouseEnter, Panel139.MouseEnter, Label13.MouseEnter, Label24.MouseEnter, Panel225.MouseEnter, Panel226.MouseEnter, Panel227.MouseEnter, Button4.MouseEnter
+    Private Sub panel_MouseEnter(sender As Object, e As EventArgs) Handles Panel164.MouseEnter, Panel165.MouseEnter, Panel166.MouseEnter, Panel167.MouseEnter, Panel134.MouseEnter, Panel133.MouseEnter, Panel91.MouseEnter, Panel90.MouseEnter, Label12.MouseEnter, Panel136.MouseEnter, Panel137.MouseEnter, Panel138.MouseEnter, Panel139.MouseEnter, Label13.MouseEnter, Label24.MouseEnter
 
         If sender Is Panel164 Or sender Is Panel165 Or sender Is Panel166 Or sender Is Panel167 Or sender Is Label24 Then
             Panel164.BackColor = accentColor
@@ -111,12 +108,10 @@ Public Class POSSystem
 
         ElseIf sender Is Panel136 Or sender Is Panel137 Or sender Is Panel138 Or sender Is Panel139 Or sender Is Label13 Then
             Panel136.BackColor = accentColor
-        ElseIf sender Is Button4 Then
-            Panel225.BackColor = accentColor
         End If
     End Sub
 
-    Private Sub panel_MouseLeave(sender As Object, e As EventArgs) Handles Panel164.MouseLeave, Panel165.MouseLeave, Panel166.MouseLeave, Panel167.MouseLeave, Panel134.MouseLeave, Panel133.MouseLeave, Panel91.MouseLeave, Panel90.MouseLeave, Label12.MouseLeave, Panel136.MouseLeave, Panel137.MouseLeave, Panel138.MouseLeave, Panel139.MouseLeave, Label13.MouseLeave, Label24.MouseLeave, Panel225.MouseLeave, Panel226.MouseLeave, Panel227.MouseLeave, Button4.MouseLeave
+    Private Sub panel_MouseLeave(sender As Object, e As EventArgs) Handles Panel164.MouseLeave, Panel165.MouseLeave, Panel166.MouseLeave, Panel167.MouseLeave, Panel134.MouseLeave, Panel133.MouseLeave, Panel91.MouseLeave, Panel90.MouseLeave, Label12.MouseLeave, Panel136.MouseLeave, Panel137.MouseLeave, Panel138.MouseLeave, Panel139.MouseLeave, Label13.MouseLeave, Label24.MouseLeave
 
         If sender Is Panel164 Or sender Is Panel165 Or sender Is Panel166 Or sender Is Panel167 Or sender Is Label24 Then
             If Panel169.Visible = False Then
@@ -126,8 +121,6 @@ Public Class POSSystem
             Panel90.BackColor = Color.FromArgb(0, 0, 0)
         ElseIf sender Is Panel136 Or sender Is Panel137 Or sender Is Panel138 Or sender Is Panel139 Or sender Is Label13 Then
             Panel136.BackColor = Color.FromArgb(0, 0, 0)
-        ElseIf sender Is Button4 Then
-            Panel225.BackColor = Color.FromArgb(0, 0, 0)
         End If
     End Sub
 
@@ -171,8 +164,6 @@ Public Class POSSystem
         Panel8.BackColor = accentColor
         Panel25.BackColor = accentColor
         Panel26.BackColor = accentColor
-        Panel68.BackColor = accentColor
-        Panel75.BackColor = accentColor
         Panel104.BackColor = accentColor
         Panel111.BackColor = accentColor
         Panel46.BackColor = accentColor
@@ -181,8 +172,6 @@ Public Class POSSystem
         Panel300.BackColor = accentColor
         Panel179.BackColor = accentColor
         Panel186.BackColor = accentColor
-        Panel213.BackColor = accentColor
-        Panel220.BackColor = accentColor
         Panel194.BackColor = accentColor
         Panel201.BackColor = accentColor
         Panel264.BackColor = accentColor
@@ -246,7 +235,7 @@ Public Class POSSystem
         End If
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button8.Click
         AntiFocus()
         Me.Hide()
         AuthLogin.Show()
@@ -269,7 +258,7 @@ Public Class POSSystem
     End Sub
 
     'UI Accent Colour Picker
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button7.Click
         AntiFocus()
         If (cDialog.ShowDialog() = DialogResult.OK) Then
             accentColor = cDialog.Color ' update with user selected color.
