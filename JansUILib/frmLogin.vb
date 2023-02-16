@@ -10,9 +10,15 @@ Public Class AuthLogin
     Private Property MoveForm_MousePositiion As Point
 
     'Winforms Init' 
-    Private Sub UserLogin_OnLoad(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub UserLogin_OnLoad(ByVal qsender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        ComboBox1.DataSource = getUsernames()
         btnDummy.Focus()
     End Sub
+
+    Private Function getUsernames() As DataTable
+        Dim dtUsers As New DataTable
+        Return dtUsers
+    End Function
 
     'Winforms Borderless Dragging'
 
@@ -53,7 +59,6 @@ Public Class AuthLogin
     Private Sub WindowExit(sender As Object, e As EventArgs) Handles btnExit.Click
         Close()
     End Sub
-
 
     'Application Code'
 

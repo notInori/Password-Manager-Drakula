@@ -136,6 +136,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="CustomerDataDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerDataDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmPosSystem.designer.vb">
       <DependentUpon>frmPosSystem.vb</DependentUpon>
     </Compile>
@@ -147,6 +152,11 @@
     </Compile>
     <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MenuDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -180,6 +190,28 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="CustomerDataDataSet.xsc">
+      <DependentUpon>CustomerDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CustomerDataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerDataDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CustomerDataDataSet.xss">
+      <DependentUpon>CustomerDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MenuDataSet.xsc">
+      <DependentUpon>MenuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MenuDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MenuDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MenuDataSet.xss">
+      <DependentUpon>MenuDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -192,10 +224,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="POS.ico" />
-    <Content Include="Users.accdb">
+    <Content Include="CustomerData.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Menu.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="POS.ico" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

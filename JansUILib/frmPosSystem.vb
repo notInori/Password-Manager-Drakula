@@ -323,4 +323,10 @@ Public Class POSSystem
             Me.Refresh()
         End If
     End Sub
+
+    Friend Class UserDataDataSet
+    End Class
+
+    Friend Class UserDataDataSetTableAdapters
+    End Class
 End Class
