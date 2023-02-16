@@ -5,11 +5,6 @@ Public Class POSSystem
     'Init'
 
     'Variable Init'
-
-    Private Property MoveForm As Boolean
-    Private Property Fullscreen
-    Private Property Maxscreen
-    Private Property MoveForm_MousePositiion As Point
     Public Shared accentColor As Color = Color.FromArgb(255, 255, 255)
     Dim cDialog As New ColorDialog()
 
