@@ -44,7 +44,6 @@ Public Class POSSystem
 
     'Control Highlighting
     Private Sub Input_MouseEnter(sender As Object, e As EventArgs) Handles input.MouseEnter, Panel35.MouseEnter, Panel34.MouseEnter, Panel33.MouseEnter, Panel32.MouseEnter, btnButton.MouseEnter, BtnRemove.MouseEnter, btnClear.MouseEnter, ListBox1.MouseEnter, Panel93.MouseEnter, Panel94.MouseEnter, Panel95.MouseEnter, Panel96.MouseEnter, Label3.MouseEnter
-
         If sender Is input Or sender Is Panel35 Or sender Is Panel34 Or sender Is Panel33 Or sender Is Panel32 Then
             Panel33.BackColor = accentColor
         ElseIf sender Is btnButton Then
@@ -82,7 +81,6 @@ Public Class POSSystem
     End Sub
 
     Private Sub ControlHighlight_mouseEnter(sender As Object, e As EventArgs) Handles Panel164.MouseEnter, Panel165.MouseEnter, Panel166.MouseEnter, Panel167.MouseEnter, Panel134.MouseEnter, Panel133.MouseEnter, Panel91.MouseEnter, Panel90.MouseEnter, Label12.MouseEnter, Panel136.MouseEnter, Panel137.MouseEnter, Panel138.MouseEnter, Panel139.MouseEnter, Label13.MouseEnter, Label24.MouseEnter
-
         If sender Is Panel164 Or sender Is Panel165 Or sender Is Panel166 Or sender Is Panel167 Or sender Is Label24 Then
             Panel164.BackColor = accentColor
 
@@ -95,7 +93,6 @@ Public Class POSSystem
     End Sub
 
     Private Sub ControlHighlight_mouseLeave(sender As Object, e As EventArgs) Handles Panel164.MouseLeave, Panel165.MouseLeave, Panel166.MouseLeave, Panel167.MouseLeave, Panel134.MouseLeave, Panel133.MouseLeave, Panel91.MouseLeave, Panel90.MouseLeave, Label12.MouseLeave, Panel136.MouseLeave, Panel137.MouseLeave, Panel138.MouseLeave, Panel139.MouseLeave, Label13.MouseLeave, Label24.MouseLeave
-
         If sender Is Panel164 Or sender Is Panel165 Or sender Is Panel166 Or sender Is Panel167 Or sender Is Label24 Then
             If Panel169.Visible = False Then
                 Panel164.BackColor = Color.FromArgb(0, 0, 0)
@@ -108,8 +105,6 @@ Public Class POSSystem
     End Sub
 
     Private Sub ChangeTab(sender As Object, e As EventArgs) Handles Label7.Click, Label8.Click, Label9.Click
-
-        'Clean this up
         For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
             cntrl.Visible = False
 
@@ -117,16 +112,12 @@ Public Class POSSystem
         For Each lbl As Control In TblTabsContainer.Controls.OfType(Of Label)
             lbl.ForeColor = Color.FromArgb(150, 150, 150)
         Next
-        'Label7.ForeColor = Color.FromArgb(150, 150, 150)
-        'Label8.ForeColor = Color.FromArgb(150, 150, 150)
-        'Label9.ForeColor = Color.FromArgb(150, 150, 150)
         For Each menuscreen As Control In Panel1.Controls.OfType(Of Panel)
             menuscreen.Dock = DockStyle.None
             menuscreen.Height = 0
         Next
 
         sender.ForeColor = accentColor
-        AntiFocus()
         If sender Is Label7 Then
             pnlMainPage.Dock = DockStyle.Fill
             sel1.Visible = True
@@ -139,13 +130,12 @@ Public Class POSSystem
             sel3.Visible = True
 
         End If
-
+        AntiFocus()
     End Sub
 
     '---Change Colourisable Accents in UI
 
     Private Sub UpdateAccent()
-
         'Groupbox Topbar Color Updating
         Panel8.BackColor = accentColor
         For Each menuscreen As Control In Panel1.Controls.OfType(Of Panel)
