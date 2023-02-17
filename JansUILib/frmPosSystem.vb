@@ -11,6 +11,7 @@ Public Class POSSystem
     Dim currentUser As String = "Dev"
     Dim versionNumber As String = "[Dev Build]"
 
+    'Toggles Variables Init
     Public toggle2 As Boolean = False
     Public toggle3 As Boolean = False
     Public toggle4 As Boolean = False
