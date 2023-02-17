@@ -110,18 +110,21 @@ Public Class POSSystem
     Private Sub ChangeTab(sender As Object, e As EventArgs) Handles Label7.Click, Label8.Click, Label9.Click
 
         'Clean this up
-        sel1.Visible = False
-        sel2.Visible = False
-        sel3.Visible = False
-        pnlMiscPage.Dock = DockStyle.None
-        pnlMiscPage.Height = 0
-        pnlSettingsPage.Dock = DockStyle.None
-        pnlSettingsPage.Height = 0
-        pnlMainPage.Dock = DockStyle.None
-        pnlMainPage.Height = 0
-        Label7.ForeColor = Color.FromArgb(150, 150, 150)
-        Label8.ForeColor = Color.FromArgb(150, 150, 150)
-        Label9.ForeColor = Color.FromArgb(150, 150, 150)
+        For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
+            cntrl.Visible = False
+
+        Next
+        For Each lbl As Control In TblTabsContainer.Controls.OfType(Of Label)
+            lbl.ForeColor = Color.FromArgb(150, 150, 150)
+        Next
+        'Label7.ForeColor = Color.FromArgb(150, 150, 150)
+        'Label8.ForeColor = Color.FromArgb(150, 150, 150)
+        'Label9.ForeColor = Color.FromArgb(150, 150, 150)
+        For Each menuscreen As Control In Panel1.Controls.OfType(Of Panel)
+            menuscreen.Dock = DockStyle.None
+            menuscreen.Height = 0
+        Next
+
         sender.ForeColor = accentColor
         AntiFocus()
         If sender Is Label7 Then
@@ -143,37 +146,24 @@ Public Class POSSystem
 
     Private Sub UpdateAccent()
 
-        'Update the rest of the ui to use the new system
+        'Groupbox Topbar Color Updating
         Panel8.BackColor = accentColor
-        Panel104.BackColor = accentColor
-        Panel111.BackColor = accentColor
-        Panel46.BackColor = accentColor
-        Panel39.BackColor = accentColor
-        Panel309.BackColor = accentColor
-        Panel300.BackColor = accentColor
-        Panel179.BackColor = accentColor
-        Panel186.BackColor = accentColor
-        Panel194.BackColor = accentColor
-        Panel201.BackColor = accentColor
-        Panel264.BackColor = accentColor
-        Panel256.BackColor = accentColor
-        Panel287.BackColor = accentColor
-        Panel294.BackColor = accentColor
-
-        For Each findGroupbox As Control In pnlSettingsPage.Controls.OfType(Of TableLayoutPanel)
-            If findGroupbox.Tag = "groupbox" Then
-                For Each findGroupboxHeader As Control In findGroupbox.Controls.OfType(Of Panel)
-                    For Each findBarTable As Control In findGroupboxHeader.Controls.OfType(Of TableLayoutPanel)
-                        For Each findBarOuter As Control In findBarTable.Controls
-                            For Each findBarInner As Control In findBarOuter.Controls
-                                If findBarInner.Tag = "colorise" Then
-                                    findBarInner.BackColor = accentColor
-                                End If
+        For Each menuscreen As Control In Panel1.Controls.OfType(Of Panel)
+            For Each findGroupbox As Control In menuscreen.Controls.OfType(Of TableLayoutPanel)
+                If findGroupbox.Tag = "groupbox" Then
+                    For Each findGroupboxHeader As Control In findGroupbox.Controls.OfType(Of Panel)
+                        For Each findBarTable As Control In findGroupboxHeader.Controls.OfType(Of TableLayoutPanel)
+                            For Each findBarOuter As Control In findBarTable.Controls
+                                For Each findBarInner As Control In findBarOuter.Controls
+                                    If findBarInner.Tag = "colorise" Then
+                                        findBarInner.BackColor = accentColor
+                                    End If
+                                Next
                             Next
                         Next
                     Next
-                Next
-            End If
+                End If
+            Next
         Next
 
         'Toggle Accent Updating
@@ -186,10 +176,13 @@ Public Class POSSystem
         If toggle4 Then
             Panel139.BackColor = accentColor
         End If
-        sel1.BackColor = accentColor
-        sel2.BackColor = accentColor
-        sel3.BackColor = accentColor
 
+        'Tab Highlight Color Updating
+        For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
+            cntrl.BackColor = accentColor
+        Next
+
+        'Tab Label Color Updating
         If Label7.ForeColor = Color.FromArgb(150, 150, 150) Then
         Else
             Label7.ForeColor = accentColor
@@ -312,4 +305,5 @@ Public Class POSSystem
 
     Friend Class UserDataDataSetTableAdapters
     End Class
+
 End Class
