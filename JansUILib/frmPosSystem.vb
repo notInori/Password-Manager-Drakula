@@ -7,9 +7,9 @@ Public Class POSSystem
 
     'Variable Init'
     Public Shared accentColor As Color = Color.FromArgb(255, 255, 255)
-    Dim cDialog As New ColorDialog()
-    Dim currentUser As String = "Dev"
-    Dim versionNumber As String = "[Dev Build]"
+    ReadOnly cDialog As New ColorDialog()
+    ReadOnly currentUser As String = "Dev"
+    ReadOnly versionNumber As String = "[Dev Build]"
 
     'Toggles Variables Init
     Public toggle2 As Boolean = False
