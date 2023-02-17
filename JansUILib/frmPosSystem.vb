@@ -7,9 +7,9 @@ Public Class POSSystem
 
     'Variable Init'
     Public Shared accentColor As Color = Color.FromArgb(255, 255, 255)
-    Dim cDialog As New ColorDialog()
-    Dim currentUser As String = "Dev"
-    Dim versionNumber As String = "[Dev Build]"
+    ReadOnly cDialog As New ColorDialog()
+    ReadOnly currentUser As String = "Dev"
+    ReadOnly versionNumber As String = "[Dev Build]"
 
     'Toggles Variables Init
     Public toggle2 As Boolean = False
@@ -38,12 +38,12 @@ Public Class POSSystem
     '---UI Library Functions'
 
     'Clear Textbox on Double Click
-    Private Sub clearTextbox_DoubleClick(sender As Object, e As EventArgs) Handles input.DoubleClick
+    Private Sub ClearTextbox_DoubleClick(sender As Object, e As EventArgs) Handles input.DoubleClick
         sender.Text = ""
     End Sub
 
     'Control Highlighting
-    Private Sub input_MouseEnter(sender As Object, e As EventArgs) Handles input.MouseEnter, Panel35.MouseEnter, Panel34.MouseEnter, Panel33.MouseEnter, Panel32.MouseEnter, btnButton.MouseEnter, BtnRemove.MouseEnter, btnClear.MouseEnter, ListBox1.MouseEnter, Panel93.MouseEnter, Panel94.MouseEnter, Panel95.MouseEnter, Panel96.MouseEnter, Label3.MouseEnter
+    Private Sub Input_MouseEnter(sender As Object, e As EventArgs) Handles input.MouseEnter, Panel35.MouseEnter, Panel34.MouseEnter, Panel33.MouseEnter, Panel32.MouseEnter, btnButton.MouseEnter, BtnRemove.MouseEnter, btnClear.MouseEnter, ListBox1.MouseEnter, Panel93.MouseEnter, Panel94.MouseEnter, Panel95.MouseEnter, Panel96.MouseEnter, Label3.MouseEnter
 
         If sender Is input Or sender Is Panel35 Or sender Is Panel34 Or sender Is Panel33 Or sender Is Panel32 Then
             Panel33.BackColor = accentColor
@@ -62,7 +62,7 @@ Public Class POSSystem
         End If
     End Sub
 
-    Private Sub input_MouseLeave(sender As Object, e As EventArgs) Handles input.MouseLeave, Panel35.MouseLeave, Panel34.MouseLeave, Panel33.MouseLeave, Panel32.MouseLeave, btnButton.MouseLeave, BtnRemove.MouseLeave, btnClear.MouseLeave, ListBox1.MouseLeave, Panel93.MouseLeave, Panel94.MouseLeave, Panel95.MouseLeave, Panel96.MouseLeave, Label3.MouseLeave
+    Private Sub Input_MouseLeave(sender As Object, e As EventArgs) Handles input.MouseLeave, Panel35.MouseLeave, Panel34.MouseLeave, Panel33.MouseLeave, Panel32.MouseLeave, btnButton.MouseLeave, BtnRemove.MouseLeave, btnClear.MouseLeave, ListBox1.MouseLeave, Panel93.MouseLeave, Panel94.MouseLeave, Panel95.MouseLeave, Panel96.MouseLeave, Label3.MouseLeave
         If sender Is input Or sender Is Panel35 Or sender Is Panel34 Or sender Is Panel33 Or sender Is Panel32 Then
             If input.Focused() Then
             Else
@@ -81,7 +81,7 @@ Public Class POSSystem
         End If
     End Sub
 
-    Private Sub controlHighlight_mouseEnter(sender As Object, e As EventArgs) Handles Panel164.MouseEnter, Panel165.MouseEnter, Panel166.MouseEnter, Panel167.MouseEnter, Panel134.MouseEnter, Panel133.MouseEnter, Panel91.MouseEnter, Panel90.MouseEnter, Label12.MouseEnter, Panel136.MouseEnter, Panel137.MouseEnter, Panel138.MouseEnter, Panel139.MouseEnter, Label13.MouseEnter, Label24.MouseEnter
+    Private Sub ControlHighlight_mouseEnter(sender As Object, e As EventArgs) Handles Panel164.MouseEnter, Panel165.MouseEnter, Panel166.MouseEnter, Panel167.MouseEnter, Panel134.MouseEnter, Panel133.MouseEnter, Panel91.MouseEnter, Panel90.MouseEnter, Label12.MouseEnter, Panel136.MouseEnter, Panel137.MouseEnter, Panel138.MouseEnter, Panel139.MouseEnter, Label13.MouseEnter, Label24.MouseEnter
 
         If sender Is Panel164 Or sender Is Panel165 Or sender Is Panel166 Or sender Is Panel167 Or sender Is Label24 Then
             Panel164.BackColor = accentColor
@@ -94,7 +94,7 @@ Public Class POSSystem
         End If
     End Sub
 
-    Private Sub controlHighlight_mouseLeave(sender As Object, e As EventArgs) Handles Panel164.MouseLeave, Panel165.MouseLeave, Panel166.MouseLeave, Panel167.MouseLeave, Panel134.MouseLeave, Panel133.MouseLeave, Panel91.MouseLeave, Panel90.MouseLeave, Label12.MouseLeave, Panel136.MouseLeave, Panel137.MouseLeave, Panel138.MouseLeave, Panel139.MouseLeave, Label13.MouseLeave, Label24.MouseLeave
+    Private Sub ControlHighlight_mouseLeave(sender As Object, e As EventArgs) Handles Panel164.MouseLeave, Panel165.MouseLeave, Panel166.MouseLeave, Panel167.MouseLeave, Panel134.MouseLeave, Panel133.MouseLeave, Panel91.MouseLeave, Panel90.MouseLeave, Label12.MouseLeave, Panel136.MouseLeave, Panel137.MouseLeave, Panel138.MouseLeave, Panel139.MouseLeave, Label13.MouseLeave, Label24.MouseLeave
 
         If sender Is Panel164 Or sender Is Panel165 Or sender Is Panel166 Or sender Is Panel167 Or sender Is Label24 Then
             If Panel169.Visible = False Then
@@ -141,7 +141,7 @@ Public Class POSSystem
 
     '---Change Colourisable Accents in UI
 
-    Private Sub updateAccent()
+    Private Sub UpdateAccent()
 
         'Update the rest of the ui to use the new system
         Panel8.BackColor = accentColor
@@ -277,7 +277,7 @@ Public Class POSSystem
     End Sub
 
     'Config Buttons
-    Private Sub btnButton_Click(sender As Object, e As EventArgs) Handles btnButton.Click
+    Private Sub BtnButton_Click(sender As Object, e As EventArgs) Handles btnButton.Click
         AntiFocus()
         If ListBox1.Items.Contains(input.Text) Or input.TextLength < 1 Then
         Else
@@ -290,7 +290,7 @@ Public Class POSSystem
         ListBox1.Items.Remove(input.Text)
     End Sub
 
-    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         AntiFocus()
         ListBox1.Items.Clear()
     End Sub
@@ -303,7 +303,7 @@ Public Class POSSystem
     '---Watermark
 
     'Timer Tick Update
-    Private Sub tmrMain_Tick(sender As Object, e As EventArgs) Handles tmrMain.Tick
+    Private Sub TmrMain_Tick(sender As Object, e As EventArgs) Handles tmrMain.Tick
         lblTitle.Text = "POS SYSTEM | " & versionNumber & " | " & currentUser & " | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
     End Sub
 
