@@ -1,7 +1,4 @@
-﻿Imports System.Drawing
-Imports System.Windows.Forms.VisualStyles
-
-Public Class POSSystem
+﻿Public Class POSSystem
 
     '---Init'
 
@@ -249,7 +246,7 @@ Public Class POSSystem
         If (cDialog.ShowDialog() = DialogResult.OK) Then
             accentColor = cDialog.Color ' update with user selected color.
         End If
-        updateAccent()
+        UpdateAccent()
     End Sub
 
     'User Logout Button
