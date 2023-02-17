@@ -179,6 +179,23 @@ Public Class POSSystem
         Panel287.BackColor = accentColor
         Panel294.BackColor = accentColor
 
+
+        'Cleaner Implemention of Accent Colors
+
+        'For Each cntrl As Control In Me.Controls
+        '    Dim result As Integer
+        '    If TypeOf cntrl Is Panel Then
+        '        If cntrl.Tag IsNot Nothing Then
+        '            If Integer.TryParse(cntrl.Tag.ToString, result) Then
+        '                If result = "1" Then
+        '                    cntrl.BackColor = accentColor
+
+        '                End If
+        '            End If
+        '        End If
+        '    End If
+        'Next
+
         'Toggle Accent Updating
         If toggle2 Then
             Panel96.BackColor = accentColor

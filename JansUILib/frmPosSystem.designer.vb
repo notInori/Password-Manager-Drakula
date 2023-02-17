@@ -411,6 +411,7 @@ Partial Class POSSystem
         Me.Panel88 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.tmrMain = New System.Windows.Forms.Timer(Me.components)
+        Me.Panel61 = New System.Windows.Forms.Panel()
         Me.pnlBackground.SuspendLayout()
         Me.tblMain.SuspendLayout()
         Me.pnlTopBar.SuspendLayout()
@@ -889,6 +890,7 @@ Partial Class POSSystem
         'pnlSettingsPage
         '
         Me.pnlSettingsPage.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.pnlSettingsPage.Controls.Add(Me.Panel61)
         Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel33)
         Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel16)
         Me.pnlSettingsPage.Controls.Add(Me.tblSection1)
@@ -1340,6 +1342,7 @@ Partial Class POSSystem
         Me.Panel243.Name = "Panel243"
         Me.Panel243.Size = New System.Drawing.Size(219, 1)
         Me.Panel243.TabIndex = 0
+        Me.Panel243.Tag = "colourise"
         '
         'Label1
         '
@@ -1495,6 +1498,7 @@ Partial Class POSSystem
         Me.Panel254.Padding = New System.Windows.Forms.Padding(5)
         Me.Panel254.Size = New System.Drawing.Size(294, 185)
         Me.Panel254.TabIndex = 17
+        Me.Panel254.Tag = "1"
         '
         'Panel314
         '
@@ -5401,6 +5405,14 @@ Partial Class POSSystem
         '
         Me.tmrMain.Enabled = True
         '
+        'Panel61
+        '
+        Me.Panel61.Location = New System.Drawing.Point(805, 240)
+        Me.Panel61.Name = "Panel61"
+        Me.Panel61.Size = New System.Drawing.Size(200, 100)
+        Me.Panel61.TabIndex = 21
+        Me.Panel61.Tag = "1"
+        '
         'POSSystem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -6082,4 +6094,5 @@ Partial Class POSSystem
     Friend WithEvents Panel317 As Panel
     Friend WithEvents Panel318 As Panel
     Friend WithEvents Button8 As Button
+    Friend WithEvents Panel61 As Panel
 End Class
