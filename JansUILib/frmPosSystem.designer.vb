@@ -32,7 +32,7 @@ Partial Class POSSystem
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.pnlTitleIcons = New System.Windows.Forms.Panel()
         Me.lblTitle = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel9 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TblTabsContainer = New System.Windows.Forms.TableLayoutPanel()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -416,7 +416,7 @@ Partial Class POSSystem
         Me.pnlTopBar.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.pnlTitleIcons.SuspendLayout()
-        Me.TableLayoutPanel9.SuspendLayout()
+        Me.TblTabsContainer.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.pnlSettingsPage.SuspendLayout()
         Me.TableLayoutPanel33.SuspendLayout()
@@ -686,7 +686,7 @@ Partial Class POSSystem
         Me.tblMain.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tblMain.Controls.Add(Me.pnlTopBar, 0, 0)
         Me.tblMain.Controls.Add(Me.pnlTitleIcons, 0, 1)
-        Me.tblMain.Controls.Add(Me.TableLayoutPanel9, 0, 2)
+        Me.tblMain.Controls.Add(Me.TblTabsContainer, 0, 2)
         Me.tblMain.Controls.Add(Me.Panel1, 0, 4)
         Me.tblMain.Controls.Add(Me.Panel88, 0, 3)
         Me.tblMain.Dock = System.Windows.Forms.DockStyle.Fill
@@ -774,27 +774,27 @@ Partial Class POSSystem
         Me.lblTitle.Text = "POS SYSTEM | [BETA] | USER | 00:00:00"
         Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'TableLayoutPanel9
+        'TblTabsContainer
         '
-        Me.TableLayoutPanel9.ColumnCount = 4
-        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel9.Controls.Add(Me.Label9, 2, 0)
-        Me.TableLayoutPanel9.Controls.Add(Me.Label8, 1, 0)
-        Me.TableLayoutPanel9.Controls.Add(Me.Label7, 0, 0)
-        Me.TableLayoutPanel9.Controls.Add(Me.sel1, 0, 1)
-        Me.TableLayoutPanel9.Controls.Add(Me.sel2, 1, 1)
-        Me.TableLayoutPanel9.Controls.Add(Me.sel3, 2, 1)
-        Me.TableLayoutPanel9.Location = New System.Drawing.Point(0, 44)
-        Me.TableLayoutPanel9.Margin = New System.Windows.Forms.Padding(0)
-        Me.TableLayoutPanel9.Name = "TableLayoutPanel9"
-        Me.TableLayoutPanel9.RowCount = 2
-        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1.0!))
-        Me.TableLayoutPanel9.Size = New System.Drawing.Size(289, 40)
-        Me.TableLayoutPanel9.TabIndex = 6
+        Me.TblTabsContainer.ColumnCount = 4
+        Me.TblTabsContainer.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TblTabsContainer.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TblTabsContainer.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TblTabsContainer.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TblTabsContainer.Controls.Add(Me.Label9, 2, 0)
+        Me.TblTabsContainer.Controls.Add(Me.Label8, 1, 0)
+        Me.TblTabsContainer.Controls.Add(Me.Label7, 0, 0)
+        Me.TblTabsContainer.Controls.Add(Me.sel1, 0, 1)
+        Me.TblTabsContainer.Controls.Add(Me.sel2, 1, 1)
+        Me.TblTabsContainer.Controls.Add(Me.sel3, 2, 1)
+        Me.TblTabsContainer.Location = New System.Drawing.Point(0, 44)
+        Me.TblTabsContainer.Margin = New System.Windows.Forms.Padding(0)
+        Me.TblTabsContainer.Name = "TblTabsContainer"
+        Me.TblTabsContainer.RowCount = 2
+        Me.TblTabsContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TblTabsContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1.0!))
+        Me.TblTabsContainer.Size = New System.Drawing.Size(289, 40)
+        Me.TblTabsContainer.TabIndex = 6
         '
         'Label9
         '
@@ -853,6 +853,7 @@ Partial Class POSSystem
         Me.sel1.Name = "sel1"
         Me.sel1.Size = New System.Drawing.Size(68, 1)
         Me.sel1.TabIndex = 0
+        Me.sel1.Tag = "tabHighlight"
         '
         'sel2
         '
@@ -863,6 +864,7 @@ Partial Class POSSystem
         Me.sel2.Name = "sel2"
         Me.sel2.Size = New System.Drawing.Size(68, 1)
         Me.sel2.TabIndex = 6
+        Me.sel2.Tag = "tabHighlight"
         '
         'sel3
         '
@@ -873,6 +875,7 @@ Partial Class POSSystem
         Me.sel3.Name = "sel3"
         Me.sel3.Size = New System.Drawing.Size(116, 1)
         Me.sel3.TabIndex = 6
+        Me.sel3.Tag = "tabHighlight"
         '
         'Panel1
         '
@@ -5430,8 +5433,8 @@ Partial Class POSSystem
         Me.pnlTopBar.ResumeLayout(False)
         Me.Panel7.ResumeLayout(False)
         Me.pnlTitleIcons.ResumeLayout(False)
-        Me.TableLayoutPanel9.ResumeLayout(False)
-        Me.TableLayoutPanel9.PerformLayout()
+        Me.TblTabsContainer.ResumeLayout(False)
+        Me.TblTabsContainer.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.pnlSettingsPage.ResumeLayout(False)
         Me.TableLayoutPanel33.ResumeLayout(False)
@@ -5762,7 +5765,7 @@ Partial Class POSSystem
     Friend WithEvents input As TextBox
     Friend WithEvents btnDummy As Button
     Friend WithEvents pnlSettingsPage As Panel
-    Friend WithEvents TableLayoutPanel9 As TableLayoutPanel
+    Friend WithEvents TblTabsContainer As TableLayoutPanel
     Friend WithEvents sel1 As Panel
     Friend WithEvents sel2 As Panel
     Friend WithEvents sel3 As Panel

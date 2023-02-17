@@ -3,7 +3,7 @@ Imports System.Windows.Forms.VisualStyles
 
 Public Class POSSystem
 
-    'Init'
+    '---Init'
 
     'Variable Init'
     Public Shared accentColor As Color = Color.FromArgb(255, 255, 255)
@@ -13,18 +13,15 @@ Public Class POSSystem
     Public toggle3 As Boolean = False
     Public toggle4 As Boolean = False
 
-    'Winforms Init' 
+    '---Winforms Init' 
     Private Sub TestApp_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Me.FormBorderStyle = FormBorderStyle.None
-        Me.DoubleBuffered = True
-        Me.SetStyle(ControlStyles.ResizeRedraw, True)
         btnDummy.Focus()
-        sel1.Width = 0
-        sel2.Width = 0
-        sel3.Width = 0
-        ChangeTab(Label7, e)
-        Panel169.Visible = False
+        For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
 
+            cntrl.Width = 0
+
+        Next
+        ChangeTab(Label7, e)
     End Sub
 
     'Titlebar Button Events'
@@ -33,11 +30,7 @@ Public Class POSSystem
         AuthLogin.Close()
     End Sub
 
-    'UI Library Fixes'
-
-    Private Sub input_DoubleClick(sender As Object, e As EventArgs) Handles input.DoubleClick
-        input.Text = ""
-    End Sub
+    '---UI Library Fixes'
 
     Public Sub AntiFocus() Handles ListBox1.Click, pnlMiscPage.Click, pnlSettingsPage.Click, Panel38.Click, Panel36.Click, Label4.Click
         Panel169.Visible = False
@@ -47,8 +40,14 @@ Public Class POSSystem
 
     End Sub
 
-    'UI Library Functions'
+    '---UI Library Functions'
 
+    'Clear Textbox on Double Click
+    Private Sub clearTextbox_DoubleClick(sender As Object, e As EventArgs) Handles input.DoubleClick
+        sender.Text = ""
+    End Sub
+
+    'Control Highlighting
     Private Sub input_MouseEnter(sender As Object, e As EventArgs) Handles input.MouseEnter, Panel35.MouseEnter, Panel34.MouseEnter, Panel33.MouseEnter, Panel32.MouseEnter, btnButton.MouseEnter, BtnRemove.MouseEnter, btnClear.MouseEnter, ListBox1.MouseEnter, Panel93.MouseEnter, Panel94.MouseEnter, Panel95.MouseEnter, Panel96.MouseEnter, Label3.MouseEnter
 
         If sender Is input Or sender Is Panel35 Or sender Is Panel34 Or sender Is Panel33 Or sender Is Panel32 Then
@@ -114,6 +113,8 @@ Public Class POSSystem
     End Sub
 
     Private Sub ChangeTab(sender As Object, e As EventArgs) Handles Label7.Click, Label8.Click, Label9.Click
+
+        'Clean this up
         sel1.Visible = False
         sel2.Visible = False
         sel3.Visible = False
@@ -143,11 +144,11 @@ Public Class POSSystem
 
     End Sub
 
-    'Change Colourisable Accents in UI
+    '---Change Colourisable Accents in UI
 
     Private Sub updateAccent()
 
-        '--- Update the rest of the ui to use the new system
+        'Update the rest of the ui to use the new system
         Panel8.BackColor = accentColor
         Panel104.BackColor = accentColor
         Panel111.BackColor = accentColor
@@ -254,7 +255,6 @@ Public Class POSSystem
         End If
     End Sub
 
-
     Private Sub DropDown_Hide(sender As Object, e As EventArgs) Handles Label24.Click
         If Panel169.Visible = False Then
             Panel169.Visible = True
@@ -310,9 +310,6 @@ Public Class POSSystem
     Private Sub tmrMain_Tick(sender As Object, e As EventArgs) Handles tmrMain.Tick
         lblTitle.Text = "POS SYSTEM | [BUILD] | [USER] | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
     End Sub
-
-
-
 
     Friend Class UserDataDataSet
     End Class
