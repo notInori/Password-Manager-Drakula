@@ -8,6 +8,8 @@ Public Class POSSystem
     'Variable Init'
     Public Shared accentColor As Color = Color.FromArgb(255, 255, 255)
     Dim cDialog As New ColorDialog()
+    Dim currentUser As String = "Dev"
+    Dim versionNumber As String = "[Dev Build]"
 
     Public toggle2 As Boolean = False
     Public toggle3 As Boolean = False
@@ -301,7 +303,7 @@ Public Class POSSystem
 
     'Timer Tick Update
     Private Sub tmrMain_Tick(sender As Object, e As EventArgs) Handles tmrMain.Tick
-        lblTitle.Text = "POS SYSTEM | [BUILD] | [USER] | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
+        lblTitle.Text = "POS SYSTEM | " & versionNumber & " | " & currentUser & " | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
     End Sub
 
     Friend Class UserDataDataSet
