@@ -915,6 +915,7 @@ Partial Class POSSystem
         Me.TableLayoutPanel33.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel33.Size = New System.Drawing.Size(300, 85)
         Me.TableLayoutPanel33.TabIndex = 20
+        Me.TableLayoutPanel33.Tag = "groupbox"
         '
         'Panel315
         '
@@ -1022,6 +1023,7 @@ Partial Class POSSystem
         Me.Panel324.Name = "Panel324"
         Me.Panel324.Size = New System.Drawing.Size(219, 1)
         Me.Panel324.TabIndex = 0
+        Me.Panel324.Tag = "colorise"
         '
         'Label36
         '
@@ -1128,6 +1130,7 @@ Partial Class POSSystem
         Me.Panel331.Name = "Panel331"
         Me.Panel331.Size = New System.Drawing.Size(21, 1)
         Me.Panel331.TabIndex = 1
+        Me.Panel331.Tag = "colorise"
         '
         'Panel332
         '
@@ -1233,6 +1236,7 @@ Partial Class POSSystem
         Me.TableLayoutPanel16.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel16.Size = New System.Drawing.Size(300, 212)
         Me.TableLayoutPanel16.TabIndex = 19
+        Me.TableLayoutPanel16.Tag = "groupbox"
         '
         'Panel236
         '
@@ -1340,6 +1344,7 @@ Partial Class POSSystem
         Me.Panel243.Name = "Panel243"
         Me.Panel243.Size = New System.Drawing.Size(219, 1)
         Me.Panel243.TabIndex = 0
+        Me.Panel243.Tag = "colorise"
         '
         'Label1
         '
@@ -1446,6 +1451,7 @@ Partial Class POSSystem
         Me.Panel250.Name = "Panel250"
         Me.Panel250.Size = New System.Drawing.Size(21, 1)
         Me.Panel250.TabIndex = 1
+        Me.Panel250.Tag = "colorise"
         '
         'Panel251
         '
@@ -1591,6 +1597,7 @@ Partial Class POSSystem
         Me.tblSection1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.tblSection1.Size = New System.Drawing.Size(274, 293)
         Me.tblSection1.TabIndex = 12
+        Me.tblSection1.Tag = "groupbox"
         '
         'Panel10
         '
@@ -1698,6 +1705,7 @@ Partial Class POSSystem
         Me.Panel25.Name = "Panel25"
         Me.Panel25.Size = New System.Drawing.Size(195, 1)
         Me.Panel25.TabIndex = 0
+        Me.Panel25.Tag = "colorise"
         '
         'Configs
         '
@@ -1804,6 +1812,7 @@ Partial Class POSSystem
         Me.Panel26.Name = "Panel26"
         Me.Panel26.Size = New System.Drawing.Size(21, 1)
         Me.Panel26.TabIndex = 1
+        Me.Panel26.Tag = "colorise"
         '
         'Panel3
         '

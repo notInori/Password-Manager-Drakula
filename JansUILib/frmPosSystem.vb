@@ -1,4 +1,5 @@
 ﻿Imports System.Drawing
+Imports System.Windows.Forms.VisualStyles
 
 Public Class POSSystem
 
@@ -28,7 +29,6 @@ Public Class POSSystem
         ChangeTab(Label7, e)
         Panel169.Visible = False
 
-
     End Sub
 
     'Winforms Borderless Dragging'
@@ -40,8 +40,6 @@ Public Class POSSystem
     Private Sub btnExit_Click(sender As Object, e As EventArgs)
         AuthLogin.Close()
     End Sub
-
-
 
     'UI Library Fixes'
 
@@ -56,7 +54,6 @@ Public Class POSSystem
         Panel164.BackColor = Color.FromArgb(0, 0, 0)
 
     End Sub
-
 
     'UI Library Functions'
 
@@ -124,9 +121,6 @@ Public Class POSSystem
         End If
     End Sub
 
-
-
-
     Private Sub ChangeTab(sender As Object, e As EventArgs) Handles Label7.Click, Label8.Click, Label9.Click
         sel1.Visible = False
         sel2.Visible = False
@@ -157,13 +151,10 @@ Public Class POSSystem
 
     End Sub
 
-
     'Updates the accent colour in the UI
 
     Private Sub updateAccent()
         Panel8.BackColor = accentColor
-        Panel25.BackColor = accentColor
-        Panel26.BackColor = accentColor
         Panel104.BackColor = accentColor
         Panel111.BackColor = accentColor
         Panel46.BackColor = accentColor
@@ -178,6 +169,30 @@ Public Class POSSystem
         Panel256.BackColor = accentColor
         Panel287.BackColor = accentColor
         Panel294.BackColor = accentColor
+
+        For Each cntrl As Control In pnlSettingsPage.Controls
+            If TypeOf cntrl Is TableLayoutPanel And cntrl.Tag IsNot Nothing Then
+                For Each cntrl5 As Control In cntrl.Controls
+                    If TypeOf cntrl5 Is Panel Then
+                        For Each cntrl2 As Control In cntrl5.Controls
+                            If TypeOf cntrl2 Is TableLayoutPanel Then
+                                For Each cntrl3 As Control In cntrl2.Controls
+                                    For Each cntrl6 As Control In cntrl3.Controls
+                                        If TypeOf cntrl6 Is Panel Then
+                                            If TypeOf cntrl6 Is Panel And cntrl6.Tag IsNot Nothing Then
+                                                If cntrl6.Tag = "colorise" Then
+                                                    cntrl6.BackColor = accentColor
+                                                End If
+                                            End If
+                                        End If
+                                    Next
+                                Next
+                            End If
+                        Next
+                    End If
+                Next
+            End If
+        Next
 
         'Toggle Accent Updating
         If toggle2 Then
@@ -206,8 +221,6 @@ Public Class POSSystem
             Label9.ForeColor = accentColor
         End If
     End Sub
-
-
 
     'Application Code
     Private Sub btnButton_Click(sender As Object, e As EventArgs) Handles btnButton.Click
