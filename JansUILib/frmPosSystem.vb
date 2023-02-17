@@ -170,22 +170,18 @@ Public Class POSSystem
         Panel287.BackColor = accentColor
         Panel294.BackColor = accentColor
 
-        For Each cntrl As Control In pnlSettingsPage.Controls
-            If TypeOf cntrl Is TableLayoutPanel And cntrl.Tag IsNot Nothing Then
-                For Each cntrl5 As Control In cntrl.Controls
-                    If TypeOf cntrl5 Is Panel Then
-                        For Each cntrl2 As Control In cntrl5.Controls
-                            If TypeOf cntrl2 Is TableLayoutPanel Then
-                                For Each cntrl3 As Control In cntrl2.Controls
-                                    For Each cntrl6 As Control In cntrl3.Controls
-                                        If TypeOf cntrl6 Is Panel And cntrl6.Tag = "colorise" Then
-                                            cntrl6.BackColor = accentColor
-                                        End If
-                                    Next
-                                Next
-                            End If
+        For Each findGroupbox As Control In pnlSettingsPage.Controls.OfType(Of TableLayoutPanel)
+            If findGroupbox.Tag = "groupbox" Then
+                For Each findGroupboxHeader As Control In findGroupbox.Controls.OfType(Of Panel)
+                    For Each findBarTable As Control In findGroupboxHeader.Controls.OfType(Of TableLayoutPanel)
+                        For Each findBarOuter As Control In findBarTable.Controls
+                            For Each findBarInner As Control In findBarOuter.Controls
+                                If findBarInner.Tag = "colorise" Then
+                                    findBarInner.BackColor = accentColor
+                                End If
+                            Next
                         Next
-                    End If
+                    Next
                 Next
             End If
         Next
