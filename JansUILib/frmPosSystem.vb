@@ -22,12 +22,6 @@ Public Class POSSystem
         btnDummy.Focus()
     End Sub
 
-    'Titlebar Button Events'
-
-    Private Sub btnExit_Click(sender As Object, e As EventArgs)
-        AuthLogin.Close()
-    End Sub
-
     '---UI Library Fixes'
 
     Public Sub AntiFocus() Handles ListBox1.Click, pnlMiscPage.Click, pnlSettingsPage.Click, Panel38.Click, Panel36.Click, Label4.Click
@@ -304,6 +298,7 @@ Public Class POSSystem
     End Sub
 
     '---Watermark
+
     'Timer Tick Update
     Private Sub tmrMain_Tick(sender As Object, e As EventArgs) Handles tmrMain.Tick
         lblTitle.Text = "POS SYSTEM | [BUILD] | [USER] | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
