@@ -18,6 +18,7 @@
         For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
             cntrl.Width = 0
         Next
+        UpdateAccent()
         ChangeTab(Label7, e)
         btnDummy.Focus()
     End Sub
@@ -293,4 +294,7 @@
     Friend Class UserDataDataSetTableAdapters
     End Class
 
+    Private Sub AntiFocus(sender As Object, e As EventArgs) Handles pnlSettingsPage.Click, pnlMiscPage.Click, Panel38.Click, Panel36.Click, ListBox1.Click, Label4.Click
+
+    End Sub
 End Class
