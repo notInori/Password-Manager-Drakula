@@ -95,7 +95,7 @@ Partial Class POSSystem
         Me.Label33 = New System.Windows.Forms.Label()
         Me.Panel317 = New System.Windows.Forms.Panel()
         Me.Panel318 = New System.Windows.Forms.Panel()
-        Me.Button8 = New System.Windows.Forms.Button()
+        Me.BtnLogOut = New System.Windows.Forms.Button()
         Me.tblSection1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
@@ -126,7 +126,7 @@ Partial Class POSSystem
         Me.Panel54 = New System.Windows.Forms.Panel()
         Me.Panel55 = New System.Windows.Forms.Panel()
         Me.Panel59 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnRemove = New System.Windows.Forms.Button()
         Me.Panel51 = New System.Windows.Forms.Panel()
         Me.Panel52 = New System.Windows.Forms.Panel()
         Me.Panel53 = New System.Windows.Forms.Panel()
@@ -892,7 +892,7 @@ Partial Class POSSystem
         Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel33)
         Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel16)
         Me.pnlSettingsPage.Controls.Add(Me.tblSection1)
-        Me.pnlSettingsPage.Location = New System.Drawing.Point(25, 338)
+        Me.pnlSettingsPage.Location = New System.Drawing.Point(769, 227)
         Me.pnlSettingsPage.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlSettingsPage.Name = "pnlSettingsPage"
         Me.pnlSettingsPage.Padding = New System.Windows.Forms.Padding(5)
@@ -1555,7 +1555,7 @@ Partial Class POSSystem
         'Panel318
         '
         Me.Panel318.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
-        Me.Panel318.Controls.Add(Me.Button8)
+        Me.Panel318.Controls.Add(Me.BtnLogOut)
         Me.Panel318.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel318.Location = New System.Drawing.Point(1, 1)
         Me.Panel318.Name = "Panel318"
@@ -1563,23 +1563,23 @@ Partial Class POSSystem
         Me.Panel318.Size = New System.Drawing.Size(272, 35)
         Me.Panel318.TabIndex = 0
         '
-        'Button8
+        'BtnLogOut
         '
-        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button8.FlatAppearance.BorderSize = 0
-        Me.Button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.Button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.Button8.Location = New System.Drawing.Point(1, 1)
-        Me.Button8.Margin = New System.Windows.Forms.Padding(1)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(270, 33)
-        Me.Button8.TabIndex = 6
-        Me.Button8.Text = "Log Out"
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.BtnLogOut.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.BtnLogOut.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnLogOut.FlatAppearance.BorderSize = 0
+        Me.BtnLogOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.BtnLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.BtnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnLogOut.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLogOut.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.BtnLogOut.Location = New System.Drawing.Point(1, 1)
+        Me.BtnLogOut.Margin = New System.Windows.Forms.Padding(1)
+        Me.BtnLogOut.Name = "BtnLogOut"
+        Me.BtnLogOut.Size = New System.Drawing.Size(270, 33)
+        Me.BtnLogOut.TabIndex = 6
+        Me.BtnLogOut.Text = "Log Out"
+        Me.BtnLogOut.UseVisualStyleBackColor = False
         '
         'tblSection1
         '
@@ -1937,30 +1937,30 @@ Partial Class POSSystem
         'Panel59
         '
         Me.Panel59.BackColor = System.Drawing.Color.Black
-        Me.Panel59.Controls.Add(Me.Button1)
+        Me.Panel59.Controls.Add(Me.BtnRemove)
         Me.Panel59.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel59.Location = New System.Drawing.Point(1, 1)
         Me.Panel59.Name = "Panel59"
         Me.Panel59.Size = New System.Drawing.Size(244, 21)
         Me.Panel59.TabIndex = 8
         '
-        'Button1
+        'BtnRemove
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.Button1.Location = New System.Drawing.Point(0, 0)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(1)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(244, 21)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Delete"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.BtnRemove.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.BtnRemove.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnRemove.FlatAppearance.BorderSize = 0
+        Me.BtnRemove.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.BtnRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.BtnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnRemove.Font = New System.Drawing.Font("Consolas", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRemove.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.BtnRemove.Location = New System.Drawing.Point(0, 0)
+        Me.BtnRemove.Margin = New System.Windows.Forms.Padding(1)
+        Me.BtnRemove.Name = "BtnRemove"
+        Me.BtnRemove.Size = New System.Drawing.Size(244, 21)
+        Me.BtnRemove.TabIndex = 6
+        Me.BtnRemove.Text = "Delete"
+        Me.BtnRemove.UseVisualStyleBackColor = False
         '
         'Panel51
         '
@@ -3857,7 +3857,7 @@ Partial Class POSSystem
         Me.pnlMiscPage.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlMiscPage.Name = "pnlMiscPage"
         Me.pnlMiscPage.Padding = New System.Windows.Forms.Padding(5)
-        Me.pnlMiscPage.Size = New System.Drawing.Size(578, 187)
+        Me.pnlMiscPage.Size = New System.Drawing.Size(578, 351)
         Me.pnlMiscPage.TabIndex = 4
         '
         'Panel169
@@ -5744,7 +5744,7 @@ Partial Class POSSystem
     Friend WithEvents Panel54 As Panel
     Friend WithEvents Panel55 As Panel
     Friend WithEvents Panel59 As Panel
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnRemove As Button
     Friend WithEvents Panel51 As Panel
     Friend WithEvents Panel52 As Panel
     Friend WithEvents Panel53 As Panel
@@ -6090,5 +6090,5 @@ Partial Class POSSystem
     Friend WithEvents Label33 As Label
     Friend WithEvents Panel317 As Panel
     Friend WithEvents Panel318 As Panel
-    Friend WithEvents Button8 As Button
+    Friend WithEvents BtnLogOut As Button
 End Class

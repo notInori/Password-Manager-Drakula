@@ -9,7 +9,6 @@ Public Class POSSystem
     Public Shared accentColor As Color = Color.FromArgb(255, 255, 255)
     Dim cDialog As New ColorDialog()
 
-    Public toggle1 As Boolean = False
     Public toggle2 As Boolean = False
     Public toggle3 As Boolean = False
     Public toggle4 As Boolean = False
@@ -50,13 +49,13 @@ Public Class POSSystem
 
     'UI Library Functions'
 
-    Private Sub input_MouseEnter(sender As Object, e As EventArgs) Handles input.MouseEnter, Panel35.MouseEnter, Panel34.MouseEnter, Panel33.MouseEnter, Panel32.MouseEnter, btnButton.MouseEnter, Button1.MouseEnter, btnClear.MouseEnter, ListBox1.MouseEnter, Panel93.MouseEnter, Panel94.MouseEnter, Panel95.MouseEnter, Panel96.MouseEnter, Label3.MouseEnter
+    Private Sub input_MouseEnter(sender As Object, e As EventArgs) Handles input.MouseEnter, Panel35.MouseEnter, Panel34.MouseEnter, Panel33.MouseEnter, Panel32.MouseEnter, btnButton.MouseEnter, BtnRemove.MouseEnter, btnClear.MouseEnter, ListBox1.MouseEnter, Panel93.MouseEnter, Panel94.MouseEnter, Panel95.MouseEnter, Panel96.MouseEnter, Label3.MouseEnter
 
         If sender Is input Or sender Is Panel35 Or sender Is Panel34 Or sender Is Panel33 Or sender Is Panel32 Then
             Panel33.BackColor = accentColor
         ElseIf sender Is btnButton Then
             Panel4.BackColor = accentColor
-        ElseIf sender Is Button1 Then
+        ElseIf sender Is BtnRemove Then
             Panel54.BackColor = accentColor
         ElseIf sender Is btnClear Then
             Panel51.BackColor = accentColor
@@ -69,7 +68,7 @@ Public Class POSSystem
         End If
     End Sub
 
-    Private Sub input_MouseLeave(sender As Object, e As EventArgs) Handles input.MouseLeave, Panel35.MouseLeave, Panel34.MouseLeave, Panel33.MouseLeave, Panel32.MouseLeave, btnButton.MouseLeave, Button1.MouseLeave, btnClear.MouseLeave, ListBox1.MouseLeave, Panel93.MouseLeave, Panel94.MouseLeave, Panel95.MouseLeave, Panel96.MouseLeave, Label3.MouseLeave
+    Private Sub input_MouseLeave(sender As Object, e As EventArgs) Handles input.MouseLeave, Panel35.MouseLeave, Panel34.MouseLeave, Panel33.MouseLeave, Panel32.MouseLeave, btnButton.MouseLeave, BtnRemove.MouseLeave, btnClear.MouseLeave, ListBox1.MouseLeave, Panel93.MouseLeave, Panel94.MouseLeave, Panel95.MouseLeave, Panel96.MouseLeave, Label3.MouseLeave
         If sender Is input Or sender Is Panel35 Or sender Is Panel34 Or sender Is Panel33 Or sender Is Panel32 Then
             If input.Focused() Then
             Else
@@ -77,7 +76,7 @@ Public Class POSSystem
             End If
         ElseIf sender Is btnButton Then
             Panel4.BackColor = Color.FromArgb(0, 0, 0)
-        ElseIf sender Is Button1 Then
+        ElseIf sender Is BtnRemove Then
             Panel54.BackColor = Color.FromArgb(0, 0, 0)
         ElseIf sender Is btnClear Then
             Panel51.BackColor = Color.FromArgb(0, 0, 0)
@@ -88,7 +87,7 @@ Public Class POSSystem
         End If
     End Sub
 
-    Private Sub panel_MouseEnter(sender As Object, e As EventArgs) Handles Panel164.MouseEnter, Panel165.MouseEnter, Panel166.MouseEnter, Panel167.MouseEnter, Panel134.MouseEnter, Panel133.MouseEnter, Panel91.MouseEnter, Panel90.MouseEnter, Label12.MouseEnter, Panel136.MouseEnter, Panel137.MouseEnter, Panel138.MouseEnter, Panel139.MouseEnter, Label13.MouseEnter, Label24.MouseEnter
+    Private Sub controlHighlight_mouseEnter(sender As Object, e As EventArgs) Handles Panel164.MouseEnter, Panel165.MouseEnter, Panel166.MouseEnter, Panel167.MouseEnter, Panel134.MouseEnter, Panel133.MouseEnter, Panel91.MouseEnter, Panel90.MouseEnter, Label12.MouseEnter, Panel136.MouseEnter, Panel137.MouseEnter, Panel138.MouseEnter, Panel139.MouseEnter, Label13.MouseEnter, Label24.MouseEnter
 
         If sender Is Panel164 Or sender Is Panel165 Or sender Is Panel166 Or sender Is Panel167 Or sender Is Label24 Then
             Panel164.BackColor = accentColor
@@ -101,7 +100,7 @@ Public Class POSSystem
         End If
     End Sub
 
-    Private Sub panel_MouseLeave(sender As Object, e As EventArgs) Handles Panel164.MouseLeave, Panel165.MouseLeave, Panel166.MouseLeave, Panel167.MouseLeave, Panel134.MouseLeave, Panel133.MouseLeave, Panel91.MouseLeave, Panel90.MouseLeave, Label12.MouseLeave, Panel136.MouseLeave, Panel137.MouseLeave, Panel138.MouseLeave, Panel139.MouseLeave, Label13.MouseLeave, Label24.MouseLeave
+    Private Sub controlHighlight_mouseLeave(sender As Object, e As EventArgs) Handles Panel164.MouseLeave, Panel165.MouseLeave, Panel166.MouseLeave, Panel167.MouseLeave, Panel134.MouseLeave, Panel133.MouseLeave, Panel91.MouseLeave, Panel90.MouseLeave, Label12.MouseLeave, Panel136.MouseLeave, Panel137.MouseLeave, Panel138.MouseLeave, Panel139.MouseLeave, Label13.MouseLeave, Label24.MouseLeave
 
         If sender Is Panel164 Or sender Is Panel165 Or sender Is Panel166 Or sender Is Panel167 Or sender Is Label24 Then
             If Panel169.Visible = False Then
@@ -209,62 +208,9 @@ Public Class POSSystem
         End If
     End Sub
 
-    'Application Code
-    Private Sub btnButton_Click(sender As Object, e As EventArgs) Handles btnButton.Click
-        AntiFocus()
-        If ListBox1.Items.Contains(input.Text) Or input.TextLength < 1 Then
-        Else
-            ListBox1.Items.Add(input.Text)
-        End If
-    End Sub
+    '---Application Code
 
-    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        AntiFocus()
-        ListBox1.Items.Clear()
-    End Sub
-
-    Private Sub TextBox1_Click(sender As Object, e As EventArgs)
-        Panel169.Visible = True
-    End Sub
-
-    Private Sub Label24_Click(sender As Object, e As EventArgs) Handles Label24.Click
-        If Panel169.Visible = False Then
-            Panel169.Visible = True
-        Else
-            Panel169.Visible = False
-        End If
-    End Sub
-
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button8.Click
-        AntiFocus()
-        Me.Hide()
-        AuthLogin.Show()
-    End Sub
-
-    'Keeps watermark updated
-    Private Sub tmrMain_Tick(sender As Object, e As EventArgs) Handles tmrMain.Tick
-        lblTitle.Text = "POS SYSTEM | [BUILD] | [USER] | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
-    End Sub
-
-    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
-        If ListBox1.GetItemText(ListBox1.SelectedItem) IsNot "" Then
-            input.Text = ListBox1.GetItemText(ListBox1.SelectedItem)
-        End If
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        AntiFocus()
-        ListBox1.Items.Remove(input.Text)
-    End Sub
-
-    'UI Accent Colour Picker
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        AntiFocus()
-        If (cDialog.ShowDialog() = DialogResult.OK) Then
-            accentColor = cDialog.Color ' update with user selected color.
-        End If
-        updateAccent()
-    End Sub
+    'Misc Tab
 
     'Example Toggle Switches
     Private Sub Toggle2_Click(sender As Object, e As EventArgs) Handles Panel93.Click, Panel94.Click, Panel95.Click, Panel96.Click, Label3.Click
@@ -307,6 +253,66 @@ Public Class POSSystem
             Me.Refresh()
         End If
     End Sub
+
+
+    Private Sub DropDown_Hide(sender As Object, e As EventArgs) Handles Label24.Click
+        If Panel169.Visible = False Then
+            Panel169.Visible = True
+        Else
+            Panel169.Visible = False
+        End If
+    End Sub
+
+    'Settings Tab 
+
+    'UI Accent Colour Picker
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        AntiFocus()
+        If (cDialog.ShowDialog() = DialogResult.OK) Then
+            accentColor = cDialog.Color ' update with user selected color.
+        End If
+        updateAccent()
+    End Sub
+
+    'User Logout Button
+    Private Sub UserLogOut(sender As Object, e As EventArgs) Handles BtnLogOut.Click
+        AntiFocus()
+        Me.Close()
+        AuthLogin.Show()
+    End Sub
+
+    'Config Buttons
+    Private Sub btnButton_Click(sender As Object, e As EventArgs) Handles btnButton.Click
+        AntiFocus()
+        If ListBox1.Items.Contains(input.Text) Or input.TextLength < 1 Then
+        Else
+            ListBox1.Items.Add(input.Text)
+        End If
+    End Sub
+
+    Private Sub BtnRemoveItem_Click(sender As Object, e As EventArgs) Handles BtnRemove.Click
+        AntiFocus()
+        ListBox1.Items.Remove(input.Text)
+    End Sub
+
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        AntiFocus()
+        ListBox1.Items.Clear()
+    End Sub
+    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
+        If ListBox1.GetItemText(ListBox1.SelectedItem) IsNot "" Then
+            input.Text = ListBox1.GetItemText(ListBox1.SelectedItem)
+        End If
+    End Sub
+
+    '---Watermark
+    'Timer Tick Update
+    Private Sub tmrMain_Tick(sender As Object, e As EventArgs) Handles tmrMain.Tick
+        lblTitle.Text = "POS SYSTEM | [BUILD] | [USER] | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
+    End Sub
+
+
+
 
     Friend Class UserDataDataSet
     End Class
