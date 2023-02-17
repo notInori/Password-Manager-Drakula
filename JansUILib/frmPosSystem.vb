@@ -178,12 +178,8 @@ Public Class POSSystem
                             If TypeOf cntrl2 Is TableLayoutPanel Then
                                 For Each cntrl3 As Control In cntrl2.Controls
                                     For Each cntrl6 As Control In cntrl3.Controls
-                                        If TypeOf cntrl6 Is Panel Then
-                                            If TypeOf cntrl6 Is Panel And cntrl6.Tag IsNot Nothing Then
-                                                If cntrl6.Tag = "colorise" Then
-                                                    cntrl6.BackColor = accentColor
-                                                End If
-                                            End If
+                                        If TypeOf cntrl6 Is Panel And cntrl6.Tag = "colorise" Then
+                                            cntrl6.BackColor = accentColor
                                         End If
                                     Next
                                 Next
