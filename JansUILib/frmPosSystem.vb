@@ -14,14 +14,12 @@ Public Class POSSystem
     Public toggle4 As Boolean = False
 
     '---Winforms Init' 
-    Private Sub TestApp_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        btnDummy.Focus()
+    Private Sub POSSystem_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
-
             cntrl.Width = 0
-
         Next
         ChangeTab(Label7, e)
+        btnDummy.Focus()
     End Sub
 
     'Titlebar Button Events'
