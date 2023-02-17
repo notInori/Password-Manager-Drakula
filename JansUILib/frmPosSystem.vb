@@ -14,9 +14,6 @@ Public Class POSSystem
     Public toggle3 As Boolean = False
     Public toggle4 As Boolean = False
 
-    Const ImaginaryBorderSize As Integer = 16
-    Private Const HTLEFT As Integer = 10, HTRIGHT As Integer = 11, HTTOP As Integer = 12, HTTOPLEFT As Integer = 13, HTTOPRIGHT As Integer = 14, HTBOTTOM As Integer = 15, HTBOTTOMLEFT As Integer = 16, HTBOTTOMRIGHT As Integer = 17
-
     'Winforms Init' 
     Private Sub TestApp_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.FormBorderStyle = FormBorderStyle.None
@@ -30,10 +27,6 @@ Public Class POSSystem
         Panel169.Visible = False
 
     End Sub
-
-    'Winforms Borderless Dragging'
-
-    'Resizeable Window Init'
 
     'Titlebar Button Events'
 
@@ -151,9 +144,11 @@ Public Class POSSystem
 
     End Sub
 
-    'Updates the accent colour in the UI
+    'Change Colourisable Accents in UI
 
     Private Sub updateAccent()
+
+        '--- Update the rest of the ui to use the new system
         Panel8.BackColor = accentColor
         Panel104.BackColor = accentColor
         Panel111.BackColor = accentColor
