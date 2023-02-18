@@ -652,7 +652,6 @@ Partial Class AuthLogin
         Me.pnlBlackOutline.Padding = New System.Windows.Forms.Padding(1)
         Me.pnlBlackOutline.Size = New System.Drawing.Size(496, 396)
         Me.pnlBlackOutline.TabIndex = 1
-
         '
         'AuthLogin
         '
@@ -701,7 +700,6 @@ Partial Class AuthLogin
         Me.Panel4.ResumeLayout(False)
         Me.pnlTitleIcons.ResumeLayout(False)
         Me.pnlBlackOutline.ResumeLayout(False)
-
         Me.ResumeLayout(False)
 
     End Sub
