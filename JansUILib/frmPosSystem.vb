@@ -28,7 +28,7 @@
             cntrl.Width = 0
         Next
         UpdateAccent()
-        ChangeTab(Label7, e)
+        ChangeTab(lblTabSel1, e)
         btnDummy.Focus()
     End Sub
 
@@ -86,7 +86,7 @@
 
     '---Tab Changing System
 
-    Private Sub ChangeTab(sender As Object, e As EventArgs) Handles Label7.Click, Label9.Click
+    Private Sub ChangeTab(sender As Object, e As EventArgs) Handles lblTabSel1.Click, lblTabSel2.Click
 
         'Hides selected tab indicator
         For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
@@ -108,12 +108,12 @@
         Next
 
         'Docks the selected tab panel and accents selected tab indicator
-        If sender Is Label7 Then
+        If sender Is lblTabSel1 Then
             pnlMainPage.Dock = DockStyle.Fill
-            sel1.Visible = True
-        ElseIf sender Is Label9 Then
+            pnlTabHighlight1.Visible = True
+        ElseIf sender Is lblTabSel2 Then
             pnlSettingsPage.Dock = DockStyle.Fill
-            sel3.Visible = True
+            pnlTabHighlight2.Visible = True
         End If
         AntiFocus()
     End Sub
@@ -162,14 +162,14 @@
         Next
 
         'Tab Label Accent Updating
-        If Label7.ForeColor = Color.FromArgb(150, 150, 150) Then
+        If lblTabSel1.ForeColor = Color.FromArgb(150, 150, 150) Then
         Else
-            Label7.ForeColor = accentColor
+            lblTabSel1.ForeColor = accentColor
         End If
 
-        If Label9.ForeColor = Color.FromArgb(150, 150, 150) Then
+        If lblTabSel2.ForeColor = Color.FromArgb(150, 150, 150) Then
         Else
-            Label9.ForeColor = accentColor
+            lblTabSel2.ForeColor = accentColor
         End If
     End Sub
 

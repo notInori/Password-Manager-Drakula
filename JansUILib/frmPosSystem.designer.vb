@@ -33,10 +33,10 @@ Partial Class POSSystem
         Me.pnlTitleIcons = New System.Windows.Forms.Panel()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.TblTabsContainer = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.sel1 = New System.Windows.Forms.Panel()
-        Me.sel3 = New System.Windows.Forms.Panel()
+        Me.lblTabSel2 = New System.Windows.Forms.Label()
+        Me.lblTabSel1 = New System.Windows.Forms.Label()
+        Me.pnlTabHighlight1 = New System.Windows.Forms.Panel()
+        Me.pnlTabHighlight2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.pnlSettingsPage = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel33 = New System.Windows.Forms.TableLayoutPanel()
@@ -705,10 +705,10 @@ Partial Class POSSystem
         Me.TblTabsContainer.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
         Me.TblTabsContainer.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TblTabsContainer.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TblTabsContainer.Controls.Add(Me.Label9, 1, 0)
-        Me.TblTabsContainer.Controls.Add(Me.Label7, 0, 0)
-        Me.TblTabsContainer.Controls.Add(Me.sel1, 0, 1)
-        Me.TblTabsContainer.Controls.Add(Me.sel3, 1, 1)
+        Me.TblTabsContainer.Controls.Add(Me.lblTabSel2, 1, 0)
+        Me.TblTabsContainer.Controls.Add(Me.lblTabSel1, 0, 0)
+        Me.TblTabsContainer.Controls.Add(Me.pnlTabHighlight1, 0, 1)
+        Me.TblTabsContainer.Controls.Add(Me.pnlTabHighlight2, 1, 1)
         Me.TblTabsContainer.Location = New System.Drawing.Point(0, 44)
         Me.TblTabsContainer.Margin = New System.Windows.Forms.Padding(0)
         Me.TblTabsContainer.Name = "TblTabsContainer"
@@ -718,59 +718,59 @@ Partial Class POSSystem
         Me.TblTabsContainer.Size = New System.Drawing.Size(289, 40)
         Me.TblTabsContainer.TabIndex = 6
         '
-        'Label9
+        'lblTabSel2
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label9.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(68, 0)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(0)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Padding = New System.Windows.Forms.Padding(5)
-        Me.Label9.Size = New System.Drawing.Size(116, 39)
-        Me.Label9.TabIndex = 12
-        Me.Label9.Text = "Settings"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblTabSel2.AutoSize = True
+        Me.lblTabSel2.BackColor = System.Drawing.Color.Transparent
+        Me.lblTabSel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lblTabSel2.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTabSel2.ForeColor = System.Drawing.Color.White
+        Me.lblTabSel2.Location = New System.Drawing.Point(68, 0)
+        Me.lblTabSel2.Margin = New System.Windows.Forms.Padding(0)
+        Me.lblTabSel2.Name = "lblTabSel2"
+        Me.lblTabSel2.Padding = New System.Windows.Forms.Padding(5)
+        Me.lblTabSel2.Size = New System.Drawing.Size(116, 39)
+        Me.lblTabSel2.TabIndex = 12
+        Me.lblTabSel2.Text = "Settings"
+        Me.lblTabSel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label7
+        'lblTabSel1
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label7.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(0, 0)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Padding = New System.Windows.Forms.Padding(5)
-        Me.Label7.Size = New System.Drawing.Size(68, 39)
-        Me.Label7.TabIndex = 10
-        Me.Label7.Text = "Main"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblTabSel1.AutoSize = True
+        Me.lblTabSel1.BackColor = System.Drawing.Color.Transparent
+        Me.lblTabSel1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.lblTabSel1.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTabSel1.ForeColor = System.Drawing.Color.White
+        Me.lblTabSel1.Location = New System.Drawing.Point(0, 0)
+        Me.lblTabSel1.Margin = New System.Windows.Forms.Padding(0)
+        Me.lblTabSel1.Name = "lblTabSel1"
+        Me.lblTabSel1.Padding = New System.Windows.Forms.Padding(5)
+        Me.lblTabSel1.Size = New System.Drawing.Size(68, 39)
+        Me.lblTabSel1.TabIndex = 10
+        Me.lblTabSel1.Text = "Main"
+        Me.lblTabSel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'sel1
+        'pnlTabHighlight1
         '
-        Me.sel1.BackColor = System.Drawing.Color.White
-        Me.sel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.sel1.Location = New System.Drawing.Point(0, 39)
-        Me.sel1.Margin = New System.Windows.Forms.Padding(0)
-        Me.sel1.Name = "sel1"
-        Me.sel1.Size = New System.Drawing.Size(68, 1)
-        Me.sel1.TabIndex = 0
-        Me.sel1.Tag = "tabHighlight"
+        Me.pnlTabHighlight1.BackColor = System.Drawing.Color.White
+        Me.pnlTabHighlight1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlTabHighlight1.Location = New System.Drawing.Point(0, 39)
+        Me.pnlTabHighlight1.Margin = New System.Windows.Forms.Padding(0)
+        Me.pnlTabHighlight1.Name = "pnlTabHighlight1"
+        Me.pnlTabHighlight1.Size = New System.Drawing.Size(68, 1)
+        Me.pnlTabHighlight1.TabIndex = 0
+        Me.pnlTabHighlight1.Tag = "tabHighlight"
         '
-        'sel3
+        'pnlTabHighlight2
         '
-        Me.sel3.BackColor = System.Drawing.Color.White
-        Me.sel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.sel3.Location = New System.Drawing.Point(68, 39)
-        Me.sel3.Margin = New System.Windows.Forms.Padding(0)
-        Me.sel3.Name = "sel3"
-        Me.sel3.Size = New System.Drawing.Size(116, 1)
-        Me.sel3.TabIndex = 6
-        Me.sel3.Tag = "tabHighlight"
+        Me.pnlTabHighlight2.BackColor = System.Drawing.Color.White
+        Me.pnlTabHighlight2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlTabHighlight2.Location = New System.Drawing.Point(68, 39)
+        Me.pnlTabHighlight2.Margin = New System.Windows.Forms.Padding(0)
+        Me.pnlTabHighlight2.Name = "pnlTabHighlight2"
+        Me.pnlTabHighlight2.Size = New System.Drawing.Size(116, 1)
+        Me.pnlTabHighlight2.TabIndex = 6
+        Me.pnlTabHighlight2.Tag = "tabHighlight"
         '
         'Panel1
         '
@@ -5061,11 +5061,11 @@ Partial Class POSSystem
     Friend WithEvents btnDummy As Button
     Friend WithEvents pnlSettingsPage As Panel
     Friend WithEvents TblTabsContainer As TableLayoutPanel
-    Friend WithEvents sel1 As Panel
-    Friend WithEvents sel3 As Panel
+    Friend WithEvents pnlTabHighlight1 As Panel
+    Friend WithEvents pnlTabHighlight2 As Panel
     Friend WithEvents Panel88 As Panel
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents lblTabSel2 As Label
+    Friend WithEvents lblTabSel1 As Label
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Panel27 As Panel
     Friend WithEvents TableLayoutPanel4 As TableLayoutPanel
