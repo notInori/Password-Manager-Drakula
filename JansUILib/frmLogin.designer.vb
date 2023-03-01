@@ -263,10 +263,10 @@ Partial Class AuthLogin
         '
         Me.lblCurrentVersion.AutoSize = True
         Me.lblCurrentVersion.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.lblCurrentVersion.Dock = System.Windows.Forms.DockStyle.Left
+        Me.lblCurrentVersion.Dock = System.Windows.Forms.DockStyle.Right
         Me.lblCurrentVersion.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCurrentVersion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.lblCurrentVersion.Location = New System.Drawing.Point(106, 0)
+        Me.lblCurrentVersion.Location = New System.Drawing.Point(356, 0)
         Me.lblCurrentVersion.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.lblCurrentVersion.Name = "lblCurrentVersion"
         Me.lblCurrentVersion.Size = New System.Drawing.Size(118, 24)
@@ -303,10 +303,10 @@ Partial Class AuthLogin
         '
         Me.lblShopName.AutoSize = True
         Me.lblShopName.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.lblShopName.Dock = System.Windows.Forms.DockStyle.Left
+        Me.lblShopName.Dock = System.Windows.Forms.DockStyle.Right
         Me.lblShopName.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblShopName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.lblShopName.Location = New System.Drawing.Point(130, 0)
+        Me.lblShopName.Location = New System.Drawing.Point(332, 0)
         Me.lblShopName.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.lblShopName.Name = "lblShopName"
         Me.lblShopName.Size = New System.Drawing.Size(142, 24)
