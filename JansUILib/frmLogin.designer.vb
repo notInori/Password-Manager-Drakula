@@ -110,7 +110,7 @@ Partial Class AuthLogin
         Me.pnlBackground.Location = New System.Drawing.Point(1, 1)
         Me.pnlBackground.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlBackground.Name = "pnlBackground"
-        Me.pnlBackground.Size = New System.Drawing.Size(494, 220)
+        Me.pnlBackground.Size = New System.Drawing.Size(494, 222)
         Me.pnlBackground.TabIndex = 0
         '
         'tblWindow
@@ -132,7 +132,7 @@ Partial Class AuthLogin
         Me.tblWindow.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1.0!))
         Me.tblWindow.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tblWindow.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.tblWindow.Size = New System.Drawing.Size(494, 220)
+        Me.tblWindow.Size = New System.Drawing.Size(494, 222)
         Me.tblWindow.TabIndex = 2
         '
         'pnlTopBar
@@ -187,7 +187,7 @@ Partial Class AuthLogin
         Me.pnlWindowContents.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlWindowContents.Name = "pnlWindowContents"
         Me.pnlWindowContents.Padding = New System.Windows.Forms.Padding(5)
-        Me.pnlWindowContents.Size = New System.Drawing.Size(494, 180)
+        Me.pnlWindowContents.Size = New System.Drawing.Size(494, 182)
         Me.pnlWindowContents.TabIndex = 3
         '
         'tblMainGroupBox
@@ -197,7 +197,7 @@ Partial Class AuthLogin
         Me.tblMainGroupBox.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tblMainGroupBox.Controls.Add(Me.Panel10, 0, 0)
         Me.tblMainGroupBox.Controls.Add(Me.pnlGroupBoxOuterBlack, 0, 1)
-        Me.tblMainGroupBox.Location = New System.Drawing.Point(10, 8)
+        Me.tblMainGroupBox.Location = New System.Drawing.Point(10, 10)
         Me.tblMainGroupBox.Margin = New System.Windows.Forms.Padding(5)
         Me.tblMainGroupBox.Name = "tblMainGroupBox"
         Me.tblMainGroupBox.RowCount = 2
@@ -653,7 +653,7 @@ Partial Class AuthLogin
         Me.pnlBlackOutline.Location = New System.Drawing.Point(2, 2)
         Me.pnlBlackOutline.Name = "pnlBlackOutline"
         Me.pnlBlackOutline.Padding = New System.Windows.Forms.Padding(1)
-        Me.pnlBlackOutline.Size = New System.Drawing.Size(496, 222)
+        Me.pnlBlackOutline.Size = New System.Drawing.Size(496, 224)
         Me.pnlBlackOutline.TabIndex = 1
         '
         'Panel1
@@ -686,7 +686,7 @@ Partial Class AuthLogin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(500, 226)
+        Me.ClientSize = New System.Drawing.Size(500, 228)
         Me.Controls.Add(Me.pnlBlackOutline)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
