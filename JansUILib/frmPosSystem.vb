@@ -140,6 +140,7 @@
             Next
         Next
 
+        'Update Color Picker UI Preview
         pnlColorPicker.BackColor = accentColor
 
         'Toggle Control Accent Updating
