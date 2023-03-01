@@ -25,10 +25,10 @@
 
     '---UI Library Fixes'
 
-    Public Sub AntiFocus() Handles ListBox1.Click, pnlMiscPage.Click, pnlSettingsPage.Click, Panel38.Click, Panel36.Click, Label4.Click
+    Public Sub AntiFocus() Handles pnlMiscPage.Click, pnlSettingsPage.Click, Panel38.Click
         Panel169.Visible = False
         btnDummy.Focus()
-        Panel33.BackColor = Color.FromArgb(0, 0, 0)
+
         Panel164.BackColor = Color.FromArgb(0, 0, 0)
 
     End Sub
@@ -36,44 +36,20 @@
     '---UI Library Functions'
 
     'Clear Textbox on Double Click
-    Private Sub ClearTextbox_DoubleClick(sender As Object, e As EventArgs) Handles input.DoubleClick
+    Private Sub ClearTextbox_DoubleClick(sender As Object, e As EventArgs)
         sender.Text = ""
     End Sub
 
     'Control Highlighting
-    Private Sub Input_MouseEnter(sender As Object, e As EventArgs) Handles input.MouseEnter, Panel35.MouseEnter, Panel34.MouseEnter, Panel33.MouseEnter, Panel32.MouseEnter, btnButton.MouseEnter, BtnRemove.MouseEnter, btnClear.MouseEnter, ListBox1.MouseEnter, Panel93.MouseEnter, Panel94.MouseEnter, Panel95.MouseEnter, Panel96.MouseEnter, Label3.MouseEnter
-        If sender Is input Or sender Is Panel35 Or sender Is Panel34 Or sender Is Panel33 Or sender Is Panel32 Then
-            Panel33.BackColor = accentColor
-        ElseIf sender Is btnButton Then
-            Panel4.BackColor = accentColor
-        ElseIf sender Is BtnRemove Then
-            Panel54.BackColor = accentColor
-        ElseIf sender Is btnClear Then
-            Panel51.BackColor = accentColor
-        ElseIf sender Is ListBox1 Or sender Is Panel58 Or sender Is Panel57 Then
-            Panel56.BackColor = accentColor
-
-        ElseIf sender Is Panel93 Or sender Is Panel94 Or sender Is Panel95 Or sender Is Panel96 Or sender Is Label3 Then
+    Private Sub Input_MouseEnter(sender As Object, e As EventArgs) Handles Panel93.MouseEnter, Panel94.MouseEnter, Panel95.MouseEnter, Panel96.MouseEnter, Label3.MouseEnter
+        If sender Is Panel93 Or sender Is Panel94 Or sender Is Panel95 Or sender Is Panel96 Or sender Is Label3 Then
             Panel93.BackColor = accentColor
 
         End If
     End Sub
 
-    Private Sub Input_MouseLeave(sender As Object, e As EventArgs) Handles input.MouseLeave, Panel35.MouseLeave, Panel34.MouseLeave, Panel33.MouseLeave, Panel32.MouseLeave, btnButton.MouseLeave, BtnRemove.MouseLeave, btnClear.MouseLeave, ListBox1.MouseLeave, Panel93.MouseLeave, Panel94.MouseLeave, Panel95.MouseLeave, Panel96.MouseLeave, Label3.MouseLeave
-        If sender Is input Or sender Is Panel35 Or sender Is Panel34 Or sender Is Panel33 Or sender Is Panel32 Then
-            If input.Focused() Then
-            Else
-                Panel33.BackColor = Color.FromArgb(0, 0, 0)
-            End If
-        ElseIf sender Is btnButton Then
-            Panel4.BackColor = Color.FromArgb(0, 0, 0)
-        ElseIf sender Is BtnRemove Then
-            Panel54.BackColor = Color.FromArgb(0, 0, 0)
-        ElseIf sender Is btnClear Then
-            Panel51.BackColor = Color.FromArgb(0, 0, 0)
-        ElseIf sender Is ListBox1 Or sender Is Panel58 Or sender Is Panel57 Then
-            Panel56.BackColor = Color.FromArgb(0, 0, 0)
-        ElseIf sender Is Panel93 Or sender Is Panel94 Or sender Is Panel95 Or sender Is Panel96 Or sender Is Label3 Then
+    Private Sub Input_MouseLeave(sender As Object, e As EventArgs) Handles Panel93.MouseLeave, Panel94.MouseLeave, Panel95.MouseLeave, Panel96.MouseLeave, Label3.MouseLeave
+        If sender Is Panel93 Or sender Is Panel94 Or sender Is Panel95 Or sender Is Panel96 Or sender Is Label3 Then
             Panel93.BackColor = Color.FromArgb(0, 0, 0)
         End If
     End Sub
@@ -257,30 +233,6 @@
         AuthLogin.Show()
     End Sub
 
-    'Config Buttons
-    Private Sub BtnButton_Click(sender As Object, e As EventArgs) Handles btnButton.Click
-        AntiFocus()
-        If ListBox1.Items.Contains(input.Text) Or input.TextLength < 1 Then
-        Else
-            ListBox1.Items.Add(input.Text)
-        End If
-    End Sub
-
-    Private Sub BtnRemoveItem_Click(sender As Object, e As EventArgs) Handles BtnRemove.Click
-        AntiFocus()
-        ListBox1.Items.Remove(input.Text)
-    End Sub
-
-    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        AntiFocus()
-        ListBox1.Items.Clear()
-    End Sub
-    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
-        If ListBox1.GetItemText(ListBox1.SelectedItem) IsNot "" Then
-            input.Text = ListBox1.GetItemText(ListBox1.SelectedItem)
-        End If
-    End Sub
-
     '---Watermark
 
     'Timer Tick Update
@@ -294,7 +246,7 @@
     Friend Class UserDataDataSetTableAdapters
     End Class
 
-    Private Sub AntiFocus(sender As Object, e As EventArgs) Handles pnlSettingsPage.Click, pnlMiscPage.Click, Panel38.Click, Panel36.Click, ListBox1.Click, Label4.Click
+    Private Sub AntiFocus(sender As Object, e As EventArgs) Handles pnlSettingsPage.Click, pnlMiscPage.Click, Panel38.Click
 
     End Sub
 End Class
