@@ -33,6 +33,11 @@
         lblCurrentUser.Text = currentUser
         UpdateAccent()
         ChangeTab(lblTabSel1, e)
+
+        'Temporary Code
+        Label4.ForeColor = Color.FromArgb(150, 150, 150)
+        Panel5.Visible = False
+
         btnDummy.Focus()
     End Sub
 
