@@ -92,7 +92,7 @@ Partial Class POSSystem
         Me.Panel253 = New System.Windows.Forms.Panel()
         Me.Panel254 = New System.Windows.Forms.Panel()
         Me.Panel314 = New System.Windows.Forms.Panel()
-        Me.Label32 = New System.Windows.Forms.Label()
+        Me.lblCurrentUser = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.Panel317 = New System.Windows.Forms.Panel()
         Me.Panel318 = New System.Windows.Forms.Panel()
@@ -1429,7 +1429,7 @@ Partial Class POSSystem
         '
         'Panel314
         '
-        Me.Panel314.Controls.Add(Me.Label32)
+        Me.Panel314.Controls.Add(Me.lblCurrentUser)
         Me.Panel314.Controls.Add(Me.Label33)
         Me.Panel314.Location = New System.Drawing.Point(13, 10)
         Me.Panel314.Margin = New System.Windows.Forms.Padding(5, 5, 5, 0)
@@ -1437,20 +1437,20 @@ Partial Class POSSystem
         Me.Panel314.Size = New System.Drawing.Size(271, 24)
         Me.Panel314.TabIndex = 21
         '
-        'Label32
+        'lblCurrentUser
         '
-        Me.Label32.AutoSize = True
-        Me.Label32.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Label32.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Label32.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.Label32.Location = New System.Drawing.Point(165, 0)
-        Me.Label32.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(106, 24)
-        Me.Label32.TabIndex = 10
-        Me.Label32.Text = "DevUser1"
-        Me.Label32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblCurrentUser.AutoSize = True
+        Me.lblCurrentUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.lblCurrentUser.Dock = System.Windows.Forms.DockStyle.Right
+        Me.lblCurrentUser.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCurrentUser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.lblCurrentUser.Location = New System.Drawing.Point(225, 0)
+        Me.lblCurrentUser.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.lblCurrentUser.Name = "lblCurrentUser"
+        Me.lblCurrentUser.Size = New System.Drawing.Size(46, 24)
+        Me.lblCurrentUser.TabIndex = 10
+        Me.lblCurrentUser.Text = "Dev"
+        Me.lblCurrentUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label33
         '
@@ -5356,7 +5356,7 @@ Partial Class POSSystem
     Friend WithEvents Panel253 As Panel
     Friend WithEvents Panel254 As Panel
     Friend WithEvents Panel314 As Panel
-    Friend WithEvents Label32 As Label
+    Friend WithEvents lblCurrentUser As Label
     Friend WithEvents Label33 As Label
     Friend WithEvents Panel317 As Panel
     Friend WithEvents Panel318 As Panel

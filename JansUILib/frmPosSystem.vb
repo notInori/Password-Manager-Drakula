@@ -27,6 +27,7 @@
         For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
             cntrl.Width = 0
         Next
+        lblCurrentUser.Text = currentUser
         UpdateAccent()
         ChangeTab(lblTabSel1, e)
         btnDummy.Focus()
