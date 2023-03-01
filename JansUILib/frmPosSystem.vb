@@ -9,9 +9,9 @@
     ReadOnly versionNumber As String = "[Dev Build]"
 
     'Toggles Variables Init
+    Public toggle1 As Boolean = False
     Public toggle2 As Boolean = False
     Public toggle3 As Boolean = False
-    Public toggle4 As Boolean = False
 
     'Databases
     Friend Class UserDataDataSet
@@ -125,13 +125,13 @@
         Panel8.BackColor = accentColor
         For Each menuscreen As Control In Panel1.Controls.OfType(Of Panel)
             For Each findGroupbox As Control In menuscreen.Controls.OfType(Of TableLayoutPanel)
-                If findGroupbox.Tag = "groupbox" Then
+                If findGroupbox.Tag = "groupbox" Then 'Finds groupboxes in menu panels
                     For Each findGroupboxHeader As Control In findGroupbox.Controls.OfType(Of Panel)
                         For Each findBarTable As Control In findGroupboxHeader.Controls.OfType(Of TableLayoutPanel)
                             For Each findBarOuter As Control In findBarTable.Controls
                                 For Each findBarInner As Control In findBarOuter.Controls
                                     If findBarInner.Tag = "colorise" Then
-                                        findBarInner.BackColor = accentColor
+                                        findBarInner.BackColor = accentColor 'Sets top border to new accent color
                                     End If
                                 Next
                             Next
@@ -142,15 +142,15 @@
         Next
 
         'Toggle Control Accent Updating
-        If toggle2 Then
+        If toggle1 Then
             Panel96.BackColor = accentColor
         End If
 
-        If toggle3 Then
+        If toggle2 Then
             Panel134.BackColor = accentColor
         End If
 
-        If toggle4 Then
+        If toggle3 Then
             Panel139.BackColor = accentColor
         End If
 
@@ -176,47 +176,48 @@
     'Misc Tab
 
     'Example Toggle Switches
-    Private Sub Toggle2_Click(sender As Object, e As EventArgs) Handles Panel93.Click, Panel94.Click, Panel95.Click, Panel96.Click, Label3.Click
+    Private Sub toggle1_Click(sender As Object, e As EventArgs) Handles Panel93.Click, Panel94.Click, Panel95.Click, Panel96.Click, Label3.Click
         btnDummy.Focus()
-        If toggle2 Then
+        If toggle1 Then
             Panel96.BackColor = Color.FromArgb(30, 30, 30)
-            toggle2 = False
+            toggle1 = False
             Label3.ForeColor = Color.FromArgb(150, 150, 150)
         Else
             Panel96.BackColor = accentColor
-            toggle2 = True
+            toggle1 = True
             Label3.ForeColor = Color.FromArgb(255, 255, 255)
             Me.Refresh()
         End If
     End Sub
 
-    Private Sub Toggle3_Click(sender As Object, e As EventArgs) Handles Panel134.Click, Panel133.Click, Panel90.Click, Label12.Click
-        If toggle3 Then
+    Private Sub toggle2_Click(sender As Object, e As EventArgs) Handles Panel134.Click, Panel133.Click, Panel90.Click, Label12.Click
+        If toggle2 Then
             Panel134.BackColor = Color.FromArgb(30, 30, 30)
-            toggle3 = False
+            toggle2 = False
             Label12.ForeColor = Color.FromArgb(150, 150, 150)
         Else
             Panel134.BackColor = accentColor
-            toggle3 = True
+            toggle2 = True
             Label12.ForeColor = Color.FromArgb(255, 255, 255)
             Me.Refresh()
         End If
 
     End Sub
 
-    Private Sub Toggle4_Click(sender As Object, e As EventArgs) Handles Panel139.Click, Panel136.Click, Panel137.Click, Panel138.Click, Panel139.Click, Label13.Click
-        If toggle4 Then
+    Private Sub toggle3_Click(sender As Object, e As EventArgs) Handles Panel139.Click, Panel136.Click, Panel137.Click, Panel138.Click, Panel139.Click, Label13.Click
+        If toggle3 Then
             Panel139.BackColor = Color.FromArgb(30, 30, 30)
-            toggle4 = False
+            toggle3 = False
             Label13.ForeColor = Color.FromArgb(150, 150, 150)
         Else
             Panel139.BackColor = accentColor
-            toggle4 = True
+            toggle3 = True
             Label13.ForeColor = Color.FromArgb(255, 255, 255)
             Me.Refresh()
         End If
     End Sub
 
+    'Hides dropdown when another control in focus
     Private Sub DropDown_Hide(sender As Object, e As EventArgs) Handles Label24.Click
         If Panel169.Visible = False Then
             Panel169.Visible = True
