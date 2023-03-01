@@ -13,7 +13,16 @@
     Public toggle3 As Boolean = False
     Public toggle4 As Boolean = False
 
+    'Databases
+    Friend Class UserDataDataSet
+    End Class
+
+    Friend Class UserDataDataSetTableAdapters
+    End Class
+
     '---Winforms Init' 
+
+    'Init tab system and load accent color
     Private Sub POSSystem_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
             cntrl.Width = 0
@@ -28,9 +37,7 @@
     Public Sub AntiFocus() Handles pnlMiscPage.Click, pnlSettingsPage.Click, Panel38.Click
         Panel169.Visible = False
         btnDummy.Focus()
-
         Panel164.BackColor = Color.FromArgb(0, 0, 0)
-
     End Sub
 
     '---UI Library Functions'
@@ -44,7 +51,6 @@
     Private Sub Input_MouseEnter(sender As Object, e As EventArgs) Handles Panel93.MouseEnter, Panel94.MouseEnter, Panel95.MouseEnter, Panel96.MouseEnter, Label3.MouseEnter
         If sender Is Panel93 Or sender Is Panel94 Or sender Is Panel95 Or sender Is Panel96 Or sender Is Label3 Then
             Panel93.BackColor = accentColor
-
         End If
     End Sub
 
@@ -78,31 +84,36 @@
         End If
     End Sub
 
-    Private Sub ChangeTab(sender As Object, e As EventArgs) Handles Label7.Click, Label8.Click, Label9.Click
+    '---Tab Changing System
+
+    Private Sub ChangeTab(sender As Object, e As EventArgs) Handles Label7.Click, Label9.Click
+
+        'Hides selected tab indicator
         For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
             cntrl.Visible = False
-
         Next
+
+        'Darkens all tab indicator text
         For Each lbl As Control In TblTabsContainer.Controls.OfType(Of Label)
             lbl.ForeColor = Color.FromArgb(150, 150, 150)
         Next
+
+        'Hightlights selected tab with accent color
+        sender.ForeColor = accentColor
+
+        'Undocks all tab panels and hides them
         For Each menuscreen As Control In Panel1.Controls.OfType(Of Panel)
             menuscreen.Dock = DockStyle.None
             menuscreen.Height = 0
         Next
 
-        sender.ForeColor = accentColor
+        'Docks the selected tab panel and accents selected tab indicator
         If sender Is Label7 Then
             pnlMainPage.Dock = DockStyle.Fill
             sel1.Visible = True
-
-        ElseIf sender Is Label8 Then
-            pnlMiscPage.Dock = DockStyle.Fill
-            sel2.Visible = True
         ElseIf sender Is Label9 Then
             pnlSettingsPage.Dock = DockStyle.Fill
             sel3.Visible = True
-
         End If
         AntiFocus()
     End Sub
@@ -130,31 +141,30 @@
             Next
         Next
 
-        'Toggle Accent Updating
+        'Toggle Control Accent Updating
         If toggle2 Then
             Panel96.BackColor = accentColor
         End If
+
         If toggle3 Then
             Panel134.BackColor = accentColor
         End If
+
         If toggle4 Then
             Panel139.BackColor = accentColor
         End If
 
-        'Tab Highlight Color Updating
+        'Tab Highlight Accent Updating
         For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
             cntrl.BackColor = accentColor
         Next
 
-        'Tab Label Color Updating
+        'Tab Label Accent Updating
         If Label7.ForeColor = Color.FromArgb(150, 150, 150) Then
         Else
             Label7.ForeColor = accentColor
         End If
-        If Label8.ForeColor = Color.FromArgb(150, 150, 150) Then
-        Else
-            Label8.ForeColor = accentColor
-        End If
+
         If Label9.ForeColor = Color.FromArgb(150, 150, 150) Then
         Else
             Label9.ForeColor = accentColor
@@ -240,13 +250,4 @@
         lblTitle.Text = "POS SYSTEM | " & versionNumber & " | " & currentUser & " | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
     End Sub
 
-    Friend Class UserDataDataSet
-    End Class
-
-    Friend Class UserDataDataSetTableAdapters
-    End Class
-
-    Private Sub AntiFocus(sender As Object, e As EventArgs) Handles pnlSettingsPage.Click, pnlMiscPage.Click, Panel38.Click
-
-    End Sub
 End Class

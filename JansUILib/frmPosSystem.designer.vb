@@ -34,10 +34,8 @@ Partial Class POSSystem
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.TblTabsContainer = New System.Windows.Forms.TableLayoutPanel()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.sel1 = New System.Windows.Forms.Panel()
-        Me.sel2 = New System.Windows.Forms.Panel()
         Me.sel3 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.pnlMiscPage = New System.Windows.Forms.Panel()
@@ -697,17 +695,15 @@ Partial Class POSSystem
         '
         'TblTabsContainer
         '
-        Me.TblTabsContainer.ColumnCount = 4
-        Me.TblTabsContainer.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TblTabsContainer.ColumnCount = 3
         Me.TblTabsContainer.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
         Me.TblTabsContainer.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
         Me.TblTabsContainer.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TblTabsContainer.Controls.Add(Me.Label9, 2, 0)
-        Me.TblTabsContainer.Controls.Add(Me.Label8, 1, 0)
+        Me.TblTabsContainer.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TblTabsContainer.Controls.Add(Me.Label9, 1, 0)
         Me.TblTabsContainer.Controls.Add(Me.Label7, 0, 0)
         Me.TblTabsContainer.Controls.Add(Me.sel1, 0, 1)
-        Me.TblTabsContainer.Controls.Add(Me.sel2, 1, 1)
-        Me.TblTabsContainer.Controls.Add(Me.sel3, 2, 1)
+        Me.TblTabsContainer.Controls.Add(Me.sel3, 1, 1)
         Me.TblTabsContainer.Location = New System.Drawing.Point(0, 44)
         Me.TblTabsContainer.Margin = New System.Windows.Forms.Padding(0)
         Me.TblTabsContainer.Name = "TblTabsContainer"
@@ -724,7 +720,7 @@ Partial Class POSSystem
         Me.Label9.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label9.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(136, 0)
+        Me.Label9.Location = New System.Drawing.Point(68, 0)
         Me.Label9.Margin = New System.Windows.Forms.Padding(0)
         Me.Label9.Name = "Label9"
         Me.Label9.Padding = New System.Windows.Forms.Padding(5)
@@ -732,22 +728,6 @@ Partial Class POSSystem
         Me.Label9.TabIndex = 12
         Me.Label9.Text = "Settings"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label8.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(68, 0)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Padding = New System.Windows.Forms.Padding(5)
-        Me.Label8.Size = New System.Drawing.Size(68, 39)
-        Me.Label8.TabIndex = 11
-        Me.Label8.Text = "Misc"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label7
         '
@@ -776,22 +756,11 @@ Partial Class POSSystem
         Me.sel1.TabIndex = 0
         Me.sel1.Tag = "tabHighlight"
         '
-        'sel2
-        '
-        Me.sel2.BackColor = System.Drawing.Color.White
-        Me.sel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.sel2.Location = New System.Drawing.Point(68, 39)
-        Me.sel2.Margin = New System.Windows.Forms.Padding(0)
-        Me.sel2.Name = "sel2"
-        Me.sel2.Size = New System.Drawing.Size(68, 1)
-        Me.sel2.TabIndex = 6
-        Me.sel2.Tag = "tabHighlight"
-        '
         'sel3
         '
         Me.sel3.BackColor = System.Drawing.Color.White
         Me.sel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.sel3.Location = New System.Drawing.Point(136, 39)
+        Me.sel3.Location = New System.Drawing.Point(68, 39)
         Me.sel3.Margin = New System.Windows.Forms.Padding(0)
         Me.sel3.Name = "sel3"
         Me.sel3.Size = New System.Drawing.Size(116, 1)
@@ -5058,11 +5027,9 @@ Partial Class POSSystem
     Friend WithEvents pnlSettingsPage As Panel
     Friend WithEvents TblTabsContainer As TableLayoutPanel
     Friend WithEvents sel1 As Panel
-    Friend WithEvents sel2 As Panel
     Friend WithEvents sel3 As Panel
     Friend WithEvents Panel88 As Panel
     Friend WithEvents Label9 As Label
-    Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Panel27 As Panel
