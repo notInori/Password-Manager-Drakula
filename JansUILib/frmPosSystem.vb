@@ -141,6 +141,8 @@
             Next
         Next
 
+        pnlColorPicker.BackColor = accentColor
+
         'Toggle Control Accent Updating
         If toggle1 Then
             Panel96.BackColor = accentColor
@@ -229,7 +231,7 @@
     'Settings Tab 
 
     'UI Accent Colour Picker
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button7.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles pnlColorPicker.Click
         AntiFocus()
         If (cDialog.ShowDialog() = DialogResult.OK) Then
             accentColor = cDialog.Color ' update with user selected color.

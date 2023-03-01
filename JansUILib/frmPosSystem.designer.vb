@@ -62,9 +62,12 @@ Partial Class POSSystem
         Me.Panel333 = New System.Windows.Forms.Panel()
         Me.Panel334 = New System.Windows.Forms.Panel()
         Me.Panel335 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel337 = New System.Windows.Forms.Panel()
         Me.Panel338 = New System.Windows.Forms.Panel()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.pnlColorPicker = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel16 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel236 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel17 = New System.Windows.Forms.TableLayoutPanel()
@@ -387,8 +390,10 @@ Partial Class POSSystem
         Me.Panel333.SuspendLayout()
         Me.Panel334.SuspendLayout()
         Me.Panel335.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.Panel337.SuspendLayout()
         Me.Panel338.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.TableLayoutPanel16.SuspendLayout()
         Me.Panel236.SuspendLayout()
         Me.TableLayoutPanel17.SuspendLayout()
@@ -770,8 +775,8 @@ Partial Class POSSystem
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.pnlSettingsPage)
-        Me.Panel1.Controls.Add(Me.pnlMiscPage)
         Me.Panel1.Controls.Add(Me.pnlMainPage)
+        Me.Panel1.Controls.Add(Me.pnlMiscPage)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 85)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
@@ -784,11 +789,12 @@ Partial Class POSSystem
         Me.pnlSettingsPage.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel33)
         Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel16)
-        Me.pnlSettingsPage.Location = New System.Drawing.Point(72, 250)
+        Me.pnlSettingsPage.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlSettingsPage.Location = New System.Drawing.Point(0, 0)
         Me.pnlSettingsPage.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlSettingsPage.Name = "pnlSettingsPage"
         Me.pnlSettingsPage.Padding = New System.Windows.Forms.Padding(5)
-        Me.pnlSettingsPage.Size = New System.Drawing.Size(1290, 74)
+        Me.pnlSettingsPage.Size = New System.Drawing.Size(1434, 809)
         Me.pnlSettingsPage.TabIndex = 5
         '
         'TableLayoutPanel33
@@ -805,7 +811,7 @@ Partial Class POSSystem
         Me.TableLayoutPanel33.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24.0!))
         Me.TableLayoutPanel33.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel33.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel33.Size = New System.Drawing.Size(300, 85)
+        Me.TableLayoutPanel33.Size = New System.Drawing.Size(300, 71)
         Me.TableLayoutPanel33.TabIndex = 20
         Me.TableLayoutPanel33.Tag = "groupbox"
         '
@@ -1033,7 +1039,7 @@ Partial Class POSSystem
         Me.Panel332.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel332.Name = "Panel332"
         Me.Panel332.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel332.Size = New System.Drawing.Size(300, 61)
+        Me.Panel332.Size = New System.Drawing.Size(300, 47)
         Me.Panel332.TabIndex = 16
         '
         'Panel333
@@ -1045,7 +1051,7 @@ Partial Class POSSystem
         Me.Panel333.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel333.Name = "Panel333"
         Me.Panel333.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel333.Size = New System.Drawing.Size(298, 60)
+        Me.Panel333.Size = New System.Drawing.Size(298, 46)
         Me.Panel333.TabIndex = 17
         '
         'Panel334
@@ -1057,60 +1063,87 @@ Partial Class POSSystem
         Me.Panel334.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel334.Name = "Panel334"
         Me.Panel334.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel334.Size = New System.Drawing.Size(296, 59)
+        Me.Panel334.Size = New System.Drawing.Size(296, 45)
         Me.Panel334.TabIndex = 17
         '
         'Panel335
         '
         Me.Panel335.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Panel335.Controls.Add(Me.Panel337)
+        Me.Panel335.Controls.Add(Me.Panel4)
         Me.Panel335.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel335.Location = New System.Drawing.Point(1, 0)
         Me.Panel335.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel335.Name = "Panel335"
         Me.Panel335.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel335.Size = New System.Drawing.Size(294, 58)
+        Me.Panel335.Size = New System.Drawing.Size(294, 44)
         Me.Panel335.TabIndex = 17
+        '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.Label5)
+        Me.Panel4.Controls.Add(Me.Panel337)
+        Me.Panel4.Location = New System.Drawing.Point(10, 8)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(5, 5, 5, 0)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(274, 24)
+        Me.Panel4.TabIndex = 22
+        '
+        'Label5
+        '
+        Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.Label5.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Label5.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(0, 0)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(161, 24)
+        Me.Label5.TabIndex = 9
+        Me.Label5.Text = "Accent Color"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Panel337
         '
         Me.Panel337.BackColor = System.Drawing.Color.Black
         Me.Panel337.Controls.Add(Me.Panel338)
-        Me.Panel337.Location = New System.Drawing.Point(10, 10)
-        Me.Panel337.Margin = New System.Windows.Forms.Padding(5)
+        Me.Panel337.Location = New System.Drawing.Point(235, 0)
+        Me.Panel337.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel337.Name = "Panel337"
         Me.Panel337.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel337.Size = New System.Drawing.Size(274, 37)
+        Me.Panel337.Size = New System.Drawing.Size(37, 24)
         Me.Panel337.TabIndex = 19
         '
         'Panel338
         '
         Me.Panel338.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
-        Me.Panel338.Controls.Add(Me.Button7)
+        Me.Panel338.Controls.Add(Me.Panel2)
         Me.Panel338.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel338.Location = New System.Drawing.Point(1, 1)
         Me.Panel338.Name = "Panel338"
         Me.Panel338.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel338.Size = New System.Drawing.Size(272, 35)
+        Me.Panel338.Size = New System.Drawing.Size(35, 22)
         Me.Panel338.TabIndex = 0
         '
-        'Button7
+        'Panel2
         '
-        Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button7.FlatAppearance.BorderSize = 0
-        Me.Button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.Button7.Location = New System.Drawing.Point(1, 1)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(1)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(270, 33)
-        Me.Button7.TabIndex = 6
-        Me.Button7.Text = "Accent Color"
-        Me.Button7.UseVisualStyleBackColor = False
+        Me.Panel2.BackColor = System.Drawing.Color.Black
+        Me.Panel2.Controls.Add(Me.pnlColorPicker)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel2.Location = New System.Drawing.Point(1, 1)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Padding = New System.Windows.Forms.Padding(1)
+        Me.Panel2.Size = New System.Drawing.Size(33, 20)
+        Me.Panel2.TabIndex = 1
+        '
+        'pnlColorPicker
+        '
+        Me.pnlColorPicker.BackColor = System.Drawing.Color.DarkGray
+        Me.pnlColorPicker.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlColorPicker.Location = New System.Drawing.Point(1, 1)
+        Me.pnlColorPicker.Name = "pnlColorPicker"
+        Me.pnlColorPicker.Padding = New System.Windows.Forms.Padding(1)
+        Me.pnlColorPicker.Size = New System.Drawing.Size(31, 18)
+        Me.pnlColorPicker.TabIndex = 2
         '
         'TableLayoutPanel16
         '
@@ -1119,7 +1152,7 @@ Partial Class POSSystem
         Me.TableLayoutPanel16.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel16.Controls.Add(Me.Panel236, 0, 0)
         Me.TableLayoutPanel16.Controls.Add(Me.Panel251, 0, 1)
-        Me.TableLayoutPanel16.Location = New System.Drawing.Point(10, 102)
+        Me.TableLayoutPanel16.Location = New System.Drawing.Point(10, 88)
         Me.TableLayoutPanel16.Margin = New System.Windows.Forms.Padding(5)
         Me.TableLayoutPanel16.Name = "TableLayoutPanel16"
         Me.TableLayoutPanel16.RowCount = 2
@@ -3027,7 +3060,7 @@ Partial Class POSSystem
         Me.pnlMainPage.Controls.Add(Me.TableLayoutPanel13)
         Me.pnlMainPage.Controls.Add(Me.tblGroupBox)
         Me.pnlMainPage.Controls.Add(Me.Button2)
-        Me.pnlMainPage.Location = New System.Drawing.Point(519, 365)
+        Me.pnlMainPage.Location = New System.Drawing.Point(331, 217)
         Me.pnlMainPage.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlMainPage.Name = "pnlMainPage"
         Me.pnlMainPage.Padding = New System.Windows.Forms.Padding(5)
@@ -4797,8 +4830,10 @@ Partial Class POSSystem
         Me.Panel333.ResumeLayout(False)
         Me.Panel334.ResumeLayout(False)
         Me.Panel335.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
         Me.Panel337.ResumeLayout(False)
         Me.Panel338.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
         Me.TableLayoutPanel16.ResumeLayout(False)
         Me.Panel236.ResumeLayout(False)
         Me.Panel236.PerformLayout()
@@ -5297,9 +5332,6 @@ Partial Class POSSystem
     Friend WithEvents Panel333 As Panel
     Friend WithEvents Panel334 As Panel
     Friend WithEvents Panel335 As Panel
-    Friend WithEvents Panel337 As Panel
-    Friend WithEvents Panel338 As Panel
-    Friend WithEvents Button7 As Button
     Friend WithEvents TableLayoutPanel16 As TableLayoutPanel
     Friend WithEvents Panel236 As Panel
     Friend WithEvents TableLayoutPanel17 As TableLayoutPanel
@@ -5352,4 +5384,10 @@ Partial Class POSSystem
     Friend WithEvents Panel188 As Panel
     Friend WithEvents Panel189 As Panel
     Friend WithEvents Panel190 As Panel
+    Friend WithEvents Panel337 As Panel
+    Friend WithEvents Panel338 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents pnlColorPicker As Panel
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label5 As Label
 End Class
