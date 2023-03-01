@@ -2,12 +2,14 @@
 
     '---Init'
 
-    'Variable Init'
+    'Client Info Variables
+    Public Shared ReadOnly businessName As String = ""
+    Public Shared ReadOnly versionNumber As String = "[Dev Build]"
+    ReadOnly currentUser As String = "Dev"
+
+    'Variables Init'
     Public Shared accentColor As Color = Color.FromArgb(255, 255, 255)
     ReadOnly cDialog As New ColorDialog()
-    ReadOnly currentUser As String = "Dev"
-    Public Shared ReadOnly versionNumber As String = "[Dev Build]"
-    Public Shared ReadOnly businessName As String = ""
 
     'Toggles Variables Init
     Public toggle1 As Boolean = False
