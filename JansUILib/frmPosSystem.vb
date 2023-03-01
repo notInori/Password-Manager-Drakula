@@ -6,7 +6,8 @@
     Public Shared accentColor As Color = Color.FromArgb(255, 255, 255)
     ReadOnly cDialog As New ColorDialog()
     ReadOnly currentUser As String = "Dev"
-    ReadOnly versionNumber As String = "[Dev Build]"
+    Public Shared ReadOnly versionNumber As String = "[Dev Build]"
+    Public Shared ReadOnly businessName As String = ""
 
     'Toggles Variables Init
     Public toggle1 As Boolean = False

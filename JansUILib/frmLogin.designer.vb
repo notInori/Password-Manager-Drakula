@@ -29,7 +29,16 @@ Partial Class AuthLogin
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.pnlTitleIcons = New System.Windows.Forms.Panel()
+        Me.lblTitle = New System.Windows.Forms.Label()
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.pnlWindowContents = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.lblCurrentVersion = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel314 = New System.Windows.Forms.Panel()
+        Me.lblShopName = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
         Me.tblMainGroupBox = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
@@ -64,16 +73,16 @@ Partial Class AuthLogin
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.btnDummy = New System.Windows.Forms.Button()
-        Me.pnlTitleIcons = New System.Windows.Forms.Panel()
-        Me.btnExit = New System.Windows.Forms.Button()
-        Me.pnlBlackOutline = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.lblTitle = New System.Windows.Forms.Label()
+        Me.pnlBlackOutline = New System.Windows.Forms.Panel()
         Me.pnlBackground.SuspendLayout()
         Me.tblWindow.SuspendLayout()
         Me.pnlTopBar.SuspendLayout()
         Me.Panel7.SuspendLayout()
+        Me.pnlTitleIcons.SuspendLayout()
         Me.pnlWindowContents.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        Me.Panel314.SuspendLayout()
         Me.tblMainGroupBox.SuspendLayout()
         Me.Panel10.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -97,7 +106,6 @@ Partial Class AuthLogin
         Me.pnlUsernameInputBackground.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        Me.pnlTitleIcons.SuspendLayout()
         Me.pnlBlackOutline.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -110,7 +118,7 @@ Partial Class AuthLogin
         Me.pnlBackground.Location = New System.Drawing.Point(1, 1)
         Me.pnlBackground.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlBackground.Name = "pnlBackground"
-        Me.pnlBackground.Size = New System.Drawing.Size(494, 222)
+        Me.pnlBackground.Size = New System.Drawing.Size(494, 289)
         Me.pnlBackground.TabIndex = 0
         '
         'tblWindow
@@ -132,7 +140,7 @@ Partial Class AuthLogin
         Me.tblWindow.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1.0!))
         Me.tblWindow.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tblWindow.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.tblWindow.Size = New System.Drawing.Size(494, 222)
+        Me.tblWindow.Size = New System.Drawing.Size(494, 289)
         Me.tblWindow.TabIndex = 2
         '
         'pnlTopBar
@@ -178,8 +186,59 @@ Partial Class AuthLogin
         Me.Panel8.Size = New System.Drawing.Size(492, 1)
         Me.Panel8.TabIndex = 3
         '
+        'pnlTitleIcons
+        '
+        Me.pnlTitleIcons.AutoSize = True
+        Me.pnlTitleIcons.BackColor = System.Drawing.Color.Transparent
+        Me.pnlTitleIcons.Controls.Add(Me.lblTitle)
+        Me.pnlTitleIcons.Controls.Add(Me.btnExit)
+        Me.pnlTitleIcons.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlTitleIcons.Location = New System.Drawing.Point(0, 4)
+        Me.pnlTitleIcons.Margin = New System.Windows.Forms.Padding(0)
+        Me.pnlTitleIcons.MinimumSize = New System.Drawing.Size(0, 35)
+        Me.pnlTitleIcons.Name = "pnlTitleIcons"
+        Me.pnlTitleIcons.Size = New System.Drawing.Size(494, 35)
+        Me.pnlTitleIcons.TabIndex = 1
+        '
+        'lblTitle
+        '
+        Me.lblTitle.BackColor = System.Drawing.Color.Transparent
+        Me.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lblTitle.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.ForeColor = System.Drawing.Color.White
+        Me.lblTitle.Location = New System.Drawing.Point(0, 0)
+        Me.lblTitle.Margin = New System.Windows.Forms.Padding(0)
+        Me.lblTitle.Name = "lblTitle"
+        Me.lblTitle.Padding = New System.Windows.Forms.Padding(5)
+        Me.lblTitle.Size = New System.Drawing.Size(459, 35)
+        Me.lblTitle.TabIndex = 14
+        Me.lblTitle.Text = "POS System Loader"
+        Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'btnExit
+        '
+        Me.btnExit.BackColor = System.Drawing.Color.Transparent
+        Me.btnExit.Dock = System.Windows.Forms.DockStyle.Right
+        Me.btnExit.FlatAppearance.BorderSize = 0
+        Me.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
+        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExit.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.btnExit.Location = New System.Drawing.Point(459, 0)
+        Me.btnExit.MaximumSize = New System.Drawing.Size(35, 35)
+        Me.btnExit.MinimumSize = New System.Drawing.Size(35, 35)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(35, 35)
+        Me.btnExit.TabIndex = 0
+        Me.btnExit.TabStop = False
+        Me.btnExit.Text = "✕"
+        Me.btnExit.UseVisualStyleBackColor = False
+        '
         'pnlWindowContents
         '
+        Me.pnlWindowContents.Controls.Add(Me.Panel5)
+        Me.pnlWindowContents.Controls.Add(Me.Panel314)
         Me.pnlWindowContents.Controls.Add(Me.tblMainGroupBox)
         Me.pnlWindowContents.Controls.Add(Me.btnDummy)
         Me.pnlWindowContents.Dock = System.Windows.Forms.DockStyle.Fill
@@ -187,8 +246,88 @@ Partial Class AuthLogin
         Me.pnlWindowContents.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlWindowContents.Name = "pnlWindowContents"
         Me.pnlWindowContents.Padding = New System.Windows.Forms.Padding(5)
-        Me.pnlWindowContents.Size = New System.Drawing.Size(494, 182)
+        Me.pnlWindowContents.Size = New System.Drawing.Size(494, 249)
         Me.pnlWindowContents.TabIndex = 3
+        '
+        'Panel5
+        '
+        Me.Panel5.Controls.Add(Me.lblCurrentVersion)
+        Me.Panel5.Controls.Add(Me.Label2)
+        Me.Panel5.Location = New System.Drawing.Point(10, 44)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(5)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(474, 24)
+        Me.Panel5.TabIndex = 23
+        '
+        'lblCurrentVersion
+        '
+        Me.lblCurrentVersion.AutoSize = True
+        Me.lblCurrentVersion.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.lblCurrentVersion.Dock = System.Windows.Forms.DockStyle.Left
+        Me.lblCurrentVersion.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCurrentVersion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.lblCurrentVersion.Location = New System.Drawing.Point(106, 0)
+        Me.lblCurrentVersion.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.lblCurrentVersion.Name = "lblCurrentVersion"
+        Me.lblCurrentVersion.Size = New System.Drawing.Size(118, 24)
+        Me.lblCurrentVersion.TabIndex = 10
+        Me.lblCurrentVersion.Text = "[VERSION]"
+        Me.lblCurrentVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.Label2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Label2.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(0, 0)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(106, 24)
+        Me.Label2.TabIndex = 9
+        Me.Label2.Text = "Version:"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Panel314
+        '
+        Me.Panel314.Controls.Add(Me.lblShopName)
+        Me.Panel314.Controls.Add(Me.Label33)
+        Me.Panel314.Location = New System.Drawing.Point(10, 10)
+        Me.Panel314.Margin = New System.Windows.Forms.Padding(5)
+        Me.Panel314.Name = "Panel314"
+        Me.Panel314.Size = New System.Drawing.Size(474, 24)
+        Me.Panel314.TabIndex = 22
+        '
+        'lblShopName
+        '
+        Me.lblShopName.AutoSize = True
+        Me.lblShopName.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.lblShopName.Dock = System.Windows.Forms.DockStyle.Left
+        Me.lblShopName.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblShopName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.lblShopName.Location = New System.Drawing.Point(130, 0)
+        Me.lblShopName.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.lblShopName.Name = "lblShopName"
+        Me.lblShopName.Size = New System.Drawing.Size(142, 24)
+        Me.lblShopName.TabIndex = 10
+        Me.lblShopName.Text = "[SHOP NAME]"
+        Me.lblShopName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.Label33.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Label33.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.Label33.Location = New System.Drawing.Point(0, 0)
+        Me.Label33.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(130, 24)
+        Me.Label33.TabIndex = 9
+        Me.Label33.Text = "Shop Name:"
+        Me.Label33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'tblMainGroupBox
         '
@@ -197,7 +336,7 @@ Partial Class AuthLogin
         Me.tblMainGroupBox.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tblMainGroupBox.Controls.Add(Me.Panel10, 0, 0)
         Me.tblMainGroupBox.Controls.Add(Me.pnlGroupBoxOuterBlack, 0, 1)
-        Me.tblMainGroupBox.Location = New System.Drawing.Point(10, 10)
+        Me.tblMainGroupBox.Location = New System.Drawing.Point(10, 78)
         Me.tblMainGroupBox.Margin = New System.Windows.Forms.Padding(5)
         Me.tblMainGroupBox.Name = "tblMainGroupBox"
         Me.tblMainGroupBox.RowCount = 2
@@ -611,51 +750,6 @@ Partial Class AuthLogin
         Me.btnDummy.TabIndex = 12
         Me.btnDummy.UseVisualStyleBackColor = False
         '
-        'pnlTitleIcons
-        '
-        Me.pnlTitleIcons.AutoSize = True
-        Me.pnlTitleIcons.BackColor = System.Drawing.Color.Transparent
-        Me.pnlTitleIcons.Controls.Add(Me.lblTitle)
-        Me.pnlTitleIcons.Controls.Add(Me.btnExit)
-        Me.pnlTitleIcons.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlTitleIcons.Location = New System.Drawing.Point(0, 4)
-        Me.pnlTitleIcons.Margin = New System.Windows.Forms.Padding(0)
-        Me.pnlTitleIcons.MinimumSize = New System.Drawing.Size(0, 35)
-        Me.pnlTitleIcons.Name = "pnlTitleIcons"
-        Me.pnlTitleIcons.Size = New System.Drawing.Size(494, 35)
-        Me.pnlTitleIcons.TabIndex = 1
-        '
-        'btnExit
-        '
-        Me.btnExit.BackColor = System.Drawing.Color.Transparent
-        Me.btnExit.Dock = System.Windows.Forms.DockStyle.Right
-        Me.btnExit.FlatAppearance.BorderSize = 0
-        Me.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
-        Me.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
-        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExit.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.btnExit.Location = New System.Drawing.Point(459, 0)
-        Me.btnExit.MaximumSize = New System.Drawing.Size(35, 35)
-        Me.btnExit.MinimumSize = New System.Drawing.Size(35, 35)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(35, 35)
-        Me.btnExit.TabIndex = 0
-        Me.btnExit.TabStop = False
-        Me.btnExit.Text = "✕"
-        Me.btnExit.UseVisualStyleBackColor = False
-        '
-        'pnlBlackOutline
-        '
-        Me.pnlBlackOutline.BackColor = System.Drawing.Color.Black
-        Me.pnlBlackOutline.Controls.Add(Me.pnlBackground)
-        Me.pnlBlackOutline.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlBlackOutline.Location = New System.Drawing.Point(2, 2)
-        Me.pnlBlackOutline.Name = "pnlBlackOutline"
-        Me.pnlBlackOutline.Padding = New System.Windows.Forms.Padding(1)
-        Me.pnlBlackOutline.Size = New System.Drawing.Size(496, 224)
-        Me.pnlBlackOutline.TabIndex = 1
-        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
@@ -666,27 +760,23 @@ Partial Class AuthLogin
         Me.Panel1.Size = New System.Drawing.Size(494, 1)
         Me.Panel1.TabIndex = 4
         '
-        'lblTitle
+        'pnlBlackOutline
         '
-        Me.lblTitle.BackColor = System.Drawing.Color.Transparent
-        Me.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblTitle.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.ForeColor = System.Drawing.Color.White
-        Me.lblTitle.Location = New System.Drawing.Point(0, 0)
-        Me.lblTitle.Margin = New System.Windows.Forms.Padding(0)
-        Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Padding = New System.Windows.Forms.Padding(5)
-        Me.lblTitle.Size = New System.Drawing.Size(459, 35)
-        Me.lblTitle.TabIndex = 14
-        Me.lblTitle.Text = "POS System Loader"
-        Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.pnlBlackOutline.BackColor = System.Drawing.Color.Black
+        Me.pnlBlackOutline.Controls.Add(Me.pnlBackground)
+        Me.pnlBlackOutline.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlBlackOutline.Location = New System.Drawing.Point(2, 2)
+        Me.pnlBlackOutline.Name = "pnlBlackOutline"
+        Me.pnlBlackOutline.Padding = New System.Windows.Forms.Padding(1)
+        Me.pnlBlackOutline.Size = New System.Drawing.Size(496, 291)
+        Me.pnlBlackOutline.TabIndex = 1
         '
         'AuthLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(500, 228)
+        Me.ClientSize = New System.Drawing.Size(500, 295)
         Me.Controls.Add(Me.pnlBlackOutline)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -699,7 +789,12 @@ Partial Class AuthLogin
         Me.tblWindow.PerformLayout()
         Me.pnlTopBar.ResumeLayout(False)
         Me.Panel7.ResumeLayout(False)
+        Me.pnlTitleIcons.ResumeLayout(False)
         Me.pnlWindowContents.ResumeLayout(False)
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
+        Me.Panel314.ResumeLayout(False)
+        Me.Panel314.PerformLayout()
         Me.tblMainGroupBox.ResumeLayout(False)
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
@@ -726,7 +821,6 @@ Partial Class AuthLogin
         Me.pnlUsernameInputBackground.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
-        Me.pnlTitleIcons.ResumeLayout(False)
         Me.pnlBlackOutline.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -777,4 +871,10 @@ Partial Class AuthLogin
     Friend WithEvents btnDummy As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents lblTitle As Label
+    Friend WithEvents Panel314 As Panel
+    Friend WithEvents lblShopName As Label
+    Friend WithEvents Label33 As Label
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents lblCurrentVersion As Label
+    Friend WithEvents Label2 As Label
 End Class
