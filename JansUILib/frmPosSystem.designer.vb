@@ -4801,6 +4801,7 @@ Partial Class POSSystem
         Me.MinimumSize = New System.Drawing.Size(300, 400)
         Me.Name = "POSSystem"
         Me.Padding = New System.Windows.Forms.Padding(2)
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "POS System"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.pnlBackground.ResumeLayout(False)
