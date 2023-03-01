@@ -366,7 +366,6 @@ Partial Class POSSystem
         Me.Panel88 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.tmrMain = New System.Windows.Forms.Timer(Me.components)
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.pnlBackground.SuspendLayout()
         Me.tblMain.SuspendLayout()
         Me.pnlTopBar.SuspendLayout()
@@ -788,7 +787,6 @@ Partial Class POSSystem
         'pnlSettingsPage
         '
         Me.pnlSettingsPage.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.pnlSettingsPage.Controls.Add(Me.Button1)
         Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel33)
         Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel16)
         Me.pnlSettingsPage.Dock = System.Windows.Forms.DockStyle.Fill
@@ -4791,15 +4789,6 @@ Partial Class POSSystem
         '
         Me.tmrMain.Enabled = True
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(500, 112)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 21
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'POSSystem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -5401,5 +5390,4 @@ Partial Class POSSystem
     Friend WithEvents pnlColorPicker As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label5 As Label
-    Friend WithEvents Button1 As Button
 End Class

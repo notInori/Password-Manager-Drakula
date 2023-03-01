@@ -43,30 +43,6 @@
 
     '---UI Library Functions'
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim intR As Int32
-        Dim intG As Int32
-        Dim intB As Int32
-        'Alpha channel is implicitly opaque (255))
-        Dim x As Integer = 0
-        For intR = 0 To 254 Step 20
-            For intG = 0 To 254 Step 20
-                For intB = 0 To 254 Step 20
-                    Threading.Thread.Sleep(10) 'change this value to change speed, 500 is 1/2 second
-                    '16.6 million loops Wow - cut that down by using Step
-                    accentColor = Color.FromArgb(intR, intG, intB)
-                    x += 1
-                Next
-            Next intG
-        Next intR
-
-    End Sub
-
-    'Clear Textbox on Double Click
-    Private Sub ClearTextbox_DoubleClick(sender As Object, e As EventArgs)
-        sender.Text = ""
-    End Sub
-
     'Control Highlighting
     Private Sub Input_MouseEnter(sender As Object, e As EventArgs) Handles Panel93.MouseEnter, Panel94.MouseEnter, Panel95.MouseEnter, Panel96.MouseEnter, Label3.MouseEnter
         If sender Is Panel93 Or sender Is Panel94 Or sender Is Panel95 Or sender Is Panel96 Or sender Is Label3 Then
