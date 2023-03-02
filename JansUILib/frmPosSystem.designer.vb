@@ -745,7 +745,7 @@ Partial Class POSSystem
         Me.TblTabsContainer.RowCount = 2
         Me.TblTabsContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TblTabsContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1.0!))
-        Me.TblTabsContainer.Size = New System.Drawing.Size(289, 40)
+        Me.TblTabsContainer.Size = New System.Drawing.Size(282, 40)
         Me.TblTabsContainer.TabIndex = 6
         '
         'lblTabSel2
