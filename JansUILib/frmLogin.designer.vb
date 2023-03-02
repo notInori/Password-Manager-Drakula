@@ -189,7 +189,7 @@ Partial Class AuthLogin
         'pnlTitleIcons
         '
         Me.pnlTitleIcons.AutoSize = True
-        Me.pnlTitleIcons.BackColor = System.Drawing.Color.Transparent
+        Me.pnlTitleIcons.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.pnlTitleIcons.Controls.Add(Me.lblTitle)
         Me.pnlTitleIcons.Controls.Add(Me.btnExit)
         Me.pnlTitleIcons.Dock = System.Windows.Forms.DockStyle.Fill
@@ -237,6 +237,7 @@ Partial Class AuthLogin
         '
         'pnlWindowContents
         '
+        Me.pnlWindowContents.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.pnlWindowContents.Controls.Add(Me.Panel5)
         Me.pnlWindowContents.Controls.Add(Me.Panel314)
         Me.pnlWindowContents.Controls.Add(Me.tblMainGroupBox)
@@ -262,7 +263,7 @@ Partial Class AuthLogin
         'lblCurrentVersion
         '
         Me.lblCurrentVersion.AutoSize = True
-        Me.lblCurrentVersion.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.lblCurrentVersion.BackColor = System.Drawing.Color.Transparent
         Me.lblCurrentVersion.Dock = System.Windows.Forms.DockStyle.Right
         Me.lblCurrentVersion.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCurrentVersion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
@@ -277,7 +278,7 @@ Partial Class AuthLogin
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label2.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
@@ -302,7 +303,7 @@ Partial Class AuthLogin
         'lblShopName
         '
         Me.lblShopName.AutoSize = True
-        Me.lblShopName.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.lblShopName.BackColor = System.Drawing.Color.Transparent
         Me.lblShopName.Dock = System.Windows.Forms.DockStyle.Right
         Me.lblShopName.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblShopName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
@@ -317,7 +318,7 @@ Partial Class AuthLogin
         'Label33
         '
         Me.Label33.AutoSize = True
-        Me.Label33.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.Label33.BackColor = System.Drawing.Color.Transparent
         Me.Label33.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label33.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label33.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
@@ -459,6 +460,7 @@ Partial Class AuthLogin
         Me.pnlMainGroupBoxTitle.Dock = System.Windows.Forms.DockStyle.Left
         Me.pnlMainGroupBoxTitle.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.pnlMainGroupBoxTitle.ForeColor = System.Drawing.Color.White
+        Me.pnlMainGroupBoxTitle.Image = Global.POSSystem.My.Resources.Resources.titlebar_background
         Me.pnlMainGroupBoxTitle.Location = New System.Drawing.Point(22, 0)
         Me.pnlMainGroupBoxTitle.Name = "pnlMainGroupBoxTitle"
         Me.pnlMainGroupBoxTitle.Size = New System.Drawing.Size(58, 24)

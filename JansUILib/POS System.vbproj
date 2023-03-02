@@ -247,6 +247,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="POS.ico" />
+    <None Include="Resources\titlebar_background .png" />
     <None Include="Resources\titlebar_background.png" />
     <Content Include="UserData.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

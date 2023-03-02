@@ -816,7 +816,7 @@ Partial Class POSSystem
         '
         'pnlMainPage
         '
-        Me.pnlMainPage.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.pnlMainPage.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.pnlMainPage.Controls.Add(Me.TableLayoutPanel30)
         Me.pnlMainPage.Controls.Add(Me.TableLayoutPanel24)
         Me.pnlMainPage.Controls.Add(Me.TableLayoutPanel27)
@@ -833,7 +833,7 @@ Partial Class POSSystem
         '
         'TableLayoutPanel30
         '
-        Me.TableLayoutPanel30.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.TableLayoutPanel30.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel30.ColumnCount = 1
         Me.TableLayoutPanel30.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel30.Controls.Add(Me.Panel274, 0, 0)
@@ -851,7 +851,7 @@ Partial Class POSSystem
         '
         'Panel274
         '
-        Me.Panel274.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.Panel274.BackColor = System.Drawing.Color.Transparent
         Me.Panel274.Controls.Add(Me.TableLayoutPanel31)
         Me.Panel274.Controls.Add(Me.Label31)
         Me.Panel274.Controls.Add(Me.TableLayoutPanel32)
@@ -864,6 +864,7 @@ Partial Class POSSystem
         '
         'TableLayoutPanel31
         '
+        Me.TableLayoutPanel31.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel31.ColumnCount = 1
         Me.TableLayoutPanel31.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel31.Controls.Add(Me.Panel275, 0, 2)
@@ -963,6 +964,7 @@ Partial Class POSSystem
         Me.Label31.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label31.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label31.ForeColor = System.Drawing.Color.White
+        Me.Label31.Image = Global.POSSystem.My.Resources.Resources.titlebar_background
         Me.Label31.Location = New System.Drawing.Point(22, 0)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(82, 24)
@@ -971,6 +973,7 @@ Partial Class POSSystem
         '
         'TableLayoutPanel32
         '
+        Me.TableLayoutPanel32.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel32.ColumnCount = 1
         Me.TableLayoutPanel32.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel32.Controls.Add(Me.Panel301, 0, 2)
@@ -1273,7 +1276,7 @@ Partial Class POSSystem
         '
         'TableLayoutPanel24
         '
-        Me.TableLayoutPanel24.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.TableLayoutPanel24.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel24.ColumnCount = 1
         Me.TableLayoutPanel24.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel24.Controls.Add(Me.Panel229, 0, 0)
@@ -1291,7 +1294,7 @@ Partial Class POSSystem
         '
         'Panel229
         '
-        Me.Panel229.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.Panel229.BackColor = System.Drawing.Color.Transparent
         Me.Panel229.Controls.Add(Me.TableLayoutPanel25)
         Me.Panel229.Controls.Add(Me.Label29)
         Me.Panel229.Controls.Add(Me.TableLayoutPanel26)
@@ -1304,6 +1307,7 @@ Partial Class POSSystem
         '
         'TableLayoutPanel25
         '
+        Me.TableLayoutPanel25.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel25.ColumnCount = 1
         Me.TableLayoutPanel25.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel25.Controls.Add(Me.Panel230, 0, 2)
@@ -1403,6 +1407,7 @@ Partial Class POSSystem
         Me.Label29.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label29.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label29.ForeColor = System.Drawing.Color.White
+        Me.Label29.Image = Global.POSSystem.My.Resources.Resources.titlebar_background
         Me.Label29.Location = New System.Drawing.Point(22, 0)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(154, 24)
@@ -1411,6 +1416,7 @@ Partial Class POSSystem
         '
         'TableLayoutPanel26
         '
+        Me.TableLayoutPanel26.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel26.ColumnCount = 1
         Me.TableLayoutPanel26.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel26.Controls.Add(Me.Panel257, 0, 2)
@@ -1635,7 +1641,7 @@ Partial Class POSSystem
         '
         'TableLayoutPanel27
         '
-        Me.TableLayoutPanel27.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.TableLayoutPanel27.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel27.ColumnCount = 1
         Me.TableLayoutPanel27.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel27.Controls.Add(Me.Panel280, 0, 0)
@@ -1653,7 +1659,7 @@ Partial Class POSSystem
         '
         'Panel280
         '
-        Me.Panel280.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.Panel280.BackColor = System.Drawing.Color.Transparent
         Me.Panel280.Controls.Add(Me.TableLayoutPanel28)
         Me.Panel280.Controls.Add(Me.Label30)
         Me.Panel280.Controls.Add(Me.TableLayoutPanel29)
@@ -1666,6 +1672,7 @@ Partial Class POSSystem
         '
         'TableLayoutPanel28
         '
+        Me.TableLayoutPanel28.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel28.ColumnCount = 1
         Me.TableLayoutPanel28.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel28.Controls.Add(Me.Panel281, 0, 2)
@@ -1765,6 +1772,7 @@ Partial Class POSSystem
         Me.Label30.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label30.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label30.ForeColor = System.Drawing.Color.White
+        Me.Label30.Image = Global.POSSystem.My.Resources.Resources.titlebar_background
         Me.Label30.Location = New System.Drawing.Point(22, 0)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(178, 24)
@@ -1773,6 +1781,7 @@ Partial Class POSSystem
         '
         'TableLayoutPanel29
         '
+        Me.TableLayoutPanel29.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel29.ColumnCount = 1
         Me.TableLayoutPanel29.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel29.Controls.Add(Me.Panel288, 0, 2)
@@ -1956,7 +1965,7 @@ Partial Class POSSystem
         '
         'TableLayoutPanel13
         '
-        Me.TableLayoutPanel13.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.TableLayoutPanel13.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel13.ColumnCount = 1
         Me.TableLayoutPanel13.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel13.Controls.Add(Me.Panel84, 0, 0)
@@ -1973,7 +1982,7 @@ Partial Class POSSystem
         '
         'Panel84
         '
-        Me.Panel84.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.Panel84.BackColor = System.Drawing.Color.Transparent
         Me.Panel84.Controls.Add(Me.TableLayoutPanel19)
         Me.Panel84.Controls.Add(Me.Label26)
         Me.Panel84.Controls.Add(Me.TableLayoutPanel20)
@@ -1986,6 +1995,7 @@ Partial Class POSSystem
         '
         'TableLayoutPanel19
         '
+        Me.TableLayoutPanel19.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel19.ColumnCount = 1
         Me.TableLayoutPanel19.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel19.Controls.Add(Me.Panel85, 0, 2)
@@ -2085,6 +2095,7 @@ Partial Class POSSystem
         Me.Label26.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label26.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.ForeColor = System.Drawing.Color.White
+        Me.Label26.Image = Global.POSSystem.My.Resources.Resources.titlebar_background
         Me.Label26.Location = New System.Drawing.Point(22, 0)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(58, 24)
@@ -2093,6 +2104,7 @@ Partial Class POSSystem
         '
         'TableLayoutPanel20
         '
+        Me.TableLayoutPanel20.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel20.ColumnCount = 1
         Me.TableLayoutPanel20.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel20.Controls.Add(Me.Panel195, 0, 2)
@@ -2405,7 +2417,7 @@ Partial Class POSSystem
         '
         'tblGroupBox
         '
-        Me.tblGroupBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.tblGroupBox.BackColor = System.Drawing.Color.Transparent
         Me.tblGroupBox.ColumnCount = 1
         Me.tblGroupBox.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tblGroupBox.Controls.Add(Me.Panel168, 0, 0)
@@ -2422,7 +2434,7 @@ Partial Class POSSystem
         '
         'Panel168
         '
-        Me.Panel168.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.Panel168.BackColor = System.Drawing.Color.Transparent
         Me.Panel168.Controls.Add(Me.TableLayoutPanel14)
         Me.Panel168.Controls.Add(Me.Label6)
         Me.Panel168.Controls.Add(Me.TableLayoutPanel15)
@@ -2435,6 +2447,7 @@ Partial Class POSSystem
         '
         'TableLayoutPanel14
         '
+        Me.TableLayoutPanel14.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel14.ColumnCount = 1
         Me.TableLayoutPanel14.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel14.Controls.Add(Me.Panel173, 0, 2)
@@ -2534,6 +2547,7 @@ Partial Class POSSystem
         Me.Label6.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label6.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Image = Global.POSSystem.My.Resources.Resources.titlebar_background
         Me.Label6.Location = New System.Drawing.Point(22, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(82, 24)
@@ -2542,6 +2556,7 @@ Partial Class POSSystem
         '
         'TableLayoutPanel15
         '
+        Me.TableLayoutPanel15.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel15.ColumnCount = 1
         Me.TableLayoutPanel15.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel15.Controls.Add(Me.Panel180, 0, 2)
@@ -2747,7 +2762,7 @@ Partial Class POSSystem
         '
         'pnlSettingsPage
         '
-        Me.pnlSettingsPage.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.pnlSettingsPage.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel33)
         Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel16)
         Me.pnlSettingsPage.Location = New System.Drawing.Point(509, 77)
@@ -2759,7 +2774,7 @@ Partial Class POSSystem
         '
         'TableLayoutPanel33
         '
-        Me.TableLayoutPanel33.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.TableLayoutPanel33.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel33.ColumnCount = 1
         Me.TableLayoutPanel33.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel33.Controls.Add(Me.Panel315, 0, 0)
@@ -2777,7 +2792,7 @@ Partial Class POSSystem
         '
         'Panel315
         '
-        Me.Panel315.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.Panel315.BackColor = System.Drawing.Color.Transparent
         Me.Panel315.Controls.Add(Me.TableLayoutPanel34)
         Me.Panel315.Controls.Add(Me.Label36)
         Me.Panel315.Controls.Add(Me.TableLayoutPanel35)
@@ -2790,6 +2805,7 @@ Partial Class POSSystem
         '
         'TableLayoutPanel34
         '
+        Me.TableLayoutPanel34.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel34.ColumnCount = 1
         Me.TableLayoutPanel34.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel34.Controls.Add(Me.Panel316, 0, 2)
@@ -2889,6 +2905,7 @@ Partial Class POSSystem
         Me.Label36.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label36.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label36.ForeColor = System.Drawing.Color.White
+        Me.Label36.Image = Global.POSSystem.My.Resources.Resources.titlebar_background
         Me.Label36.Location = New System.Drawing.Point(22, 0)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(58, 24)
@@ -2897,6 +2914,7 @@ Partial Class POSSystem
         '
         'TableLayoutPanel35
         '
+        Me.TableLayoutPanel35.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel35.ColumnCount = 1
         Me.TableLayoutPanel35.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel35.Controls.Add(Me.Panel325, 0, 2)
@@ -3075,7 +3093,7 @@ Partial Class POSSystem
         '
         'Panel338
         '
-        Me.Panel338.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
+        Me.Panel338.BackColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.Panel338.Controls.Add(Me.Panel2)
         Me.Panel338.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel338.Location = New System.Drawing.Point(1, 1)
@@ -3090,6 +3108,7 @@ Partial Class POSSystem
         Me.Panel2.Controls.Add(Me.pnlColorPicker)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(1, 1)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(1)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Padding = New System.Windows.Forms.Padding(1)
         Me.Panel2.Size = New System.Drawing.Size(33, 20)
@@ -3100,6 +3119,7 @@ Partial Class POSSystem
         Me.pnlColorPicker.BackColor = System.Drawing.Color.DarkGray
         Me.pnlColorPicker.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlColorPicker.Location = New System.Drawing.Point(1, 1)
+        Me.pnlColorPicker.Margin = New System.Windows.Forms.Padding(1)
         Me.pnlColorPicker.Name = "pnlColorPicker"
         Me.pnlColorPicker.Padding = New System.Windows.Forms.Padding(1)
         Me.pnlColorPicker.Size = New System.Drawing.Size(31, 18)
@@ -3107,7 +3127,7 @@ Partial Class POSSystem
         '
         'TableLayoutPanel16
         '
-        Me.TableLayoutPanel16.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.TableLayoutPanel16.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel16.ColumnCount = 1
         Me.TableLayoutPanel16.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel16.Controls.Add(Me.Panel236, 0, 0)
@@ -3125,7 +3145,7 @@ Partial Class POSSystem
         '
         'Panel236
         '
-        Me.Panel236.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.Panel236.BackColor = System.Drawing.Color.Transparent
         Me.Panel236.Controls.Add(Me.TableLayoutPanel17)
         Me.Panel236.Controls.Add(Me.Label1)
         Me.Panel236.Controls.Add(Me.TableLayoutPanel18)
@@ -3138,6 +3158,7 @@ Partial Class POSSystem
         '
         'TableLayoutPanel17
         '
+        Me.TableLayoutPanel17.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel17.ColumnCount = 1
         Me.TableLayoutPanel17.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel17.Controls.Add(Me.Panel237, 0, 2)
@@ -3237,6 +3258,7 @@ Partial Class POSSystem
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label1.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Image = Global.POSSystem.My.Resources.Resources.titlebar_background
         Me.Label1.Location = New System.Drawing.Point(22, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(58, 24)
@@ -3245,6 +3267,7 @@ Partial Class POSSystem
         '
         'TableLayoutPanel18
         '
+        Me.TableLayoutPanel18.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel18.ColumnCount = 1
         Me.TableLayoutPanel18.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel18.Controls.Add(Me.Panel244, 0, 2)
