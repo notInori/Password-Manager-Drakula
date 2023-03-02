@@ -141,6 +141,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CustomerDataDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmAdminPanel.designer.vb">
+      <DependentUpon>frmAdminPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminPanel.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPosSystem.designer.vb">
       <DependentUpon>frmPosSystem.vb</DependentUpon>
     </Compile>
@@ -181,6 +187,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmAdminPanel.resx">
+      <DependentUpon>frmAdminPanel.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPosSystem.resx">
       <DependentUpon>frmPosSystem.vb</DependentUpon>
     </EmbeddedResource>
