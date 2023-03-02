@@ -252,6 +252,7 @@ Partial Class AuthLogin
         '
         'Panel5
         '
+        Me.Panel5.BackColor = System.Drawing.Color.Transparent
         Me.Panel5.Controls.Add(Me.lblCurrentVersion)
         Me.Panel5.Controls.Add(Me.Label2)
         Me.Panel5.Location = New System.Drawing.Point(10, 44)
@@ -292,6 +293,7 @@ Partial Class AuthLogin
         '
         'Panel314
         '
+        Me.Panel314.BackColor = System.Drawing.Color.Transparent
         Me.Panel314.Controls.Add(Me.lblShopName)
         Me.Panel314.Controls.Add(Me.Label33)
         Me.Panel314.Location = New System.Drawing.Point(10, 10)
