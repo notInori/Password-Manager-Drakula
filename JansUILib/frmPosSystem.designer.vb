@@ -2765,7 +2765,7 @@ Partial Class POSSystem
         Me.pnlSettingsPage.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel33)
         Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel16)
-        Me.pnlSettingsPage.Location = New System.Drawing.Point(509, 77)
+        Me.pnlSettingsPage.Location = New System.Drawing.Point(301, 61)
         Me.pnlSettingsPage.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlSettingsPage.Name = "pnlSettingsPage"
         Me.pnlSettingsPage.Padding = New System.Windows.Forms.Padding(5)
@@ -3132,7 +3132,7 @@ Partial Class POSSystem
         Me.TableLayoutPanel16.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel16.Controls.Add(Me.Panel236, 0, 0)
         Me.TableLayoutPanel16.Controls.Add(Me.Panel251, 0, 1)
-        Me.TableLayoutPanel16.Location = New System.Drawing.Point(10, 88)
+        Me.TableLayoutPanel16.Location = New System.Drawing.Point(10, 86)
         Me.TableLayoutPanel16.Margin = New System.Windows.Forms.Padding(5)
         Me.TableLayoutPanel16.Name = "TableLayoutPanel16"
         Me.TableLayoutPanel16.RowCount = 2
