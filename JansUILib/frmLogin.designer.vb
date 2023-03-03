@@ -49,7 +49,6 @@ Partial Class AuthLogin
         Me.Panel23 = New System.Windows.Forms.Panel()
         Me.Panel24 = New System.Windows.Forms.Panel()
         Me.Panel25 = New System.Windows.Forms.Panel()
-        Me.pnlMainGroupBoxTitle = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel16 = New System.Windows.Forms.Panel()
@@ -75,6 +74,7 @@ Partial Class AuthLogin
         Me.btnDummy = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.pnlBlackOutline = New System.Windows.Forms.Panel()
+        Me.pnlMainGroupBoxTitle = New System.Windows.Forms.Label()
         Me.pnlBackground.SuspendLayout()
         Me.tblWindow.SuspendLayout()
         Me.pnlTopBar.SuspendLayout()
@@ -455,20 +455,6 @@ Partial Class AuthLogin
         Me.Panel25.Size = New System.Drawing.Size(393, 1)
         Me.Panel25.TabIndex = 0
         '
-        'pnlMainGroupBoxTitle
-        '
-        Me.pnlMainGroupBoxTitle.AutoSize = True
-        Me.pnlMainGroupBoxTitle.BackColor = System.Drawing.Color.Transparent
-        Me.pnlMainGroupBoxTitle.Dock = System.Windows.Forms.DockStyle.Left
-        Me.pnlMainGroupBoxTitle.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.pnlMainGroupBoxTitle.ForeColor = System.Drawing.Color.White
-        Me.pnlMainGroupBoxTitle.Image = Global.POSSystem.My.Resources.Resources.titlebar_background
-        Me.pnlMainGroupBoxTitle.Location = New System.Drawing.Point(22, 0)
-        Me.pnlMainGroupBoxTitle.Name = "pnlMainGroupBoxTitle"
-        Me.pnlMainGroupBoxTitle.Size = New System.Drawing.Size(58, 24)
-        Me.pnlMainGroupBoxTitle.TabIndex = 18
-        Me.pnlMainGroupBoxTitle.Text = "Main"
-        '
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.ColumnCount = 1
@@ -693,6 +679,7 @@ Partial Class AuthLogin
         Me.ComboBox1.ForeColor = System.Drawing.Color.White
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.ItemHeight = 24
+        Me.ComboBox1.Items.AddRange(New Object() {"Dev", "Admin"})
         Me.ComboBox1.Location = New System.Drawing.Point(-2, -1)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(446, 32)
@@ -774,6 +761,20 @@ Partial Class AuthLogin
         Me.pnlBlackOutline.Padding = New System.Windows.Forms.Padding(1)
         Me.pnlBlackOutline.Size = New System.Drawing.Size(496, 291)
         Me.pnlBlackOutline.TabIndex = 1
+        '
+        'pnlMainGroupBoxTitle
+        '
+        Me.pnlMainGroupBoxTitle.AutoSize = True
+        Me.pnlMainGroupBoxTitle.BackColor = System.Drawing.Color.Transparent
+        Me.pnlMainGroupBoxTitle.Dock = System.Windows.Forms.DockStyle.Left
+        Me.pnlMainGroupBoxTitle.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.pnlMainGroupBoxTitle.ForeColor = System.Drawing.Color.White
+        Me.pnlMainGroupBoxTitle.Image = Global.POSSystem.My.Resources.Resources.titlebar_background
+        Me.pnlMainGroupBoxTitle.Location = New System.Drawing.Point(22, 0)
+        Me.pnlMainGroupBoxTitle.Name = "pnlMainGroupBoxTitle"
+        Me.pnlMainGroupBoxTitle.Size = New System.Drawing.Size(58, 24)
+        Me.pnlMainGroupBoxTitle.TabIndex = 18
+        Me.pnlMainGroupBoxTitle.Text = "Main"
         '
         'AuthLogin
         '

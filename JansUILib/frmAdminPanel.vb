@@ -5,7 +5,7 @@
     'Client Info Variables
     Public Shared ReadOnly businessName As String = ""
     Public Shared ReadOnly versionNumber As String = "[Dev Build]"
-    ReadOnly currentUser As String = "Dev"
+    ReadOnly currentUser As String = "Admin"
 
     'Variables Init'
     Public Shared accentColor As Color = Color.FromArgb(255, 255, 255)
@@ -33,10 +33,6 @@
         lblCurrentUser.Text = currentUser
         UpdateAccent()
         ChangeTab(lblTabSel1, e)
-
-        'Temporary Code
-        Label4.ForeColor = Color.FromArgb(150, 150, 150)
-        Panel5.Visible = False
 
         btnDummy.Focus()
     End Sub
@@ -90,7 +86,7 @@
 
     '---Tab Changing System
 
-    Private Sub ChangeTab(sender As Object, e As EventArgs) Handles lblTabSel1.Click, lblTabSel2.Click
+    Private Sub ChangeTab(sender As Object, e As EventArgs) Handles lblTabSel1.Click, lblTabSel3.Click
 
         'Hides selected tab indicator
         For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
@@ -116,8 +112,10 @@
             pnlMainPage.Dock = DockStyle.Fill
             pnlTabHighlight1.Visible = True
         ElseIf sender Is lblTabSel2 Then
+
+        ElseIf sender Is lblTabSel3 Then
             pnlSettingsPage.Dock = DockStyle.Fill
-            pnlTabHighlight2.Visible = True
+            pnlTabHighlight3.Visible = True
         End If
         AntiFocus()
     End Sub
@@ -172,9 +170,9 @@
             lblTabSel1.ForeColor = accentColor
         End If
 
-        If lblTabSel2.ForeColor = Color.FromArgb(150, 150, 150) Then
+        If lblTabSel3.ForeColor = Color.FromArgb(150, 150, 150) Then
         Else
-            lblTabSel2.ForeColor = accentColor
+            lblTabSel3.ForeColor = accentColor
         End If
     End Sub
 

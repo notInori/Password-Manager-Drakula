@@ -5,7 +5,7 @@
     'Client Info Variables
     Public Shared ReadOnly businessName As String = ""
     Public Shared ReadOnly versionNumber As String = "[Dev Build]"
-    ReadOnly currentUser As String = "Dev"
+    Public Shared currentUser As String = "Dev"
 
     'Variables Init'
     Public Shared accentColor As Color = Color.FromArgb(255, 255, 255)
