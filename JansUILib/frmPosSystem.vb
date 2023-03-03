@@ -212,15 +212,8 @@ Public Class POSSystem
         Next
 
         'Tab Label Accent Updating
-        If lblTabSel1.ForeColor = Color.FromArgb(150, 150, 150) Then
-        Else
-            lblTabSel1.ForeColor = accentColor
-        End If
+        lblTabSel2.ForeColor = accentColor
 
-        If lblTabSel2.ForeColor = Color.FromArgb(150, 150, 150) Then
-        Else
-            lblTabSel2.ForeColor = accentColor
-        End If
     End Sub
 
     '---Application Code

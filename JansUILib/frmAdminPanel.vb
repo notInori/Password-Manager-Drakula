@@ -131,7 +131,7 @@ Public Class AdminPanel
 
     '---Tab Changing System
 
-    Private Sub ChangeTab(sender As Object, e As EventArgs) Handles lblTabSel1.Click, lblTabSel3.Click
+    Private Sub ChangeTab(sender As Object, e As EventArgs) Handles lblTabSel1.Click, lblTabSel2.Click, lblTabSel3.Click, lblTabSel4.Click
 
         'Hides selected tab indicator
         For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
@@ -157,10 +157,14 @@ Public Class AdminPanel
             pnlMainPage.Dock = DockStyle.Fill
             pnlTabHighlight1.Visible = True
         ElseIf sender Is lblTabSel2 Then
-
+            pnlMenuPage.Dock = DockStyle.Fill
+            pnlTabHighlight2.Visible = True
         ElseIf sender Is lblTabSel3 Then
-            pnlSettingsPage.Dock = DockStyle.Fill
+            pnlPerformancePage.Dock = DockStyle.Fill
             pnlTabHighlight3.Visible = True
+        ElseIf sender Is lblTabSel4 Then
+            pnlSettingsPage.Dock = DockStyle.Fill
+            pnlTabHighlight4.Visible = True
         End If
         AntiFocus()
     End Sub
@@ -210,15 +214,8 @@ Public Class AdminPanel
         Next
 
         'Tab Label Accent Updating
-        If lblTabSel1.ForeColor = Color.FromArgb(150, 150, 150) Then
-        Else
-            lblTabSel1.ForeColor = accentColor
-        End If
+        lblTabSel4.ForeColor = accentColor
 
-        If lblTabSel3.ForeColor = Color.FromArgb(150, 150, 150) Then
-        Else
-            lblTabSel3.ForeColor = accentColor
-        End If
     End Sub
 
     '---Application Code
@@ -302,4 +299,7 @@ Public Class AdminPanel
         lblTitle.Text = "POS SYSTEM | " & versionNumber & " | " & currentUser & " | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
     End Sub
 
+    Private Sub AntiFocus(sender As Object, e As EventArgs) Handles pnlSettingsPage.Click, pnlMiscPage.Click, Panel38.Click
+
+    End Sub
 End Class
