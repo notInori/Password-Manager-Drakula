@@ -79,4 +79,7 @@ Public Class AuthLogin
         Close()
     End Sub
 
+    Private Sub Antifocus(sender As Object, e As EventArgs) Handles pnlGroupUsernameTextbox.Click, pnlGroupBoxInner.MouseClick, lblUsername.Click, btnLogin.Click
+
+    End Sub
 End Class
