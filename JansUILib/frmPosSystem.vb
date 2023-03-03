@@ -28,6 +28,7 @@ Public Class POSSystem
 
     '---Winforms Init' 
 
+    'Loads the users UID
     Private Sub setUID(ByVal username As String)
         Dim temp As String = ""
         Dim conn As New OleDbConnection("Provider=Microsoft.Ace.Oledb.12.0;Data Source=C:\Users\nicks\Downloads\POS System\JansUILib\JansUILib\UserData.accdb")
@@ -43,7 +44,6 @@ Public Class POSSystem
     End Sub
 
     'Load User Configs
-
     Private Sub loadUserConfig()
         Dim tempColor As Int32
         Dim conn As New OleDbConnection("Provider=Microsoft.Ace.Oledb.12.0;Data Source=C:\Users\nicks\Downloads\POS System\JansUILib\JansUILib\UserData.accdb")
@@ -59,6 +59,7 @@ Public Class POSSystem
         UpdateAccent()
         conn.Close()
     End Sub
+
     'Init tab system and load accent color
     Private Sub POSSystem_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
@@ -67,7 +68,6 @@ Public Class POSSystem
         lblCurrentUser.Text = currentUser
         setUID(currentUser)
         loadUserConfig()
-
         ChangeTab(lblTabSel1, e)
 
         'Temporary Code

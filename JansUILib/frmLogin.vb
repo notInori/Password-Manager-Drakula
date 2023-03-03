@@ -23,6 +23,7 @@ Public Class AuthLogin
         conn.Close()
     End Sub
 
+    'Authenticates the User
     Private Function authUser(ByVal username As String, ByVal password As String)
         Dim conn As New OleDbConnection("Provider=Microsoft.Ace.Oledb.12.0;Data Source=C:\Users\nicks\Downloads\POS System\JansUILib\JansUILib\UserData.accdb")
         conn.Open()
@@ -34,9 +35,9 @@ Public Class AuthLogin
             storedPassword = myReader("PIN").ToString
         End While
         If password = storedPassword And storedPassword <> "" Then
-            Return True
+            Return True 'Returns true if combination of username and password is correct
         Else
-            Return False
+            Return False 'Returns false if combination is inccorrect or fields are empty
         End If
         conn.Close()
     End Function
