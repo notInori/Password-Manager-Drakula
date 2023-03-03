@@ -4,6 +4,7 @@ Imports System.Data.OleDb
 Imports System.Web.UI.WebControls.Expressions
 Imports System.Runtime.CompilerServices
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports System.Web
 
 Public Class AuthLogin
 
@@ -26,7 +27,7 @@ Public Class AuthLogin
         Dim conn As New OleDbConnection("Provider=Microsoft.Ace.Oledb.12.0;Data Source=C:\Users\nicks\Downloads\POS System\JansUILib\JansUILib\UserData.accdb")
         conn.Open()
         Dim cmdInput As String = "SELECT PIN FROM UserAuth WHERE (Username='" & username & "')"
-        Dim storedPassword As String
+        Dim storedPassword As String = ""
         Dim cmd As New OleDbCommand(cmdInput, conn)
         Dim myReader As OleDbDataReader = cmd.ExecuteReader
         While myReader.Read()
@@ -39,6 +40,9 @@ Public Class AuthLogin
         End If
         conn.Close()
     End Function
+
+  
+
     '---Winforms Dragging
 
     'Winforms Init' 
