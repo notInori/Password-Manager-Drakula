@@ -1,4 +1,5 @@
 ﻿Imports System.Data.OleDb
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 Public Class POSSystem
 
@@ -56,6 +57,18 @@ Public Class POSSystem
         End While
         accentColor = Color.FromArgb(tempColor)
         UpdateAccent()
+        conn.Close()
+    End Sub
+
+    Private Sub saveConfig()
+
+        Dim conn As New OleDbConnection("Provider=Microsoft.Ace.Oledb.12.0;Data Source=C:\Users\nicks\Downloads\POS System\JansUILib\JansUILib\UserData.accdb")
+        conn.Open()
+        Dim cmdInput As String = "UPDATE UserConfig SET Accent=" & accentColor.ToArgb() & " WHERE UID=" & UID
+
+        Dim cmd As New OleDbCommand(cmdInput, conn)
+        cmd.ExecuteNonQuery()
+
         conn.Close()
     End Sub
 
@@ -276,7 +289,7 @@ Public Class POSSystem
         If (cDialog.ShowDialog() = DialogResult.OK) Then
             accentColor = cDialog.Color ' update with user selected color.
         End If
-        Console.WriteLine(accentColor.ToArgb())
+        saveConfig()
         UpdateAccent()
     End Sub
 
