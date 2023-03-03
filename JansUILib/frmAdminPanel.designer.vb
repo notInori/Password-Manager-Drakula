@@ -99,9 +99,6 @@ Partial Class AdminPanel
         Me.Panel311 = New System.Windows.Forms.Panel()
         Me.Panel312 = New System.Windows.Forms.Panel()
         Me.Panel313 = New System.Windows.Forms.Panel()
-        Me.Panel83 = New System.Windows.Forms.Panel()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
         Me.Panel265 = New System.Windows.Forms.Panel()
         Me.Label34 = New System.Windows.Forms.Label()
         Me.Label40 = New System.Windows.Forms.Label()
@@ -396,7 +393,6 @@ Partial Class AdminPanel
         Me.Panel311.SuspendLayout()
         Me.Panel312.SuspendLayout()
         Me.Panel313.SuspendLayout()
-        Me.Panel83.SuspendLayout()
         Me.Panel265.SuspendLayout()
         Me.Panel255.SuspendLayout()
         Me.Panel260.SuspendLayout()
@@ -807,14 +803,14 @@ Partial Class AdminPanel
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Panel3, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Panel32, 0, 1)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(952, 636)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(952, 644)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(5)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(472, 163)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(472, 155)
         Me.TableLayoutPanel1.TabIndex = 20
         Me.TableLayoutPanel1.Tag = "groupbox"
         '
@@ -1045,7 +1041,7 @@ Partial Class AdminPanel
         Me.Panel32.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel32.Name = "Panel32"
         Me.Panel32.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel32.Size = New System.Drawing.Size(472, 139)
+        Me.Panel32.Size = New System.Drawing.Size(472, 131)
         Me.Panel32.TabIndex = 16
         '
         'Panel33
@@ -1057,7 +1053,7 @@ Partial Class AdminPanel
         Me.Panel33.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel33.Name = "Panel33"
         Me.Panel33.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel33.Size = New System.Drawing.Size(470, 138)
+        Me.Panel33.Size = New System.Drawing.Size(470, 130)
         Me.Panel33.TabIndex = 17
         '
         'Panel34
@@ -1069,7 +1065,7 @@ Partial Class AdminPanel
         Me.Panel34.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel34.Name = "Panel34"
         Me.Panel34.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel34.Size = New System.Drawing.Size(468, 137)
+        Me.Panel34.Size = New System.Drawing.Size(468, 129)
         Me.Panel34.TabIndex = 17
         '
         'Panel35
@@ -1084,7 +1080,7 @@ Partial Class AdminPanel
         Me.Panel35.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel35.Name = "Panel35"
         Me.Panel35.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel35.Size = New System.Drawing.Size(466, 136)
+        Me.Panel35.Size = New System.Drawing.Size(466, 128)
         Me.Panel35.TabIndex = 17
         '
         'Panel36
@@ -1104,12 +1100,12 @@ Partial Class AdminPanel
         Me.Label7.Dock = System.Windows.Forms.DockStyle.Right
         Me.Label7.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(373, 0)
+        Me.Label7.Location = New System.Drawing.Point(337, 0)
         Me.Label7.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(70, 24)
+        Me.Label7.Size = New System.Drawing.Size(106, 24)
         Me.Label7.TabIndex = 11
-        Me.Label7.Text = "£0.00"
+        Me.Label7.Text = "00/00/00"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label8
@@ -1122,9 +1118,9 @@ Partial Class AdminPanel
         Me.Label8.Location = New System.Drawing.Point(0, 0)
         Me.Label8.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(238, 24)
+        Me.Label8.Size = New System.Drawing.Size(250, 24)
         Me.Label8.TabIndex = 9
-        Me.Label8.Text = "Wage Due [Monthly]:"
+        Me.Label8.Text = "Last Paid [Monthly]:"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Panel51
@@ -1162,9 +1158,9 @@ Partial Class AdminPanel
         Me.Label27.Location = New System.Drawing.Point(0, 0)
         Me.Label27.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(238, 24)
+        Me.Label27.Size = New System.Drawing.Size(250, 24)
         Me.Label27.TabIndex = 9
-        Me.Label27.Text = "Total Hours [WEEK]:"
+        Me.Label27.Text = "Current Wage [WEEK]:"
         Me.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Panel52
@@ -1202,9 +1198,9 @@ Partial Class AdminPanel
         Me.Label29.Location = New System.Drawing.Point(0, 0)
         Me.Label29.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(298, 24)
+        Me.Label29.Size = New System.Drawing.Size(286, 24)
         Me.Label29.TabIndex = 9
-        Me.Label29.Text = "Total Hours  [All Time]:"
+        Me.Label29.Text = "Total Wages [All Time]:"
         Me.Label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Panel53
@@ -1242,9 +1238,9 @@ Partial Class AdminPanel
         Me.Label32.Location = New System.Drawing.Point(0, 0)
         Me.Label32.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(250, 24)
+        Me.Label32.Size = New System.Drawing.Size(262, 24)
         Me.Label32.TabIndex = 9
-        Me.Label32.Text = "Total Hours [Month]:"
+        Me.Label32.Text = "Current Wage [Month]:"
         Me.Label32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TableLayoutPanel30
@@ -1254,14 +1250,14 @@ Partial Class AdminPanel
         Me.TableLayoutPanel30.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel30.Controls.Add(Me.Panel274, 0, 0)
         Me.TableLayoutPanel30.Controls.Add(Me.Panel310, 0, 1)
-        Me.TableLayoutPanel30.Location = New System.Drawing.Point(470, 636)
+        Me.TableLayoutPanel30.Location = New System.Drawing.Point(470, 644)
         Me.TableLayoutPanel30.Margin = New System.Windows.Forms.Padding(5)
         Me.TableLayoutPanel30.Name = "TableLayoutPanel30"
         Me.TableLayoutPanel30.RowCount = 2
         Me.TableLayoutPanel30.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24.0!))
         Me.TableLayoutPanel30.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel30.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel30.Size = New System.Drawing.Size(472, 163)
+        Me.TableLayoutPanel30.Size = New System.Drawing.Size(472, 155)
         Me.TableLayoutPanel30.TabIndex = 19
         Me.TableLayoutPanel30.Tag = "groupbox"
         '
@@ -1492,7 +1488,7 @@ Partial Class AdminPanel
         Me.Panel310.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel310.Name = "Panel310"
         Me.Panel310.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel310.Size = New System.Drawing.Size(472, 139)
+        Me.Panel310.Size = New System.Drawing.Size(472, 131)
         Me.Panel310.TabIndex = 16
         '
         'Panel311
@@ -1504,7 +1500,7 @@ Partial Class AdminPanel
         Me.Panel311.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel311.Name = "Panel311"
         Me.Panel311.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel311.Size = New System.Drawing.Size(470, 138)
+        Me.Panel311.Size = New System.Drawing.Size(470, 130)
         Me.Panel311.TabIndex = 17
         '
         'Panel312
@@ -1516,13 +1512,12 @@ Partial Class AdminPanel
         Me.Panel312.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel312.Name = "Panel312"
         Me.Panel312.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel312.Size = New System.Drawing.Size(468, 137)
+        Me.Panel312.Size = New System.Drawing.Size(468, 129)
         Me.Panel312.TabIndex = 17
         '
         'Panel313
         '
         Me.Panel313.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Panel313.Controls.Add(Me.Panel83)
         Me.Panel313.Controls.Add(Me.Panel265)
         Me.Panel313.Controls.Add(Me.Panel255)
         Me.Panel313.Controls.Add(Me.Panel260)
@@ -1531,48 +1526,8 @@ Partial Class AdminPanel
         Me.Panel313.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel313.Name = "Panel313"
         Me.Panel313.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel313.Size = New System.Drawing.Size(466, 136)
+        Me.Panel313.Size = New System.Drawing.Size(466, 128)
         Me.Panel313.TabIndex = 17
-        '
-        'Panel83
-        '
-        Me.Panel83.Controls.Add(Me.Label41)
-        Me.Panel83.Controls.Add(Me.Label25)
-        Me.Panel83.Location = New System.Drawing.Point(10, 92)
-        Me.Panel83.Margin = New System.Windows.Forms.Padding(5, 5, 5, 0)
-        Me.Panel83.Name = "Panel83"
-        Me.Panel83.Size = New System.Drawing.Size(443, 24)
-        Me.Panel83.TabIndex = 18
-        '
-        'Label41
-        '
-        Me.Label41.AutoSize = True
-        Me.Label41.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Label41.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Label41.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.Label41.Location = New System.Drawing.Point(373, 0)
-        Me.Label41.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(70, 24)
-        Me.Label41.TabIndex = 11
-        Me.Label41.Text = "£0.00"
-        Me.Label41.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Label25.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label25.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.Label25.Location = New System.Drawing.Point(0, 0)
-        Me.Label25.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(238, 24)
-        Me.Label25.TabIndex = 9
-        Me.Label25.Text = "Wage Due [Monthly]:"
-        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Panel265
         '
@@ -1707,7 +1662,7 @@ Partial Class AdminPanel
         Me.TableLayoutPanel13.RowCount = 2
         Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24.0!))
         Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel13.Size = New System.Drawing.Size(954, 621)
+        Me.TableLayoutPanel13.Size = New System.Drawing.Size(954, 629)
         Me.TableLayoutPanel13.TabIndex = 15
         Me.TableLayoutPanel13.Tag = "groupbox"
         '
@@ -1938,7 +1893,7 @@ Partial Class AdminPanel
         Me.Panel202.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel202.Name = "Panel202"
         Me.Panel202.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel202.Size = New System.Drawing.Size(954, 597)
+        Me.Panel202.Size = New System.Drawing.Size(954, 605)
         Me.Panel202.TabIndex = 16
         '
         'Panel203
@@ -1950,7 +1905,7 @@ Partial Class AdminPanel
         Me.Panel203.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel203.Name = "Panel203"
         Me.Panel203.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel203.Size = New System.Drawing.Size(952, 596)
+        Me.Panel203.Size = New System.Drawing.Size(952, 604)
         Me.Panel203.TabIndex = 17
         '
         'Panel204
@@ -1962,7 +1917,7 @@ Partial Class AdminPanel
         Me.Panel204.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel204.Name = "Panel204"
         Me.Panel204.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel204.Size = New System.Drawing.Size(950, 595)
+        Me.Panel204.Size = New System.Drawing.Size(950, 603)
         Me.Panel204.TabIndex = 17
         '
         'Panel205
@@ -1973,7 +1928,7 @@ Partial Class AdminPanel
         Me.Panel205.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel205.Name = "Panel205"
         Me.Panel205.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel205.Size = New System.Drawing.Size(948, 594)
+        Me.Panel205.Size = New System.Drawing.Size(948, 602)
         Me.Panel205.TabIndex = 17
         '
         'tblGroupBox
@@ -4687,8 +4642,6 @@ Partial Class AdminPanel
         Me.Panel311.ResumeLayout(False)
         Me.Panel312.ResumeLayout(False)
         Me.Panel313.ResumeLayout(False)
-        Me.Panel83.ResumeLayout(False)
-        Me.Panel83.PerformLayout()
         Me.Panel265.ResumeLayout(False)
         Me.Panel265.PerformLayout()
         Me.Panel255.ResumeLayout(False)
@@ -5023,8 +4976,6 @@ Partial Class AdminPanel
     Friend WithEvents Panel265 As Panel
     Friend WithEvents Label40 As Label
     Friend WithEvents Button2 As Button
-    Friend WithEvents Panel83 As Panel
-    Friend WithEvents Label25 As Label
     Friend WithEvents TableLayoutPanel13 As TableLayoutPanel
     Friend WithEvents Panel84 As Panel
     Friend WithEvents TableLayoutPanel19 As TableLayoutPanel
@@ -5049,7 +5000,6 @@ Partial Class AdminPanel
     Friend WithEvents Panel204 As Panel
     Friend WithEvents Panel205 As Panel
     Friend WithEvents Label34 As Label
-    Friend WithEvents Label41 As Label
     Friend WithEvents Label37 As Label
     Friend WithEvents Label35 As Label
     Friend WithEvents TableLayoutPanel30 As TableLayoutPanel
