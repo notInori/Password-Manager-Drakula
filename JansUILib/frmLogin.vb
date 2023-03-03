@@ -63,10 +63,13 @@ Public Class AuthLogin
     Private Sub AuthUser(sender As Object, e As EventArgs) Handles btnLogin.Click
         If LCase(ComboBox1.Text) = "admin" Then
             AdminPanel.Show()
-        Else
+        ElseIf ComboBox1.Text <> "" Then
             POSSystem.currentUser = ComboBox1.Text
-            POSSystem.Show()
+
+        Else
+            POSSystem.currentUser = "[USER]"
         End If
+        POSSystem.Show()
         Antifocus()
         ComboBox1.Text = ""
         Me.Hide()
