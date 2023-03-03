@@ -1,5 +1,4 @@
 ﻿Imports System.Data.OleDb
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 Public Class POSSystem
 

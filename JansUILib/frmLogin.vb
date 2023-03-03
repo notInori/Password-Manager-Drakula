@@ -1,10 +1,5 @@
-﻿Imports System.Drawing
-Imports System.Security.Cryptography
-Imports System.Data.OleDb
-Imports System.Web.UI.WebControls.Expressions
-Imports System.Runtime.CompilerServices
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-Imports System.Web
+﻿Imports System.Data.OleDb
+
 
 Public Class AuthLogin
 
