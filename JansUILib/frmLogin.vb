@@ -19,6 +19,7 @@ Public Class AuthLogin
         While myReader.Read
             CbxUsername.Items.Add(myReader("Username"))
         End While
+        conn.Close()
     End Sub
 
     Private Function authUser(ByVal username As String, ByVal password As String)
@@ -36,6 +37,7 @@ Public Class AuthLogin
         Else
             Return False
         End If
+        conn.Close()
     End Function
     '---Winforms Dragging
 
