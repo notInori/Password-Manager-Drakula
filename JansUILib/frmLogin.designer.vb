@@ -68,7 +68,7 @@ Partial Class AuthLogin
         Me.pnlUsernameBorder = New System.Windows.Forms.Panel()
         Me.pnlUsernameInnerBlackLine = New System.Windows.Forms.Panel()
         Me.pnlUsernameInputBackground = New System.Windows.Forms.Panel()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.CbxUsername = New System.Windows.Forms.ComboBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.btnLogin = New System.Windows.Forms.Button()
@@ -81,7 +81,7 @@ Partial Class AuthLogin
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.Panel13 = New System.Windows.Forms.Panel()
         Me.Panel27 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TbxPassword = New System.Windows.Forms.TextBox()
         Me.pnlBackground.SuspendLayout()
         Me.tblWindow.SuspendLayout()
         Me.pnlTopBar.SuspendLayout()
@@ -689,7 +689,7 @@ Partial Class AuthLogin
         'pnlUsernameInputBackground
         '
         Me.pnlUsernameInputBackground.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.pnlUsernameInputBackground.Controls.Add(Me.ComboBox1)
+        Me.pnlUsernameInputBackground.Controls.Add(Me.CbxUsername)
         Me.pnlUsernameInputBackground.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlUsernameInputBackground.Location = New System.Drawing.Point(1, 1)
         Me.pnlUsernameInputBackground.Margin = New System.Windows.Forms.Padding(0)
@@ -698,18 +698,18 @@ Partial Class AuthLogin
         Me.pnlUsernameInputBackground.Size = New System.Drawing.Size(442, 30)
         Me.pnlUsernameInputBackground.TabIndex = 10
         '
-        'ComboBox1
+        'CbxUsername
         '
-        Me.ComboBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox1.Font = New System.Drawing.Font("Consolas", 15.75!)
-        Me.ComboBox1.ForeColor = System.Drawing.Color.White
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.ItemHeight = 24
-        Me.ComboBox1.Location = New System.Drawing.Point(-2, -1)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(446, 32)
-        Me.ComboBox1.TabIndex = 13
+        Me.CbxUsername.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.CbxUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CbxUsername.Font = New System.Drawing.Font("Consolas", 15.75!)
+        Me.CbxUsername.ForeColor = System.Drawing.Color.White
+        Me.CbxUsername.FormattingEnabled = True
+        Me.CbxUsername.ItemHeight = 24
+        Me.CbxUsername.Location = New System.Drawing.Point(-2, -1)
+        Me.CbxUsername.Name = "CbxUsername"
+        Me.CbxUsername.Size = New System.Drawing.Size(446, 32)
+        Me.CbxUsername.TabIndex = 13
         '
         'Panel3
         '
@@ -852,7 +852,7 @@ Partial Class AuthLogin
         'Panel27
         '
         Me.Panel27.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Panel27.Controls.Add(Me.TextBox1)
+        Me.Panel27.Controls.Add(Me.TbxPassword)
         Me.Panel27.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel27.Location = New System.Drawing.Point(1, 1)
         Me.Panel27.Margin = New System.Windows.Forms.Padding(0)
@@ -861,17 +861,17 @@ Partial Class AuthLogin
         Me.Panel27.Size = New System.Drawing.Size(442, 30)
         Me.Panel27.TabIndex = 10
         '
-        'TextBox1
+        'TbxPassword
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Consolas", 15.75!)
-        Me.TextBox1.ForeColor = System.Drawing.Color.White
-        Me.TextBox1.Location = New System.Drawing.Point(0, 2)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(0)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(442, 25)
-        Me.TextBox1.TabIndex = 0
+        Me.TbxPassword.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.TbxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TbxPassword.Font = New System.Drawing.Font("Consolas", 15.75!)
+        Me.TbxPassword.ForeColor = System.Drawing.Color.White
+        Me.TbxPassword.Location = New System.Drawing.Point(0, 2)
+        Me.TbxPassword.Margin = New System.Windows.Forms.Padding(0)
+        Me.TbxPassword.Name = "TbxPassword"
+        Me.TbxPassword.Size = New System.Drawing.Size(442, 25)
+        Me.TbxPassword.TabIndex = 0
         '
         'AuthLogin
         '
@@ -973,7 +973,7 @@ Partial Class AuthLogin
     Friend WithEvents pnlUsernameBorder As Panel
     Friend WithEvents pnlUsernameInnerBlackLine As Panel
     Friend WithEvents pnlUsernameInputBackground As Panel
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents CbxUsername As ComboBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents btnLogin As Button
@@ -992,5 +992,5 @@ Partial Class AuthLogin
     Friend WithEvents Panel12 As Panel
     Friend WithEvents Panel13 As Panel
     Friend WithEvents Panel27 As Panel
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TbxPassword As TextBox
 End Class

@@ -1,21 +1,47 @@
 ﻿Imports System.Drawing
 Imports System.Security.Cryptography
+Imports System.Data.OleDb
+Imports System.Web.UI.WebControls.Expressions
+Imports System.Runtime.CompilerServices
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class AuthLogin
 
     '---Init'
 
     'Load Usernames
-    Private Function getUsernames() As DataTable
-        Dim dtUsers As New DataTable
-        Return dtUsers
-    End Function
+    Private Sub loadUsernames()
+        Dim conn As New OleDbConnection("Provider=Microsoft.Ace.Oledb.12.0;Data Source=C:\Users\nicks\Downloads\POS System\JansUILib\JansUILib\UserData.accdb")
+        conn.Open()
+        Dim cmd As New OleDbCommand("SELECT Username FROM UserAuth", conn)
+        Dim myReader As OleDbDataReader = cmd.ExecuteReader
+        ComboBox1.Items.Clear()
+        While myReader.Read
+            ComboBox1.Items.Add(myReader("Username"))
+        End While
+    End Sub
 
+    Private Function authUser(ByVal username As String, ByVal password As String)
+        Dim conn As New OleDbConnection("Provider=Microsoft.Ace.Oledb.12.0;Data Source=C:\Users\nicks\Downloads\POS System\JansUILib\JansUILib\UserData.accdb")
+        conn.Open()
+        Dim cmdInput As String = "SELECT PIN FROM UserAuth WHERE (Username='" & username & "')"
+        Dim storedPassword As String
+        Dim cmd As New OleDbCommand(cmdInput, conn)
+        Dim myReader As OleDbDataReader = cmd.ExecuteReader
+        While myReader.Read()
+            storedPassword = myReader("PIN").ToString
+        End While
+        If password = storedPassword And storedPassword <> "" Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
     '---Winforms Dragging
 
     'Winforms Init' 
     Private Sub UserLogin_OnLoad(ByVal qsender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        ComboBox1.DataSource = getUsernames() 'Set usernames selector datasource to usernames stored in database
+        loadUsernames()
         lblCurrentVersion.Text = POSSystem.versionNumber
         lblShopName.Text = POSSystem.businessName
         Antifocus()
@@ -61,18 +87,16 @@ Public Class AuthLogin
 
     'User Auth Button
     Private Sub AuthUser(sender As Object, e As EventArgs) Handles btnLogin.Click
-        If LCase(ComboBox1.Text) = "admin" Then
+        If ComboBox1.Text = "admin" And authUser(ComboBox1.Text, TextBox1.Text) Then
             AdminPanel.Show()
-        ElseIf ComboBox1.Text <> "" Then
+        ElseIf authUser(ComboBox1.Text, TextBox1.Text) Then
             POSSystem.currentUser = ComboBox1.Text
-
-        Else
-            POSSystem.currentUser = "[USER]"
+            POSSystem.Show()
         End If
-        POSSystem.Show()
-        Antifocus()
-        ComboBox1.Text = ""
-        Me.Hide()
+        If authUser(ComboBox1.Text, TextBox1.Text) Then
+            authUser(ComboBox1.Text, TextBox1.Text)
+            Me.Hide()
+        End If
     End Sub
 
     'Titlebar Button Events'
@@ -82,7 +106,4 @@ Public Class AuthLogin
         Close()
     End Sub
 
-    Private Sub Antifocus(sender As Object, e As EventArgs) Handles pnlGroupUsernameTextbox.Click, pnlGroupBoxInner.MouseClick, lblUsername.Click, btnLogin.Click
-
-    End Sub
 End Class
