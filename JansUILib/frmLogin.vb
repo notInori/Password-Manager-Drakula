@@ -15,9 +15,9 @@ Public Class AuthLogin
         conn.Open()
         Dim cmd As New OleDbCommand("SELECT Username FROM UserAuth", conn)
         Dim myReader As OleDbDataReader = cmd.ExecuteReader
-        ComboBox1.Items.Clear()
+        CbxUsername.Items.Clear()
         While myReader.Read
-            ComboBox1.Items.Add(myReader("Username"))
+            CbxUsername.Items.Add(myReader("Username"))
         End While
     End Sub
 
@@ -87,14 +87,14 @@ Public Class AuthLogin
 
     'User Auth Button
     Private Sub AuthUser(sender As Object, e As EventArgs) Handles btnLogin.Click
-        If ComboBox1.Text = "admin" And authUser(ComboBox1.Text, TextBox1.Text) Then
+        If CbxUsername.Text = "admin" And authUser(CbxUsername.Text, TbxPassword.Text) Then
             AdminPanel.Show()
-        ElseIf authUser(ComboBox1.Text, TextBox1.Text) Then
-            POSSystem.currentUser = ComboBox1.Text
+        ElseIf authUser(CbxUsername.Text, TbxPassword.Text) Then
+            POSSystem.currentUser = CbxUsername.Text
             POSSystem.Show()
         End If
-        If authUser(ComboBox1.Text, TextBox1.Text) Then
-            authUser(ComboBox1.Text, TextBox1.Text)
+        If authUser(CbxUsername.Text, TbxPassword.Text) Then
+            authUser(CbxUsername.Text, TbxPassword.Text)
             Me.Hide()
         End If
     End Sub
