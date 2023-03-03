@@ -5,7 +5,7 @@ Public Class POSSystem
     '---Init'
 
     'Client Info Variables
-    Public Shared UID As Integer
+    Dim UID As Integer
     Public Shared ReadOnly businessName As String = ""
     Public Shared ReadOnly versionNumber As String = "[Dev Build]"
     Public Shared currentUser As String = "Dev"
@@ -53,7 +53,6 @@ Public Class POSSystem
         Dim myReader As OleDbDataReader = cmd.ExecuteReader
         While myReader.Read()
             tempColor = myReader("Accent")
-
         End While
         accentColor = Color.FromArgb(tempColor)
         UpdateAccent()

@@ -1,4 +1,7 @@
-﻿Public Class AdminPanel
+﻿Imports System.Data.OleDb
+Imports System.Security.Cryptography
+
+Public Class AdminPanel
 
     '---Init'
 
@@ -6,6 +9,7 @@
     Public Shared ReadOnly businessName As String = ""
     Public Shared ReadOnly versionNumber As String = "[Dev Build]"
     ReadOnly currentUser As String = "Admin"
+    Dim UID As Integer
 
     'Variables Init'
     Public Shared accentColor As Color = Color.FromArgb(255, 255, 255)
@@ -25,13 +29,44 @@
 
     '---Winforms Init' 
 
+    Private Sub setUID(ByVal username As String)
+        Dim temp As String = ""
+        Dim conn As New OleDbConnection("Provider=Microsoft.Ace.Oledb.12.0;Data Source=C:\Users\nicks\Downloads\POS System\JansUILib\JansUILib\UserData.accdb")
+        conn.Open()
+        Dim cmdInput As String = "SELECT UID FROM UserAuth WHERE (Username='" & username & "')"
+        Dim cmd As New OleDbCommand(cmdInput, conn)
+        Dim myReader As OleDbDataReader = cmd.ExecuteReader
+        While myReader.Read()
+            temp = myReader("UID")
+        End While
+        UID = CInt(temp)
+        conn.Close()
+    End Sub
+
+    'Load User Configs
+    Private Sub loadUserConfig()
+        Dim tempColor As Int32
+        Dim conn As New OleDbConnection("Provider=Microsoft.Ace.Oledb.12.0;Data Source=C:\Users\nicks\Downloads\POS System\JansUILib\JansUILib\UserData.accdb")
+        conn.Open()
+        Dim cmdInput As String = "SELECT Accent FROM UserConfig WHERE (UID=" & UID & ")"
+        Dim cmd As New OleDbCommand(cmdInput, conn)
+        Dim myReader As OleDbDataReader = cmd.ExecuteReader
+        While myReader.Read()
+            tempColor = myReader("Accent")
+        End While
+        accentColor = Color.FromArgb(tempColor)
+        UpdateAccent()
+        conn.Close()
+    End Sub
+
     'Init tab system and load accent color
     Private Sub POSSystem_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
             cntrl.Width = 0
         Next
         lblCurrentUser.Text = currentUser
-        UpdateAccent()
+        setUID(currentUser)
+        loadUserConfig()
         ChangeTab(lblTabSel1, e)
 
         btnDummy.Focus()

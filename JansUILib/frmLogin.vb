@@ -101,7 +101,8 @@ Public Class AuthLogin
             POSSystem.Show()
         End If
         If authUser(CbxUsername.Text, TbxPassword.Text) Then
-            authUser(CbxUsername.Text, TbxPassword.Text)
+            CbxUsername.Text = ""
+            TbxPassword.Text = ""
             Me.Hide()
         End If
     End Sub
