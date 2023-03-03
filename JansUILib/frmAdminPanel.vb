@@ -60,7 +60,7 @@ Public Class AdminPanel
         conn.Close()
     End Sub
 
-    'Save user settings
+    'Save User Config
     Private Sub saveConfig()
         Dim conn As New OleDbConnection("Provider=Microsoft.Ace.Oledb.12.0;Data Source=C:\Users\nicks\Downloads\POS System\JansUILib\JansUILib\UserData.accdb")
         conn.Open()
