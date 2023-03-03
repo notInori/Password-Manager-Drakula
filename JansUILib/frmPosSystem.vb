@@ -29,7 +29,7 @@ Public Class POSSystem
 
     '---Winforms Init' 
 
-    'Loads the users UID
+    'Load UID
     Private Sub setUID(ByVal username As String)
         Dim temp As String = ""
         Dim conn As New OleDbConnection("Provider=Microsoft.Ace.Oledb.12.0;Data Source=C:\Users\nicks\Downloads\POS System\JansUILib\JansUILib\UserData.accdb")
