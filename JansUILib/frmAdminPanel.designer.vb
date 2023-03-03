@@ -349,6 +349,8 @@ Partial Class AdminPanel
         Me.Panel88 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.tmrMain = New System.Windows.Forms.Timer(Me.components)
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Panel54 = New System.Windows.Forms.Panel()
         Me.pnlBackground.SuspendLayout()
         Me.tblMain.SuspendLayout()
         Me.pnlTopBar.SuspendLayout()
@@ -668,24 +670,27 @@ Partial Class AdminPanel
         '
         'TblTabsContainer
         '
-        Me.TblTabsContainer.ColumnCount = 4
+        Me.TblTabsContainer.ColumnCount = 5
         Me.TblTabsContainer.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
         Me.TblTabsContainer.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
         Me.TblTabsContainer.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TblTabsContainer.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127.0!))
+        Me.TblTabsContainer.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TblTabsContainer.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TblTabsContainer.Controls.Add(Me.Panel54, 2, 1)
+        Me.TblTabsContainer.Controls.Add(Me.Label25, 2, 0)
         Me.TblTabsContainer.Controls.Add(Me.lblTabSel2, 1, 0)
         Me.TblTabsContainer.Controls.Add(Me.lblTabSel1, 0, 0)
         Me.TblTabsContainer.Controls.Add(Me.pnlTabHighlight1, 0, 1)
-        Me.TblTabsContainer.Controls.Add(Me.lblTabSel3, 2, 0)
-        Me.TblTabsContainer.Controls.Add(Me.pnlTabHighlight3, 2, 1)
         Me.TblTabsContainer.Controls.Add(Me.pnlTabHighlight2, 1, 1)
+        Me.TblTabsContainer.Controls.Add(Me.lblTabSel3, 3, 0)
+        Me.TblTabsContainer.Controls.Add(Me.pnlTabHighlight3, 3, 1)
         Me.TblTabsContainer.Location = New System.Drawing.Point(0, 44)
         Me.TblTabsContainer.Margin = New System.Windows.Forms.Padding(0)
         Me.TblTabsContainer.Name = "TblTabsContainer"
         Me.TblTabsContainer.RowCount = 2
         Me.TblTabsContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TblTabsContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1.0!))
-        Me.TblTabsContainer.Size = New System.Drawing.Size(391, 40)
+        Me.TblTabsContainer.Size = New System.Drawing.Size(539, 40)
         Me.TblTabsContainer.TabIndex = 6
         '
         'lblTabSel2
@@ -722,6 +727,7 @@ Partial Class AdminPanel
         '
         'pnlTabHighlight1
         '
+        Me.pnlTabHighlight1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.pnlTabHighlight1.BackColor = System.Drawing.Color.White
         Me.pnlTabHighlight1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlTabHighlight1.Location = New System.Drawing.Point(0, 39)
@@ -735,22 +741,24 @@ Partial Class AdminPanel
         '
         Me.lblTabSel3.AutoSize = True
         Me.lblTabSel3.BackColor = System.Drawing.Color.Transparent
+        Me.lblTabSel3.Dock = System.Windows.Forms.DockStyle.Left
         Me.lblTabSel3.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTabSel3.ForeColor = System.Drawing.Color.White
-        Me.lblTabSel3.Location = New System.Drawing.Point(148, 0)
+        Me.lblTabSel3.Location = New System.Drawing.Point(360, 0)
         Me.lblTabSel3.Margin = New System.Windows.Forms.Padding(0)
         Me.lblTabSel3.Name = "lblTabSel3"
         Me.lblTabSel3.Padding = New System.Windows.Forms.Padding(5)
-        Me.lblTabSel3.Size = New System.Drawing.Size(116, 34)
+        Me.lblTabSel3.Size = New System.Drawing.Size(116, 39)
         Me.lblTabSel3.TabIndex = 12
         Me.lblTabSel3.Text = "Settings"
         Me.lblTabSel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'pnlTabHighlight3
         '
+        Me.pnlTabHighlight3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.pnlTabHighlight3.BackColor = System.Drawing.Color.White
         Me.pnlTabHighlight3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlTabHighlight3.Location = New System.Drawing.Point(148, 39)
+        Me.pnlTabHighlight3.Location = New System.Drawing.Point(360, 39)
         Me.pnlTabHighlight3.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlTabHighlight3.Name = "pnlTabHighlight3"
         Me.pnlTabHighlight3.Size = New System.Drawing.Size(116, 1)
@@ -759,6 +767,7 @@ Partial Class AdminPanel
         '
         'pnlTabHighlight2
         '
+        Me.pnlTabHighlight2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.pnlTabHighlight2.BackColor = System.Drawing.Color.White
         Me.pnlTabHighlight2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlTabHighlight2.Location = New System.Drawing.Point(80, 39)
@@ -4575,6 +4584,34 @@ Partial Class AdminPanel
         '
         Me.tmrMain.Enabled = True
         '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.BackColor = System.Drawing.Color.Transparent
+        Me.Label25.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Label25.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.ForeColor = System.Drawing.Color.White
+        Me.Label25.Location = New System.Drawing.Point(148, 0)
+        Me.Label25.Margin = New System.Windows.Forms.Padding(0)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Padding = New System.Windows.Forms.Padding(5)
+        Me.Label25.Size = New System.Drawing.Size(212, 39)
+        Me.Label25.TabIndex = 13
+        Me.Label25.Text = "Shop Performance"
+        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel54
+        '
+        Me.Panel54.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Panel54.BackColor = System.Drawing.Color.White
+        Me.Panel54.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel54.Location = New System.Drawing.Point(148, 39)
+        Me.Panel54.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel54.Name = "Panel54"
+        Me.Panel54.Size = New System.Drawing.Size(212, 1)
+        Me.Panel54.TabIndex = 7
+        Me.Panel54.Tag = "tabHighlight"
+        '
         'AdminPanel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -5147,4 +5184,6 @@ Partial Class AdminPanel
     Friend WithEvents Panel53 As Panel
     Friend WithEvents Label30 As Label
     Friend WithEvents Label32 As Label
+    Friend WithEvents Panel54 As Panel
+    Friend WithEvents Label25 As Label
 End Class
