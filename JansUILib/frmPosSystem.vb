@@ -60,15 +60,13 @@ Public Class POSSystem
         conn.Close()
     End Sub
 
+    'Save user settings
     Private Sub saveConfig()
-
         Dim conn As New OleDbConnection("Provider=Microsoft.Ace.Oledb.12.0;Data Source=C:\Users\nicks\Downloads\POS System\JansUILib\JansUILib\UserData.accdb")
         conn.Open()
         Dim cmdInput As String = "UPDATE UserConfig SET Accent=" & accentColor.ToArgb() & " WHERE UID=" & UID
-
         Dim cmd As New OleDbCommand(cmdInput, conn)
         cmd.ExecuteNonQuery()
-
         conn.Close()
     End Sub
 

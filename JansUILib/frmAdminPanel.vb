@@ -59,6 +59,16 @@ Public Class AdminPanel
         conn.Close()
     End Sub
 
+    'Save user settings
+    Private Sub saveConfig()
+        Dim conn As New OleDbConnection("Provider=Microsoft.Ace.Oledb.12.0;Data Source=C:\Users\nicks\Downloads\POS System\JansUILib\JansUILib\UserData.accdb")
+        conn.Open()
+        Dim cmdInput As String = "UPDATE UserConfig SET Accent=" & accentColor.ToArgb() & " WHERE UID=" & UID
+        Dim cmd As New OleDbCommand(cmdInput, conn)
+        cmd.ExecuteNonQuery()
+        conn.Close()
+    End Sub
+
     'Init tab system and load accent color
     Private Sub POSSystem_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
@@ -275,6 +285,7 @@ Public Class AdminPanel
             accentColor = cDialog.Color ' update with user selected color.
         End If
         UpdateAccent()
+        saveConfig()
     End Sub
 
     'User Logout Button
