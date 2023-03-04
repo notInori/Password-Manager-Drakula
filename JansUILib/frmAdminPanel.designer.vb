@@ -161,6 +161,8 @@ Partial Class AdminPanel
         Me.Panel16 = New System.Windows.Forms.Panel()
         Me.Panel17 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.pnlPerformancePage = New System.Windows.Forms.Panel()
+        Me.pnlMenuPage = New System.Windows.Forms.Panel()
         Me.pnlSettingsPage = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel33 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel315 = New System.Windows.Forms.Panel()
@@ -351,8 +353,6 @@ Partial Class AdminPanel
         Me.Panel88 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.tmrMain = New System.Windows.Forms.Timer(Me.components)
-        Me.pnlMenuPage = New System.Windows.Forms.Panel()
-        Me.pnlPerformancePage = New System.Windows.Forms.Panel()
         Me.pnlBackground.SuspendLayout()
         Me.tblMain.SuspendLayout()
         Me.pnlTopBar.SuspendLayout()
@@ -1645,9 +1645,9 @@ Partial Class AdminPanel
         Me.Label38.Location = New System.Drawing.Point(0, 0)
         Me.Label38.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(298, 24)
+        Me.Label38.Size = New System.Drawing.Size(286, 24)
         Me.Label38.TabIndex = 9
-        Me.Label38.Text = "Total Hours  [All Time]:"
+        Me.Label38.Text = "Total Hours [All Time]:"
         Me.Label38.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Panel260
@@ -2316,6 +2316,26 @@ Partial Class AdminPanel
         Me.Button2.Size = New System.Drawing.Size(45, 21)
         Me.Button2.TabIndex = 12
         Me.Button2.UseVisualStyleBackColor = False
+        '
+        'pnlPerformancePage
+        '
+        Me.pnlPerformancePage.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.pnlPerformancePage.Location = New System.Drawing.Point(781, 21)
+        Me.pnlPerformancePage.Margin = New System.Windows.Forms.Padding(0)
+        Me.pnlPerformancePage.Name = "pnlPerformancePage"
+        Me.pnlPerformancePage.Padding = New System.Windows.Forms.Padding(5)
+        Me.pnlPerformancePage.Size = New System.Drawing.Size(1434, 809)
+        Me.pnlPerformancePage.TabIndex = 8
+        '
+        'pnlMenuPage
+        '
+        Me.pnlMenuPage.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.pnlMenuPage.Location = New System.Drawing.Point(29, 725)
+        Me.pnlMenuPage.Margin = New System.Windows.Forms.Padding(0)
+        Me.pnlMenuPage.Name = "pnlMenuPage"
+        Me.pnlMenuPage.Padding = New System.Windows.Forms.Padding(5)
+        Me.pnlMenuPage.Size = New System.Drawing.Size(1434, 809)
+        Me.pnlMenuPage.TabIndex = 7
         '
         'pnlSettingsPage
         '
@@ -4615,26 +4635,6 @@ Partial Class AdminPanel
         'tmrMain
         '
         Me.tmrMain.Enabled = True
-        '
-        'pnlMenuPage
-        '
-        Me.pnlMenuPage.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.pnlMenuPage.Location = New System.Drawing.Point(29, 725)
-        Me.pnlMenuPage.Margin = New System.Windows.Forms.Padding(0)
-        Me.pnlMenuPage.Name = "pnlMenuPage"
-        Me.pnlMenuPage.Padding = New System.Windows.Forms.Padding(5)
-        Me.pnlMenuPage.Size = New System.Drawing.Size(1434, 809)
-        Me.pnlMenuPage.TabIndex = 7
-        '
-        'pnlPerformancePage
-        '
-        Me.pnlPerformancePage.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.pnlPerformancePage.Location = New System.Drawing.Point(781, 21)
-        Me.pnlPerformancePage.Margin = New System.Windows.Forms.Padding(0)
-        Me.pnlPerformancePage.Name = "pnlPerformancePage"
-        Me.pnlPerformancePage.Padding = New System.Windows.Forms.Padding(5)
-        Me.pnlPerformancePage.Size = New System.Drawing.Size(1434, 809)
-        Me.pnlPerformancePage.TabIndex = 8
         '
         'AdminPanel
         '
