@@ -299,7 +299,4 @@ Public Class AdminPanel
         lblTitle.Text = "POS SYSTEM | " & versionNumber & " | " & currentUser & " | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
     End Sub
 
-    Private Sub AntiFocus(sender As Object, e As EventArgs) Handles pnlSettingsPage.Click, pnlMiscPage.Click, Panel38.Click
-
-    End Sub
 End Class
