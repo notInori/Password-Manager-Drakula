@@ -37,8 +37,6 @@ Public Class AuthLogin
         conn.Close()
     End Function
 
-  
-
     '---Winforms Dragging
 
     'Winforms Init' 
@@ -50,7 +48,6 @@ Public Class AuthLogin
     End Sub
 
     'Winforms Variable Init'
-
     Private Property MoveForm As Boolean
     Private Property MoveForm_MousePositiion As Point
 
