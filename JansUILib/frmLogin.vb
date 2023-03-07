@@ -5,9 +5,11 @@ Public Class AuthLogin
 
     '---Init'
 
+    Public Shared localDatabasePath As String = "C:\Users\nicks\Downloads\POS System\JansUILib\JansUILib\UserData.accdb"
+    Public Shared localConnectionString As String = "Provider=Microsoft.Ace.Oledb.12.0;Data Source=" & AuthLogin.localDatabasePath
     'Load Usernames
     Private Sub loadUsernames()
-        Dim conn As New OleDbConnection("Provider=Microsoft.Ace.Oledb.12.0;Data Source=C:\Users\nicks\Downloads\POS System\JansUILib\JansUILib\UserData.accdb")
+        Dim conn As New OleDbConnection(localConnectionString)
         conn.Open()
         Dim cmd As New OleDbCommand("SELECT Username FROM UserAuth", conn)
         Dim myReader As OleDbDataReader = cmd.ExecuteReader
@@ -20,7 +22,7 @@ Public Class AuthLogin
 
     'Authenticates the User
     Private Function authUser(ByVal username As String, ByVal password As String)
-        Dim conn As New OleDbConnection("Provider=Microsoft.Ace.Oledb.12.0;Data Source=C:\Users\nicks\Downloads\POS System\JansUILib\JansUILib\UserData.accdb")
+        Dim conn As New OleDbConnection(localConnectionString)
         conn.Open()
         Dim cmdInput As String = "SELECT PIN FROM UserAuth WHERE (Username='" & username & "')"
         Dim storedPassword As String = ""
