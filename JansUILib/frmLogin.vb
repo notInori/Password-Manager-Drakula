@@ -5,8 +5,13 @@ Public Class AuthLogin
 
     '---Init'
 
+    'Database Path Location
+
     Public Shared localDatabasePath As String = "C:\Users\nicks\Downloads\POS System\JansUILib\JansUILib\UserData.accdb"
+    'Public Shared localDatabasePath As String = "C:\Users\ns05257932\Downloads\POS System\JansUILib\JansUILib\UserData.accdb"
+
     Public Shared localConnectionString As String = "Provider=Microsoft.Ace.Oledb.12.0;Data Source=" & AuthLogin.localDatabasePath
+
     'Load Usernames
     Private Sub loadUsernames()
         Dim conn As New OleDbConnection(localConnectionString)
