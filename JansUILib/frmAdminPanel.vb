@@ -44,6 +44,18 @@ Public Class AdminPanel
         conn.Close()
     End Sub
 
+    'Load Data
+    Private Sub LoadData()
+        Dim conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
+        conn.Open()
+        Dim cmdInput As String = "SELECT PIN FROM UserAuth WHERE (Username='" & lbxUsernames.SelectedItem.ToString & "')"
+        Dim cmd As New OleDbCommand(cmdInput, conn)
+        Dim myReader As OleDbDataReader = cmd.ExecuteReader
+        While myReader.Read()
+            TbxPassword.Text = myReader("PIN")
+        End While
+        conn.Close()
+    End Sub
     'Load User Configs
     Private Sub loadUserConfig()
         Dim tempColor As Int32
@@ -184,4 +196,8 @@ Public Class AdminPanel
         lblTitle.Text = "POS SYSTEM | " & versionNumber & " | " & currentUser & " | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
     End Sub
 
+    Private Sub lbxUsernames_SelectedValueChanged(sender As Object, e As EventArgs) Handles lbxUsernames.SelectedValueChanged
+        TbxUsername.Text = lbxUsernames.SelectedItem
+        LoadData()
+    End Sub
 End Class
