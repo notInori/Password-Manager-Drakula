@@ -204,12 +204,12 @@ Public Class AdminPanel
     Private Sub UpdateUserCredentials(sender As Object, e As EventArgs) Handles btnSave.Click
         If TbxUsername.Text <> "" And TbxPassword.Text <> "" And lbxUsernames.SelectedItem <> "" Then
             saveConfig("UPDATE UserAuth SET Username='" & TbxUsername.Text & "' WHERE UID=" & selectedUID)
-
+            saveConfig("UPDATE UserAuth SET PIN='" & TbxPassword.Text & "' WHERE UID=" & selectedUID)
             loadUsernames()
             lbxUsernames.SelectedItem = SqlReadVAlue("SELECT Username FROM UserAuth WHERE (UID=" & selectedUID & ")")
             notifcation("New User Credentials for " & lbxUsernames.SelectedItem & " have been saved successfully!")
         End If
-        AuthLogin.loadUsernames()
+
     End Sub
 
     'Settings Tab 
@@ -217,7 +217,10 @@ Public Class AdminPanel
     'User Logout Button
     Private Sub UserLogOut(sender As Object, e As EventArgs) Handles BtnLogOut.Click
         Me.Close()
+        conn.Close()
+        AuthLogin.loadUsernames()
         AuthLogin.Show()
+
     End Sub
 
     'Save Admin Password Button
