@@ -90,7 +90,6 @@ Public Class AuthLogin
         If CbxUsername.Text = "admin" And authUser(CbxUsername.Text, TbxPassword.Text) Then
             AdminPanel.Show()
         ElseIf authUser(CbxUsername.Text, TbxPassword.Text) Then
-            conn.Close()
             POSSystem.currentUser = CbxUsername.Text
             POSSystem.Show()
         End If

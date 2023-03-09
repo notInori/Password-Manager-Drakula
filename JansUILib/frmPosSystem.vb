@@ -13,57 +13,42 @@ Public Class POSSystem
     'Variables Init'
     Public Shared accentColor As Color = Color.FromArgb(255, 255, 255)
     ReadOnly cDialog As New ColorDialog()
+    Dim myReader As OleDbDataReader
+    Dim conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
 
     '---Winforms Init' 
 
-    'Load UID
-    Private Sub setUID(ByVal username As String)
-        Dim temp As String = ""
-        Dim conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
-        conn.Open()
-        Dim cmdInput As String = "SELECT UID FROM UserAuth WHERE (Username='" & username & "')"
-        Dim cmd As New OleDbCommand(cmdInput, conn)
-        Dim myReader As OleDbDataReader = cmd.ExecuteReader
+    'Read From Database
+    Public Function SqlReadValue(command As String)
+        Dim cmd As New OleDbCommand(command, conn)
+        myReader = cmd.ExecuteReader
         While myReader.Read()
-            temp = myReader("UID")
+            Return myReader.GetValue(0)
         End While
-        UID = CInt(temp)
-        conn.Close()
-    End Sub
+    End Function
 
     'Load User Configs
     Private Sub loadUserConfig()
-        Dim tempColor As Int32
-        Dim conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
-        conn.Open()
-        Dim cmdInput As String = "SELECT Accent FROM UserConfig WHERE (UID=" & UID & ")"
-        Dim cmd As New OleDbCommand(cmdInput, conn)
-        Dim myReader As OleDbDataReader = cmd.ExecuteReader
-        While myReader.Read()
-            tempColor = myReader("Accent")
-        End While
-        accentColor = Color.FromArgb(tempColor)
+        UID = CInt(SqlReadValue("SELECT UID FROM UserAuth WHERE (Username='" & currentUser & "')"))
+        accentColor = Color.FromArgb(SqlReadValue("SELECT Accent FROM UserConfig WHERE (UID=" & UID & ")"))
+
         UpdateAccent()
-        conn.Close()
     End Sub
 
     'Save User Config
     Private Sub saveConfig()
-        Dim conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
-        conn.Open()
-        Dim cmdInput As String = "UPDATE UserConfig SET Accent=" & accentColor.ToArgb() & " WHERE UID=" & UID
-        Dim cmd As New OleDbCommand(cmdInput, conn)
+        Dim cmd As New OleDbCommand("UPDATE UserConfig SET Accent=" & accentColor.ToArgb() & " WHERE UID=" & UID, conn)
         cmd.ExecuteNonQuery()
-        conn.Close()
+
     End Sub
 
     'Init tab system and load accent color
     Private Sub POSSystem_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        conn.Open()
         For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
             cntrl.Width = 0
         Next
         lblCurrentUser.Text = currentUser
-        setUID(currentUser)
         loadUserConfig()
         ChangeTab(lblTabSel1, e)
 
