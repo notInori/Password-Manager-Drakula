@@ -31,7 +31,7 @@ Public Class AdminPanel
     'Load UID
     Private Sub setUID(ByVal username As String)
         Dim temp As String = ""
-        Dim conn As New OleDbConnection(AuthLogin.localConnectionString)
+        Dim conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
         conn.Open()
         Dim cmdInput As String = "SELECT UID FROM UserAuth WHERE (Username='" & username & "')"
         Dim cmd As New OleDbCommand(cmdInput, conn)
@@ -46,7 +46,7 @@ Public Class AdminPanel
     'Load User Configs
     Private Sub loadUserConfig()
         Dim tempColor As Int32
-        Dim conn As New OleDbConnection(AuthLogin.localConnectionString)
+        Dim conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
         conn.Open()
         Dim cmdInput As String = "SELECT Accent FROM UserConfig WHERE (UID=" & UID & ")"
         Dim cmd As New OleDbCommand(cmdInput, conn)
@@ -61,7 +61,7 @@ Public Class AdminPanel
 
     'Save User Config
     Private Sub saveConfig()
-        Dim conn As New OleDbConnection(AuthLogin.localConnectionString)
+        Dim conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
         conn.Open()
         Dim cmdInput As String = "UPDATE UserConfig SET Accent=" & accentColor.ToArgb() & " WHERE UID=" & UID
         Dim cmd As New OleDbCommand(cmdInput, conn)
