@@ -16,21 +16,6 @@ Public Class AdminPanel
     ReadOnly cDialog As New ColorDialog()
     Dim selectedUID As New Integer
 
-    '---Winforms Init' 
-
-    'Load UID
-    Private Sub setUID(ByVal username As String)
-        Dim temp As String = ""
-        Dim cmdInput As String = "SELECT UID FROM UserAuth WHERE (Username='" & username & "')"
-        Dim cmd As New OleDbCommand(cmdInput, conn)
-        Dim myReader As OleDbDataReader = cmd.ExecuteReader
-        While myReader.Read()
-            temp = myReader("UID")
-        End While
-        UID = CInt(temp)
-
-    End Sub
-
     'Database Variables Init
     Dim myReader As OleDbDataReader
     Dim conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
@@ -44,7 +29,6 @@ Public Class AdminPanel
             cntrl.Width = 0
         Next
         lblCurrentUser.Text = currentUser
-        setUID(currentUser)
         loadUserConfig()
         ChangeTab(lblTabSel1, e)
         loadUsernames()
