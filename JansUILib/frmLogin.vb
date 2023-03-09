@@ -9,10 +9,11 @@ Public Class AuthLogin
 
     Public Shared localUserDataPath As String = ".\UserData.accdb"
 
-    'Old DatabasePath Strings
+    'Legacy DatabasePath Strings
     'Public Shared localDatabasePath As String = "C:\Users\nicks\Downloads\POS System\JansUILib\JansUILib\UserData.accdb"
     'Public Shared localDatabasePath As String = "C:\Users\ns05257932\Downloads\POS System\JansUILib\JansUILib\UserData.accdb"
 
+    'Create Global Connection String For User Data
     Public Shared UserDataConnectionString As String = "Provider=Microsoft.Ace.Oledb.12.0;Data Source=" & AuthLogin.localUserDataPath
 
     'Load Usernames
@@ -54,7 +55,6 @@ Public Class AuthLogin
         loadUsernames()
         lblCurrentVersion.Text = POSSystem.versionNumber
         lblShopName.Text = POSSystem.businessName
-
     End Sub
 
     'Winforms Variable Init'
