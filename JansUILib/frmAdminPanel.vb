@@ -43,7 +43,7 @@ Public Class AdminPanel
         While myReader.Read()
             Return myReader.GetValue(0)
         End While
-        Return 0
+        Return Nothing
     End Function
 
     'Load Usernames
