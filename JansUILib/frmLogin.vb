@@ -15,10 +15,10 @@ Public Class AuthLogin
 
     'Create Global Connection String For User Data
     Public Shared UserDataConnectionString As String = "Provider=Microsoft.Ace.Oledb.12.0;Data Source=" & AuthLogin.localUserDataPath
+    Dim conn As New OleDbConnection(UserDataConnectionString)
 
     'Load Usernames
     Private Sub loadUsernames()
-        Dim conn As New OleDbConnection(UserDataConnectionString)
         conn.Open()
         Dim cmd As New OleDbCommand("SELECT Username FROM UserAuth", conn)
         Dim myReader As OleDbDataReader = cmd.ExecuteReader
@@ -31,7 +31,6 @@ Public Class AuthLogin
 
     'Authenticates the User
     Private Function authUser(ByVal username As String, ByVal password As String)
-        Dim conn As New OleDbConnection(UserDataConnectionString)
         conn.Open()
         Dim cmdInput As String = "SELECT PIN FROM UserAuth WHERE (Username='" & username & "')"
         Dim storedPassword As String = ""
