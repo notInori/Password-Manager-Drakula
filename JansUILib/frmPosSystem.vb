@@ -14,18 +14,6 @@ Public Class POSSystem
     Public Shared accentColor As Color = Color.FromArgb(255, 255, 255)
     ReadOnly cDialog As New ColorDialog()
 
-    'Toggles Variables Init
-    Public toggle1 As Boolean = False
-    Public toggle2 As Boolean = False
-    Public toggle3 As Boolean = False
-
-    'Databases
-    Friend Class UserDataDataSet
-    End Class
-
-    Friend Class UserDataDataSetTableAdapters
-    End Class
-
     '---Winforms Init' 
 
     'Load UID
@@ -83,16 +71,9 @@ Public Class POSSystem
         Label4.ForeColor = Color.FromArgb(150, 150, 150)
         Panel5.Visible = False
 
-        btnDummy.Focus()
+
     End Sub
 
-    '---UI Library Fixes'
-
-    Public Sub AntiFocus() Handles pnlMiscPage.Click, pnlSettingsPage.Click, Panel38.Click
-        Panel169.Visible = False
-        btnDummy.Focus()
-        Panel164.BackColor = Color.FromArgb(0, 0, 0)
-    End Sub
 
     '---UI Library Functions'
 
@@ -164,7 +145,7 @@ Public Class POSSystem
             pnlSettingsPage.Dock = DockStyle.Fill
             pnlTabHighlight2.Visible = True
         End If
-        AntiFocus()
+
     End Sub
 
     '---Change Colourisable Accents in UI
@@ -222,7 +203,7 @@ Public Class POSSystem
 
     'Example Toggle Switches
     Private Sub toggle1_Click(sender As Object, e As EventArgs) Handles Panel93.Click, Panel94.Click, Panel95.Click, Panel96.Click, Label3.Click
-        btnDummy.Focus()
+
         If toggle1 Then
             Panel96.BackColor = Color.FromArgb(30, 30, 30)
             toggle1 = False
@@ -275,7 +256,7 @@ Public Class POSSystem
 
     'UI Accent Colour Picker
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles pnlColorPicker.Click
-        AntiFocus()
+
         If (cDialog.ShowDialog() = DialogResult.OK) Then
             accentColor = cDialog.Color ' update with user selected color.
         End If
@@ -285,7 +266,7 @@ Public Class POSSystem
 
     'User Logout Button
     Private Sub UserLogOut(sender As Object, e As EventArgs) Handles BtnLogOut.Click
-        AntiFocus()
+
         Me.Close()
         AuthLogin.Show()
     End Sub
