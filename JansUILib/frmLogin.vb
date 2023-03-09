@@ -18,9 +18,8 @@ Public Class AuthLogin
     Dim conn As New OleDbConnection(UserDataConnectionString)
     Dim myReader As OleDbDataReader
 
-    'Load Usernames
+    'Read From Database
     Public Sub ExecuteSqlCommand(command As String)
-        conn.Open()
         Dim cmd As New OleDbCommand(command, conn)
         myReader = cmd.ExecuteReader
     End Sub
@@ -52,6 +51,7 @@ Public Class AuthLogin
 
     'Winforms Init' 
     Private Sub UserLogin_OnLoad(ByVal qsender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        conn.Open()
         loadUsernames()
         lblCurrentVersion.Text = POSSystem.versionNumber
         lblShopName.Text = POSSystem.businessName
@@ -98,6 +98,7 @@ Public Class AuthLogin
             CbxUsername.Text = ""
             TbxPassword.Text = ""
             Me.Hide()
+            conn.Close()
         End If
     End Sub
 
@@ -105,6 +106,7 @@ Public Class AuthLogin
 
     'Exit Program
     Private Sub WindowExit(sender As Object, e As EventArgs) Handles btnExit.Click
+        conn.Close()
         Close()
     End Sub
 
