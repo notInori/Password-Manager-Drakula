@@ -1323,7 +1323,7 @@ Partial Class AuthLogin
         Me.Name = "AuthLogin"
         Me.Padding = New System.Windows.Forms.Padding(2)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "POS System Auth"
+        Me.Text = "POS System Loader"
         Me.pnlBackground.ResumeLayout(False)
         Me.tblWindow.ResumeLayout(False)
         Me.tblWindow.PerformLayout()
