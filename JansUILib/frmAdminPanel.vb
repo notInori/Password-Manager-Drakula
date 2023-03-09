@@ -187,6 +187,12 @@ Public Class AdminPanel
         lblTitle.Text = "POS SYSTEM | " & versionNumber & " | " & currentUser & " | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
     End Sub
 
+    Private Sub notifcation(notifcationText As String)
+        lblNotifcationInfo.Text = notifcationText
+        pnlNotification.Dock = DockStyle.Fill
+        pnlNotification.BringToFront()
+    End Sub
+
     Private Sub LoadSelectedUserInfo(sender As Object, e As EventArgs) Handles lbxUsernames.SelectedValueChanged, btnReload.Click
         If lbxUsernames.SelectedItem <> "" Then
             selectedUID = SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & lbxUsernames.SelectedItem.ToString & "')")
@@ -197,10 +203,26 @@ Public Class AdminPanel
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        saveConfig("UPDATE UserAuth SET Username='" & TbxUsername.Text & "' WHERE UID=" & selectedUID)
-        saveConfig("UPDATE UserAuth SET PIN='" & TbxPassword.Text & "' WHERE UID=" & selectedUID)
-        loadUsernames()
+        If TbxUsername.Text <> "" And TbxPassword.Text <> "" And lbxUsernames.SelectedItem <> "" Then
+            saveConfig("UPDATE UserAuth SET Username='" & TbxUsername.Text & "' WHERE UID=" & selectedUID)
+            saveConfig("UPDATE UserAuth SET PIN='" & TbxPassword.Text & "' WHERE UID=" & selectedUID)
+            loadUsernames()
+            lbxUsernames.SelectedItem = SqlReadVAlue("SELECT Username FROM UserAuth WHERE (UID=" & selectedUID & ")")
+            notifcation("User Data for " & lbxUsernames.SelectedItem & " has been saved successfully!")
+        End If
         AuthLogin.loadUsernames()
-        lbxUsernames.SelectedItem = SqlReadVAlue("SELECT Username FROM UserAuth WHERE (UID=" & selectedUID & ")")
+    End Sub
+
+    Private Sub btnSaveAdminPass_Click(sender As Object, e As EventArgs) Handles btnSaveAdminPass.Click
+        If tbxAdminPassword.Text <> "" Then
+            saveConfig("UPDATE UserAuth SET PIN='" & tbxAdminPassword.Text & "' WHERE UID=1")
+            notifcation("New admin password has been set successfully!")
+        End If
+        tbxAdminPassword.Text = ""
+    End Sub
+
+    Private Sub btnContinueNotification_Click(sender As Object, e As EventArgs) Handles btnContinueNotification.Click
+        pnlNotification.Dock = DockStyle.None
+        pnlNotification.Height = 0
     End Sub
 End Class
