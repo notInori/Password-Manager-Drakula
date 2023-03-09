@@ -207,7 +207,7 @@ Public Class AdminPanel
             saveConfig("UPDATE UserAuth SET PIN='" & TbxPassword.Text & "' WHERE UID=" & selectedUID)
             loadUsernames()
             lbxUsernames.SelectedItem = SqlReadVAlue("SELECT Username FROM UserAuth WHERE (UID=" & selectedUID & ")")
-            notifcation("User Data for " & lbxUsernames.SelectedItem & " has been saved successfully!")
+            notifcation("New User Credentials for " & lbxUsernames.SelectedItem & " has been saved successfully!")
         End If
         AuthLogin.loadUsernames()
     End Sub
