@@ -55,6 +55,8 @@ Public Class AuthLogin
         loadUsernames()
         lblCurrentVersion.Text = POSSystem.versionNumber
         lblShopName.Text = POSSystem.businessName
+        pnlWindowContents.Dock = DockStyle.Fill
+        pnlWindowContents.BringToFront()
     End Sub
 
     'Winforms Variable Init'
@@ -92,6 +94,9 @@ Public Class AuthLogin
         ElseIf authUser(CbxUsername.Text, TbxPassword.Text) Then
             POSSystem.currentUser = CbxUsername.Text
             POSSystem.Show()
+        Else
+            pnlNotification.Dock = DockStyle.Fill
+            pnlNotification.BringToFront()
         End If
         If authUser(CbxUsername.Text, TbxPassword.Text) Then
             CbxUsername.Text = ""
@@ -99,6 +104,12 @@ Public Class AuthLogin
             Me.Hide()
             conn.Close()
         End If
+    End Sub
+
+    'Dismiss Notification Button
+    Private Sub DimissNotification(sender As Object, e As EventArgs) Handles btnContinueNotification.Click
+        pnlNotification.Dock = DockStyle.None
+        pnlNotification.Height = 0
     End Sub
 
     'Titlebar Button Events'

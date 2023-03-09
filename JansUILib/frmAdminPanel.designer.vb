@@ -1038,8 +1038,8 @@ Partial Class AdminPanel
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.pnlMainPage)
         Me.Panel1.Controls.Add(Me.pnlNotification)
+        Me.Panel1.Controls.Add(Me.pnlMainPage)
         Me.Panel1.Controls.Add(Me.pnlSettingsPage)
         Me.Panel1.Controls.Add(Me.pnlPerformancePage)
         Me.Panel1.Controls.Add(Me.pnlMenuPage)
@@ -1061,12 +1061,11 @@ Partial Class AdminPanel
         Me.pnlMainPage.Controls.Add(Me.TableLayoutPanel13)
         Me.pnlMainPage.Controls.Add(Me.tblGroupBox)
         Me.pnlMainPage.Controls.Add(Me.Button2)
-        Me.pnlMainPage.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlMainPage.Location = New System.Drawing.Point(0, 0)
+        Me.pnlMainPage.Location = New System.Drawing.Point(429, 115)
         Me.pnlMainPage.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlMainPage.Name = "pnlMainPage"
         Me.pnlMainPage.Padding = New System.Windows.Forms.Padding(5)
-        Me.pnlMainPage.Size = New System.Drawing.Size(1434, 809)
+        Me.pnlMainPage.Size = New System.Drawing.Size(1005, 694)
         Me.pnlMainPage.TabIndex = 6
         '
         'TableLayoutPanel21
@@ -3470,7 +3469,7 @@ Partial Class AdminPanel
         '
         Me.pnlNotification.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.pnlNotification.Controls.Add(Me.TableLayoutPanel39)
-        Me.pnlNotification.Location = New System.Drawing.Point(251, 270)
+        Me.pnlNotification.Location = New System.Drawing.Point(259, 270)
         Me.pnlNotification.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlNotification.Name = "pnlNotification"
         Me.pnlNotification.Padding = New System.Windows.Forms.Padding(5)
