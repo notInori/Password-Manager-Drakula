@@ -92,16 +92,8 @@ Public Class AdminPanel
         loadUserConfig()
         ChangeTab(lblTabSel1, e)
         loadUsernames()
-        btnDummy.Focus()
     End Sub
 
-    '---UI Library Fixes'
-
-    Public Sub AntiFocus() Handles pnlMiscPage.Click, pnlSettingsPage.Click, Panel38.Click
-        Panel169.Visible = False
-        btnDummy.Focus()
-        Panel164.BackColor = Color.FromArgb(0, 0, 0)
-    End Sub
 
     '---Tab Changing System
 
@@ -198,7 +190,7 @@ Public Class AdminPanel
 
     'Example Toggle Switches
     Private Sub toggle1_Click(sender As Object, e As EventArgs) Handles Panel93.Click, Panel94.Click, Panel95.Click, Panel96.Click, Label3.Click
-        btnDummy.Focus()
+
         If toggle1 Then
             Panel96.BackColor = Color.FromArgb(30, 30, 30)
             toggle1 = False
