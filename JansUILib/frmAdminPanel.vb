@@ -14,18 +14,6 @@ Public Class AdminPanel
     Public Shared accentColor As Color = Color.FromArgb(255, 255, 255)
     ReadOnly cDialog As New ColorDialog()
 
-    'Toggles Variables Init
-    Public toggle1 As Boolean = False
-    Public toggle2 As Boolean = False
-    Public toggle3 As Boolean = False
-
-    'Databases
-    Friend Class UserDataDataSet
-    End Class
-
-    Friend Class UserDataDataSetTableAdapters
-    End Class
-
     '---Winforms Init' 
 
     'Load UID
