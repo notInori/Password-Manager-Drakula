@@ -5,18 +5,17 @@ Public Class AuthLogin
 
     '---Init'
 
-    'Database Path Location
+    '---Setting Database Path
 
-    Public Shared localUserDataPath As String = ".\UserData.accdb"
-
-    'Legacy DatabasePath Strings
-    'Public Shared localDatabasePath As String = "C:\Users\nicks\Downloads\POS System\JansUILib\JansUILib\UserData.accdb"
-    'Public Shared localDatabasePath As String = "C:\Users\ns05257932\Downloads\POS System\JansUILib\JansUILib\UserData.accdb"
-
-    'Create Global Connection String For User Data
-    Public Shared UserDataConnectionString As String = "Provider=Microsoft.Ace.Oledb.12.0;Data Source=" & AuthLogin.localUserDataPath
+    'Database Connection Variables
     Dim conn As New OleDbConnection(UserDataConnectionString)
     Dim myReader As OleDbDataReader
+    'Database Path Location
+    Public Shared localUserDataPath As String = ".\UserData.accdb"
+    'Create Global Connection String For User Data
+    Public Shared UserDataConnectionString As String = "Provider=Microsoft.Ace.Oledb.12.0;Data Source=" & AuthLogin.localUserDataPath
+
+    '---Database Functions
 
     'Read From Database
     Public Sub ExecuteSqlCommand(command As String)
