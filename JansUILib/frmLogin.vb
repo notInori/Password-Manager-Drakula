@@ -54,7 +54,7 @@ Public Class AuthLogin
         loadUsernames()
         lblCurrentVersion.Text = POSSystem.versionNumber
         lblShopName.Text = POSSystem.businessName
-        Antifocus()
+
     End Sub
 
     'Winforms Variable Init'
@@ -63,7 +63,7 @@ Public Class AuthLogin
 
     'Winforms Dragging Events
     Private Sub WindowDragging_MouseDown(sender As Object, e As MouseEventArgs) Handles tblWindow.MouseDown, pnlBackground.MouseDown, pnlWindowContents.MouseDown, pnlGroupBoxInner.MouseDown, pnlGroupUsernameTextbox.MouseDown, lblUsername.MouseDown, TableLayoutPanel2.MouseDown, TableLayoutPanel1.MouseDown, lblTitle.MouseDown, Panel5.MouseDown, Panel314.MouseDown, lblShopName.MouseDown, Label33.MouseDown, Label2.MouseDown, lblCurrentVersion.MouseDown
-        btnDummy.Focus()
+
         If e.Button = MouseButtons.Left And Me.WindowState <> FormWindowState.Maximized Then
             MoveForm = True
             Me.Cursor = Cursors.Default
@@ -72,7 +72,7 @@ Public Class AuthLogin
     End Sub
 
     Private Sub WindowDragging_MouseUp(sender As Object, e As MouseEventArgs) Handles tblWindow.MouseUp, pnlBackground.MouseUp, pnlWindowContents.MouseUp, pnlGroupBoxInner.MouseUp, pnlGroupUsernameTextbox.MouseUp, lblUsername.MouseUp, TableLayoutPanel2.MouseUp, TableLayoutPanel1.MouseUp, lblTitle.MouseUp, Panel5.MouseUp, Panel314.MouseUp, lblShopName.MouseUp, Label33.MouseUp, Label2.MouseUp, lblCurrentVersion.MouseUp
-        btnDummy.Focus()
+
         If e.Button = MouseButtons.Left Then
             MoveForm = False
             Me.Cursor = Cursors.Default
@@ -83,13 +83,6 @@ Public Class AuthLogin
         If MoveForm Then
             Me.Location += (e.Location - MoveForm_MousePositiion)
         End If
-    End Sub
-
-    '---UI Library Fixes'
-
-    'Remove Highlight Box
-    Private Sub Antifocus() Handles pnlGroupBoxInner.MouseClick, btnLogin.Click, pnlGroupUsernameTextbox.Click, lblUsername.Click
-        btnDummy.Focus()
     End Sub
 
     '---Aplication Code
