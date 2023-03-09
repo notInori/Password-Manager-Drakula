@@ -353,6 +353,7 @@ Partial Class AdminPanel
         Me.Panel88 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.tmrMain = New System.Windows.Forms.Timer(Me.components)
+        Me.lbxUsernames = New System.Windows.Forms.ListBox()
         Me.pnlBackground.SuspendLayout()
         Me.tblMain.SuspendLayout()
         Me.pnlTopBar.SuspendLayout()
@@ -434,6 +435,7 @@ Partial Class AdminPanel
         Me.Panel14.SuspendLayout()
         Me.Panel15.SuspendLayout()
         Me.Panel16.SuspendLayout()
+        Me.Panel17.SuspendLayout()
         Me.pnlSettingsPage.SuspendLayout()
         Me.TableLayoutPanel33.SuspendLayout()
         Me.Panel315.SuspendLayout()
@@ -2293,6 +2295,7 @@ Partial Class AdminPanel
         'Panel17
         '
         Me.Panel17.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Panel17.Controls.Add(Me.lbxUsernames)
         Me.Panel17.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel17.Location = New System.Drawing.Point(1, 1)
         Me.Panel17.Margin = New System.Windows.Forms.Padding(0)
@@ -4636,6 +4639,21 @@ Partial Class AdminPanel
         '
         Me.tmrMain.Enabled = True
         '
+        'lbxUsernames
+        '
+        Me.lbxUsernames.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.lbxUsernames.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.lbxUsernames.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbxUsernames.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbxUsernames.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.lbxUsernames.FormattingEnabled = True
+        Me.lbxUsernames.ItemHeight = 24
+        Me.lbxUsernames.Location = New System.Drawing.Point(1, 1)
+        Me.lbxUsernames.Margin = New System.Windows.Forms.Padding(0)
+        Me.lbxUsernames.Name = "lbxUsernames"
+        Me.lbxUsernames.Size = New System.Drawing.Size(416, 736)
+        Me.lbxUsernames.TabIndex = 0
+        '
         'AdminPanel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -4745,6 +4763,7 @@ Partial Class AdminPanel
         Me.Panel14.ResumeLayout(False)
         Me.Panel15.ResumeLayout(False)
         Me.Panel16.ResumeLayout(False)
+        Me.Panel17.ResumeLayout(False)
         Me.pnlSettingsPage.ResumeLayout(False)
         Me.TableLayoutPanel33.ResumeLayout(False)
         Me.Panel315.ResumeLayout(False)
@@ -5212,4 +5231,5 @@ Partial Class AdminPanel
     Friend WithEvents lblTabSel3 As Label
     Friend WithEvents pnlPerformancePage As Panel
     Friend WithEvents pnlMenuPage As Panel
+    Friend WithEvents lbxUsernames As ListBox
 End Class

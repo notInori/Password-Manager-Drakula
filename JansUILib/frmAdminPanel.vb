@@ -43,6 +43,19 @@ Public Class AdminPanel
         conn.Close()
     End Sub
 
+    'Load Usernames
+    Private Sub loadUsernames()
+        Dim conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
+        conn.Open()
+        Dim cmd As New OleDbCommand("SELECT Username FROM UserAuth", conn)
+        Dim myReader As OleDbDataReader = cmd.ExecuteReader
+        lbxUsernames.Items.Clear()
+        While myReader.Read
+            lbxUsernames.Items.Add(myReader("Username"))
+        End While
+        conn.Close()
+    End Sub
+
     'Load User Configs
     Private Sub loadUserConfig()
         Dim tempColor As Int32
@@ -78,7 +91,7 @@ Public Class AdminPanel
         setUID(currentUser)
         loadUserConfig()
         ChangeTab(lblTabSel1, e)
-
+        loadUsernames()
         btnDummy.Focus()
     End Sub
 
