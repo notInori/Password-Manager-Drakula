@@ -1,4 +1,5 @@
 ﻿Imports System.Data.OleDb
+Imports System.Web.UI.WebControls
 
 Public Class AdminPanel
 
@@ -196,10 +197,11 @@ Public Class AdminPanel
         lblTitle.Text = "POS SYSTEM | " & versionNumber & " | " & currentUser & " | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
     End Sub
 
-    Private Sub lbxUsernames_SelectedValueChanged(sender As Object, e As EventArgs) Handles lbxUsernames.SelectedValueChanged
+    Private Sub LoadSelectedUserInfo(sender As Object, e As EventArgs) Handles lbxUsernames.SelectedValueChanged, btnReload.Click
         If lbxUsernames.SelectedItem <> "" Then
             TbxUsername.Text = lbxUsernames.SelectedItem
             LoadData()
         End If
     End Sub
+
 End Class

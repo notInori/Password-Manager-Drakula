@@ -158,7 +158,7 @@ Partial Class AdminPanel
         Me.Panel205 = New System.Windows.Forms.Panel()
         Me.Panel207 = New System.Windows.Forms.Panel()
         Me.Panel208 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnReload = New System.Windows.Forms.Button()
         Me.Panel83 = New System.Windows.Forms.Panel()
         Me.Panel206 = New System.Windows.Forms.Panel()
         Me.btnLogin = New System.Windows.Forms.Button()
@@ -2348,7 +2348,7 @@ Partial Class AdminPanel
         'Panel208
         '
         Me.Panel208.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
-        Me.Panel208.Controls.Add(Me.Button1)
+        Me.Panel208.Controls.Add(Me.btnReload)
         Me.Panel208.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel208.Location = New System.Drawing.Point(1, 1)
         Me.Panel208.Name = "Panel208"
@@ -2356,23 +2356,23 @@ Partial Class AdminPanel
         Me.Panel208.Size = New System.Drawing.Size(457, 35)
         Me.Panel208.TabIndex = 0
         '
-        'Button1
+        'btnReload
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.Button1.Location = New System.Drawing.Point(1, 1)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(1)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(455, 33)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Reload"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnReload.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnReload.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnReload.FlatAppearance.BorderSize = 0
+        Me.btnReload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.btnReload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.btnReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnReload.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReload.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.btnReload.Location = New System.Drawing.Point(1, 1)
+        Me.btnReload.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnReload.Name = "btnReload"
+        Me.btnReload.Size = New System.Drawing.Size(455, 33)
+        Me.btnReload.TabIndex = 6
+        Me.btnReload.Text = "Reload"
+        Me.btnReload.UseVisualStyleBackColor = False
         '
         'Panel83
         '
@@ -5917,7 +5917,7 @@ Partial Class AdminPanel
     Friend WithEvents Panel82 As Panel
     Friend WithEvents Panel207 As Panel
     Friend WithEvents Panel208 As Panel
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnReload As Button
     Friend WithEvents Panel83 As Panel
     Friend WithEvents Panel206 As Panel
     Friend WithEvents btnLogin As Button
