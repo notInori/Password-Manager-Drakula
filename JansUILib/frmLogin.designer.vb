@@ -62,6 +62,13 @@ Partial Class AuthLogin
         Me.pnlGroupBoxOutline = New System.Windows.Forms.Panel()
         Me.pnlGroupBoxInnerBlackLine = New System.Windows.Forms.Panel()
         Me.pnlGroupBoxInner = New System.Windows.Forms.Panel()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.Panel12 = New System.Windows.Forms.Panel()
+        Me.Panel13 = New System.Windows.Forms.Panel()
+        Me.Panel27 = New System.Windows.Forms.Panel()
+        Me.TbxPassword = New System.Windows.Forms.TextBox()
         Me.pnlGroupUsernameTextbox = New System.Windows.Forms.Panel()
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.pnlusernameOuterBlack = New System.Windows.Forms.Panel()
@@ -75,13 +82,6 @@ Partial Class AuthLogin
         Me.btnDummy = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.pnlBlackOutline = New System.Windows.Forms.Panel()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.Panel12 = New System.Windows.Forms.Panel()
-        Me.Panel13 = New System.Windows.Forms.Panel()
-        Me.Panel27 = New System.Windows.Forms.Panel()
-        Me.TbxPassword = New System.Windows.Forms.TextBox()
         Me.pnlBackground.SuspendLayout()
         Me.tblWindow.SuspendLayout()
         Me.pnlTopBar.SuspendLayout()
@@ -106,6 +106,11 @@ Partial Class AuthLogin
         Me.pnlGroupBoxOutline.SuspendLayout()
         Me.pnlGroupBoxInnerBlackLine.SuspendLayout()
         Me.pnlGroupBoxInner.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        Me.Panel11.SuspendLayout()
+        Me.Panel12.SuspendLayout()
+        Me.Panel13.SuspendLayout()
+        Me.Panel27.SuspendLayout()
         Me.pnlGroupUsernameTextbox.SuspendLayout()
         Me.pnlusernameOuterBlack.SuspendLayout()
         Me.pnlUsernameBorder.SuspendLayout()
@@ -114,11 +119,6 @@ Partial Class AuthLogin
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.pnlBlackOutline.SuspendLayout()
-        Me.Panel6.SuspendLayout()
-        Me.Panel11.SuspendLayout()
-        Me.Panel12.SuspendLayout()
-        Me.Panel13.SuspendLayout()
-        Me.Panel27.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnlBackground
@@ -130,7 +130,7 @@ Partial Class AuthLogin
         Me.pnlBackground.Location = New System.Drawing.Point(1, 1)
         Me.pnlBackground.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlBackground.Name = "pnlBackground"
-        Me.pnlBackground.Size = New System.Drawing.Size(494, 357)
+        Me.pnlBackground.Size = New System.Drawing.Size(494, 356)
         Me.pnlBackground.TabIndex = 0
         '
         'tblWindow
@@ -152,7 +152,7 @@ Partial Class AuthLogin
         Me.tblWindow.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1.0!))
         Me.tblWindow.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tblWindow.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.tblWindow.Size = New System.Drawing.Size(494, 357)
+        Me.tblWindow.Size = New System.Drawing.Size(494, 356)
         Me.tblWindow.TabIndex = 2
         '
         'pnlTopBar
@@ -259,7 +259,7 @@ Partial Class AuthLogin
         Me.pnlWindowContents.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlWindowContents.Name = "pnlWindowContents"
         Me.pnlWindowContents.Padding = New System.Windows.Forms.Padding(5)
-        Me.pnlWindowContents.Size = New System.Drawing.Size(494, 317)
+        Me.pnlWindowContents.Size = New System.Drawing.Size(494, 316)
         Me.pnlWindowContents.TabIndex = 3
         '
         'Panel5
@@ -357,7 +357,7 @@ Partial Class AuthLogin
         Me.tblMainGroupBox.RowCount = 2
         Me.tblMainGroupBox.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24.0!))
         Me.tblMainGroupBox.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tblMainGroupBox.Size = New System.Drawing.Size(474, 228)
+        Me.tblMainGroupBox.Size = New System.Drawing.Size(474, 225)
         Me.tblMainGroupBox.TabIndex = 12
         '
         'Panel10
@@ -584,7 +584,7 @@ Partial Class AuthLogin
         Me.pnlGroupBoxOuterBlack.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlGroupBoxOuterBlack.Name = "pnlGroupBoxOuterBlack"
         Me.pnlGroupBoxOuterBlack.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.pnlGroupBoxOuterBlack.Size = New System.Drawing.Size(474, 204)
+        Me.pnlGroupBoxOuterBlack.Size = New System.Drawing.Size(474, 201)
         Me.pnlGroupBoxOuterBlack.TabIndex = 16
         '
         'pnlGroupBoxOutline
@@ -596,7 +596,7 @@ Partial Class AuthLogin
         Me.pnlGroupBoxOutline.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlGroupBoxOutline.Name = "pnlGroupBoxOutline"
         Me.pnlGroupBoxOutline.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.pnlGroupBoxOutline.Size = New System.Drawing.Size(472, 203)
+        Me.pnlGroupBoxOutline.Size = New System.Drawing.Size(472, 200)
         Me.pnlGroupBoxOutline.TabIndex = 17
         '
         'pnlGroupBoxInnerBlackLine
@@ -608,7 +608,7 @@ Partial Class AuthLogin
         Me.pnlGroupBoxInnerBlackLine.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlGroupBoxInnerBlackLine.Name = "pnlGroupBoxInnerBlackLine"
         Me.pnlGroupBoxInnerBlackLine.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.pnlGroupBoxInnerBlackLine.Size = New System.Drawing.Size(470, 202)
+        Me.pnlGroupBoxInnerBlackLine.Size = New System.Drawing.Size(470, 199)
         Me.pnlGroupBoxInnerBlackLine.TabIndex = 17
         '
         'pnlGroupBoxInner
@@ -622,15 +622,100 @@ Partial Class AuthLogin
         Me.pnlGroupBoxInner.Margin = New System.Windows.Forms.Padding(5)
         Me.pnlGroupBoxInner.Name = "pnlGroupBoxInner"
         Me.pnlGroupBoxInner.Padding = New System.Windows.Forms.Padding(5)
-        Me.pnlGroupBoxInner.Size = New System.Drawing.Size(468, 201)
+        Me.pnlGroupBoxInner.Size = New System.Drawing.Size(468, 198)
         Me.pnlGroupBoxInner.TabIndex = 17
+        '
+        'Panel6
+        '
+        Me.Panel6.AutoSize = True
+        Me.Panel6.Controls.Add(Me.Label1)
+        Me.Panel6.Controls.Add(Me.Panel11)
+        Me.Panel6.Location = New System.Drawing.Point(10, 74)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(5)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(448, 65)
+        Me.Panel6.TabIndex = 13
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(-2, 0)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Padding = New System.Windows.Forms.Padding(0, 0, 5, 5)
+        Me.Label1.Size = New System.Drawing.Size(123, 29)
+        Me.Label1.TabIndex = 9
+        Me.Label1.Text = "Password:"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Panel11
+        '
+        Me.Panel11.BackColor = System.Drawing.Color.Black
+        Me.Panel11.Controls.Add(Me.Panel12)
+        Me.Panel11.Location = New System.Drawing.Point(0, 29)
+        Me.Panel11.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Padding = New System.Windows.Forms.Padding(1)
+        Me.Panel11.Size = New System.Drawing.Size(448, 36)
+        Me.Panel11.TabIndex = 11
+        '
+        'Panel12
+        '
+        Me.Panel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
+        Me.Panel12.Controls.Add(Me.Panel13)
+        Me.Panel12.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel12.Location = New System.Drawing.Point(1, 1)
+        Me.Panel12.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel12.Name = "Panel12"
+        Me.Panel12.Padding = New System.Windows.Forms.Padding(1)
+        Me.Panel12.Size = New System.Drawing.Size(446, 34)
+        Me.Panel12.TabIndex = 9
+        '
+        'Panel13
+        '
+        Me.Panel13.BackColor = System.Drawing.Color.Black
+        Me.Panel13.Controls.Add(Me.Panel27)
+        Me.Panel13.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel13.Location = New System.Drawing.Point(1, 1)
+        Me.Panel13.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel13.Name = "Panel13"
+        Me.Panel13.Padding = New System.Windows.Forms.Padding(1)
+        Me.Panel13.Size = New System.Drawing.Size(444, 32)
+        Me.Panel13.TabIndex = 10
+        '
+        'Panel27
+        '
+        Me.Panel27.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Panel27.Controls.Add(Me.TbxPassword)
+        Me.Panel27.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel27.Location = New System.Drawing.Point(1, 1)
+        Me.Panel27.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel27.Name = "Panel27"
+        Me.Panel27.Padding = New System.Windows.Forms.Padding(1)
+        Me.Panel27.Size = New System.Drawing.Size(442, 30)
+        Me.Panel27.TabIndex = 10
+        '
+        'TbxPassword
+        '
+        Me.TbxPassword.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.TbxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TbxPassword.Font = New System.Drawing.Font("Consolas", 15.75!)
+        Me.TbxPassword.ForeColor = System.Drawing.Color.White
+        Me.TbxPassword.Location = New System.Drawing.Point(0, 2)
+        Me.TbxPassword.Margin = New System.Windows.Forms.Padding(0)
+        Me.TbxPassword.Name = "TbxPassword"
+        Me.TbxPassword.Size = New System.Drawing.Size(442, 25)
+        Me.TbxPassword.TabIndex = 0
         '
         'pnlGroupUsernameTextbox
         '
         Me.pnlGroupUsernameTextbox.AutoSize = True
         Me.pnlGroupUsernameTextbox.Controls.Add(Me.lblUsername)
         Me.pnlGroupUsernameTextbox.Controls.Add(Me.pnlusernameOuterBlack)
-        Me.pnlGroupUsernameTextbox.Location = New System.Drawing.Point(10, 8)
+        Me.pnlGroupUsernameTextbox.Location = New System.Drawing.Point(10, 4)
         Me.pnlGroupUsernameTextbox.Margin = New System.Windows.Forms.Padding(5)
         Me.pnlGroupUsernameTextbox.Name = "pnlGroupUsernameTextbox"
         Me.pnlGroupUsernameTextbox.Size = New System.Drawing.Size(448, 65)
@@ -715,7 +800,7 @@ Partial Class AuthLogin
         '
         Me.Panel3.BackColor = System.Drawing.Color.Black
         Me.Panel3.Controls.Add(Me.Panel4)
-        Me.Panel3.Location = New System.Drawing.Point(10, 154)
+        Me.Panel3.Location = New System.Drawing.Point(10, 149)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Padding = New System.Windows.Forms.Padding(1)
@@ -785,100 +870,15 @@ Partial Class AuthLogin
         Me.pnlBlackOutline.Location = New System.Drawing.Point(2, 2)
         Me.pnlBlackOutline.Name = "pnlBlackOutline"
         Me.pnlBlackOutline.Padding = New System.Windows.Forms.Padding(1)
-        Me.pnlBlackOutline.Size = New System.Drawing.Size(496, 359)
+        Me.pnlBlackOutline.Size = New System.Drawing.Size(496, 358)
         Me.pnlBlackOutline.TabIndex = 1
-        '
-        'Panel6
-        '
-        Me.Panel6.AutoSize = True
-        Me.Panel6.Controls.Add(Me.Label1)
-        Me.Panel6.Controls.Add(Me.Panel11)
-        Me.Panel6.Location = New System.Drawing.Point(10, 79)
-        Me.Panel6.Margin = New System.Windows.Forms.Padding(5)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(448, 65)
-        Me.Panel6.TabIndex = 13
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(-2, 0)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Padding = New System.Windows.Forms.Padding(0, 0, 5, 5)
-        Me.Label1.Size = New System.Drawing.Size(123, 29)
-        Me.Label1.TabIndex = 9
-        Me.Label1.Text = "Password:"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Panel11
-        '
-        Me.Panel11.BackColor = System.Drawing.Color.Black
-        Me.Panel11.Controls.Add(Me.Panel12)
-        Me.Panel11.Location = New System.Drawing.Point(0, 29)
-        Me.Panel11.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel11.Name = "Panel11"
-        Me.Panel11.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel11.Size = New System.Drawing.Size(448, 36)
-        Me.Panel11.TabIndex = 11
-        '
-        'Panel12
-        '
-        Me.Panel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
-        Me.Panel12.Controls.Add(Me.Panel13)
-        Me.Panel12.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel12.Location = New System.Drawing.Point(1, 1)
-        Me.Panel12.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel12.Name = "Panel12"
-        Me.Panel12.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel12.Size = New System.Drawing.Size(446, 34)
-        Me.Panel12.TabIndex = 9
-        '
-        'Panel13
-        '
-        Me.Panel13.BackColor = System.Drawing.Color.Black
-        Me.Panel13.Controls.Add(Me.Panel27)
-        Me.Panel13.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel13.Location = New System.Drawing.Point(1, 1)
-        Me.Panel13.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel13.Name = "Panel13"
-        Me.Panel13.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel13.Size = New System.Drawing.Size(444, 32)
-        Me.Panel13.TabIndex = 10
-        '
-        'Panel27
-        '
-        Me.Panel27.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Panel27.Controls.Add(Me.TbxPassword)
-        Me.Panel27.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel27.Location = New System.Drawing.Point(1, 1)
-        Me.Panel27.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel27.Name = "Panel27"
-        Me.Panel27.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel27.Size = New System.Drawing.Size(442, 30)
-        Me.Panel27.TabIndex = 10
-        '
-        'TbxPassword
-        '
-        Me.TbxPassword.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.TbxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TbxPassword.Font = New System.Drawing.Font("Consolas", 15.75!)
-        Me.TbxPassword.ForeColor = System.Drawing.Color.White
-        Me.TbxPassword.Location = New System.Drawing.Point(0, 2)
-        Me.TbxPassword.Margin = New System.Windows.Forms.Padding(0)
-        Me.TbxPassword.Name = "TbxPassword"
-        Me.TbxPassword.Size = New System.Drawing.Size(442, 25)
-        Me.TbxPassword.TabIndex = 0
         '
         'AuthLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(500, 363)
+        Me.ClientSize = New System.Drawing.Size(500, 360)
         Me.Controls.Add(Me.pnlBlackOutline)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -915,6 +915,13 @@ Partial Class AuthLogin
         Me.pnlGroupBoxInnerBlackLine.ResumeLayout(False)
         Me.pnlGroupBoxInner.ResumeLayout(False)
         Me.pnlGroupBoxInner.PerformLayout()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        Me.Panel11.ResumeLayout(False)
+        Me.Panel12.ResumeLayout(False)
+        Me.Panel13.ResumeLayout(False)
+        Me.Panel27.ResumeLayout(False)
+        Me.Panel27.PerformLayout()
         Me.pnlGroupUsernameTextbox.ResumeLayout(False)
         Me.pnlGroupUsernameTextbox.PerformLayout()
         Me.pnlusernameOuterBlack.ResumeLayout(False)
@@ -924,13 +931,6 @@ Partial Class AuthLogin
         Me.Panel3.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.pnlBlackOutline.ResumeLayout(False)
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
-        Me.Panel11.ResumeLayout(False)
-        Me.Panel12.ResumeLayout(False)
-        Me.Panel13.ResumeLayout(False)
-        Me.Panel27.ResumeLayout(False)
-        Me.Panel27.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
