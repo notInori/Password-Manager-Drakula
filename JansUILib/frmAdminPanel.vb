@@ -148,19 +148,6 @@ Public Class AdminPanel
         'Update Color Picker UI Preview
         pnlColorPicker.BackColor = accentColor
 
-        'Toggle Control Accent Updating
-        If toggle1 Then
-            Panel96.BackColor = accentColor
-        End If
-
-        If toggle2 Then
-            Panel134.BackColor = accentColor
-        End If
-
-        If toggle3 Then
-            Panel139.BackColor = accentColor
-        End If
-
         'Tab Highlight Accent Updating
         For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
             cntrl.BackColor = accentColor
