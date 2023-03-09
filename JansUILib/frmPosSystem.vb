@@ -31,7 +31,6 @@ Public Class POSSystem
     Private Sub loadUserConfig()
         UID = CInt(SqlReadValue("SELECT UID FROM UserAuth WHERE (Username='" & currentUser & "')"))
         accentColor = Color.FromArgb(SqlReadValue("SELECT Accent FROM UserConfig WHERE (UID=" & UID & ")"))
-
         UpdateAccent()
     End Sub
 
@@ -39,7 +38,6 @@ Public Class POSSystem
     Private Sub saveConfig()
         Dim cmd As New OleDbCommand("UPDATE UserConfig SET Accent=" & accentColor.ToArgb() & " WHERE UID=" & UID, conn)
         cmd.ExecuteNonQuery()
-
     End Sub
 
     'Init tab system and load accent color
