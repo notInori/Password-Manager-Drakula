@@ -16,27 +16,26 @@ Public Class AuthLogin
     'Create Global Connection String For User Data
     Public Shared UserDataConnectionString As String = "Provider=Microsoft.Ace.Oledb.12.0;Data Source=" & AuthLogin.localUserDataPath
     Dim conn As New OleDbConnection(UserDataConnectionString)
-    Dim myReader As OleDbDataReader
-
-    'Read From Database
-    Public Sub ExecuteSqlCommand(command As String)
-        Dim cmd As New OleDbCommand(command, conn)
-        myReader = cmd.ExecuteReader
-    End Sub
 
     'Load Usernames
     Private Sub loadUsernames()
-        ExecuteSqlCommand("SELECT Username FROM UserAuth")
+        conn.Open()
+        Dim cmd As New OleDbCommand("SELECT Username FROM UserAuth", conn)
+        Dim myReader As OleDbDataReader = cmd.ExecuteReader
         CbxUsername.Items.Clear()
         While myReader.Read
             CbxUsername.Items.Add(myReader("Username"))
         End While
+        conn.Close()
     End Sub
 
     'Authenticates the User
     Private Function authUser(ByVal username As String, ByVal password As String)
+        conn.Open()
+        Dim cmdInput As String = "SELECT PIN FROM UserAuth WHERE (Username='" & username & "')"
         Dim storedPassword As String = ""
-        ExecuteSqlCommand("SELECT PIN FROM UserAuth WHERE (Username='" & username & "')")
+        Dim cmd As New OleDbCommand(cmdInput, conn)
+        Dim myReader As OleDbDataReader = cmd.ExecuteReader
         While myReader.Read()
             storedPassword = myReader("PIN").ToString
         End While
@@ -45,6 +44,7 @@ Public Class AuthLogin
         Else
             Return False 'Returns false if combination is inccorrect or fields are empty
         End If
+        conn.Close()
     End Function
 
     '---Winforms Dragging
@@ -54,7 +54,6 @@ Public Class AuthLogin
         loadUsernames()
         lblCurrentVersion.Text = POSSystem.versionNumber
         lblShopName.Text = POSSystem.businessName
-        conn.Open()
     End Sub
 
     'Winforms Variable Init'
@@ -90,14 +89,12 @@ Public Class AuthLogin
         If CbxUsername.Text = "admin" And authUser(CbxUsername.Text, TbxPassword.Text) Then
             AdminPanel.Show()
         ElseIf authUser(CbxUsername.Text, TbxPassword.Text) Then
-
             POSSystem.currentUser = CbxUsername.Text
             POSSystem.Show()
         End If
         If authUser(CbxUsername.Text, TbxPassword.Text) Then
             CbxUsername.Text = ""
             TbxPassword.Text = ""
-            conn.Close()
             Me.Hide()
         End If
     End Sub
