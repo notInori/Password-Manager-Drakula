@@ -37,7 +37,22 @@ Public Class AdminPanel
 
     '---Winforms Init' 
 
-    'Read From Database
+    'Init tab system and load accent color
+    Private Sub POSSystem_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        conn.Open()
+        For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
+            cntrl.Width = 0
+        Next
+        lblCurrentUser.Text = currentUser
+        setUID(currentUser)
+        loadUserConfig()
+        ChangeTab(lblTabSel1, e)
+        loadUsernames()
+    End Sub
+
+    '---Database Functions
+
+    'Read Value from Database
     Public Function SqlReadVAlue(command As String)
         Dim cmd As New OleDbCommand(command, conn)
         myReader = cmd.ExecuteReader
@@ -47,7 +62,6 @@ Public Class AdminPanel
     End Function
 
     'Load Usernames
-
     Private Sub loadUsernames()
         Dim cmd As New OleDbCommand("SELECT Username FROM UserAuth", conn)
         myReader = cmd.ExecuteReader
@@ -72,22 +86,9 @@ Public Class AdminPanel
         cmd.ExecuteNonQuery()
     End Sub
 
-    'Init tab system and load accent color
-    Private Sub POSSystem_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        conn.Open()
-        For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
-            cntrl.Width = 0
-        Next
-        lblCurrentUser.Text = currentUser
-        setUID(currentUser)
-        loadUserConfig()
-        ChangeTab(lblTabSel1, e)
-        loadUsernames()
-    End Sub
+    '---UI Library Functions
 
-
-    '---Tab Changing System
-
+    'Tab Changing System
     Private Sub ChangeTab(sender As Object, e As EventArgs) Handles lblTabSel1.Click, lblTabSel2.Click, lblTabSel3.Click, lblTabSel4.Click
 
         'Hides selected tab indicator
@@ -161,9 +162,20 @@ Public Class AdminPanel
 
     End Sub
 
-    '---Application Code
+    '---Notifications
 
-    'Settings Tab 
+    'Full screen notifications
+    Private Sub notifcation(notifcationText As String)
+        lblNotifcationInfo.Text = notifcationText
+        pnlNotification.Dock = DockStyle.Fill
+        pnlNotification.BringToFront()
+    End Sub
+
+    'Dismiss Notification Button
+    Private Sub btnContinueNotification_Click(sender As Object, e As EventArgs) Handles btnContinueNotification.Click
+        pnlNotification.Dock = DockStyle.None
+        pnlNotification.Height = 0
+    End Sub
 
     'UI Accent Colour Picker
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles pnlColorPicker.Click
@@ -174,25 +186,11 @@ Public Class AdminPanel
         saveConfig("UPDATE UserConfig SET Accent=" & accentColor.ToArgb() & " WHERE UID=" & UID)
     End Sub
 
-    'User Logout Button
-    Private Sub UserLogOut(sender As Object, e As EventArgs) Handles BtnLogOut.Click
-        Me.Close()
-        AuthLogin.Show()
-    End Sub
+    '---Application Code
 
-    '---Watermark
+    'Users Screen
 
-    'Timer Tick Update
-    Private Sub TmrMain_Tick(sender As Object, e As EventArgs) Handles tmrMain.Tick
-        lblTitle.Text = "POS SYSTEM | " & versionNumber & " | " & currentUser & " | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
-    End Sub
-
-    Private Sub notifcation(notifcationText As String)
-        lblNotifcationInfo.Text = notifcationText
-        pnlNotification.Dock = DockStyle.Fill
-        pnlNotification.BringToFront()
-    End Sub
-
+    'Load selected User's Data
     Private Sub LoadSelectedUserInfo(sender As Object, e As EventArgs) Handles lbxUsernames.SelectedValueChanged, btnReload.Click
         If lbxUsernames.SelectedItem <> "" Then
             selectedUID = SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & lbxUsernames.SelectedItem.ToString & "')")
@@ -202,6 +200,7 @@ Public Class AdminPanel
 
     End Sub
 
+    'Save Changes to User's Username and Password
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         If TbxUsername.Text <> "" And TbxPassword.Text <> "" And lbxUsernames.SelectedItem <> "" Then
             saveConfig("UPDATE UserAuth SET Username='" & TbxUsername.Text & "' WHERE UID=" & selectedUID)
@@ -213,6 +212,15 @@ Public Class AdminPanel
         AuthLogin.loadUsernames()
     End Sub
 
+    'Settings Tab 
+
+    'User Logout Button
+    Private Sub UserLogOut(sender As Object, e As EventArgs) Handles BtnLogOut.Click
+        Me.Close()
+        AuthLogin.Show()
+    End Sub
+
+    'Save Admin Password Button
     Private Sub btnSaveAdminPass_Click(sender As Object, e As EventArgs) Handles btnSaveAdminPass.Click
         If tbxAdminPassword.Text <> "" Then
             saveConfig("UPDATE UserAuth SET PIN='" & tbxAdminPassword.Text & "' WHERE UID=1")
@@ -221,8 +229,11 @@ Public Class AdminPanel
         tbxAdminPassword.Text = ""
     End Sub
 
-    Private Sub btnContinueNotification_Click(sender As Object, e As EventArgs) Handles btnContinueNotification.Click
-        pnlNotification.Dock = DockStyle.None
-        pnlNotification.Height = 0
+    '---Watermark
+
+    'Timer Tick Update
+    Private Sub TmrMain_Tick(sender As Object, e As EventArgs) Handles tmrMain.Tick
+        lblTitle.Text = "POS SYSTEM | " & versionNumber & " | " & currentUser & " | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
     End Sub
+
 End Class
