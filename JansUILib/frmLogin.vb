@@ -24,6 +24,7 @@ Public Class AuthLogin
         While myReader.Read()
             Return myReader.GetValue(0)
         End While
+        Return Nothing
     End Function
 
     'Load Usernames
@@ -40,7 +41,7 @@ Public Class AuthLogin
     'Authenticates the User
     Private Function AuthUser(ByVal username As String, ByVal password As String)
         Dim storedPassword = SqlReadValue("SELECT PIN FROM UserAuth WHERE (Username='" & username & "')")
-        If password = storedPassword And storedPassword <> "" Then
+        If password = CStr(storedPassword) And CStr(storedPassword) <> "" Then
             Return True 'Returns true if combination of username and password is correct
         Else
             Return False 'Returns false if combination is inccorrect or fields are empty
