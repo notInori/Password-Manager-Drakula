@@ -8,7 +8,7 @@ Public Class AuthLogin
     '---Setting Database Path
 
     'Database Connection Variables
-    Dim conn As New OleDbConnection(UserDataConnectionString)
+    ReadOnly conn As New OleDbConnection(UserDataConnectionString)
     Dim myReader As OleDbDataReader
     'Database Path Location
     Public Shared localUserDataPath As String = ".\UserData.accdb"
@@ -27,7 +27,7 @@ Public Class AuthLogin
     End Function
 
     'Load Usernames
-    Public Sub loadUsernames()
+    Public Sub LoadUsernames()
         conn.Open()
         CbxUsername.Items.Clear()
         Dim cmd As New OleDbCommand("SELECT Username FROM UserAuth", conn)
@@ -38,7 +38,7 @@ Public Class AuthLogin
     End Sub
 
     'Authenticates the User
-    Private Function authUser(ByVal username As String, ByVal password As String)
+    Private Function AuthUser(ByVal username As String, ByVal password As String)
         Dim storedPassword = SqlReadValue("SELECT PIN FROM UserAuth WHERE (Username='" & username & "')")
         If password = storedPassword And storedPassword <> "" Then
             Return True 'Returns true if combination of username and password is correct

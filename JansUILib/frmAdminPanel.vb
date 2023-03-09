@@ -18,7 +18,7 @@ Public Class AdminPanel
 
     'Database Variables Init
     Dim myReader As OleDbDataReader
-    Dim conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
+    ReadOnly conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
 
     '---Winforms Init' 
 
@@ -46,7 +46,7 @@ Public Class AdminPanel
     End Function
 
     'Load Usernames
-    Private Sub loadUsernames()
+    Private Sub LoadUsernames()
         Dim cmd As New OleDbCommand("SELECT Username FROM UserAuth", conn)
         myReader = cmd.ExecuteReader
         lbxUsernames.Items.Clear()
@@ -58,14 +58,14 @@ Public Class AdminPanel
     End Sub
 
     'Load User Configs
-    Private Sub loadUserConfig()
+    Private Sub LoadUserConfig()
         UID = CInt(SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & currentUser & "')"))
         accentColor = Color.FromArgb(SqlReadVAlue("SELECT Accent FROM UserConfig WHERE (UID=" & UID & ")"))
         UpdateAccent()
     End Sub
 
     'Save User Config
-    Private Sub saveConfig(command As String)
+    Private Sub SaveConfig(command As String)
         Dim cmd As New OleDbCommand(command, conn)
         cmd.ExecuteNonQuery()
     End Sub
@@ -149,14 +149,14 @@ Public Class AdminPanel
     '---Notifications
 
     'Full screen notifications
-    Private Sub notifcation(notifcationText As String)
+    Private Sub Notifcation(notifcationText As String)
         lblNotifcationInfo.Text = notifcationText
         pnlNotification.Dock = DockStyle.Fill
         pnlNotification.BringToFront()
     End Sub
 
     'Dismiss Notification Button
-    Private Sub btnContinueNotification_Click(sender As Object, e As EventArgs) Handles btnContinueNotification.Click
+    Private Sub DimissNotification(sender As Object, e As EventArgs) Handles btnContinueNotification.Click
         pnlNotification.Dock = DockStyle.None
         pnlNotification.Height = 0
     End Sub
@@ -207,10 +207,10 @@ Public Class AdminPanel
     End Sub
 
     'Save Admin Password Button
-    Private Sub btnSaveAdminPass_Click(sender As Object, e As EventArgs) Handles btnSaveAdminPass.Click
+    Private Sub SaveAdminPassword(sender As Object, e As EventArgs) Handles btnSaveAdminPass.Click
         If tbxAdminPassword.Text <> "" Then
-            saveConfig("UPDATE UserAuth SET PIN='" & tbxAdminPassword.Text & "' WHERE UID=1")
-            notifcation("New admin credentials have been set successfully!")
+            SaveConfig("UPDATE UserAuth SET PIN='" & tbxAdminPassword.Text & "' WHERE UID=1")
+            Notifcation("New admin credentials have been set successfully!")
         End If
         tbxAdminPassword.Text = ""
     End Sub

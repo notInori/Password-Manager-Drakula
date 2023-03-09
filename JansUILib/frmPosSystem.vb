@@ -16,7 +16,7 @@ Public Class POSSystem
 
     'Database Variables Init
     Dim myReader As OleDbDataReader
-    Dim conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
+    ReadOnly conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
 
     '---Winforms Init' 
 
@@ -30,14 +30,14 @@ Public Class POSSystem
     End Function
 
     'Load User Configs
-    Private Sub loadUserConfig()
+    Private Sub LoadUserConfig()
         UID = CInt(SqlReadValue("SELECT UID FROM UserAuth WHERE (Username='" & currentUser & "')"))
         accentColor = Color.FromArgb(SqlReadValue("SELECT Accent FROM UserConfig WHERE (UID=" & UID & ")"))
         UpdateAccent()
     End Sub
 
     'Save User Config
-    Private Sub saveConfig()
+    Private Sub SaveConfig()
         Dim cmd As New OleDbCommand("UPDATE UserConfig SET Accent=" & accentColor.ToArgb() & " WHERE UID=" & UID, conn)
         cmd.ExecuteNonQuery()
     End Sub
