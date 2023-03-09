@@ -18,14 +18,18 @@ Public Class AuthLogin
     '---Database Functions
 
     'Read From Database
-    Public Sub ExecuteSqlCommand(command As String)
+    Public Function SqlReadValue(command As String)
         Dim cmd As New OleDbCommand(command, conn)
         myReader = cmd.ExecuteReader
-    End Sub
+        While myReader.Read()
+            Return myReader.GetValue(0)
+        End While
+    End Function
 
     'Load Usernames
     Private Sub loadUsernames()
-        ExecuteSqlCommand("SELECT Username FROM UserAuth")
+        Dim cmd As New OleDbCommand("SELECT Username FROM UserAuth", conn)
+        myReader = cmd.ExecuteReader
         CbxUsername.Items.Clear()
         While myReader.Read
             CbxUsername.Items.Add(myReader("Username"))
@@ -34,11 +38,7 @@ Public Class AuthLogin
 
     'Authenticates the User
     Private Function authUser(ByVal username As String, ByVal password As String)
-        Dim storedPassword As String = ""
-        ExecuteSqlCommand("SELECT PIN FROM UserAuth WHERE (Username='" & username & "')")
-        While myReader.Read()
-            storedPassword = myReader("PIN").ToString
-        End While
+        Dim storedPassword = SqlReadValue("SELECT PIN FROM UserAuth WHERE (Username='" & username & "')")
         If password = storedPassword And storedPassword <> "" Then
             Return True 'Returns true if combination of username and password is correct
         Else
