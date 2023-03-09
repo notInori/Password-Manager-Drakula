@@ -145,6 +145,7 @@ Public Class POSSystem
     Private Sub UserLogOut(sender As Object, e As EventArgs) Handles BtnLogOut.Click
         Me.Close()
         AuthLogin.Show()
+        AuthLogin.loadUsernames()
     End Sub
 
     '---Watermark

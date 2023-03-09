@@ -216,11 +216,10 @@ Public Class AdminPanel
 
     'User Logout Button
     Private Sub UserLogOut(sender As Object, e As EventArgs) Handles BtnLogOut.Click
-        Me.Close()
         conn.Close()
-        AuthLogin.loadUsernames()
+        Me.Close()
         AuthLogin.Show()
-
+        AuthLogin.loadUsernames()
     End Sub
 
     'Save Admin Password Button

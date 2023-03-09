@@ -28,9 +28,10 @@ Public Class AuthLogin
 
     'Load Usernames
     Public Sub loadUsernames()
+        conn.Open()
+        CbxUsername.Items.Clear()
         Dim cmd As New OleDbCommand("SELECT Username FROM UserAuth", conn)
         myReader = cmd.ExecuteReader
-        CbxUsername.Items.Clear()
         While myReader.Read
             CbxUsername.Items.Add(myReader("Username"))
         End While
@@ -50,7 +51,6 @@ Public Class AuthLogin
 
     'Winforms Init' 
     Private Sub UserLogin_OnLoad(ByVal qsender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        conn.Open()
         loadUsernames()
         lblCurrentVersion.Text = POSSystem.versionNumber
         lblShopName.Text = POSSystem.businessName
@@ -96,6 +96,7 @@ Public Class AuthLogin
             CbxUsername.Text = ""
             TbxPassword.Text = ""
             Me.Hide()
+            conn.Close()
         End If
     End Sub
 
