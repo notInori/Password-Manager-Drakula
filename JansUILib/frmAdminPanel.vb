@@ -14,14 +14,13 @@ Public Class AdminPanel
     'Variables Init'
     Public Shared accentColor As Color = Color.FromArgb(255, 255, 255)
     ReadOnly cDialog As New ColorDialog()
+    Dim selectedUID As New Integer
 
     '---Winforms Init' 
 
     'Load UID
     Private Sub setUID(ByVal username As String)
         Dim temp As String = ""
-
-
         Dim cmdInput As String = "SELECT UID FROM UserAuth WHERE (Username='" & username & "')"
         Dim cmd As New OleDbCommand(cmdInput, conn)
         Dim myReader As OleDbDataReader = cmd.ExecuteReader
@@ -54,7 +53,9 @@ Public Class AdminPanel
         myReader = cmd.ExecuteReader
         lbxUsernames.Items.Clear()
         While myReader.Read
-            lbxUsernames.Items.Add(myReader("Username"))
+            If myReader("Username") <> "admin" Then
+                lbxUsernames.Items.Add(myReader("Username"))
+            End If
         End While
     End Sub
 
@@ -66,8 +67,8 @@ Public Class AdminPanel
     End Sub
 
     'Save User Config
-    Private Sub saveConfig()
-        Dim cmd As New OleDbCommand("UPDATE UserConfig SET Accent=" & accentColor.ToArgb() & " WHERE UID=" & UID, conn)
+    Private Sub saveConfig(command As String)
+        Dim cmd As New OleDbCommand(command, conn)
         cmd.ExecuteNonQuery()
     End Sub
 
@@ -170,7 +171,7 @@ Public Class AdminPanel
             accentColor = cDialog.Color ' update with user selected color.
         End If
         UpdateAccent()
-        saveConfig()
+        saveConfig("UPDATE UserConfig SET Accent=" & accentColor.ToArgb() & " WHERE UID=" & UID)
     End Sub
 
     'User Logout Button
@@ -188,9 +189,18 @@ Public Class AdminPanel
 
     Private Sub LoadSelectedUserInfo(sender As Object, e As EventArgs) Handles lbxUsernames.SelectedValueChanged, btnReload.Click
         If lbxUsernames.SelectedItem <> "" Then
+            selectedUID = SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & lbxUsernames.SelectedItem.ToString & "')")
             TbxUsername.Text = lbxUsernames.SelectedItem
             TbxPassword.Text = SqlReadVAlue("SELECT PIN FROM UserAuth WHERE (Username='" & lbxUsernames.SelectedItem.ToString & "')")
         End If
+
     End Sub
 
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        saveConfig("UPDATE UserAuth SET Username='" & TbxUsername.Text & "' WHERE UID=" & selectedUID)
+        saveConfig("UPDATE UserAuth SET PIN='" & TbxPassword.Text & "' WHERE UID=" & selectedUID)
+        loadUsernames()
+        AuthLogin.loadUsernames()
+        lbxUsernames.SelectedItem = SqlReadVAlue("SELECT Username FROM UserAuth WHERE (UID=" & selectedUID & ")")
+    End Sub
 End Class

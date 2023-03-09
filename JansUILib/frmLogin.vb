@@ -27,7 +27,7 @@ Public Class AuthLogin
     End Function
 
     'Load Usernames
-    Private Sub loadUsernames()
+    Public Sub loadUsernames()
         Dim cmd As New OleDbCommand("SELECT Username FROM UserAuth", conn)
         myReader = cmd.ExecuteReader
         CbxUsername.Items.Clear()

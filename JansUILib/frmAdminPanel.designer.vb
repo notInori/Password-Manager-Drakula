@@ -161,7 +161,7 @@ Partial Class AdminPanel
         Me.btnReload = New System.Windows.Forms.Button()
         Me.Panel83 = New System.Windows.Forms.Panel()
         Me.Panel206 = New System.Windows.Forms.Panel()
-        Me.btnLogin = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
         Me.Panel59 = New System.Windows.Forms.Panel()
         Me.Label41 = New System.Windows.Forms.Label()
         Me.Panel60 = New System.Windows.Forms.Panel()
@@ -2388,7 +2388,7 @@ Partial Class AdminPanel
         'Panel206
         '
         Me.Panel206.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
-        Me.Panel206.Controls.Add(Me.btnLogin)
+        Me.Panel206.Controls.Add(Me.btnSave)
         Me.Panel206.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel206.Location = New System.Drawing.Point(1, 1)
         Me.Panel206.Name = "Panel206"
@@ -2396,23 +2396,23 @@ Partial Class AdminPanel
         Me.Panel206.Size = New System.Drawing.Size(457, 35)
         Me.Panel206.TabIndex = 0
         '
-        'btnLogin
+        'btnSave
         '
-        Me.btnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnLogin.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnLogin.FlatAppearance.BorderSize = 0
-        Me.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogin.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.btnLogin.Location = New System.Drawing.Point(1, 1)
-        Me.btnLogin.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(455, 33)
-        Me.btnLogin.TabIndex = 6
-        Me.btnLogin.Text = "Save"
-        Me.btnLogin.UseVisualStyleBackColor = False
+        Me.btnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.btnSave.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnSave.FlatAppearance.BorderSize = 0
+        Me.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSave.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSave.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.btnSave.Location = New System.Drawing.Point(1, 1)
+        Me.btnSave.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(455, 33)
+        Me.btnSave.TabIndex = 6
+        Me.btnSave.Text = "Save"
+        Me.btnSave.UseVisualStyleBackColor = False
         '
         'Panel59
         '
@@ -5920,5 +5920,5 @@ Partial Class AdminPanel
     Friend WithEvents btnReload As Button
     Friend WithEvents Panel83 As Panel
     Friend WithEvents Panel206 As Panel
-    Friend WithEvents btnLogin As Button
+    Friend WithEvents btnSave As Button
 End Class
