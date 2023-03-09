@@ -197,7 +197,9 @@ Public Class AdminPanel
     End Sub
 
     Private Sub lbxUsernames_SelectedValueChanged(sender As Object, e As EventArgs) Handles lbxUsernames.SelectedValueChanged
-        TbxUsername.Text = lbxUsernames.SelectedItem
-        LoadData()
+        If lbxUsernames.SelectedItem <> "" Then
+            TbxUsername.Text = lbxUsernames.SelectedItem
+            LoadData()
+        End If
     End Sub
 End Class
