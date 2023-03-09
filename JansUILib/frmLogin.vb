@@ -96,7 +96,6 @@ Public Class AuthLogin
             CbxUsername.Text = ""
             TbxPassword.Text = ""
             Me.Hide()
-            conn.Close()
         End If
     End Sub
 

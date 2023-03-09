@@ -20,8 +20,8 @@ Public Class AdminPanel
     'Load UID
     Private Sub setUID(ByVal username As String)
         Dim temp As String = ""
-        Dim conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
-        conn.Open()
+
+
         Dim cmdInput As String = "SELECT UID FROM UserAuth WHERE (Username='" & username & "')"
         Dim cmd As New OleDbCommand(cmdInput, conn)
         Dim myReader As OleDbDataReader = cmd.ExecuteReader
@@ -29,62 +29,51 @@ Public Class AdminPanel
             temp = myReader("UID")
         End While
         UID = CInt(temp)
-        conn.Close()
+
     End Sub
 
+    'Database Variables Init
+    Dim myReader As OleDbDataReader
+    Dim conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
+
+    '---Winforms Init' 
+
+    'Read From Database
+    Public Function SqlReadVAlue(command As String)
+        Dim cmd As New OleDbCommand(command, conn)
+        myReader = cmd.ExecuteReader
+        While myReader.Read()
+            Return myReader.GetValue(0)
+        End While
+    End Function
+
     'Load Usernames
+
     Private Sub loadUsernames()
-        Dim conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
-        conn.Open()
         Dim cmd As New OleDbCommand("SELECT Username FROM UserAuth", conn)
-        Dim myReader As OleDbDataReader = cmd.ExecuteReader
+        myReader = cmd.ExecuteReader
         lbxUsernames.Items.Clear()
         While myReader.Read
             lbxUsernames.Items.Add(myReader("Username"))
         End While
-        conn.Close()
     End Sub
 
-    'Load Data
-    Private Sub LoadData()
-        Dim conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
-        conn.Open()
-        Dim cmdInput As String = "SELECT PIN FROM UserAuth WHERE (Username='" & lbxUsernames.SelectedItem.ToString & "')"
-        Dim cmd As New OleDbCommand(cmdInput, conn)
-        Dim myReader As OleDbDataReader = cmd.ExecuteReader
-        While myReader.Read()
-            TbxPassword.Text = myReader("PIN")
-        End While
-        conn.Close()
-    End Sub
     'Load User Configs
     Private Sub loadUserConfig()
-        Dim tempColor As Int32
-        Dim conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
-        conn.Open()
-        Dim cmdInput As String = "SELECT Accent FROM UserConfig WHERE (UID=" & UID & ")"
-        Dim cmd As New OleDbCommand(cmdInput, conn)
-        Dim myReader As OleDbDataReader = cmd.ExecuteReader
-        While myReader.Read()
-            tempColor = myReader("Accent")
-        End While
-        accentColor = Color.FromArgb(tempColor)
+        UID = CInt(SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & currentUser & "')"))
+        accentColor = Color.FromArgb(SqlReadVAlue("SELECT Accent FROM UserConfig WHERE (UID=" & UID & ")"))
         UpdateAccent()
-        conn.Close()
     End Sub
 
     'Save User Config
     Private Sub saveConfig()
-        Dim conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
-        conn.Open()
-        Dim cmdInput As String = "UPDATE UserConfig SET Accent=" & accentColor.ToArgb() & " WHERE UID=" & UID
-        Dim cmd As New OleDbCommand(cmdInput, conn)
+        Dim cmd As New OleDbCommand("UPDATE UserConfig SET Accent=" & accentColor.ToArgb() & " WHERE UID=" & UID, conn)
         cmd.ExecuteNonQuery()
-        conn.Close()
     End Sub
 
     'Init tab system and load accent color
     Private Sub POSSystem_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        conn.Open()
         For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
             cntrl.Width = 0
         Next
@@ -200,7 +189,7 @@ Public Class AdminPanel
     Private Sub LoadSelectedUserInfo(sender As Object, e As EventArgs) Handles lbxUsernames.SelectedValueChanged, btnReload.Click
         If lbxUsernames.SelectedItem <> "" Then
             TbxUsername.Text = lbxUsernames.SelectedItem
-            LoadData()
+            TbxPassword.Text = SqlReadVAlue("SELECT PIN FROM UserAuth WHERE (Username='" & lbxUsernames.SelectedItem.ToString & "')")
         End If
     End Sub
 

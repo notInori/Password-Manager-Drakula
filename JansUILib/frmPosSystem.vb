@@ -13,6 +13,8 @@ Public Class POSSystem
     'Variables Init'
     Public Shared accentColor As Color = Color.FromArgb(255, 255, 255)
     ReadOnly cDialog As New ColorDialog()
+
+    'Database Variables Init
     Dim myReader As OleDbDataReader
     Dim conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
 
