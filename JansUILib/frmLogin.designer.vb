@@ -32,6 +32,8 @@ Partial Class AuthLogin
         Me.pnlTitleIcons = New System.Windows.Forms.Panel()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel28 = New System.Windows.Forms.Panel()
         Me.pnlWindowContents = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.lblCurrentVersion = New System.Windows.Forms.Label()
@@ -80,9 +82,6 @@ Partial Class AuthLogin
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.btnDummy = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.pnlBlackOutline = New System.Windows.Forms.Panel()
-        Me.Panel28 = New System.Windows.Forms.Panel()
         Me.pnlNotification = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel39 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel374 = New System.Windows.Forms.Panel()
@@ -112,11 +111,14 @@ Partial Class AuthLogin
         Me.Panel394 = New System.Windows.Forms.Panel()
         Me.Panel395 = New System.Windows.Forms.Panel()
         Me.btnContinueNotification = New System.Windows.Forms.Button()
+        Me.pnlBlackOutline = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.pnlBackground.SuspendLayout()
         Me.tblWindow.SuspendLayout()
         Me.pnlTopBar.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.pnlTitleIcons.SuspendLayout()
+        Me.Panel28.SuspendLayout()
         Me.pnlWindowContents.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel314.SuspendLayout()
@@ -148,8 +150,6 @@ Partial Class AuthLogin
         Me.pnlUsernameInputBackground.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        Me.pnlBlackOutline.SuspendLayout()
-        Me.Panel28.SuspendLayout()
         Me.pnlNotification.SuspendLayout()
         Me.TableLayoutPanel39.SuspendLayout()
         Me.Panel374.SuspendLayout()
@@ -170,6 +170,7 @@ Partial Class AuthLogin
         Me.Panel393.SuspendLayout()
         Me.Panel394.SuspendLayout()
         Me.Panel395.SuspendLayout()
+        Me.pnlBlackOutline.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnlBackground
@@ -297,6 +298,27 @@ Partial Class AuthLogin
         Me.btnExit.TabStop = False
         Me.btnExit.Text = "✕"
         Me.btnExit.UseVisualStyleBackColor = False
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(0, 39)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(494, 1)
+        Me.Panel1.TabIndex = 4
+        '
+        'Panel28
+        '
+        Me.Panel28.Controls.Add(Me.pnlWindowContents)
+        Me.Panel28.Controls.Add(Me.pnlNotification)
+        Me.Panel28.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel28.Location = New System.Drawing.Point(0, 40)
+        Me.Panel28.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel28.Name = "Panel28"
+        Me.Panel28.Size = New System.Drawing.Size(494, 314)
+        Me.Panel28.TabIndex = 5
         '
         'pnlWindowContents
         '
@@ -903,47 +925,15 @@ Partial Class AuthLogin
         Me.btnDummy.TabIndex = 12
         Me.btnDummy.UseVisualStyleBackColor = False
         '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 39)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(494, 1)
-        Me.Panel1.TabIndex = 4
-        '
-        'pnlBlackOutline
-        '
-        Me.pnlBlackOutline.BackColor = System.Drawing.Color.Black
-        Me.pnlBlackOutline.Controls.Add(Me.pnlBackground)
-        Me.pnlBlackOutline.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlBlackOutline.Location = New System.Drawing.Point(2, 2)
-        Me.pnlBlackOutline.Name = "pnlBlackOutline"
-        Me.pnlBlackOutline.Padding = New System.Windows.Forms.Padding(1)
-        Me.pnlBlackOutline.Size = New System.Drawing.Size(496, 356)
-        Me.pnlBlackOutline.TabIndex = 1
-        '
-        'Panel28
-        '
-        Me.Panel28.Controls.Add(Me.pnlWindowContents)
-        Me.Panel28.Controls.Add(Me.pnlNotification)
-        Me.Panel28.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel28.Location = New System.Drawing.Point(0, 40)
-        Me.Panel28.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel28.Name = "Panel28"
-        Me.Panel28.Size = New System.Drawing.Size(494, 314)
-        Me.Panel28.TabIndex = 5
-        '
         'pnlNotification
         '
         Me.pnlNotification.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.pnlNotification.Controls.Add(Me.TableLayoutPanel39)
-        Me.pnlNotification.Location = New System.Drawing.Point(14, 303)
+        Me.pnlNotification.Location = New System.Drawing.Point(0, 303)
         Me.pnlNotification.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlNotification.Name = "pnlNotification"
         Me.pnlNotification.Padding = New System.Windows.Forms.Padding(5)
-        Me.pnlNotification.Size = New System.Drawing.Size(479, 10)
+        Me.pnlNotification.Size = New System.Drawing.Size(494, 10)
         Me.pnlNotification.TabIndex = 10
         '
         'TableLayoutPanel39
@@ -953,14 +943,14 @@ Partial Class AuthLogin
         Me.TableLayoutPanel39.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel39.Controls.Add(Me.Panel374, 0, 0)
         Me.TableLayoutPanel39.Controls.Add(Me.Panel389, 0, 1)
-        Me.TableLayoutPanel39.Location = New System.Drawing.Point(10, 90)
+        Me.TableLayoutPanel39.Location = New System.Drawing.Point(10, 78)
         Me.TableLayoutPanel39.Margin = New System.Windows.Forms.Padding(5)
         Me.TableLayoutPanel39.Name = "TableLayoutPanel39"
         Me.TableLayoutPanel39.RowCount = 2
         Me.TableLayoutPanel39.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24.0!))
         Me.TableLayoutPanel39.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel39.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel39.Size = New System.Drawing.Size(474, 113)
+        Me.TableLayoutPanel39.Size = New System.Drawing.Size(474, 137)
         Me.TableLayoutPanel39.TabIndex = 19
         Me.TableLayoutPanel39.Tag = "groupbox"
         '
@@ -1191,7 +1181,7 @@ Partial Class AuthLogin
         Me.Panel389.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel389.Name = "Panel389"
         Me.Panel389.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel389.Size = New System.Drawing.Size(474, 89)
+        Me.Panel389.Size = New System.Drawing.Size(474, 113)
         Me.Panel389.TabIndex = 16
         '
         'Panel390
@@ -1203,7 +1193,7 @@ Partial Class AuthLogin
         Me.Panel390.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel390.Name = "Panel390"
         Me.Panel390.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel390.Size = New System.Drawing.Size(472, 88)
+        Me.Panel390.Size = New System.Drawing.Size(472, 112)
         Me.Panel390.TabIndex = 17
         '
         'Panel391
@@ -1215,7 +1205,7 @@ Partial Class AuthLogin
         Me.Panel391.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel391.Name = "Panel391"
         Me.Panel391.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel391.Size = New System.Drawing.Size(470, 87)
+        Me.Panel391.Size = New System.Drawing.Size(470, 111)
         Me.Panel391.TabIndex = 17
         '
         'Panel392
@@ -1228,38 +1218,39 @@ Partial Class AuthLogin
         Me.Panel392.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel392.Name = "Panel392"
         Me.Panel392.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel392.Size = New System.Drawing.Size(468, 86)
+        Me.Panel392.Size = New System.Drawing.Size(468, 110)
         Me.Panel392.TabIndex = 17
         '
         'Panel393
         '
         Me.Panel393.AutoSize = True
+        Me.Panel393.Controls.Add(Me.Label3)
         Me.Panel393.Controls.Add(Me.lblNotifcationInfo)
         Me.Panel393.Location = New System.Drawing.Point(11, 7)
         Me.Panel393.Margin = New System.Windows.Forms.Padding(5, 5, 5, 0)
         Me.Panel393.Name = "Panel393"
-        Me.Panel393.Size = New System.Drawing.Size(443, 20)
+        Me.Panel393.Size = New System.Drawing.Size(443, 50)
         Me.Panel393.TabIndex = 21
         '
         'lblNotifcationInfo
         '
         Me.lblNotifcationInfo.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.lblNotifcationInfo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lblNotifcationInfo.Dock = System.Windows.Forms.DockStyle.Top
         Me.lblNotifcationInfo.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNotifcationInfo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.lblNotifcationInfo.Location = New System.Drawing.Point(0, 0)
         Me.lblNotifcationInfo.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.lblNotifcationInfo.Name = "lblNotifcationInfo"
-        Me.lblNotifcationInfo.Size = New System.Drawing.Size(443, 20)
+        Me.lblNotifcationInfo.Size = New System.Drawing.Size(443, 24)
         Me.lblNotifcationInfo.TabIndex = 9
-        Me.lblNotifcationInfo.Text = "Error: Username or Password Invalid!"
+        Me.lblNotifcationInfo.Text = "Authentication Error:"
         Me.lblNotifcationInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Panel394
         '
         Me.Panel394.BackColor = System.Drawing.Color.Black
         Me.Panel394.Controls.Add(Me.Panel395)
-        Me.Panel394.Location = New System.Drawing.Point(10, 38)
+        Me.Panel394.Location = New System.Drawing.Point(10, 63)
         Me.Panel394.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel394.Name = "Panel394"
         Me.Panel394.Padding = New System.Windows.Forms.Padding(1)
@@ -1295,6 +1286,31 @@ Partial Class AuthLogin
         Me.btnContinueNotification.Text = "Continue"
         Me.btnContinueNotification.UseVisualStyleBackColor = False
         '
+        'pnlBlackOutline
+        '
+        Me.pnlBlackOutline.BackColor = System.Drawing.Color.Black
+        Me.pnlBlackOutline.Controls.Add(Me.pnlBackground)
+        Me.pnlBlackOutline.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlBlackOutline.Location = New System.Drawing.Point(2, 2)
+        Me.pnlBlackOutline.Name = "pnlBlackOutline"
+        Me.pnlBlackOutline.Padding = New System.Windows.Forms.Padding(1)
+        Me.pnlBlackOutline.Size = New System.Drawing.Size(496, 356)
+        Me.pnlBlackOutline.TabIndex = 1
+        '
+        'Label3
+        '
+        Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.Label3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label3.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(0, 24)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(443, 24)
+        Me.Label3.TabIndex = 10
+        Me.Label3.Text = "Username or Password is invalid"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
         'AuthLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1314,6 +1330,7 @@ Partial Class AuthLogin
         Me.pnlTopBar.ResumeLayout(False)
         Me.Panel7.ResumeLayout(False)
         Me.pnlTitleIcons.ResumeLayout(False)
+        Me.Panel28.ResumeLayout(False)
         Me.pnlWindowContents.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
@@ -1352,8 +1369,6 @@ Partial Class AuthLogin
         Me.pnlUsernameInputBackground.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
-        Me.pnlBlackOutline.ResumeLayout(False)
-        Me.Panel28.ResumeLayout(False)
         Me.pnlNotification.ResumeLayout(False)
         Me.TableLayoutPanel39.ResumeLayout(False)
         Me.Panel374.ResumeLayout(False)
@@ -1376,6 +1391,7 @@ Partial Class AuthLogin
         Me.Panel393.ResumeLayout(False)
         Me.Panel394.ResumeLayout(False)
         Me.Panel395.ResumeLayout(False)
+        Me.pnlBlackOutline.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1468,4 +1484,5 @@ Partial Class AuthLogin
     Friend WithEvents Panel394 As Panel
     Friend WithEvents Panel395 As Panel
     Friend WithEvents btnContinueNotification As Button
+    Friend WithEvents Label3 As Label
 End Class
