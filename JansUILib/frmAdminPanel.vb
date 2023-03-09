@@ -132,7 +132,6 @@ Public Class AdminPanel
             pnlSettingsPage.Dock = DockStyle.Fill
             pnlTabHighlight4.Visible = True
         End If
-        AntiFocus()
     End Sub
 
     '---Change Colourisable Accents in UI
@@ -190,7 +189,6 @@ Public Class AdminPanel
 
     'UI Accent Colour Picker
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles pnlColorPicker.Click
-        AntiFocus()
         If (cDialog.ShowDialog() = DialogResult.OK) Then
             accentColor = cDialog.Color ' update with user selected color.
         End If
@@ -200,7 +198,6 @@ Public Class AdminPanel
 
     'User Logout Button
     Private Sub UserLogOut(sender As Object, e As EventArgs) Handles BtnLogOut.Click
-        AntiFocus()
         Me.Close()
         AuthLogin.Show()
     End Sub
