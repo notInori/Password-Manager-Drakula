@@ -207,7 +207,7 @@ Public Class AdminPanel
             saveConfig("UPDATE UserAuth SET PIN='" & TbxPassword.Text & "' WHERE UID=" & selectedUID)
             loadUsernames()
             lbxUsernames.SelectedItem = SqlReadVAlue("SELECT Username FROM UserAuth WHERE (UID=" & selectedUID & ")")
-            notifcation("New User Credentials for " & lbxUsernames.SelectedItem & " has been saved successfully!")
+            notifcation("New User Credentials for " & lbxUsernames.SelectedItem & " have been saved successfully!")
         End If
         AuthLogin.loadUsernames()
     End Sub
@@ -224,7 +224,7 @@ Public Class AdminPanel
     Private Sub btnSaveAdminPass_Click(sender As Object, e As EventArgs) Handles btnSaveAdminPass.Click
         If tbxAdminPassword.Text <> "" Then
             saveConfig("UPDATE UserAuth SET PIN='" & tbxAdminPassword.Text & "' WHERE UID=1")
-            notifcation("New admin password has been set successfully!")
+            notifcation("New admin credentials have been set successfully!")
         End If
         tbxAdminPassword.Text = ""
     End Sub
