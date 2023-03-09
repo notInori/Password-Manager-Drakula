@@ -186,59 +186,6 @@ Public Class AdminPanel
 
     '---Application Code
 
-    'Misc Tab
-
-    'Example Toggle Switches
-    Private Sub toggle1_Click(sender As Object, e As EventArgs) Handles Panel93.Click, Panel94.Click, Panel95.Click, Panel96.Click, Label3.Click
-
-        If toggle1 Then
-            Panel96.BackColor = Color.FromArgb(30, 30, 30)
-            toggle1 = False
-            Label3.ForeColor = Color.FromArgb(150, 150, 150)
-        Else
-            Panel96.BackColor = accentColor
-            toggle1 = True
-            Label3.ForeColor = Color.FromArgb(255, 255, 255)
-            Me.Refresh()
-        End If
-    End Sub
-
-    Private Sub toggle2_Click(sender As Object, e As EventArgs) Handles Panel134.Click, Panel133.Click, Panel90.Click, Label12.Click
-        If toggle2 Then
-            Panel134.BackColor = Color.FromArgb(30, 30, 30)
-            toggle2 = False
-            Label12.ForeColor = Color.FromArgb(150, 150, 150)
-        Else
-            Panel134.BackColor = accentColor
-            toggle2 = True
-            Label12.ForeColor = Color.FromArgb(255, 255, 255)
-            Me.Refresh()
-        End If
-
-    End Sub
-
-    Private Sub toggle3_Click(sender As Object, e As EventArgs) Handles Panel139.Click, Panel136.Click, Panel137.Click, Panel138.Click, Panel139.Click, Label13.Click
-        If toggle3 Then
-            Panel139.BackColor = Color.FromArgb(30, 30, 30)
-            toggle3 = False
-            Label13.ForeColor = Color.FromArgb(150, 150, 150)
-        Else
-            Panel139.BackColor = accentColor
-            toggle3 = True
-            Label13.ForeColor = Color.FromArgb(255, 255, 255)
-            Me.Refresh()
-        End If
-    End Sub
-
-    'Hides dropdown when another control in focus
-    Private Sub DropDown_Hide(sender As Object, e As EventArgs) Handles Label24.Click
-        If Panel169.Visible = False Then
-            Panel169.Visible = True
-        Else
-            Panel169.Visible = False
-        End If
-    End Sub
-
     'Settings Tab 
 
     'UI Accent Colour Picker
