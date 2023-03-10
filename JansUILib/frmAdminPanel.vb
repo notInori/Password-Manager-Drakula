@@ -266,7 +266,7 @@ Public Class AdminPanel
         Else
             Notifcation("Error: Field can not be empty.")
         End If
-        tbxAdminPassword.Text = ""
+        tbxAdminPassword.Clear()
     End Sub
 
     '---Watermark
