@@ -172,7 +172,7 @@ Public Class MainProgram
             Me.MaximumSize = Maxscreen
             Me.WindowState = FormWindowState.Maximized
             WindowsState = "maximised"
-            pnlTopBar.Visible = False
+            'pnlTopBar.Visible = False
         End If
     End Sub
 
