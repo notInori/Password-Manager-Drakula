@@ -175,13 +175,20 @@ Public Class AdminPanel
     'Users Screen
 
     'Load selected User's Data
-    Private Sub LoadSelectedUserInfo(sender As Object, e As EventArgs) Handles lbxUsernames.SelectedValueChanged, btnReload.Click
+    Private Sub LoadSelectedUserInfo(sender As Object, e As EventArgs) Handles lbxUsernames.SelectedValueChanged
         If lbxUsernames.SelectedItem <> "" Then
             selectedUID = SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & lbxUsernames.SelectedItem.ToString & "')")
             TbxUsername.Text = lbxUsernames.SelectedItem
             TbxPassword.Text = SqlReadVAlue("SELECT PIN FROM UserAuth WHERE (Username='" & lbxUsernames.SelectedItem.ToString & "')")
         End If
+    End Sub
 
+    'Clears User Data Fields
+    Private Sub ClearUserDataFields(sender As Object, e As EventArgs) Handles BtnClear.Click
+        selectedUID = Nothing
+        TbxUsername.Clear()
+        TbxPassword.Clear()
+        lbxUsernames.SelectedItem = Nothing
     End Sub
 
     'Save Changes to User's Username and Password
@@ -227,11 +234,9 @@ Public Class AdminPanel
 
     Private Sub AddNewUser(sender As Object, e As EventArgs) Handles BtnAddUser.Click
         If SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing And TbxUsername.Text <> "" And TbxPassword.Text <> "" Then
-            Notifcation("User " & TbxUsername.Text.ToString & " has been successfully added!")
             SaveConfig("INSERT INTO UserAuth(Username,PIN) VALUES('" & TbxUsername.Text & "','" & TbxPassword.Text & "')")
+            Notifcation("User " & TbxUsername.Text.ToString & " has been successfully added!")
             LoadUsernames()
-
-
         ElseIf SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing Then
             Notifcation("Error: Fields can not be empty!")
         Else

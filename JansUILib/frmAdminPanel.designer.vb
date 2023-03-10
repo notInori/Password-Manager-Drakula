@@ -77,7 +77,7 @@ Partial Class AdminPanel
         Me.BtnAddUser = New System.Windows.Forms.Button()
         Me.Panel207 = New System.Windows.Forms.Panel()
         Me.Panel208 = New System.Windows.Forms.Panel()
-        Me.btnReload = New System.Windows.Forms.Button()
+        Me.BtnClear = New System.Windows.Forms.Button()
         Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel64 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel8 = New System.Windows.Forms.TableLayoutPanel()
@@ -1490,7 +1490,7 @@ Partial Class AdminPanel
         'Panel208
         '
         Me.Panel208.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
-        Me.Panel208.Controls.Add(Me.btnReload)
+        Me.Panel208.Controls.Add(Me.BtnClear)
         Me.Panel208.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel208.Location = New System.Drawing.Point(1, 1)
         Me.Panel208.Name = "Panel208"
@@ -1498,23 +1498,23 @@ Partial Class AdminPanel
         Me.Panel208.Size = New System.Drawing.Size(444, 35)
         Me.Panel208.TabIndex = 0
         '
-        'btnReload
+        'BtnClear
         '
-        Me.btnReload.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.btnReload.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnReload.FlatAppearance.BorderSize = 0
-        Me.btnReload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.btnReload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.btnReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnReload.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReload.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.btnReload.Location = New System.Drawing.Point(1, 1)
-        Me.btnReload.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnReload.Name = "btnReload"
-        Me.btnReload.Size = New System.Drawing.Size(442, 33)
-        Me.btnReload.TabIndex = 6
-        Me.btnReload.Text = "Reset"
-        Me.btnReload.UseVisualStyleBackColor = False
+        Me.BtnClear.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.BtnClear.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnClear.FlatAppearance.BorderSize = 0
+        Me.BtnClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.BtnClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.BtnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnClear.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnClear.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.BtnClear.Location = New System.Drawing.Point(1, 1)
+        Me.BtnClear.Margin = New System.Windows.Forms.Padding(1)
+        Me.BtnClear.Name = "BtnClear"
+        Me.BtnClear.Size = New System.Drawing.Size(442, 33)
+        Me.BtnClear.TabIndex = 6
+        Me.BtnClear.Text = "Reset"
+        Me.BtnClear.UseVisualStyleBackColor = False
         '
         'TableLayoutPanel7
         '
@@ -7279,7 +7279,7 @@ Partial Class AdminPanel
     Friend WithEvents Panel82 As Panel
     Friend WithEvents Panel207 As Panel
     Friend WithEvents Panel208 As Panel
-    Friend WithEvents btnReload As Button
+    Friend WithEvents BtnClear As Button
     Friend WithEvents Panel83 As Panel
     Friend WithEvents Panel206 As Panel
     Friend WithEvents btnSave As Button
