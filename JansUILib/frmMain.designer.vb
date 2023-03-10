@@ -3548,7 +3548,7 @@ Partial Class MainProgram
         Me.Panel283.Name = "Panel283"
         Me.Panel283.Padding = New System.Windows.Forms.Padding(1)
         Me.Panel283.Size = New System.Drawing.Size(303, 24)
-        Me.Panel283.TabIndex = 10
+        Me.Panel283.TabIndex = 100
         '
         'tbxAdminPassword
         '
@@ -3559,7 +3559,7 @@ Partial Class MainProgram
         Me.tbxAdminPassword.Location = New System.Drawing.Point(0, 2)
         Me.tbxAdminPassword.Margin = New System.Windows.Forms.Padding(0)
         Me.tbxAdminPassword.Name = "tbxAdminPassword"
-        Me.tbxAdminPassword.Size = New System.Drawing.Size(442, 19)
+        Me.tbxAdminPassword.Size = New System.Drawing.Size(304, 19)
         Me.tbxAdminPassword.TabIndex = 0
         '
         'TableLayoutPanel1

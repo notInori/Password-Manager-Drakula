@@ -174,7 +174,6 @@ Public Class MainProgram
         End If
     End Sub
 
-
     'Init WinForm
     Private Sub POSSystem_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Connect Database
@@ -183,12 +182,10 @@ Public Class MainProgram
         For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
             cntrl.Width = 0
         Next
-        ChangeTab(lblTabSel1, e)
         lblCurrentUser.Text = currentUser
-
         LoadUserConfig() 'Load User Data
         LoadPasswords() ' Load Passwords
-
+        ChangeTab(lblTabSel1, e)
     End Sub
 
     '---Database Functions
@@ -205,7 +202,7 @@ Public Class MainProgram
 
     'Load Usernames
     Private Sub LoadPasswords()
-        Dim cmd As New OleDbCommand("SELECT Username FROM UserAuth", conn)
+        Dim cmd As New OleDbCommand("SELECT Username FROM Passwords", conn)
         myReader = cmd.ExecuteReader
         lbxUsernames.Items.Clear()
         While myReader.Read
@@ -260,6 +257,8 @@ Public Class MainProgram
             pnlSettingsPage.Dock = DockStyle.Fill
             pnlTabHighlight2.Visible = True
         End If
+
+        btnSave.Focus()
     End Sub
 
     '---Change Colourisable Accents in UI
@@ -329,18 +328,18 @@ Public Class MainProgram
     'Load selected User's Data
     Private Sub LoadSelectedUserInfo(sender As Object, e As EventArgs) Handles lbxUsernames.SelectedValueChanged
         If lbxUsernames.SelectedItem <> "" Then
-            selectedUID = SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & lbxUsernames.SelectedItem.ToString & "')")
+            selectedUID = SqlReadVAlue("SELECT UID FROM Passwords WHERE (Username='" & lbxUsernames.SelectedItem.ToString & "')")
             TbxUsername.Text = lbxUsernames.SelectedItem
-            TbxPassword.Text = SqlReadVAlue("SELECT PIN FROM UserAuth WHERE (Username='" & lbxUsernames.SelectedItem.ToString & "')")
+            TbxPassword.Text = SqlReadVAlue("SELECT [Password] FROM Passwords WHERE (Username='" & lbxUsernames.SelectedItem.ToString & "')")
         End If
     End Sub
 
     'Save Changes to User's Username and Password
     Private Sub UpdateUserCredentials(sender As Object, e As EventArgs) Handles btnSave.Click
         If TbxUsername.Text <> "" And TbxPassword.Text <> "" And lbxUsernames.SelectedItem <> Nothing Then
-            SaveConfig("UPDATE UserAuth SET Username='" & TbxUsername.Text & "' WHERE UID=" & selectedUID)
-            SaveConfig("UPDATE UserAuth SET PIN='" & TbxPassword.Text & "' WHERE UID=" & selectedUID)
-            lbxUsernames.SelectedItem = SqlReadVAlue("SELECT Username FROM UserAuth WHERE (UID=" & selectedUID & ")")
+            SaveConfig("UPDATE Passwords SET Username='" & TbxUsername.Text & "' WHERE UID=" & selectedUID)
+            SaveConfig("UPDATE Passwords SET [Password]='" & TbxPassword.Text & "' WHERE UID=" & selectedUID)
+            lbxUsernames.SelectedItem = SqlReadVAlue("SELECT Username FROM [Passwords] WHERE (UID=" & selectedUID & ")")
             Notifcation("New User Credentials for " & TbxUsername.Text & " have been saved successfully!")
         ElseIf TbxUsername.Text = "" Or TbxPassword.Text = "" Then
             Notifcation("Error: Fields can not be empty!")
@@ -360,12 +359,12 @@ Public Class MainProgram
 
     'Adds New User To Database
     Private Sub AddNewUser(sender As Object, e As EventArgs) Handles BtnAddUser.Click
-        If SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing And TbxUsername.Text <> "" And TbxPassword.Text <> "" Then
-            SaveConfig("INSERT INTO UserAuth(Username,PIN) VALUES('" & TbxUsername.Text & "','" & TbxPassword.Text & "')")
-            SaveConfig("INSERT INTO UserConfig(Accent) VALUES(-1)")
+        If SqlReadVAlue("SELECT UID FROM Passwords WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing And TbxUsername.Text <> "" And TbxPassword.Text <> "" Then
+            Dim temp As String = "INSERT INTO Passwords ('Username','Password') VALUES ('" & TbxUsername.Text.ToString & "','" & TbxPassword.Text.ToString & "')"
+            SaveConfig("INSERT INTO Passwords (Username,[Password]) VALUES ('" & TbxUsername.Text.ToString & "','" & TbxPassword.Text.ToString & "')")
             Notifcation("User " & TbxUsername.Text.ToString & " has been successfully added!")
             LoadPasswords()
-        ElseIf SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing Then
+        ElseIf SqlReadVAlue("SELECT UID FROM Passwords WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing Then
             Notifcation("Error: Fields can not be empty!")
         Else
             Notifcation("Error: " & TbxUsername.Text.ToString & " already exists.")
@@ -385,9 +384,9 @@ Public Class MainProgram
             pnlConfirmation.Height = 0
         End If
         If sender Is BtnContinueAction Then
-            Dim tempUsername As String = SqlReadVAlue("SELECT Username FROM UserAuth WHERE UID=" & selectedUID)
+            Dim tempUsername As String = SqlReadVAlue("SELECT Username FROM Passwords WHERE UID=" & selectedUID)
             SaveConfig("DELETE FROM UserConfig WHERE UID=" & selectedUID)
-            SaveConfig("DELETE FROM UserAuth WHERE UID=" & selectedUID)
+            SaveConfig("DELETE FROM Passwords WHERE UID=" & selectedUID)
             selectedUID = Nothing
             ClearUserDataFields(sender, e)
             Notifcation("User " & tempUsername & " Successfully Deleted!")
@@ -408,7 +407,7 @@ Public Class MainProgram
     'Save Admin Password Button
     Private Sub SaveAdminPassword(sender As Object, e As EventArgs) Handles btnSaveAdminPass.Click
         If tbxAdminPassword.Text <> "" Then
-            SaveConfig("UPDATE UserAuth SET PIN='" & tbxAdminPassword.Text & "' WHERE UID=1")
+            SaveConfig("UPDATE Passwords SET [Password]='" & tbxAdminPassword.Text & "' WHERE UID=1")
             Notifcation("New passworld has been set successfully!")
         Else
             Notifcation("Error: Field can not be empty.")
