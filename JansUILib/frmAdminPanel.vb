@@ -186,9 +186,9 @@ Public Class AdminPanel
     'Clears User Data Fields
     Private Sub ClearUserDataFields(sender As Object, e As EventArgs) Handles BtnClear.Click
         selectedUID = Nothing
+        lbxUsernames.SelectedItem = Nothing
         TbxUsername.Clear()
         TbxPassword.Clear()
-        lbxUsernames.SelectedItem = Nothing
     End Sub
 
     'Save Changes to User's Username and Password

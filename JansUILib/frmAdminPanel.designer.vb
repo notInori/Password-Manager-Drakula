@@ -1513,7 +1513,7 @@ Partial Class AdminPanel
         Me.BtnClear.Name = "BtnClear"
         Me.BtnClear.Size = New System.Drawing.Size(442, 33)
         Me.BtnClear.TabIndex = 6
-        Me.BtnClear.Text = "Reset"
+        Me.BtnClear.Text = "Clear"
         Me.BtnClear.UseVisualStyleBackColor = False
         '
         'TableLayoutPanel7
