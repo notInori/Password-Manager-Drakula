@@ -139,10 +139,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="frmAdminPanel.designer.vb">
-      <DependentUpon>frmAdminPanel.vb</DependentUpon>
+    <Compile Include="frmMain.designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmAdminPanel.vb">
+    <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLogin.designer.vb">
@@ -169,8 +169,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmAdminPanel.resx">
-      <DependentUpon>frmAdminPanel.vb</DependentUpon>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>

@@ -1,7 +1,7 @@
 ﻿Imports System.CodeDom.Compiler
 Imports System.Data.OleDb
 
-Public Class AdminPanel
+Public Class MainProgram
 
     '---Init'
 
@@ -22,16 +22,173 @@ Public Class AdminPanel
 
     '---Winforms Init' 
 
-    'Init tab system and load accent color
+    'Winforms Variable Init'
+    Private Property MoveForm As Boolean
+    Private Property MoveForm_MousePositiion As Point
+
+    'Winforms Dragging Events
+    Private Sub WindowDragging_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlTitleIcons.MouseDown, lblTitle.MouseDown
+        If e.Button = MouseButtons.Left And Me.WindowState <> FormWindowState.Maximized Then
+            MoveForm = True
+            Me.Cursor = Cursors.Default
+            MoveForm_MousePositiion = e.Location
+        End If
+    End Sub
+
+    Private Sub WindowDragging_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlTitleIcons.MouseUp, lblTitle.MouseUp
+        If e.Button = MouseButtons.Left Then
+            MoveForm = False
+            Me.Cursor = Cursors.Default
+        End If
+    End Sub
+
+    Private Sub WindowDragging_MouseMove(sender As Object, e As MouseEventArgs) Handles pnlTitleIcons.MouseMove, lblTitle.MouseMove
+        If MoveForm Then
+            Me.Location += (e.Location - MoveForm_MousePositiion)
+        End If
+    End Sub
+
+    '---Resizable Windows 
+
+    'Reisizeable Window Variables
+    Private Property Fullscreen
+    Private Property Maxscreen
+    Dim WindowsState As String = "normal"
+    Dim storedClientSize As Size
+    Const ImaginaryBorderSize As Integer = 16
+    Private Const HTLEFT As Integer = 10, HTRIGHT As Integer = 11, HTTOP As Integer = 12, HTTOPLEFT As Integer = 13, HTTOPRIGHT As Integer = 14, HTBOTTOM As Integer = 15, HTBOTTOMLEFT As Integer = 16, HTBOTTOMRIGHT As Integer = 17
+
+    'Resizeable Window Init'
+
+    Protected Overrides Sub OnPaint(ByVal e As PaintEventArgs)
+        e.Graphics.FillRectangle(Brushes.Transparent, Top)
+        e.Graphics.FillRectangle(Brushes.Transparent, Left)
+        e.Graphics.FillRectangle(Brushes.Transparent, Right)
+        e.Graphics.FillRectangle(Brushes.Transparent, Bottom)
+
+    End Sub
+
+    Protected Overrides Sub WndProc(ByRef m As System.Windows.Forms.Message)
+        MyBase.WndProc(m)
+        If m.Msg = &H84 Then
+            Dim mp = Me.PointToClient(Cursor.Position)
+
+            If TopLeft.Contains(mp) Then
+                m.Result = CType(HTTOPLEFT, IntPtr)
+            ElseIf TopRight.Contains(mp) Then
+                m.Result = CType(HTTOPRIGHT, IntPtr)
+            ElseIf BottomLeft.Contains(mp) Then
+                m.Result = CType(HTBOTTOMLEFT, IntPtr)
+            ElseIf BottomRight.Contains(mp) Then
+                m.Result = CType(HTBOTTOMRIGHT, IntPtr)
+            ElseIf Top.Contains(mp) Then
+                m.Result = CType(HTTOP, IntPtr)
+            ElseIf Left.Contains(mp) Then
+                m.Result = CType(HTLEFT, IntPtr)
+            ElseIf Right.Contains(mp) Then
+                m.Result = CType(HTRIGHT, IntPtr)
+            ElseIf Bottom.Contains(mp) Then
+                m.Result = CType(HTBOTTOM, IntPtr)
+            End If
+        End If
+    End Sub
+
+    Shadows Function Top() As Rectangle
+        If Me.WindowState <> FormWindowState.Maximized Then
+            Return New Rectangle(0, 0, Me.ClientSize.Width, ImaginaryBorderSize)
+        End If
+
+    End Function
+
+    Shadows Function Left() As Rectangle
+        If Me.WindowState <> FormWindowState.Maximized Then
+            Return New Rectangle(0, 0, ImaginaryBorderSize, Me.ClientSize.Height)
+        End If
+
+    End Function
+
+    Shadows Function Bottom() As Rectangle
+        If Me.WindowState <> FormWindowState.Maximized Then
+            Return New Rectangle(0, Me.ClientSize.Height - ImaginaryBorderSize, Me.ClientSize.Width, ImaginaryBorderSize)
+        End If
+
+    End Function
+
+    Shadows Function Right() As Rectangle
+        If Me.WindowState <> FormWindowState.Maximized Then
+            Return New Rectangle(Me.ClientSize.Width - ImaginaryBorderSize, 0, ImaginaryBorderSize, Me.ClientSize.Height)
+        End If
+    End Function
+
+    Shadows Function TopLeft() As Rectangle
+        If Me.WindowState <> FormWindowState.Maximized Then
+            Return New Rectangle(0, 0, ImaginaryBorderSize, ImaginaryBorderSize)
+        End If
+
+    End Function
+
+    Shadows Function TopRight() As Rectangle
+        If Me.WindowState <> FormWindowState.Maximized Then
+            Return New Rectangle(Me.ClientSize.Width - ImaginaryBorderSize, 0, ImaginaryBorderSize, ImaginaryBorderSize)
+        End If
+    End Function
+
+    Shadows Function BottomLeft() As Rectangle
+        If Me.WindowState <> FormWindowState.Maximized Then
+            Return New Rectangle(0, Me.ClientSize.Height - ImaginaryBorderSize, ImaginaryBorderSize, ImaginaryBorderSize)
+        End If
+
+    End Function
+
+    Shadows Function BottomRight() As Rectangle
+        If Me.WindowState <> FormWindowState.Maximized Then
+            Return New Rectangle(Me.ClientSize.Width - ImaginaryBorderSize, Me.ClientSize.Height - ImaginaryBorderSize, ImaginaryBorderSize, ImaginaryBorderSize)
+        End If
+
+    End Function
+
+    'Titlebar Button Events'
+
+    Private Sub btnMinimize_Click(sender As Object, e As EventArgs) Handles BtnMinimize.Click
+        Me.WindowState = FormWindowState.Minimized
+
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        conn.Close()
+        AuthLogin.Close()
+    End Sub
+
+    Private Sub btnMaximize_Click(sender As Object, e As EventArgs) Handles BtnMaximize.Click
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+            Me.ClientSize = storedClientSize
+            WindowsState = "normal"
+            pnlTopBar.Visible = True
+        Else
+            storedClientSize = Me.ClientSize
+            Me.MaximumSize = Maxscreen
+            Me.WindowState = FormWindowState.Maximized
+            WindowsState = "maximised"
+            pnlTopBar.Visible = False
+        End If
+    End Sub
+
+
+    'Init WinForm
     Private Sub POSSystem_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'Connect Database
         conn.Open()
+        'Init Tab System
         For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
             cntrl.Width = 0
         Next
-        lblCurrentUser.Text = currentUser
-        LoadUserConfig()
         ChangeTab(lblTabSel1, e)
-        LoadUsernames()
+        lblCurrentUser.Text = currentUser
+
+        LoadUserConfig() 'Load User Data
+        LoadPasswords() ' Load Passwords
+
     End Sub
 
     '---Database Functions
@@ -47,7 +204,7 @@ Public Class AdminPanel
     End Function
 
     'Load Usernames
-    Private Sub LoadUsernames()
+    Private Sub LoadPasswords()
         Dim cmd As New OleDbCommand("SELECT Username FROM UserAuth", conn)
         myReader = cmd.ExecuteReader
         lbxUsernames.Items.Clear()
@@ -74,7 +231,7 @@ Public Class AdminPanel
     '---UI Library Functions
 
     'Tab Changing System
-    Private Sub ChangeTab(sender As Object, e As EventArgs) Handles lblTabSel1.Click, lblTabSel2.Click, lblTabSel3.Click, lblTabSel4.Click
+    Private Sub ChangeTab(sender As Object, e As EventArgs) Handles lblTabSel1.Click, lblTabSel2.Click
 
         'Hides selected tab indicator
         For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
@@ -100,14 +257,8 @@ Public Class AdminPanel
             pnlMainPage.Dock = DockStyle.Fill
             pnlTabHighlight1.Visible = True
         ElseIf sender Is lblTabSel2 Then
-            pnlMenuPage.Dock = DockStyle.Fill
-            pnlTabHighlight2.Visible = True
-        ElseIf sender Is lblTabSel3 Then
-            pnlPerformancePage.Dock = DockStyle.Fill
-            pnlTabHighlight3.Visible = True
-        ElseIf sender Is lblTabSel4 Then
             pnlSettingsPage.Dock = DockStyle.Fill
-            pnlTabHighlight4.Visible = True
+            pnlTabHighlight2.Visible = True
         End If
     End Sub
 
@@ -143,7 +294,7 @@ Public Class AdminPanel
         Next
 
         'Tab Label Accent Updating
-        lblTabSel4.ForeColor = accentColor
+        lblTabSel2.ForeColor = accentColor
 
     End Sub
 
@@ -196,7 +347,7 @@ Public Class AdminPanel
         Else
             Notifcation("Error: User must be selected.")
         End If
-        LoadUsernames()
+        LoadPasswords()
     End Sub
 
     'Clears User Data Fields
@@ -212,10 +363,8 @@ Public Class AdminPanel
         If SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing And TbxUsername.Text <> "" And TbxPassword.Text <> "" Then
             SaveConfig("INSERT INTO UserAuth(Username,PIN) VALUES('" & TbxUsername.Text & "','" & TbxPassword.Text & "')")
             SaveConfig("INSERT INTO UserConfig(Accent) VALUES(-1)")
-            SaveConfig("INSERT INTO UserData DEFAULT VALUES")
-            SaveConfig("INSERT INTO UserStats DEFAULT VALUES")
             Notifcation("User " & TbxUsername.Text.ToString & " has been successfully added!")
-            LoadUsernames()
+            LoadPasswords()
         ElseIf SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing Then
             Notifcation("Error: Fields can not be empty!")
         Else
@@ -239,13 +388,11 @@ Public Class AdminPanel
             Dim tempUsername As String = SqlReadVAlue("SELECT Username FROM UserAuth WHERE UID=" & selectedUID)
             SaveConfig("DELETE FROM UserConfig WHERE UID=" & selectedUID)
             SaveConfig("DELETE FROM UserAuth WHERE UID=" & selectedUID)
-            SaveConfig("DELETE FROM UserData WHERE UID=" & selectedUID)
-            SaveConfig("DELETE FROM UserStats WHERE UID=" & selectedUID)
             selectedUID = Nothing
             ClearUserDataFields(sender, e)
             Notifcation("User " & tempUsername & " Successfully Deleted!")
         End If
-        LoadUsernames()
+        LoadPasswords()
     End Sub
 
     'Settings Tab 
@@ -255,14 +402,14 @@ Public Class AdminPanel
         conn.Close()
         Me.Close()
         AuthLogin.Show()
-        AuthLogin.loadUsernames()
+        AuthLogin.LoadUsernames()
     End Sub
 
     'Save Admin Password Button
     Private Sub SaveAdminPassword(sender As Object, e As EventArgs) Handles btnSaveAdminPass.Click
         If tbxAdminPassword.Text <> "" Then
             SaveConfig("UPDATE UserAuth SET PIN='" & tbxAdminPassword.Text & "' WHERE UID=1")
-            Notifcation("New admin credentials have been set successfully!")
+            Notifcation("New passworld has been set successfully!")
         Else
             Notifcation("Error: Field can not be empty.")
         End If

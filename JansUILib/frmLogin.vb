@@ -53,13 +53,13 @@ Public Class AuthLogin
     'Winforms Init' 
     Private Sub UserLogin_OnLoad(ByVal qsender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         loadUsernames()
-        lblCurrentVersion.Text = AdminPanel.versionNumber
-        lblShopName.Text = AdminPanel.businessName
+        lblCurrentVersion.Text = MainProgram.versionNumber
+        lblShopName.Text = MainProgram.businessName
         pnlWindowContents.Dock = DockStyle.Fill
         pnlWindowContents.BringToFront()
     End Sub
 
-    'Winforms Variable Init'
+    'Winforms Draggable Variables Init'
     Private Property MoveForm As Boolean
     Private Property MoveForm_MousePositiion As Point
 
@@ -90,8 +90,8 @@ Public Class AuthLogin
     'User Auth Button
     Private Sub AuthUser(sender As Object, e As EventArgs) Handles btnLogin.Click
         If AuthUser(CbxUsername.Text, TbxPassword.Text) Then
-            AdminPanel.currentUser = CbxUsername.Text
-            AdminPanel.Show()
+            MainProgram.currentUser = CbxUsername.Text
+            MainProgram.Show()
         Else
             pnlNotification.Dock = DockStyle.Fill
             pnlNotification.BringToFront()
