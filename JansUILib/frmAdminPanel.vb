@@ -190,7 +190,7 @@ Public Class AdminPanel
             SaveConfig("UPDATE UserAuth SET Username='" & TbxUsername.Text & "' WHERE UID=" & selectedUID)
             SaveConfig("UPDATE UserAuth SET PIN='" & TbxPassword.Text & "' WHERE UID=" & selectedUID)
             lbxUsernames.SelectedItem = SqlReadVAlue("SELECT Username FROM UserAuth WHERE (UID=" & selectedUID & ")")
-            Notifcation("New User Credentials for " & lbxUsernames.SelectedItem & " have been saved successfully!")
+            Notifcation("New User Credentials for " & TbxUsername.Text & " have been saved successfully!")
         ElseIf TbxUsername.Text = "" Or TbxPassword.Text = "" Then
             Notifcation("Error: Fields can not be empty!")
         Else
