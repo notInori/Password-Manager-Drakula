@@ -200,7 +200,7 @@ Public Class MainProgram
         Return Nothing
     End Function
 
-    'Load Usernames
+    'Load Passwords
     Private Sub LoadPasswords()
         Dim cmd As New OleDbCommand("SELECT Username FROM Passwords", conn)
         myReader = cmd.ExecuteReader
