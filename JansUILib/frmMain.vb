@@ -252,9 +252,11 @@ Public Class MainProgram
         'Docks the selected tab panel and accents selected tab indicator
         If sender Is lblTabSel1 Then
             pnlMainPage.Dock = DockStyle.Fill
+            pnlMainPage.BringToFront()
             pnlTabHighlight1.Visible = True
         ElseIf sender Is lblTabSel2 Then
             pnlSettingsPage.Dock = DockStyle.Fill
+            pnlSettingsPage.BringToFront()
             pnlTabHighlight2.Visible = True
         End If
 
@@ -407,7 +409,7 @@ Public Class MainProgram
     'Save Admin Password Button
     Private Sub SaveAdminPassword(sender As Object, e As EventArgs) Handles btnSaveAdminPass.Click
         If tbxAdminPassword.Text <> "" Then
-            SaveConfig("UPDATE Passwords SET [Password]='" & tbxAdminPassword.Text & "' WHERE UID=1")
+            SaveConfig("UPDATE UserAuth SET PIN='" & tbxAdminPassword.Text & "' WHERE UID=1")
             Notifcation("New passworld has been set successfully!")
         Else
             Notifcation("Error: Field can not be empty.")

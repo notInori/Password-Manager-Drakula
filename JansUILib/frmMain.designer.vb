@@ -883,7 +883,7 @@ Partial Class MainProgram
         Me.Label49.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label49.Font = New System.Drawing.Font("Consolas", 12.0!)
         Me.Label49.ForeColor = System.Drawing.Color.White
-        Me.Label49.Image = Global.POSSystem.My.Resources.Resources.titlebar_background
+        Me.Label49.Image = Global.RainyUI.My.Resources.Resources.titlebar_background
         Me.Label49.Location = New System.Drawing.Point(22, 0)
         Me.Label49.MinimumSize = New System.Drawing.Size(0, 20)
         Me.Label49.Name = "Label49"
@@ -1329,7 +1329,7 @@ Partial Class MainProgram
         Me.pnlMainGroupBoxTitle.Dock = System.Windows.Forms.DockStyle.Left
         Me.pnlMainGroupBoxTitle.Font = New System.Drawing.Font("Consolas", 12.0!)
         Me.pnlMainGroupBoxTitle.ForeColor = System.Drawing.Color.White
-        Me.pnlMainGroupBoxTitle.Image = Global.POSSystem.My.Resources.Resources.titlebar_background
+        Me.pnlMainGroupBoxTitle.Image = Global.RainyUI.My.Resources.Resources.titlebar_background
         Me.pnlMainGroupBoxTitle.Location = New System.Drawing.Point(22, 0)
         Me.pnlMainGroupBoxTitle.MinimumSize = New System.Drawing.Size(0, 20)
         Me.pnlMainGroupBoxTitle.Name = "pnlMainGroupBoxTitle"
@@ -1674,7 +1674,7 @@ Partial Class MainProgram
         Me.Label6.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label6.Font = New System.Drawing.Font("Consolas", 12.0!)
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Image = Global.POSSystem.My.Resources.Resources.titlebar_background
+        Me.Label6.Image = Global.RainyUI.My.Resources.Resources.titlebar_background
         Me.Label6.Location = New System.Drawing.Point(22, 0)
         Me.Label6.MinimumSize = New System.Drawing.Size(0, 20)
         Me.Label6.Name = "Label6"
@@ -2155,7 +2155,7 @@ Partial Class MainProgram
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label1.Font = New System.Drawing.Font("Consolas", 12.0!)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Image = Global.POSSystem.My.Resources.Resources.titlebar_background
+        Me.Label1.Image = Global.RainyUI.My.Resources.Resources.titlebar_background
         Me.Label1.Location = New System.Drawing.Point(22, 0)
         Me.Label1.MinimumSize = New System.Drawing.Size(0, 20)
         Me.Label1.Name = "Label1"
@@ -2515,7 +2515,7 @@ Partial Class MainProgram
         Me.Label5.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label5.Font = New System.Drawing.Font("Consolas", 12.0!)
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Image = Global.POSSystem.My.Resources.Resources.titlebar_background
+        Me.Label5.Image = Global.RainyUI.My.Resources.Resources.titlebar_background
         Me.Label5.Location = New System.Drawing.Point(22, 0)
         Me.Label5.MinimumSize = New System.Drawing.Size(0, 20)
         Me.Label5.Name = "Label5"
@@ -2918,7 +2918,7 @@ Partial Class MainProgram
         Me.Label8.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label8.Font = New System.Drawing.Font("Consolas", 12.0!)
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Image = Global.POSSystem.My.Resources.Resources.titlebar_background
+        Me.Label8.Image = Global.RainyUI.My.Resources.Resources.titlebar_background
         Me.Label8.Location = New System.Drawing.Point(22, 0)
         Me.Label8.MinimumSize = New System.Drawing.Size(0, 20)
         Me.Label8.Name = "Label8"
@@ -3115,7 +3115,7 @@ Partial Class MainProgram
         '
         Me.Panel317.BackColor = System.Drawing.Color.Black
         Me.Panel317.Controls.Add(Me.Panel318)
-        Me.Panel317.Location = New System.Drawing.Point(10, 39)
+        Me.Panel317.Location = New System.Drawing.Point(10, 34)
         Me.Panel317.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel317.Name = "Panel317"
         Me.Panel317.Padding = New System.Windows.Forms.Padding(1)
@@ -3283,7 +3283,7 @@ Partial Class MainProgram
         Me.Label4.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label4.Font = New System.Drawing.Font("Consolas", 12.0!)
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Image = Global.POSSystem.My.Resources.Resources.titlebar_background
+        Me.Label4.Image = Global.RainyUI.My.Resources.Resources.titlebar_background
         Me.Label4.Location = New System.Drawing.Point(22, 0)
         Me.Label4.MinimumSize = New System.Drawing.Size(0, 20)
         Me.Label4.Name = "Label4"
@@ -3694,7 +3694,7 @@ Partial Class MainProgram
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label2.Font = New System.Drawing.Font("Consolas", 12.0!)
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Image = Global.POSSystem.My.Resources.Resources.titlebar_background
+        Me.Label2.Image = Global.RainyUI.My.Resources.Resources.titlebar_background
         Me.Label2.Location = New System.Drawing.Point(22, 0)
         Me.Label2.MinimumSize = New System.Drawing.Size(0, 20)
         Me.Label2.Name = "Label2"
