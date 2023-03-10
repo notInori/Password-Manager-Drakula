@@ -206,9 +206,7 @@ Public Class MainProgram
         myReader = cmd.ExecuteReader
         lbxUsernames.Items.Clear()
         While myReader.Read
-            If myReader("Username") <> "admin" Then
-                lbxUsernames.Items.Add(myReader("Username"))
-            End If
+            lbxUsernames.Items.Add(myReader("Username"))
         End While
     End Sub
 
