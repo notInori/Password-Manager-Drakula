@@ -5,9 +5,11 @@ Public Class MainProgram
 
     '---Init'
 
-    'Client Info Variables
-    Public Shared ReadOnly businessName As String = ""
+    'Client Info Config
+    Public Shared ReadOnly programName As String = "Rainy UI Lib"
     Public Shared ReadOnly versionNumber As String = "[Dev Build]"
+
+    'Client Info Variables
     Public Shared currentUser As String = "[USER]"
     Dim UID As Integer
 
@@ -417,7 +419,7 @@ Public Class MainProgram
 
     'Timer Tick Update
     Private Sub TmrMain_Tick(sender As Object, e As EventArgs) Handles tmrMain.Tick
-        lblTitle.Text = "POS SYSTEM | " & versionNumber & " | " & currentUser & " | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
+        lblTitle.Text = programName & " | " & versionNumber & " | " & currentUser & " | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
     End Sub
 
 End Class

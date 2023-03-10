@@ -54,7 +54,7 @@ Public Class AuthLogin
     Private Sub UserLogin_OnLoad(ByVal qsender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         loadUsernames()
         lblCurrentVersion.Text = MainProgram.versionNumber
-        lblShopName.Text = MainProgram.businessName
+        lblShopName.Text = MainProgram.programName
         pnlWindowContents.Dock = DockStyle.Fill
         pnlWindowContents.BringToFront()
     End Sub
