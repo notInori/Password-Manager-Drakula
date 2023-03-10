@@ -263,6 +263,8 @@ Public Class AdminPanel
         If tbxAdminPassword.Text <> "" Then
             SaveConfig("UPDATE UserAuth SET PIN='" & tbxAdminPassword.Text & "' WHERE UID=1")
             Notifcation("New admin credentials have been set successfully!")
+        Else
+            Notifcation("Error: Field can not be empty.")
         End If
         tbxAdminPassword.Text = ""
     End Sub
