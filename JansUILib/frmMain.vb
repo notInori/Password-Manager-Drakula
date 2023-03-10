@@ -410,7 +410,7 @@ Public Class MainProgram
     Private Sub SaveAdminPassword(sender As Object, e As EventArgs) Handles btnSaveAdminPass.Click
         If tbxAdminPassword.Text <> "" Then
             SaveConfig("UPDATE UserAuth SET PIN='" & tbxAdminPassword.Text & "' WHERE UID=1")
-            Notifcation("New passworld has been set successfully!")
+            Notifcation("New password has been set successfully!")
         Else
             Notifcation("Error: Field can not be empty.")
         End If
