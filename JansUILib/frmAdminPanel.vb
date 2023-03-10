@@ -228,6 +228,10 @@ Public Class AdminPanel
     Private Sub AddNewUser(sender As Object, e As EventArgs) Handles BtnAddUser.Click
         If SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing And TbxUsername.Text <> "" And TbxPassword.Text <> "" Then
             Notifcation("User " & TbxUsername.Text.ToString & " has been successfully added!")
+            SaveConfig("INSERT INTO UserAuth(Username,PIN) VALUES('" & TbxUsername.Text & "','" & TbxPassword.Text & "')")
+            LoadUsernames()
+
+
         ElseIf SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing Then
             Notifcation("Error: Fields can not be empty!")
         Else
