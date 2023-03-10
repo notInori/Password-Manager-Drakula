@@ -1,5 +1,4 @@
 ﻿Imports System.Data.OleDb
-Imports System.Web.UI.WebControls
 
 Public Class AdminPanel
 
@@ -187,14 +186,17 @@ Public Class AdminPanel
 
     'Save Changes to User's Username and Password
     Private Sub UpdateUserCredentials(sender As Object, e As EventArgs) Handles btnSave.Click
-        If TbxUsername.Text <> "" And TbxPassword.Text <> "" And lbxUsernames.SelectedItem <> "" Then
-            saveConfig("UPDATE UserAuth SET Username='" & TbxUsername.Text & "' WHERE UID=" & selectedUID)
-            saveConfig("UPDATE UserAuth SET PIN='" & TbxPassword.Text & "' WHERE UID=" & selectedUID)
-            loadUsernames()
+        If TbxUsername.Text <> "" And TbxPassword.Text <> "" And lbxUsernames.SelectedItem <> Nothing Then
+            SaveConfig("UPDATE UserAuth SET Username='" & TbxUsername.Text & "' WHERE UID=" & selectedUID)
+            SaveConfig("UPDATE UserAuth SET PIN='" & TbxPassword.Text & "' WHERE UID=" & selectedUID)
             lbxUsernames.SelectedItem = SqlReadVAlue("SELECT Username FROM UserAuth WHERE (UID=" & selectedUID & ")")
-            notifcation("New User Credentials for " & lbxUsernames.SelectedItem & " have been saved successfully!")
+            Notifcation("New User Credentials for " & lbxUsernames.SelectedItem & " have been saved successfully!")
+        ElseIf TbxUsername.Text = "" Or TbxPassword.Text = "" Then
+            Notifcation("Error: Fields can not be empty!")
+        Else
+            Notifcation("Error: User must be selected.")
         End If
-
+        LoadUsernames()
     End Sub
 
     'Settings Tab 
@@ -223,4 +225,13 @@ Public Class AdminPanel
         lblTitle.Text = "POS SYSTEM | " & versionNumber & " | " & currentUser & " | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
     End Sub
 
+    Private Sub AddNewUser(sender As Object, e As EventArgs) Handles BtnAddUser.Click
+        If SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing And TbxUsername.Text <> "" And TbxPassword.Text <> "" Then
+            Notifcation("User " & TbxUsername.Text.ToString & " has been successfully added!")
+        ElseIf SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing Then
+            Notifcation("Error: Fields can not be empty!")
+        Else
+            Notifcation("Error: " & TbxUsername.Text.ToString & " already exists.")
+        End If
+    End Sub
 End Class
