@@ -68,7 +68,7 @@ Partial Class AdminPanel
         Me.Panel227 = New System.Windows.Forms.Panel()
         Me.Panel230 = New System.Windows.Forms.Panel()
         Me.Panel231 = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.BtnDelete = New System.Windows.Forms.Button()
         Me.Panel83 = New System.Windows.Forms.Panel()
         Me.Panel206 = New System.Windows.Forms.Panel()
         Me.btnSave = New System.Windows.Forms.Button()
@@ -1370,7 +1370,7 @@ Partial Class AdminPanel
         'Panel231
         '
         Me.Panel231.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
-        Me.Panel231.Controls.Add(Me.Button3)
+        Me.Panel231.Controls.Add(Me.BtnDelete)
         Me.Panel231.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel231.Location = New System.Drawing.Point(1, 1)
         Me.Panel231.Name = "Panel231"
@@ -1378,23 +1378,23 @@ Partial Class AdminPanel
         Me.Panel231.Size = New System.Drawing.Size(444, 35)
         Me.Panel231.TabIndex = 0
         '
-        'Button3
+        'BtnDelete
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.Button3.Location = New System.Drawing.Point(1, 1)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(1)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(442, 33)
-        Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Delete"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.BtnDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.BtnDelete.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnDelete.FlatAppearance.BorderSize = 0
+        Me.BtnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.BtnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnDelete.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDelete.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.BtnDelete.Location = New System.Drawing.Point(1, 1)
+        Me.BtnDelete.Margin = New System.Windows.Forms.Padding(1)
+        Me.BtnDelete.Name = "BtnDelete"
+        Me.BtnDelete.Size = New System.Drawing.Size(442, 33)
+        Me.BtnDelete.TabIndex = 6
+        Me.BtnDelete.Text = "Delete"
+        Me.BtnDelete.UseVisualStyleBackColor = False
         '
         'Panel83
         '
@@ -7308,7 +7308,7 @@ Partial Class AdminPanel
     Friend WithEvents Panel227 As Panel
     Friend WithEvents Panel230 As Panel
     Friend WithEvents Panel231 As Panel
-    Friend WithEvents Button3 As Button
+    Friend WithEvents BtnDelete As Button
     Friend WithEvents Panel228 As Panel
     Friend WithEvents Panel229 As Panel
     Friend WithEvents BtnAddUser As Button

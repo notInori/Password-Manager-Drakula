@@ -206,6 +206,7 @@ Public Class AdminPanel
         TbxPassword.Clear()
     End Sub
 
+    'Adds New User To Database
     Private Sub AddNewUser(sender As Object, e As EventArgs) Handles BtnAddUser.Click
         If SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing And TbxUsername.Text <> "" And TbxPassword.Text <> "" Then
             SaveConfig("INSERT INTO UserAuth(Username,PIN) VALUES('" & TbxUsername.Text & "','" & TbxPassword.Text & "')")
@@ -216,6 +217,11 @@ Public Class AdminPanel
         Else
             Notifcation("Error: " & TbxUsername.Text.ToString & " already exists.")
         End If
+    End Sub
+
+    'Deletes Selected User
+    Private Sub DeleteUser(sender As Object, e As EventArgs) Handles BtnDelete.Click
+
     End Sub
 
     'Settings Tab 
