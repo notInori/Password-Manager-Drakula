@@ -678,9 +678,9 @@ Partial Class MainProgram
         Me.lblTabSel1.Margin = New System.Windows.Forms.Padding(0)
         Me.lblTabSel1.Name = "lblTabSel1"
         Me.lblTabSel1.Padding = New System.Windows.Forms.Padding(5)
-        Me.lblTabSel1.Size = New System.Drawing.Size(64, 29)
+        Me.lblTabSel1.Size = New System.Drawing.Size(55, 29)
         Me.lblTabSel1.TabIndex = 10
-        Me.lblTabSel1.Text = "Users"
+        Me.lblTabSel1.Text = "Main"
         Me.lblTabSel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'pnlTabHighlight1
@@ -691,7 +691,7 @@ Partial Class MainProgram
         Me.pnlTabHighlight1.Location = New System.Drawing.Point(0, 29)
         Me.pnlTabHighlight1.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlTabHighlight1.Name = "pnlTabHighlight1"
-        Me.pnlTabHighlight1.Size = New System.Drawing.Size(64, 1)
+        Me.pnlTabHighlight1.Size = New System.Drawing.Size(55, 1)
         Me.pnlTabHighlight1.TabIndex = 0
         Me.pnlTabHighlight1.Tag = "tabHighlight"
         '
@@ -702,7 +702,7 @@ Partial Class MainProgram
         Me.lblTabSel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.lblTabSel2.Font = New System.Drawing.Font("Consolas", 12.0!)
         Me.lblTabSel2.ForeColor = System.Drawing.Color.White
-        Me.lblTabSel2.Location = New System.Drawing.Point(64, 0)
+        Me.lblTabSel2.Location = New System.Drawing.Point(55, 0)
         Me.lblTabSel2.Margin = New System.Windows.Forms.Padding(0)
         Me.lblTabSel2.Name = "lblTabSel2"
         Me.lblTabSel2.Padding = New System.Windows.Forms.Padding(5)
@@ -716,7 +716,7 @@ Partial Class MainProgram
         Me.pnlTabHighlight2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.pnlTabHighlight2.BackColor = System.Drawing.Color.White
         Me.pnlTabHighlight2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlTabHighlight2.Location = New System.Drawing.Point(64, 29)
+        Me.pnlTabHighlight2.Location = New System.Drawing.Point(55, 29)
         Me.pnlTabHighlight2.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlTabHighlight2.Name = "pnlTabHighlight2"
         Me.pnlTabHighlight2.Size = New System.Drawing.Size(91, 1)
