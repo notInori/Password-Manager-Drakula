@@ -211,6 +211,9 @@ Public Class AdminPanel
     Private Sub AddNewUser(sender As Object, e As EventArgs) Handles BtnAddUser.Click
         If SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing And TbxUsername.Text <> "" And TbxPassword.Text <> "" Then
             SaveConfig("INSERT INTO UserAuth(Username,PIN) VALUES('" & TbxUsername.Text & "','" & TbxPassword.Text & "')")
+            SaveConfig("INSERT INTO UserConfig(Accent) VALUES(-1)")
+            SaveConfig("INSERT INTO UserData DEFAULT VALUES")
+            SaveConfig("INSERT INTO UserStats DEFAULT VALUES")
             Notifcation("User " & TbxUsername.Text.ToString & " has been successfully added!")
             LoadUsernames()
         ElseIf SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing Then
@@ -236,6 +239,8 @@ Public Class AdminPanel
             Dim tempUsername As String = SqlReadVAlue("SELECT Username FROM UserAuth WHERE UID=" & selectedUID)
             SaveConfig("DELETE FROM UserConfig WHERE UID=" & selectedUID)
             SaveConfig("DELETE FROM UserAuth WHERE UID=" & selectedUID)
+            SaveConfig("DELETE FROM UserData WHERE UID=" & selectedUID)
+            SaveConfig("DELETE FROM UserStats WHERE UID=" & selectedUID)
             selectedUID = Nothing
             ClearUserDataFields(sender, e)
             Notifcation("User " & tempUsername & " Successfully Deleted!")
