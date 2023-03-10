@@ -8,7 +8,7 @@ Public Class AdminPanel
     'Client Info Variables
     Public Shared ReadOnly businessName As String = ""
     Public Shared ReadOnly versionNumber As String = "[Dev Build]"
-    ReadOnly currentUser As String = "Admin"
+    Public Shared currentUser As String = "[USER]"
     Dim UID As Integer
 
     'Variables Init'

@@ -53,8 +53,8 @@ Public Class AuthLogin
     'Winforms Init' 
     Private Sub UserLogin_OnLoad(ByVal qsender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         loadUsernames()
-        lblCurrentVersion.Text = POSSystem.versionNumber
-        lblShopName.Text = POSSystem.businessName
+        lblCurrentVersion.Text = AdminPanel.versionNumber
+        lblShopName.Text = AdminPanel.businessName
         pnlWindowContents.Dock = DockStyle.Fill
         pnlWindowContents.BringToFront()
     End Sub
@@ -89,11 +89,9 @@ Public Class AuthLogin
 
     'User Auth Button
     Private Sub AuthUser(sender As Object, e As EventArgs) Handles btnLogin.Click
-        If CbxUsername.Text = "admin" And authUser(CbxUsername.Text, TbxPassword.Text) Then
+        If AuthUser(CbxUsername.Text, TbxPassword.Text) Then
+            AdminPanel.currentUser = CbxUsername.Text
             AdminPanel.Show()
-        ElseIf authUser(CbxUsername.Text, TbxPassword.Text) Then
-            POSSystem.currentUser = CbxUsername.Text
-            POSSystem.Show()
         Else
             pnlNotification.Dock = DockStyle.Fill
             pnlNotification.BringToFront()
@@ -107,7 +105,7 @@ Public Class AuthLogin
     End Sub
 
     'Dismiss Notification Button
-    Private Sub DimissNotification(sender As Object, e As EventArgs) Handles btnContinueNotification.Click
+    Private Sub DimissNotification(sender As Object, e As EventArgs) Handles BtnContinue.Click
         pnlNotification.Dock = DockStyle.None
         pnlNotification.Height = 0
     End Sub
