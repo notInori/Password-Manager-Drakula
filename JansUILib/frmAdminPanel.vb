@@ -183,14 +183,6 @@ Public Class AdminPanel
         End If
     End Sub
 
-    'Clears User Data Fields
-    Private Sub ClearUserDataFields(sender As Object, e As EventArgs) Handles BtnClear.Click
-        selectedUID = Nothing
-        lbxUsernames.SelectedItem = Nothing
-        TbxUsername.Clear()
-        TbxPassword.Clear()
-    End Sub
-
     'Save Changes to User's Username and Password
     Private Sub UpdateUserCredentials(sender As Object, e As EventArgs) Handles btnSave.Click
         If TbxUsername.Text <> "" And TbxPassword.Text <> "" And lbxUsernames.SelectedItem <> Nothing Then
@@ -204,6 +196,26 @@ Public Class AdminPanel
             Notifcation("Error: User must be selected.")
         End If
         LoadUsernames()
+    End Sub
+
+    'Clears User Data Fields
+    Private Sub ClearUserDataFields(sender As Object, e As EventArgs) Handles BtnClear.Click
+        selectedUID = Nothing
+        lbxUsernames.SelectedItem = Nothing
+        TbxUsername.Clear()
+        TbxPassword.Clear()
+    End Sub
+
+    Private Sub AddNewUser(sender As Object, e As EventArgs) Handles BtnAddUser.Click
+        If SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing And TbxUsername.Text <> "" And TbxPassword.Text <> "" Then
+            SaveConfig("INSERT INTO UserAuth(Username,PIN) VALUES('" & TbxUsername.Text & "','" & TbxPassword.Text & "')")
+            Notifcation("User " & TbxUsername.Text.ToString & " has been successfully added!")
+            LoadUsernames()
+        ElseIf SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing Then
+            Notifcation("Error: Fields can not be empty!")
+        Else
+            Notifcation("Error: " & TbxUsername.Text.ToString & " already exists.")
+        End If
     End Sub
 
     'Settings Tab 
@@ -232,15 +244,4 @@ Public Class AdminPanel
         lblTitle.Text = "POS SYSTEM | " & versionNumber & " | " & currentUser & " | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
     End Sub
 
-    Private Sub AddNewUser(sender As Object, e As EventArgs) Handles BtnAddUser.Click
-        If SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing And TbxUsername.Text <> "" And TbxPassword.Text <> "" Then
-            SaveConfig("INSERT INTO UserAuth(Username,PIN) VALUES('" & TbxUsername.Text & "','" & TbxPassword.Text & "')")
-            Notifcation("User " & TbxUsername.Text.ToString & " has been successfully added!")
-            LoadUsernames()
-        ElseIf SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing Then
-            Notifcation("Error: Fields can not be empty!")
-        Else
-            Notifcation("Error: " & TbxUsername.Text.ToString & " already exists.")
-        End If
-    End Sub
 End Class
