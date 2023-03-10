@@ -323,11 +323,12 @@ Partial Class AuthLogin
         Me.pnlWindowContents.Controls.Add(Me.Panel314)
         Me.pnlWindowContents.Controls.Add(Me.tblMainGroupBox)
         Me.pnlWindowContents.Controls.Add(Me.btnDummy)
-        Me.pnlWindowContents.Location = New System.Drawing.Point(36, 30)
+        Me.pnlWindowContents.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlWindowContents.Location = New System.Drawing.Point(0, 0)
         Me.pnlWindowContents.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlWindowContents.Name = "pnlWindowContents"
         Me.pnlWindowContents.Padding = New System.Windows.Forms.Padding(5)
-        Me.pnlWindowContents.Size = New System.Drawing.Size(494, 178)
+        Me.pnlWindowContents.Size = New System.Drawing.Size(494, 262)
         Me.pnlWindowContents.TabIndex = 3
         '
         'Panel5
@@ -925,12 +926,11 @@ Partial Class AuthLogin
         '
         Me.pnlNotification.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.pnlNotification.Controls.Add(Me.TableLayoutPanel3)
-        Me.pnlNotification.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlNotification.Location = New System.Drawing.Point(0, 0)
+        Me.pnlNotification.Location = New System.Drawing.Point(0, 262)
         Me.pnlNotification.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlNotification.Name = "pnlNotification"
         Me.pnlNotification.Padding = New System.Windows.Forms.Padding(5)
-        Me.pnlNotification.Size = New System.Drawing.Size(494, 262)
+        Me.pnlNotification.Size = New System.Drawing.Size(494, 27)
         Me.pnlNotification.TabIndex = 10
         '
         'pnlBlackOutline
