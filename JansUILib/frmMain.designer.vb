@@ -3088,12 +3088,12 @@ Partial Class MainProgram
         Me.lblCurrentUser.Dock = System.Windows.Forms.DockStyle.Right
         Me.lblCurrentUser.Font = New System.Drawing.Font("Consolas", 12.0!)
         Me.lblCurrentUser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.lblCurrentUser.Location = New System.Drawing.Point(273, 0)
+        Me.lblCurrentUser.Location = New System.Drawing.Point(246, 0)
         Me.lblCurrentUser.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.lblCurrentUser.Name = "lblCurrentUser"
-        Me.lblCurrentUser.Size = New System.Drawing.Size(36, 19)
+        Me.lblCurrentUser.Size = New System.Drawing.Size(63, 19)
         Me.lblCurrentUser.TabIndex = 10
-        Me.lblCurrentUser.Text = "Dev"
+        Me.lblCurrentUser.Text = "[USER]"
         Me.lblCurrentUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label7
@@ -3499,7 +3499,7 @@ Partial Class MainProgram
         Me.lblUsername.Padding = New System.Windows.Forms.Padding(0, 0, 5, 5)
         Me.lblUsername.Size = New System.Drawing.Size(95, 24)
         Me.lblUsername.TabIndex = 9
-        Me.lblUsername.Text = "Username:"
+        Me.lblUsername.Text = "Password:"
         Me.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Panel280
