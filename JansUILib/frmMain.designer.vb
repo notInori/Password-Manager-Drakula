@@ -2330,7 +2330,7 @@ Partial Class MainProgram
         Me.lblNotifcationInfo.Size = New System.Drawing.Size(448, 94)
         Me.lblNotifcationInfo.TabIndex = 9
         Me.lblNotifcationInfo.Text = "[Notification Text]"
-        Me.lblNotifcationInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.lblNotifcationInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel394
         '
