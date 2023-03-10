@@ -1,4 +1,5 @@
-﻿Imports System.Data.OleDb
+﻿Imports System.CodeDom.Compiler
+Imports System.Data.OleDb
 
 Public Class AdminPanel
 
@@ -28,9 +29,9 @@ Public Class AdminPanel
             cntrl.Width = 0
         Next
         lblCurrentUser.Text = currentUser
-        loadUserConfig()
+        LoadUserConfig()
         ChangeTab(lblTabSel1, e)
-        loadUsernames()
+        LoadUsernames()
     End Sub
 
     '---Database Functions
@@ -167,7 +168,7 @@ Public Class AdminPanel
             accentColor = cDialog.Color ' update with user selected color.
         End If
         UpdateAccent()
-        saveConfig("UPDATE UserConfig SET Accent=" & accentColor.ToArgb() & " WHERE UID=" & UID)
+        SaveConfig("UPDATE UserConfig SET Accent=" & accentColor.ToArgb() & " WHERE UID=" & UID)
     End Sub
 
     '---Application Code
@@ -220,8 +221,26 @@ Public Class AdminPanel
     End Sub
 
     'Deletes Selected User
-    Private Sub DeleteUser(sender As Object, e As EventArgs) Handles BtnDelete.Click
-
+    Private Sub DeleteUser(sender As Object, e As EventArgs) Handles BtnDelete.Click, BtnContinueAction.Click, BtnCancelAction.Click
+        If sender Is BtnDelete And lbxUsernames.SelectedItem <> Nothing Then
+            lblConfirmationText.Text = "Are you that you want to delete " & lbxUsernames.SelectedItem.ToString & "?"
+            pnlConfirmation.Dock = DockStyle.Fill
+            pnlConfirmation.BringToFront()
+        ElseIf sender Is BtnDelete Then
+            Notifcation("Error: User must be selected!")
+        ElseIf sender Is BtnContinueAction Or sender Is BtnCancelAction Then
+            pnlConfirmation.Dock = DockStyle.None
+            pnlConfirmation.Height = 0
+        End If
+        If sender Is BtnContinueAction Then
+            Dim tempUsername As String = SqlReadVAlue("SELECT Username FROM UserAuth WHERE UID=" & selectedUID)
+            SaveConfig("DELETE FROM UserConfig WHERE UID=" & selectedUID)
+            SaveConfig("DELETE FROM UserAuth WHERE UID=" & selectedUID)
+            selectedUID = Nothing
+            ClearUserDataFields(sender, e)
+            Notifcation("User " & tempUsername & " Successfully Deleted!")
+        End If
+        LoadUsernames()
     End Sub
 
     'Settings Tab 
