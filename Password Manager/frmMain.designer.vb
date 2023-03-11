@@ -978,7 +978,7 @@ Partial Class MainProgram
         Me.Label49.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label49.Font = New System.Drawing.Font("Consolas", 12.0!)
         Me.Label49.ForeColor = System.Drawing.Color.White
-        Me.Label49.Image = Global.PassMgr.My.Resources.Resources.titlebar_background_drakula
+        Me.Label49.Image = Global.PassMgr.My.Resources.Resources.titlebar_background_drakulaMenu
         Me.Label49.Location = New System.Drawing.Point(22, 0)
         Me.Label49.MinimumSize = New System.Drawing.Size(0, 20)
         Me.Label49.Name = "Label49"
@@ -1424,7 +1424,7 @@ Partial Class MainProgram
         Me.pnlMainGroupBoxTitle.Dock = System.Windows.Forms.DockStyle.Left
         Me.pnlMainGroupBoxTitle.Font = New System.Drawing.Font("Consolas", 12.0!)
         Me.pnlMainGroupBoxTitle.ForeColor = System.Drawing.Color.White
-        Me.pnlMainGroupBoxTitle.Image = Global.PassMgr.My.Resources.Resources.titlebar_background_drakula
+        Me.pnlMainGroupBoxTitle.Image = Global.PassMgr.My.Resources.Resources.titlebar_background_drakulaMenu
         Me.pnlMainGroupBoxTitle.Location = New System.Drawing.Point(22, 0)
         Me.pnlMainGroupBoxTitle.MinimumSize = New System.Drawing.Size(0, 20)
         Me.pnlMainGroupBoxTitle.Name = "pnlMainGroupBoxTitle"
@@ -1769,7 +1769,7 @@ Partial Class MainProgram
         Me.Label6.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label6.Font = New System.Drawing.Font("Consolas", 12.0!)
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Image = Global.PassMgr.My.Resources.Resources.titlebar_background_drakula
+        Me.Label6.Image = Global.PassMgr.My.Resources.Resources.titlebar_background_drakulaMenu
         Me.Label6.Location = New System.Drawing.Point(22, 0)
         Me.Label6.MinimumSize = New System.Drawing.Size(0, 20)
         Me.Label6.Name = "Label6"
