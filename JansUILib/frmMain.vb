@@ -374,7 +374,7 @@ Public Class MainProgram
     'Deletes Selected User
     Private Sub DeleteUser(sender As Object, e As EventArgs) Handles BtnDelete.Click, BtnContinueAction.Click, BtnCancelAction.Click
         If sender Is BtnDelete And lbxUsernames.SelectedItem <> Nothing Then
-            lblConfirmationText.Text = "Are you that you want to delete " & lbxUsernames.SelectedItem.ToString & "?"
+            lblConfirmationText.Text = "Are you sure that you want to delete " & lbxUsernames.SelectedItem.ToString & "?"
             pnlConfirmation.Dock = DockStyle.Fill
             pnlConfirmation.BringToFront()
         ElseIf sender Is BtnDelete Then
