@@ -337,15 +337,17 @@ Public Class MainProgram
 
     'Save Changes to User's Username and Password
     Private Sub UpdateUserCredentials(sender As Object, e As EventArgs) Handles btnSave.Click
-        If TbxAccountName.Text <> "" And TbxUsername.Text <> "" And TbxPassword.Text <> "" And lbxUsernames.SelectedItem <> Nothing Then
+        If TbxAccountName.Text <> "" And lbxUsernames.SelectedItem <> Nothing And SqlReadVAlue("SELECT UID FROM Passwords WHERE ([Account Name]='" & lbxUsernames.SelectedItem.ToString & "')") = Nothing Then
             SaveConfig("UPDATE Passwords SET [Account Name]='" & TbxAccountName.Text & "' WHERE UID=" & selectedUID)
             SaveConfig("UPDATE Passwords SET Website='" & TbxWebsite.Text & "' WHERE UID=" & selectedUID)
             SaveConfig("UPDATE Passwords SET Username='" & TbxUsername.Text & "' WHERE UID=" & selectedUID)
             SaveConfig("UPDATE Passwords SET [Password]='" & TbxPassword.Text & "' WHERE UID=" & selectedUID)
             Notifcation("New User Credentials for " & TbxAccountName.Text & " have been saved successfully!")
-        ElseIf TbxAccountName.Text = "" Or TbxUsername.Text = "" Or TbxPassword.Text = "" Then
-            Notifcation("Error: Fields can not be empty!")
+        ElseIf TbxAccountName.Text = "" Then
+            Notifcation("Error: An account name is required!")
             LoadSelectedUserInfo(sender, e)
+        ElseIf SqlReadVAlue("SELECT UID FROM Passwords WHERE ([Account Name]='" & lbxUsernames.SelectedItem.ToString & "')") <> Nothing Then
+            Notifcation("Error: This account name is already in use!")
         Else
             Notifcation("Error: An entry must be selected.")
         End If
@@ -365,12 +367,12 @@ Public Class MainProgram
 
     'Adds New User To Database
     Private Sub AddNewUser(sender As Object, e As EventArgs) Handles BtnAddUser.Click
-        If SqlReadVAlue("SELECT UID FROM Passwords WHERE ([Account Name]='" & TbxAccountName.Text.ToString & "')") = Nothing And TbxAccountName.Text.ToString <> Nothing And TbxUsername.Text <> "" And TbxPassword.Text <> "" Then
+        If SqlReadVAlue("SELECT UID FROM Passwords WHERE ([Account Name]='" & TbxAccountName.Text.ToString & "')") = Nothing And TbxAccountName.Text.ToString <> Nothing Then
             SaveConfig("INSERT INTO Passwords ([Account Name],Website,Username,[Password]) VALUES ('" & TbxAccountName.Text.ToString & "','" & TbxWebsite.Text.ToString & "','" & TbxUsername.Text.ToString & "','" & TbxPassword.Text.ToString & "')")
             Notifcation("New entry " & TbxAccountName.Text.ToString & " has been successfully added!")
             LoadPasswords()
         ElseIf SqlReadVAlue("SELECT UID FROM Passwords WHERE [Account Name]='" & TbxAccountName.Text.ToString & "'") = Nothing Then
-            Notifcation("Error: Fields can not be empty!")
+            Notifcation("Error: Account name is required!")
         Else
             Notifcation("Error: Entry " & TbxAccountName.Text.ToString & " already exists.")
             TbxAccountName.Clear()
@@ -398,6 +400,7 @@ Public Class MainProgram
             Notifcation("Entry " & TempAccountName & " Successfully Deleted!")
         End If
         LoadPasswords()
+        lbxUsernames.SelectedItem = SqlReadVAlue("SELECT [Account Name] FROM [Passwords] WHERE UID=" & selectedUID)
     End Sub
 
     'Settings Tab 
