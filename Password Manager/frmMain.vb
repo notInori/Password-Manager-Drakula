@@ -337,17 +337,20 @@ Public Class MainProgram
 
     'Save Changes to User's Username and Password
     Private Sub UpdateUserCredentials(sender As Object, e As EventArgs) Handles btnSave.Click
-        If TbxUsername.Text <> "" And TbxPassword.Text <> "" And lbxUsernames.SelectedItem <> Nothing Then
+        If TbxAccountName.Text <> "" And TbxUsername.Text <> "" And TbxPassword.Text <> "" And lbxUsernames.SelectedItem <> Nothing Then
+            SaveConfig("UPDATE Passwords SET [Account Name]='" & TbxAccountName.Text & "' WHERE UID=" & selectedUID)
+            SaveConfig("UPDATE Passwords SET Website='" & TbxWebsite.Text & "' WHERE UID=" & selectedUID)
             SaveConfig("UPDATE Passwords SET Username='" & TbxUsername.Text & "' WHERE UID=" & selectedUID)
             SaveConfig("UPDATE Passwords SET [Password]='" & TbxPassword.Text & "' WHERE UID=" & selectedUID)
-            lbxUsernames.SelectedItem = SqlReadVAlue("SELECT Username FROM [Passwords] WHERE (UID=" & selectedUID & ")")
-            Notifcation("New User Credentials for " & TbxUsername.Text & " have been saved successfully!")
-        ElseIf TbxUsername.Text = "" Or TbxPassword.Text = "" Then
+            Notifcation("New User Credentials for " & TbxAccountName.Text & " have been saved successfully!")
+        ElseIf TbxAccountName.Text = "" Or TbxUsername.Text = "" Or TbxPassword.Text = "" Then
             Notifcation("Error: Fields can not be empty!")
+            LoadSelectedUserInfo(sender, e)
         Else
-            Notifcation("Error: A username must be selected.")
+            Notifcation("Error: An entry must be selected.")
         End If
         LoadPasswords()
+        lbxUsernames.SelectedItem = SqlReadVAlue("SELECT [Account Name] FROM [Passwords] WHERE UID=" & selectedUID)
     End Sub
 
     'Clears User Data Fields
@@ -368,28 +371,29 @@ Public Class MainProgram
             Notifcation("Error: Fields can not be empty!")
         Else
             Notifcation("Error: Entry " & TbxAccountName.Text.ToString & " already exists.")
+            TbxAccountName.Clear()
         End If
     End Sub
 
     'Deletes Selected User
     Private Sub DeleteUser(sender As Object, e As EventArgs) Handles BtnDelete.Click, BtnContinueAction.Click, BtnCancelAction.Click
         If sender Is BtnDelete And lbxUsernames.SelectedItem <> Nothing Then
-            lblConfirmationText.Text = "Are you sure that you want to delete " & lbxUsernames.SelectedItem.ToString & "?"
+            lblConfirmationText.Text = "Are you sure that you want to delete you credentials for " & lbxUsernames.SelectedItem.ToString & "?"
             pnlConfirmation.Dock = DockStyle.Fill
             pnlConfirmation.BringToFront()
         ElseIf sender Is BtnDelete Then
-            Notifcation("Error: A username must be selected!")
+            Notifcation("Error: An entry must be selected!")
         ElseIf sender Is BtnContinueAction Or sender Is BtnCancelAction Then
             pnlConfirmation.Dock = DockStyle.None
             pnlConfirmation.Height = 0
         End If
         If sender Is BtnContinueAction Then
-            Dim tempUsername As String = SqlReadVAlue("SELECT Username FROM Passwords WHERE UID=" & selectedUID)
+            Dim TempAccountName As String = SqlReadVAlue("SELECT [Account Name] FROM Passwords WHERE UID=" & selectedUID)
             SaveConfig("DELETE FROM UserConfig WHERE UID=" & selectedUID)
             SaveConfig("DELETE FROM Passwords WHERE UID=" & selectedUID)
             selectedUID = Nothing
             ClearUserDataFields(sender, e)
-            Notifcation("Entry " & tempUsername & " Successfully Deleted!")
+            Notifcation("Entry " & TempAccountName & " Successfully Deleted!")
         End If
         LoadPasswords()
     End Sub
