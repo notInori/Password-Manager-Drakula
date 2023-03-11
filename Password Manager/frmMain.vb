@@ -360,15 +360,14 @@ Public Class MainProgram
 
     'Adds New User To Database
     Private Sub AddNewUser(sender As Object, e As EventArgs) Handles BtnAddUser.Click
-        If SqlReadVAlue("SELECT UID FROM Passwords WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing And TbxUsername.Text <> "" And TbxPassword.Text <> "" Then
-            Dim temp As String = "INSERT INTO Passwords ('Username','Password') VALUES ('" & TbxUsername.Text.ToString & "','" & TbxPassword.Text.ToString & "')"
-            SaveConfig("INSERT INTO Passwords (Username,[Password]) VALUES ('" & TbxUsername.Text.ToString & "','" & TbxPassword.Text.ToString & "')")
-            Notifcation("New entry " & TbxUsername.Text.ToString & " has been successfully added!")
+        If SqlReadVAlue("SELECT UID FROM Passwords WHERE ([Account Name]='" & TbxAccountName.Text.ToString & "')") = Nothing And TbxAccountName.Text.ToString <> Nothing And TbxUsername.Text <> "" And TbxPassword.Text <> "" Then
+            SaveConfig("INSERT INTO Passwords ([Account Name],Website,Username,[Password]) VALUES ('" & TbxAccountName.Text.ToString & "','" & TbxWebsite.Text.ToString & "','" & TbxUsername.Text.ToString & "','" & TbxPassword.Text.ToString & "')")
+            Notifcation("New entry " & TbxAccountName.Text.ToString & " has been successfully added!")
             LoadPasswords()
-        ElseIf SqlReadVAlue("SELECT UID FROM Passwords WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing Then
+        ElseIf SqlReadVAlue("SELECT UID FROM Passwords WHERE [Account Name]='" & TbxAccountName.Text.ToString & "'") = Nothing Then
             Notifcation("Error: Fields can not be empty!")
         Else
-            Notifcation("Error: Entry" & TbxUsername.Text.ToString & " already exists.")
+            Notifcation("Error: Entry " & TbxAccountName.Text.ToString & " already exists.")
         End If
     End Sub
 
