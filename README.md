@@ -11,10 +11,10 @@ A simple password manager.
 
 ### Staff POS Screen
 ##### Main Menu
-![UI](https://user-images.githubusercontent.com/124441402/224453399-e3baa437-581a-42c2-af61-28a0a15c4c1d.png)
+![image](https://user-images.githubusercontent.com/124441402/224457056-761f38d3-ff2e-4bce-a582-7796bfc65c40.png)
 ##### Settings Screen
-![UI](https://user-images.githubusercontent.com/124441402/224453406-1551660d-3d86-4805-848d-3187d6390aab.png)
-##### Notification
-![image](https://user-images.githubusercontent.com/124441402/224453778-c1e9c25c-98d4-468a-aefd-89182bc086ed.png)
+![image](https://user-images.githubusercontent.com/124441402/224457074-1c44d4aa-0f14-4132-bfc2-b104e3da5a78.png)
 ##### Confirmation
-![image](https://user-images.githubusercontent.com/124441402/224453753-64dbe615-d9e4-4db5-8271-82f3389f5aa6.png)
+![image](https://user-images.githubusercontent.com/124441402/224457083-3ff96e44-1c99-406d-a8f4-194f2a65885e.png)
+##### Notification
+![image](https://user-images.githubusercontent.com/124441402/224457081-d7e08c76-69b0-40ad-b32b-9194d42623e9.png)
