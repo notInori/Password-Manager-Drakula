@@ -344,7 +344,7 @@ Public Class MainProgram
         ElseIf TbxUsername.Text = "" Or TbxPassword.Text = "" Then
             Notifcation("Error: Fields can not be empty!")
         Else
-            Notifcation("Error: User must be selected.")
+            Notifcation("Error: A username must be selected.")
         End If
         LoadPasswords()
     End Sub
@@ -362,12 +362,12 @@ Public Class MainProgram
         If SqlReadVAlue("SELECT UID FROM Passwords WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing And TbxUsername.Text <> "" And TbxPassword.Text <> "" Then
             Dim temp As String = "INSERT INTO Passwords ('Username','Password') VALUES ('" & TbxUsername.Text.ToString & "','" & TbxPassword.Text.ToString & "')"
             SaveConfig("INSERT INTO Passwords (Username,[Password]) VALUES ('" & TbxUsername.Text.ToString & "','" & TbxPassword.Text.ToString & "')")
-            Notifcation("User " & TbxUsername.Text.ToString & " has been successfully added!")
+            Notifcation("New entry " & TbxUsername.Text.ToString & " has been successfully added!")
             LoadPasswords()
         ElseIf SqlReadVAlue("SELECT UID FROM Passwords WHERE (Username='" & TbxUsername.Text.ToString & "')") = Nothing Then
             Notifcation("Error: Fields can not be empty!")
         Else
-            Notifcation("Error: " & TbxUsername.Text.ToString & " already exists.")
+            Notifcation("Error: Entry" & TbxUsername.Text.ToString & " already exists.")
         End If
     End Sub
 
@@ -378,7 +378,7 @@ Public Class MainProgram
             pnlConfirmation.Dock = DockStyle.Fill
             pnlConfirmation.BringToFront()
         ElseIf sender Is BtnDelete Then
-            Notifcation("Error: User must be selected!")
+            Notifcation("Error: A username must be selected!")
         ElseIf sender Is BtnContinueAction Or sender Is BtnCancelAction Then
             pnlConfirmation.Dock = DockStyle.None
             pnlConfirmation.Height = 0
@@ -389,7 +389,7 @@ Public Class MainProgram
             SaveConfig("DELETE FROM Passwords WHERE UID=" & selectedUID)
             selectedUID = Nothing
             ClearUserDataFields(sender, e)
-            Notifcation("User " & tempUsername & " Successfully Deleted!")
+            Notifcation("Entry " & tempUsername & " Successfully Deleted!")
         End If
         LoadPasswords()
     End Sub
