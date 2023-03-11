@@ -5,7 +5,7 @@ A simple password manager.
 
 ### Authentication Screen
 ##### Main Screen
-![UI](https://user-images.githubusercontent.com/124441402/224453322-86802f5a-2001-4377-8468-bc0544ffc5d9.png)
+![UI](https://user-images.githubusercontent.com/124441402/224463708-8cd485c4-b50f-488d-bb7f-2e95ed3af83b.png)
 ##### Notification
 ![UI](https://user-images.githubusercontent.com/124441402/224453341-c370b8f1-e0be-4384-876b-e001d5fea82c.png)
 
