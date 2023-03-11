@@ -1098,7 +1098,7 @@ Partial Class MainProgram
         Me.BtnDelete.Margin = New System.Windows.Forms.Padding(1)
         Me.BtnDelete.Name = "BtnDelete"
         Me.BtnDelete.Size = New System.Drawing.Size(420, 26)
-        Me.BtnDelete.TabIndex = 8
+        Me.BtnDelete.TabIndex = 0
         Me.BtnDelete.Text = "Delete"
         Me.BtnDelete.UseVisualStyleBackColor = False
         '
@@ -1138,7 +1138,7 @@ Partial Class MainProgram
         Me.btnSave.Margin = New System.Windows.Forms.Padding(1)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(420, 26)
-        Me.btnSave.TabIndex = 6
+        Me.btnSave.TabIndex = 0
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = False
         '
@@ -1178,7 +1178,7 @@ Partial Class MainProgram
         Me.BtnClear.Margin = New System.Windows.Forms.Padding(1)
         Me.BtnClear.Name = "BtnClear"
         Me.BtnClear.Size = New System.Drawing.Size(420, 26)
-        Me.BtnClear.TabIndex = 7
+        Me.BtnClear.TabIndex = 0
         Me.BtnClear.Text = "Clear"
         Me.BtnClear.UseVisualStyleBackColor = False
         '
@@ -1218,7 +1218,7 @@ Partial Class MainProgram
         Me.BtnAddUser.Margin = New System.Windows.Forms.Padding(1)
         Me.BtnAddUser.Name = "BtnAddUser"
         Me.BtnAddUser.Size = New System.Drawing.Size(420, 26)
-        Me.BtnAddUser.TabIndex = 5
+        Me.BtnAddUser.TabIndex = 0
         Me.BtnAddUser.Text = "Add"
         Me.BtnAddUser.UseVisualStyleBackColor = False
         '
@@ -1851,7 +1851,7 @@ Partial Class MainProgram
         Me.Panel190.Name = "Panel190"
         Me.Panel190.Padding = New System.Windows.Forms.Padding(5)
         Me.Panel190.Size = New System.Drawing.Size(444, 309)
-        Me.Panel190.TabIndex = 17
+        Me.Panel190.TabIndex = 1000
         '
         'Panel363
         '
@@ -1863,7 +1863,7 @@ Partial Class MainProgram
         Me.Panel363.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel363.Name = "Panel363"
         Me.Panel363.Size = New System.Drawing.Size(424, 57)
-        Me.Panel363.TabIndex = 15
+        Me.Panel363.TabIndex = 1000
         '
         'Label48
         '
@@ -1890,7 +1890,7 @@ Partial Class MainProgram
         Me.Panel60.Name = "Panel60"
         Me.Panel60.Padding = New System.Windows.Forms.Padding(1)
         Me.Panel60.Size = New System.Drawing.Size(425, 30)
-        Me.Panel60.TabIndex = 11
+        Me.Panel60.TabIndex = 1000
         '
         'Panel61
         '
@@ -1902,7 +1902,7 @@ Partial Class MainProgram
         Me.Panel61.Name = "Panel61"
         Me.Panel61.Padding = New System.Windows.Forms.Padding(1)
         Me.Panel61.Size = New System.Drawing.Size(423, 28)
-        Me.Panel61.TabIndex = 9
+        Me.Panel61.TabIndex = 1000
         '
         'Panel62
         '
@@ -1914,7 +1914,7 @@ Partial Class MainProgram
         Me.Panel62.Name = "Panel62"
         Me.Panel62.Padding = New System.Windows.Forms.Padding(1)
         Me.Panel62.Size = New System.Drawing.Size(421, 26)
-        Me.Panel62.TabIndex = 10
+        Me.Panel62.TabIndex = 1000
         '
         'Panel63
         '
@@ -1926,7 +1926,7 @@ Partial Class MainProgram
         Me.Panel63.Name = "Panel63"
         Me.Panel63.Padding = New System.Windows.Forms.Padding(1)
         Me.Panel63.Size = New System.Drawing.Size(419, 24)
-        Me.Panel63.TabIndex = 10
+        Me.Panel63.TabIndex = 1000
         '
         'TbxPassword
         '
@@ -1951,7 +1951,7 @@ Partial Class MainProgram
         Me.Panel362.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel362.Name = "Panel362"
         Me.Panel362.Size = New System.Drawing.Size(424, 57)
-        Me.Panel362.TabIndex = 14
+        Me.Panel362.TabIndex = 1000
         '
         'Label47
         '
@@ -1978,7 +1978,7 @@ Partial Class MainProgram
         Me.Panel55.Name = "Panel55"
         Me.Panel55.Padding = New System.Windows.Forms.Padding(1)
         Me.Panel55.Size = New System.Drawing.Size(425, 30)
-        Me.Panel55.TabIndex = 11
+        Me.Panel55.TabIndex = 1000
         '
         'Panel56
         '
@@ -1990,7 +1990,7 @@ Partial Class MainProgram
         Me.Panel56.Name = "Panel56"
         Me.Panel56.Padding = New System.Windows.Forms.Padding(1)
         Me.Panel56.Size = New System.Drawing.Size(423, 28)
-        Me.Panel56.TabIndex = 9
+        Me.Panel56.TabIndex = 1000
         '
         'Panel57
         '
@@ -2014,7 +2014,7 @@ Partial Class MainProgram
         Me.Panel58.Name = "Panel58"
         Me.Panel58.Padding = New System.Windows.Forms.Padding(1)
         Me.Panel58.Size = New System.Drawing.Size(419, 24)
-        Me.Panel58.TabIndex = 10
+        Me.Panel58.TabIndex = 1000
         '
         'TbxUsername
         '
@@ -2027,7 +2027,7 @@ Partial Class MainProgram
         Me.TbxUsername.Margin = New System.Windows.Forms.Padding(0)
         Me.TbxUsername.Name = "TbxUsername"
         Me.TbxUsername.Size = New System.Drawing.Size(442, 19)
-        Me.TbxUsername.TabIndex = 3
+        Me.TbxUsername.TabIndex = 2
         '
         'Button2
         '
@@ -3985,7 +3985,7 @@ Partial Class MainProgram
         Me.Panel119.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel119.Name = "Panel119"
         Me.Panel119.Size = New System.Drawing.Size(424, 57)
-        Me.Panel119.TabIndex = 16
+        Me.Panel119.TabIndex = 1000
         '
         'Label9
         '
@@ -4061,7 +4061,7 @@ Partial Class MainProgram
         Me.TbxWebsite.Margin = New System.Windows.Forms.Padding(0)
         Me.TbxWebsite.Name = "TbxWebsite"
         Me.TbxWebsite.Size = New System.Drawing.Size(442, 19)
-        Me.TbxWebsite.TabIndex = 2
+        Me.TbxWebsite.TabIndex = 1
         '
         'Panel124
         '
@@ -4073,7 +4073,7 @@ Partial Class MainProgram
         Me.Panel124.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel124.Name = "Panel124"
         Me.Panel124.Size = New System.Drawing.Size(424, 57)
-        Me.Panel124.TabIndex = 0
+        Me.Panel124.TabIndex = 1000
         '
         'Label10
         '
@@ -4149,7 +4149,7 @@ Partial Class MainProgram
         Me.TbxAccountName.Margin = New System.Windows.Forms.Padding(0)
         Me.TbxAccountName.Name = "TbxAccountName"
         Me.TbxAccountName.Size = New System.Drawing.Size(442, 19)
-        Me.TbxAccountName.TabIndex = 1
+        Me.TbxAccountName.TabIndex = 0
         '
         'MainProgram
         '
