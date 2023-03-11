@@ -457,7 +457,7 @@ Partial Class AuthLogin
         Me.Label4.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label4.Font = New System.Drawing.Font("Consolas", 12.0!)
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Image = Global.RainyUI.My.Resources.Resources.titlebar_background
+        Me.Label4.Image = Global.PassMgr.My.Resources.Resources.titlebar_background
         Me.Label4.Location = New System.Drawing.Point(22, 0)
         Me.Label4.MinimumSize = New System.Drawing.Size(0, 20)
         Me.Label4.Name = "Label4"
@@ -916,7 +916,7 @@ Partial Class AuthLogin
         Me.pnlMainGroupBoxTitle.Dock = System.Windows.Forms.DockStyle.Left
         Me.pnlMainGroupBoxTitle.Font = New System.Drawing.Font("Consolas", 12.0!)
         Me.pnlMainGroupBoxTitle.ForeColor = System.Drawing.Color.White
-        Me.pnlMainGroupBoxTitle.Image = Global.RainyUI.My.Resources.Resources.titlebar_background
+        Me.pnlMainGroupBoxTitle.Image = Global.PassMgr.My.Resources.Resources.titlebar_background
         Me.pnlMainGroupBoxTitle.Location = New System.Drawing.Point(22, 0)
         Me.pnlMainGroupBoxTitle.MinimumSize = New System.Drawing.Size(0, 20)
         Me.pnlMainGroupBoxTitle.Name = "pnlMainGroupBoxTitle"
