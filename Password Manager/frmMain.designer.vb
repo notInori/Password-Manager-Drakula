@@ -57,6 +57,7 @@ Partial Class MainProgram
         Me.Panel369 = New System.Windows.Forms.Panel()
         Me.Panel370 = New System.Windows.Forms.Panel()
         Me.Panel371 = New System.Windows.Forms.Panel()
+        Me.Label49 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel44 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel372 = New System.Windows.Forms.Panel()
         Me.Panel373 = New System.Windows.Forms.Panel()
@@ -91,6 +92,7 @@ Partial Class MainProgram
         Me.Panel352 = New System.Windows.Forms.Panel()
         Me.Panel353 = New System.Windows.Forms.Panel()
         Me.Panel354 = New System.Windows.Forms.Panel()
+        Me.pnlMainGroupBoxTitle = New System.Windows.Forms.Label()
         Me.TableLayoutPanel37 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel355 = New System.Windows.Forms.Panel()
         Me.Panel356 = New System.Windows.Forms.Panel()
@@ -118,6 +120,7 @@ Partial Class MainProgram
         Me.Panel177 = New System.Windows.Forms.Panel()
         Me.Panel178 = New System.Windows.Forms.Panel()
         Me.Panel179 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel38 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel180 = New System.Windows.Forms.Panel()
         Me.Panel181 = New System.Windows.Forms.Panel()
@@ -170,6 +173,7 @@ Partial Class MainProgram
         Me.Panel84 = New System.Windows.Forms.Panel()
         Me.Panel85 = New System.Windows.Forms.Panel()
         Me.Panel86 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel12 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel87 = New System.Windows.Forms.Panel()
         Me.Panel89 = New System.Windows.Forms.Panel()
@@ -198,6 +202,7 @@ Partial Class MainProgram
         Me.Panel104 = New System.Windows.Forms.Panel()
         Me.Panel105 = New System.Windows.Forms.Panel()
         Me.Panel106 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel17 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel107 = New System.Windows.Forms.Panel()
         Me.Panel108 = New System.Windows.Forms.Panel()
@@ -229,6 +234,7 @@ Partial Class MainProgram
         Me.Panel65 = New System.Windows.Forms.Panel()
         Me.Panel66 = New System.Windows.Forms.Panel()
         Me.Panel67 = New System.Windows.Forms.Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel9 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel68 = New System.Windows.Forms.Panel()
         Me.Panel69 = New System.Windows.Forms.Panel()
@@ -257,6 +263,7 @@ Partial Class MainProgram
         Me.Panel37 = New System.Windows.Forms.Panel()
         Me.Panel38 = New System.Windows.Forms.Panel()
         Me.Panel39 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel40 = New System.Windows.Forms.Panel()
         Me.Panel41 = New System.Windows.Forms.Panel()
@@ -289,6 +296,7 @@ Partial Class MainProgram
         Me.Panel13 = New System.Windows.Forms.Panel()
         Me.Panel18 = New System.Windows.Forms.Panel()
         Me.Panel19 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel20 = New System.Windows.Forms.Panel()
         Me.Panel21 = New System.Windows.Forms.Panel()
@@ -309,14 +317,6 @@ Partial Class MainProgram
         Me.pnlColorPicker = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.tmrMain = New System.Windows.Forms.Timer(Me.components)
-        Me.Label49 = New System.Windows.Forms.Label()
-        Me.pnlMainGroupBoxTitle = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.pnlBackground.SuspendLayout()
         Me.tblMain.SuspendLayout()
         Me.pnlTopBar.SuspendLayout()
@@ -971,6 +971,21 @@ Partial Class MainProgram
         Me.Panel371.TabIndex = 0
         Me.Panel371.Tag = "colorise"
         '
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.BackColor = System.Drawing.Color.Transparent
+        Me.Label49.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Label49.Font = New System.Drawing.Font("Consolas", 12.0!)
+        Me.Label49.ForeColor = System.Drawing.Color.White
+        Me.Label49.Image = Global.PassMgr.My.Resources.Resources.titlebar_background_drakula
+        Me.Label49.Location = New System.Drawing.Point(22, 0)
+        Me.Label49.MinimumSize = New System.Drawing.Size(0, 20)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(72, 20)
+        Me.Label49.TabIndex = 0
+        Me.Label49.Text = "Options"
+        '
         'TableLayoutPanel44
         '
         Me.TableLayoutPanel44.ColumnCount = 1
@@ -1402,6 +1417,21 @@ Partial Class MainProgram
         Me.Panel354.TabIndex = 0
         Me.Panel354.Tag = "colorise"
         '
+        'pnlMainGroupBoxTitle
+        '
+        Me.pnlMainGroupBoxTitle.AutoSize = True
+        Me.pnlMainGroupBoxTitle.BackColor = System.Drawing.Color.Transparent
+        Me.pnlMainGroupBoxTitle.Dock = System.Windows.Forms.DockStyle.Left
+        Me.pnlMainGroupBoxTitle.Font = New System.Drawing.Font("Consolas", 12.0!)
+        Me.pnlMainGroupBoxTitle.ForeColor = System.Drawing.Color.White
+        Me.pnlMainGroupBoxTitle.Image = Global.PassMgr.My.Resources.Resources.titlebar_background_drakula
+        Me.pnlMainGroupBoxTitle.Location = New System.Drawing.Point(22, 0)
+        Me.pnlMainGroupBoxTitle.MinimumSize = New System.Drawing.Size(0, 20)
+        Me.pnlMainGroupBoxTitle.Name = "pnlMainGroupBoxTitle"
+        Me.pnlMainGroupBoxTitle.Size = New System.Drawing.Size(81, 20)
+        Me.pnlMainGroupBoxTitle.TabIndex = 0
+        Me.pnlMainGroupBoxTitle.Text = "Accounts"
+        '
         'TableLayoutPanel37
         '
         Me.TableLayoutPanel37.ColumnCount = 1
@@ -1731,6 +1761,21 @@ Partial Class MainProgram
         Me.Panel179.Size = New System.Drawing.Size(319, 1)
         Me.Panel179.TabIndex = 0
         Me.Panel179.Tag = "colorise"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Label6.Font = New System.Drawing.Font("Consolas", 12.0!)
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Image = Global.PassMgr.My.Resources.Resources.titlebar_background_drakula
+        Me.Label6.Location = New System.Drawing.Point(22, 0)
+        Me.Label6.MinimumSize = New System.Drawing.Size(0, 20)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(108, 20)
+        Me.Label6.TabIndex = 0
+        Me.Label6.Text = "Credentials"
         '
         'TableLayoutPanel38
         '
@@ -2382,6 +2427,21 @@ Partial Class MainProgram
         Me.Panel86.TabIndex = 0
         Me.Panel86.Tag = "colorise"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Label1.Font = New System.Drawing.Font("Consolas", 12.0!)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Image = Global.PassMgr.My.Resources.Resources.titlebar_background_drakulaMenu
+        Me.Label1.Location = New System.Drawing.Point(22, 0)
+        Me.Label1.MinimumSize = New System.Drawing.Size(0, 20)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(117, 20)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Notification"
+        '
         'TableLayoutPanel12
         '
         Me.TableLayoutPanel12.ColumnCount = 1
@@ -2726,6 +2786,21 @@ Partial Class MainProgram
         Me.Panel106.Size = New System.Drawing.Size(334, 1)
         Me.Panel106.TabIndex = 0
         Me.Panel106.Tag = "colorise"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Label5.Font = New System.Drawing.Font("Consolas", 12.0!)
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Image = Global.PassMgr.My.Resources.Resources.titlebar_background_drakulaMenu
+        Me.Label5.Location = New System.Drawing.Point(22, 0)
+        Me.Label5.MinimumSize = New System.Drawing.Size(0, 20)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(117, 20)
+        Me.Label5.TabIndex = 0
+        Me.Label5.Text = "Confirmation"
         '
         'TableLayoutPanel17
         '
@@ -3115,6 +3190,21 @@ Partial Class MainProgram
         Me.Panel67.TabIndex = 0
         Me.Panel67.Tag = "colorise"
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Label8.Font = New System.Drawing.Font("Consolas", 12.0!)
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Image = Global.PassMgr.My.Resources.Resources.titlebar_background_drakulaMenu
+        Me.Label8.Location = New System.Drawing.Point(22, 0)
+        Me.Label8.MinimumSize = New System.Drawing.Size(0, 20)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(72, 20)
+        Me.Label8.TabIndex = 0
+        Me.Label8.Text = "Session"
+        '
         'TableLayoutPanel9
         '
         Me.TableLayoutPanel9.ColumnCount = 1
@@ -3464,6 +3554,21 @@ Partial Class MainProgram
         Me.Panel39.Size = New System.Drawing.Size(150, 1)
         Me.Panel39.TabIndex = 0
         Me.Panel39.Tag = "colorise"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Label4.Font = New System.Drawing.Font("Consolas", 12.0!)
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Image = Global.PassMgr.My.Resources.Resources.titlebar_background_drakulaMenu
+        Me.Label4.Location = New System.Drawing.Point(22, 0)
+        Me.Label4.MinimumSize = New System.Drawing.Size(0, 20)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(162, 20)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "Admin Credentials"
         '
         'TableLayoutPanel6
         '
@@ -3861,6 +3966,21 @@ Partial Class MainProgram
         Me.Panel19.TabIndex = 0
         Me.Panel19.Tag = "colorise"
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Label2.Font = New System.Drawing.Font("Consolas", 12.0!)
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Image = Global.PassMgr.My.Resources.Resources.titlebar_background_drakulaMenu
+        Me.Label2.Location = New System.Drawing.Point(22, 0)
+        Me.Label2.MinimumSize = New System.Drawing.Size(0, 20)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(45, 20)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Menu"
+        '
         'TableLayoutPanel3
         '
         Me.TableLayoutPanel3.ColumnCount = 1
@@ -4090,126 +4210,6 @@ Partial Class MainProgram
         'tmrMain
         '
         Me.tmrMain.Enabled = True
-        '
-        'Label49
-        '
-        Me.Label49.AutoSize = True
-        Me.Label49.BackColor = System.Drawing.Color.Transparent
-        Me.Label49.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label49.Font = New System.Drawing.Font("Consolas", 12.0!)
-        Me.Label49.ForeColor = System.Drawing.Color.White
-        Me.Label49.Image = Global.PassMgr.My.Resources.Resources.titlebar_background_drakula
-        Me.Label49.Location = New System.Drawing.Point(22, 0)
-        Me.Label49.MinimumSize = New System.Drawing.Size(0, 20)
-        Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(72, 20)
-        Me.Label49.TabIndex = 0
-        Me.Label49.Text = "Options"
-        '
-        'pnlMainGroupBoxTitle
-        '
-        Me.pnlMainGroupBoxTitle.AutoSize = True
-        Me.pnlMainGroupBoxTitle.BackColor = System.Drawing.Color.Transparent
-        Me.pnlMainGroupBoxTitle.Dock = System.Windows.Forms.DockStyle.Left
-        Me.pnlMainGroupBoxTitle.Font = New System.Drawing.Font("Consolas", 12.0!)
-        Me.pnlMainGroupBoxTitle.ForeColor = System.Drawing.Color.White
-        Me.pnlMainGroupBoxTitle.Image = Global.PassMgr.My.Resources.Resources.titlebar_background_drakula
-        Me.pnlMainGroupBoxTitle.Location = New System.Drawing.Point(22, 0)
-        Me.pnlMainGroupBoxTitle.MinimumSize = New System.Drawing.Size(0, 20)
-        Me.pnlMainGroupBoxTitle.Name = "pnlMainGroupBoxTitle"
-        Me.pnlMainGroupBoxTitle.Size = New System.Drawing.Size(81, 20)
-        Me.pnlMainGroupBoxTitle.TabIndex = 0
-        Me.pnlMainGroupBoxTitle.Text = "Accounts"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label6.Font = New System.Drawing.Font("Consolas", 12.0!)
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Image = Global.PassMgr.My.Resources.Resources.titlebar_background_drakula
-        Me.Label6.Location = New System.Drawing.Point(22, 0)
-        Me.Label6.MinimumSize = New System.Drawing.Size(0, 20)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(108, 20)
-        Me.Label6.TabIndex = 0
-        Me.Label6.Text = "Credentials"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label1.Font = New System.Drawing.Font("Consolas", 12.0!)
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Image = Global.PassMgr.My.Resources.Resources.titlebar_background_drakulaMenu
-        Me.Label1.Location = New System.Drawing.Point(22, 0)
-        Me.Label1.MinimumSize = New System.Drawing.Size(0, 20)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(117, 20)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Notification"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label5.Font = New System.Drawing.Font("Consolas", 12.0!)
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Image = Global.PassMgr.My.Resources.Resources.titlebar_background_drakulaMenu
-        Me.Label5.Location = New System.Drawing.Point(22, 0)
-        Me.Label5.MinimumSize = New System.Drawing.Size(0, 20)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(117, 20)
-        Me.Label5.TabIndex = 0
-        Me.Label5.Text = "Confirmation"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label8.Font = New System.Drawing.Font("Consolas", 12.0!)
-        Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Image = Global.PassMgr.My.Resources.Resources.titlebar_background_drakulaMenu
-        Me.Label8.Location = New System.Drawing.Point(22, 0)
-        Me.Label8.MinimumSize = New System.Drawing.Size(0, 20)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(72, 20)
-        Me.Label8.TabIndex = 0
-        Me.Label8.Text = "Session"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label4.Font = New System.Drawing.Font("Consolas", 12.0!)
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Image = Global.PassMgr.My.Resources.Resources.titlebar_background_drakulaMenu
-        Me.Label4.Location = New System.Drawing.Point(22, 0)
-        Me.Label4.MinimumSize = New System.Drawing.Size(0, 20)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(162, 20)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Admin Credentials"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label2.Font = New System.Drawing.Font("Consolas", 12.0!)
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Image = Global.PassMgr.My.Resources.Resources.titlebar_background_drakulaMenu
-        Me.Label2.Location = New System.Drawing.Point(22, 0)
-        Me.Label2.MinimumSize = New System.Drawing.Size(0, 20)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(45, 20)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Menu"
         '
         'MainProgram
         '
