@@ -6,7 +6,7 @@ Public Class MainProgram
     '---Init'
 
     'Client Info Config
-    Public Shared ReadOnly programName As String = "Rainy UI Lib"
+    Public Shared ReadOnly programName As String = "Password Manager"
     Public Shared ReadOnly versionNumber As String = "[Dev Build]"
 
     'Client Info Variables
