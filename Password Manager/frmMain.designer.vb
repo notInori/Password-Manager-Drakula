@@ -1098,7 +1098,7 @@ Partial Class MainProgram
         Me.BtnDelete.Margin = New System.Windows.Forms.Padding(1)
         Me.BtnDelete.Name = "BtnDelete"
         Me.BtnDelete.Size = New System.Drawing.Size(420, 26)
-        Me.BtnDelete.TabIndex = 6
+        Me.BtnDelete.TabIndex = 8
         Me.BtnDelete.Text = "Delete"
         Me.BtnDelete.UseVisualStyleBackColor = False
         '
@@ -1178,7 +1178,7 @@ Partial Class MainProgram
         Me.BtnClear.Margin = New System.Windows.Forms.Padding(1)
         Me.BtnClear.Name = "BtnClear"
         Me.BtnClear.Size = New System.Drawing.Size(420, 26)
-        Me.BtnClear.TabIndex = 6
+        Me.BtnClear.TabIndex = 7
         Me.BtnClear.Text = "Clear"
         Me.BtnClear.UseVisualStyleBackColor = False
         '
@@ -1218,7 +1218,7 @@ Partial Class MainProgram
         Me.BtnAddUser.Margin = New System.Windows.Forms.Padding(1)
         Me.BtnAddUser.Name = "BtnAddUser"
         Me.BtnAddUser.Size = New System.Drawing.Size(420, 26)
-        Me.BtnAddUser.TabIndex = 6
+        Me.BtnAddUser.TabIndex = 5
         Me.BtnAddUser.Text = "Add"
         Me.BtnAddUser.UseVisualStyleBackColor = False
         '
@@ -1855,6 +1855,7 @@ Partial Class MainProgram
         '
         'Panel363
         '
+        Me.Panel363.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.Panel363.AutoSize = True
         Me.Panel363.Controls.Add(Me.Label48)
         Me.Panel363.Controls.Add(Me.Panel60)
@@ -1866,6 +1867,7 @@ Partial Class MainProgram
         '
         'Label48
         '
+        Me.Label48.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.Label48.AutoSize = True
         Me.Label48.BackColor = System.Drawing.Color.Transparent
         Me.Label48.Font = New System.Drawing.Font("Consolas", 12.0!)
@@ -1928,6 +1930,7 @@ Partial Class MainProgram
         '
         'TbxPassword
         '
+        Me.TbxPassword.AcceptsTab = True
         Me.TbxPassword.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.TbxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TbxPassword.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1936,10 +1939,11 @@ Partial Class MainProgram
         Me.TbxPassword.Margin = New System.Windows.Forms.Padding(0)
         Me.TbxPassword.Name = "TbxPassword"
         Me.TbxPassword.Size = New System.Drawing.Size(442, 19)
-        Me.TbxPassword.TabIndex = 0
+        Me.TbxPassword.TabIndex = 4
         '
         'Panel362
         '
+        Me.Panel362.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.Panel362.AutoSize = True
         Me.Panel362.Controls.Add(Me.Label47)
         Me.Panel362.Controls.Add(Me.Panel55)
@@ -1951,6 +1955,7 @@ Partial Class MainProgram
         '
         'Label47
         '
+        Me.Label47.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.Label47.AutoSize = True
         Me.Label47.BackColor = System.Drawing.Color.Transparent
         Me.Label47.Font = New System.Drawing.Font("Consolas", 12.0!)
@@ -2013,6 +2018,7 @@ Partial Class MainProgram
         '
         'TbxUsername
         '
+        Me.TbxUsername.AcceptsTab = True
         Me.TbxUsername.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.TbxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TbxUsername.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -2021,7 +2027,7 @@ Partial Class MainProgram
         Me.TbxUsername.Margin = New System.Windows.Forms.Padding(0)
         Me.TbxUsername.Name = "TbxUsername"
         Me.TbxUsername.Size = New System.Drawing.Size(442, 19)
-        Me.TbxUsername.TabIndex = 0
+        Me.TbxUsername.TabIndex = 3
         '
         'Button2
         '
@@ -3971,6 +3977,7 @@ Partial Class MainProgram
         '
         'Panel119
         '
+        Me.Panel119.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.Panel119.AutoSize = True
         Me.Panel119.Controls.Add(Me.Label9)
         Me.Panel119.Controls.Add(Me.Panel120)
@@ -3982,6 +3989,7 @@ Partial Class MainProgram
         '
         'Label9
         '
+        Me.Label9.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Consolas", 12.0!)
@@ -4044,6 +4052,7 @@ Partial Class MainProgram
         '
         'TbxWebsite
         '
+        Me.TbxWebsite.AcceptsTab = True
         Me.TbxWebsite.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.TbxWebsite.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TbxWebsite.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -4052,10 +4061,11 @@ Partial Class MainProgram
         Me.TbxWebsite.Margin = New System.Windows.Forms.Padding(0)
         Me.TbxWebsite.Name = "TbxWebsite"
         Me.TbxWebsite.Size = New System.Drawing.Size(442, 19)
-        Me.TbxWebsite.TabIndex = 0
+        Me.TbxWebsite.TabIndex = 2
         '
         'Panel124
         '
+        Me.Panel124.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.Panel124.AutoSize = True
         Me.Panel124.Controls.Add(Me.Label10)
         Me.Panel124.Controls.Add(Me.Panel125)
@@ -4063,10 +4073,11 @@ Partial Class MainProgram
         Me.Panel124.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel124.Name = "Panel124"
         Me.Panel124.Size = New System.Drawing.Size(424, 57)
-        Me.Panel124.TabIndex = 17
+        Me.Panel124.TabIndex = 0
         '
         'Label10
         '
+        Me.Label10.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Consolas", 12.0!)
@@ -4129,6 +4140,7 @@ Partial Class MainProgram
         '
         'TbxAccountName
         '
+        Me.TbxAccountName.AcceptsTab = True
         Me.TbxAccountName.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.TbxAccountName.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TbxAccountName.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -4137,7 +4149,7 @@ Partial Class MainProgram
         Me.TbxAccountName.Margin = New System.Windows.Forms.Padding(0)
         Me.TbxAccountName.Name = "TbxAccountName"
         Me.TbxAccountName.Size = New System.Drawing.Size(442, 19)
-        Me.TbxAccountName.TabIndex = 0
+        Me.TbxAccountName.TabIndex = 1
         '
         'MainProgram
         '

@@ -90,6 +90,7 @@ Public Class AuthLogin
 
     'User Auth Button
     Private Sub AuthUser(sender As Object, e As EventArgs) Handles btnLogin.Click
+
         If AuthUser(CbxUsername.Text, TbxPassword.Text) Then
             MainProgram.currentUser = CbxUsername.Text
             MainProgram.Show()
@@ -97,7 +98,7 @@ Public Class AuthLogin
             pnlNotification.Dock = DockStyle.Fill
             pnlNotification.BringToFront()
         End If
-        If authUser(CbxUsername.Text, TbxPassword.Text) Then
+        If AuthUser(CbxUsername.Text, TbxPassword.Text) Then
             CbxUsername.Text = ""
             TbxPassword.Text = ""
             Me.Hide()
