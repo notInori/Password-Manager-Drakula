@@ -299,6 +299,20 @@ Partial Class MainProgram
         Me.Panel88 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.tmrMain = New System.Windows.Forms.Timer(Me.components)
+        Me.Panel119 = New System.Windows.Forms.Panel()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Panel120 = New System.Windows.Forms.Panel()
+        Me.Panel121 = New System.Windows.Forms.Panel()
+        Me.Panel122 = New System.Windows.Forms.Panel()
+        Me.Panel123 = New System.Windows.Forms.Panel()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Panel124 = New System.Windows.Forms.Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Panel125 = New System.Windows.Forms.Panel()
+        Me.Panel126 = New System.Windows.Forms.Panel()
+        Me.Panel127 = New System.Windows.Forms.Panel()
+        Me.Panel128 = New System.Windows.Forms.Panel()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.pnlBackground.SuspendLayout()
         Me.tblMain.SuspendLayout()
         Me.pnlTopBar.SuspendLayout()
@@ -483,6 +497,16 @@ Partial Class MainProgram
         Me.Panel338.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel6.SuspendLayout()
+        Me.Panel119.SuspendLayout()
+        Me.Panel120.SuspendLayout()
+        Me.Panel121.SuspendLayout()
+        Me.Panel122.SuspendLayout()
+        Me.Panel123.SuspendLayout()
+        Me.Panel124.SuspendLayout()
+        Me.Panel125.SuspendLayout()
+        Me.Panel126.SuspendLayout()
+        Me.Panel127.SuspendLayout()
+        Me.Panel128.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnlBackground
@@ -1816,6 +1840,8 @@ Partial Class MainProgram
         'Panel190
         '
         Me.Panel190.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.Panel190.Controls.Add(Me.Panel124)
+        Me.Panel190.Controls.Add(Me.Panel119)
         Me.Panel190.Controls.Add(Me.Panel363)
         Me.Panel190.Controls.Add(Me.Panel362)
         Me.Panel190.Dock = System.Windows.Forms.DockStyle.Fill
@@ -1831,7 +1857,7 @@ Partial Class MainProgram
         Me.Panel363.AutoSize = True
         Me.Panel363.Controls.Add(Me.Label48)
         Me.Panel363.Controls.Add(Me.Panel60)
-        Me.Panel363.Location = New System.Drawing.Point(9, 72)
+        Me.Panel363.Location = New System.Drawing.Point(10, 206)
         Me.Panel363.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel363.Name = "Panel363"
         Me.Panel363.Size = New System.Drawing.Size(424, 57)
@@ -1916,7 +1942,7 @@ Partial Class MainProgram
         Me.Panel362.AutoSize = True
         Me.Panel362.Controls.Add(Me.Label47)
         Me.Panel362.Controls.Add(Me.Panel55)
-        Me.Panel362.Location = New System.Drawing.Point(10, 7)
+        Me.Panel362.Location = New System.Drawing.Point(10, 139)
         Me.Panel362.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel362.Name = "Panel362"
         Me.Panel362.Size = New System.Drawing.Size(424, 57)
@@ -3942,6 +3968,176 @@ Partial Class MainProgram
         '
         Me.tmrMain.Enabled = True
         '
+        'Panel119
+        '
+        Me.Panel119.AutoSize = True
+        Me.Panel119.Controls.Add(Me.Label9)
+        Me.Panel119.Controls.Add(Me.Panel120)
+        Me.Panel119.Location = New System.Drawing.Point(10, 72)
+        Me.Panel119.Margin = New System.Windows.Forms.Padding(5)
+        Me.Panel119.Name = "Panel119"
+        Me.Panel119.Size = New System.Drawing.Size(424, 57)
+        Me.Panel119.TabIndex = 16
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Consolas", 12.0!)
+        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.Location = New System.Drawing.Point(-2, 0)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Padding = New System.Windows.Forms.Padding(0, 0, 5, 5)
+        Me.Label9.Size = New System.Drawing.Size(77, 24)
+        Me.Label9.TabIndex = 9
+        Me.Label9.Text = "Website"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Panel120
+        '
+        Me.Panel120.BackColor = System.Drawing.Color.Black
+        Me.Panel120.Controls.Add(Me.Panel121)
+        Me.Panel120.Location = New System.Drawing.Point(-1, 27)
+        Me.Panel120.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel120.Name = "Panel120"
+        Me.Panel120.Padding = New System.Windows.Forms.Padding(1)
+        Me.Panel120.Size = New System.Drawing.Size(425, 30)
+        Me.Panel120.TabIndex = 11
+        '
+        'Panel121
+        '
+        Me.Panel121.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
+        Me.Panel121.Controls.Add(Me.Panel122)
+        Me.Panel121.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel121.Location = New System.Drawing.Point(1, 1)
+        Me.Panel121.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel121.Name = "Panel121"
+        Me.Panel121.Padding = New System.Windows.Forms.Padding(1)
+        Me.Panel121.Size = New System.Drawing.Size(423, 28)
+        Me.Panel121.TabIndex = 9
+        '
+        'Panel122
+        '
+        Me.Panel122.BackColor = System.Drawing.Color.Black
+        Me.Panel122.Controls.Add(Me.Panel123)
+        Me.Panel122.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel122.Location = New System.Drawing.Point(1, 1)
+        Me.Panel122.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel122.Name = "Panel122"
+        Me.Panel122.Padding = New System.Windows.Forms.Padding(1)
+        Me.Panel122.Size = New System.Drawing.Size(421, 26)
+        Me.Panel122.TabIndex = 10
+        '
+        'Panel123
+        '
+        Me.Panel123.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Panel123.Controls.Add(Me.TextBox1)
+        Me.Panel123.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel123.Location = New System.Drawing.Point(1, 1)
+        Me.Panel123.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel123.Name = "Panel123"
+        Me.Panel123.Padding = New System.Windows.Forms.Padding(1)
+        Me.Panel123.Size = New System.Drawing.Size(419, 24)
+        Me.Panel123.TabIndex = 10
+        '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.ForeColor = System.Drawing.Color.White
+        Me.TextBox1.Location = New System.Drawing.Point(0, 2)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(0)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(442, 19)
+        Me.TextBox1.TabIndex = 0
+        '
+        'Panel124
+        '
+        Me.Panel124.AutoSize = True
+        Me.Panel124.Controls.Add(Me.Label10)
+        Me.Panel124.Controls.Add(Me.Panel125)
+        Me.Panel124.Location = New System.Drawing.Point(10, 5)
+        Me.Panel124.Margin = New System.Windows.Forms.Padding(5)
+        Me.Panel124.Name = "Panel124"
+        Me.Panel124.Size = New System.Drawing.Size(424, 57)
+        Me.Panel124.TabIndex = 17
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Consolas", 12.0!)
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(-2, 0)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Padding = New System.Windows.Forms.Padding(0, 0, 5, 5)
+        Me.Label10.Size = New System.Drawing.Size(131, 24)
+        Me.Label10.TabIndex = 9
+        Me.Label10.Text = "Account Name:"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Panel125
+        '
+        Me.Panel125.BackColor = System.Drawing.Color.Black
+        Me.Panel125.Controls.Add(Me.Panel126)
+        Me.Panel125.Location = New System.Drawing.Point(-1, 27)
+        Me.Panel125.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel125.Name = "Panel125"
+        Me.Panel125.Padding = New System.Windows.Forms.Padding(1)
+        Me.Panel125.Size = New System.Drawing.Size(425, 30)
+        Me.Panel125.TabIndex = 11
+        '
+        'Panel126
+        '
+        Me.Panel126.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
+        Me.Panel126.Controls.Add(Me.Panel127)
+        Me.Panel126.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel126.Location = New System.Drawing.Point(1, 1)
+        Me.Panel126.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel126.Name = "Panel126"
+        Me.Panel126.Padding = New System.Windows.Forms.Padding(1)
+        Me.Panel126.Size = New System.Drawing.Size(423, 28)
+        Me.Panel126.TabIndex = 9
+        '
+        'Panel127
+        '
+        Me.Panel127.BackColor = System.Drawing.Color.Black
+        Me.Panel127.Controls.Add(Me.Panel128)
+        Me.Panel127.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel127.Location = New System.Drawing.Point(1, 1)
+        Me.Panel127.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel127.Name = "Panel127"
+        Me.Panel127.Padding = New System.Windows.Forms.Padding(1)
+        Me.Panel127.Size = New System.Drawing.Size(421, 26)
+        Me.Panel127.TabIndex = 10
+        '
+        'Panel128
+        '
+        Me.Panel128.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Panel128.Controls.Add(Me.TextBox2)
+        Me.Panel128.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel128.Location = New System.Drawing.Point(1, 1)
+        Me.Panel128.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel128.Name = "Panel128"
+        Me.Panel128.Padding = New System.Windows.Forms.Padding(1)
+        Me.Panel128.Size = New System.Drawing.Size(419, 24)
+        Me.Panel128.TabIndex = 10
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox2.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.ForeColor = System.Drawing.Color.White
+        Me.TextBox2.Location = New System.Drawing.Point(0, 2)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(0)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(442, 19)
+        Me.TextBox2.TabIndex = 0
+        '
         'MainProgram
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -4163,6 +4359,20 @@ Partial Class MainProgram
         Me.Panel338.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel6.ResumeLayout(False)
+        Me.Panel119.ResumeLayout(False)
+        Me.Panel119.PerformLayout()
+        Me.Panel120.ResumeLayout(False)
+        Me.Panel121.ResumeLayout(False)
+        Me.Panel122.ResumeLayout(False)
+        Me.Panel123.ResumeLayout(False)
+        Me.Panel123.PerformLayout()
+        Me.Panel124.ResumeLayout(False)
+        Me.Panel124.PerformLayout()
+        Me.Panel125.ResumeLayout(False)
+        Me.Panel126.ResumeLayout(False)
+        Me.Panel127.ResumeLayout(False)
+        Me.Panel128.ResumeLayout(False)
+        Me.Panel128.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -4441,4 +4651,18 @@ Partial Class MainProgram
     Friend WithEvents Panel98 As Panel
     Friend WithEvents pnlnotiflabel As Panel
     Friend WithEvents lblNotifcationInfo As Label
+    Friend WithEvents Panel124 As Panel
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Panel125 As Panel
+    Friend WithEvents Panel126 As Panel
+    Friend WithEvents Panel127 As Panel
+    Friend WithEvents Panel128 As Panel
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Panel119 As Panel
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Panel120 As Panel
+    Friend WithEvents Panel121 As Panel
+    Friend WithEvents Panel122 As Panel
+    Friend WithEvents Panel123 As Panel
+    Friend WithEvents TextBox1 As TextBox
 End Class

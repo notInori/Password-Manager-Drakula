@@ -153,7 +153,6 @@ Public Class MainProgram
 
     Private Sub btnMinimize_Click(sender As Object, e As EventArgs) Handles BtnMinimize.Click
         Me.WindowState = FormWindowState.Minimized
-
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
