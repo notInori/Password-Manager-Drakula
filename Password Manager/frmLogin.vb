@@ -35,6 +35,7 @@ Public Class AuthLogin
         myReader = cmd.ExecuteReader
         While myReader.Read
             CbxUsername.Items.Add(myReader("Username"))
+            CbxUsername.SelectedText = myReader(0)
         End While
     End Sub
 
