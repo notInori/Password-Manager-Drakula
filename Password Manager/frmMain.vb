@@ -393,7 +393,6 @@ Public Class MainProgram
         End If
         If sender Is BtnContinueAction Then
             Dim TempAccountName As String = SqlReadVAlue("SELECT [Account Name] FROM Passwords WHERE UID=" & selectedUID)
-            SaveConfig("DELETE FROM UserConfig WHERE UID=" & selectedUID)
             SaveConfig("DELETE FROM Passwords WHERE UID=" & selectedUID)
             selectedUID = Nothing
             ClearUserDataFields(sender, e)
