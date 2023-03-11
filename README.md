@@ -1,5 +1,5 @@
-# Rainy UI Lib
-A simple UI Library using WinForms.
+# Password Manager
+A simple password manager.
 
 ## Screenshots
 
