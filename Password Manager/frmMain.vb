@@ -357,6 +357,8 @@ Public Class MainProgram
     Private Sub ClearUserDataFields(sender As Object, e As EventArgs) Handles BtnClear.Click
         selectedUID = Nothing
         lbxUsernames.SelectedItem = Nothing
+        TbxAccountName.Clear()
+        TbxWebsite.Clear()
         TbxUsername.Clear()
         TbxPassword.Clear()
     End Sub
