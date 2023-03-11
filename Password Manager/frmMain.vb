@@ -201,11 +201,11 @@ Public Class MainProgram
 
     'Load Passwords
     Private Sub LoadPasswords()
-        Dim cmd As New OleDbCommand("SELECT Username FROM Passwords", conn)
+        Dim cmd As New OleDbCommand("SELECT [Account Name] FROM Passwords", conn)
         myReader = cmd.ExecuteReader
         lbxUsernames.Items.Clear()
         While myReader.Read
-            lbxUsernames.Items.Add(myReader("Username"))
+            lbxUsernames.Items.Add(myReader("Account Name"))
         End While
     End Sub
 
@@ -327,9 +327,11 @@ Public Class MainProgram
     'Load selected User's Data
     Private Sub LoadSelectedUserInfo(sender As Object, e As EventArgs) Handles lbxUsernames.SelectedValueChanged
         If lbxUsernames.SelectedItem <> "" Then
-            selectedUID = SqlReadVAlue("SELECT UID FROM Passwords WHERE (Username='" & lbxUsernames.SelectedItem.ToString & "')")
-            TbxUsername.Text = lbxUsernames.SelectedItem
-            TbxPassword.Text = SqlReadVAlue("SELECT [Password] FROM Passwords WHERE (Username='" & lbxUsernames.SelectedItem.ToString & "')")
+            selectedUID = SqlReadVAlue("SELECT UID FROM Passwords WHERE ([Account Name]='" & lbxUsernames.SelectedItem.ToString & "')")
+            TbxAccountName.Text = lbxUsernames.SelectedItem.ToString
+            TbxWebsite.Text = SqlReadVAlue("SELECT Website FROM Passwords WHERE UID=" & selectedUID)
+            TbxUsername.Text = SqlReadVAlue("SELECT Username FROM Passwords WHERE UID=" & selectedUID)
+            TbxPassword.Text = SqlReadVAlue("SELECT [Password] FROM Passwords WHERE UID=" & selectedUID)
         End If
     End Sub
 

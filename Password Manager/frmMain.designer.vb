@@ -305,14 +305,14 @@ Partial Class MainProgram
         Me.Panel121 = New System.Windows.Forms.Panel()
         Me.Panel122 = New System.Windows.Forms.Panel()
         Me.Panel123 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TbxWebsite = New System.Windows.Forms.TextBox()
         Me.Panel124 = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel125 = New System.Windows.Forms.Panel()
         Me.Panel126 = New System.Windows.Forms.Panel()
         Me.Panel127 = New System.Windows.Forms.Panel()
         Me.Panel128 = New System.Windows.Forms.Panel()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TbxAccountName = New System.Windows.Forms.TextBox()
         Me.pnlBackground.SuspendLayout()
         Me.tblMain.SuspendLayout()
         Me.pnlTopBar.SuspendLayout()
@@ -4032,7 +4032,7 @@ Partial Class MainProgram
         'Panel123
         '
         Me.Panel123.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Panel123.Controls.Add(Me.TextBox1)
+        Me.Panel123.Controls.Add(Me.TbxWebsite)
         Me.Panel123.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel123.Location = New System.Drawing.Point(1, 1)
         Me.Panel123.Margin = New System.Windows.Forms.Padding(0)
@@ -4041,17 +4041,17 @@ Partial Class MainProgram
         Me.Panel123.Size = New System.Drawing.Size(419, 24)
         Me.Panel123.TabIndex = 10
         '
-        'TextBox1
+        'TbxWebsite
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.ForeColor = System.Drawing.Color.White
-        Me.TextBox1.Location = New System.Drawing.Point(0, 2)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(0)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(442, 19)
-        Me.TextBox1.TabIndex = 0
+        Me.TbxWebsite.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.TbxWebsite.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TbxWebsite.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TbxWebsite.ForeColor = System.Drawing.Color.White
+        Me.TbxWebsite.Location = New System.Drawing.Point(0, 2)
+        Me.TbxWebsite.Margin = New System.Windows.Forms.Padding(0)
+        Me.TbxWebsite.Name = "TbxWebsite"
+        Me.TbxWebsite.Size = New System.Drawing.Size(442, 19)
+        Me.TbxWebsite.TabIndex = 0
         '
         'Panel124
         '
@@ -4117,7 +4117,7 @@ Partial Class MainProgram
         'Panel128
         '
         Me.Panel128.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Panel128.Controls.Add(Me.TextBox2)
+        Me.Panel128.Controls.Add(Me.TbxAccountName)
         Me.Panel128.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel128.Location = New System.Drawing.Point(1, 1)
         Me.Panel128.Margin = New System.Windows.Forms.Padding(0)
@@ -4126,17 +4126,17 @@ Partial Class MainProgram
         Me.Panel128.Size = New System.Drawing.Size(419, 24)
         Me.Panel128.TabIndex = 10
         '
-        'TextBox2
+        'TbxAccountName
         '
-        Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.ForeColor = System.Drawing.Color.White
-        Me.TextBox2.Location = New System.Drawing.Point(0, 2)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(0)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(442, 19)
-        Me.TextBox2.TabIndex = 0
+        Me.TbxAccountName.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.TbxAccountName.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TbxAccountName.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TbxAccountName.ForeColor = System.Drawing.Color.White
+        Me.TbxAccountName.Location = New System.Drawing.Point(0, 2)
+        Me.TbxAccountName.Margin = New System.Windows.Forms.Padding(0)
+        Me.TbxAccountName.Name = "TbxAccountName"
+        Me.TbxAccountName.Size = New System.Drawing.Size(442, 19)
+        Me.TbxAccountName.TabIndex = 0
         '
         'MainProgram
         '
@@ -4657,12 +4657,12 @@ Partial Class MainProgram
     Friend WithEvents Panel126 As Panel
     Friend WithEvents Panel127 As Panel
     Friend WithEvents Panel128 As Panel
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TbxAccountName As TextBox
     Friend WithEvents Panel119 As Panel
     Friend WithEvents Label9 As Label
     Friend WithEvents Panel120 As Panel
     Friend WithEvents Panel121 As Panel
     Friend WithEvents Panel122 As Panel
     Friend WithEvents Panel123 As Panel
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TbxWebsite As TextBox
 End Class
