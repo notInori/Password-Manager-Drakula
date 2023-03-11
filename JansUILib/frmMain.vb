@@ -166,13 +166,11 @@ Public Class MainProgram
             Me.WindowState = FormWindowState.Normal
             Me.ClientSize = storedClientSize
             WindowsState = "normal"
-            pnlTopBar.Visible = True
         Else
             storedClientSize = Me.ClientSize
             Me.MaximumSize = Maxscreen
             Me.WindowState = FormWindowState.Maximized
             WindowsState = "maximised"
-            'pnlTopBar.Visible = False
         End If
     End Sub
 
