@@ -151,16 +151,16 @@ Public Class MainProgram
 
     'Titlebar Button Events'
 
-    Private Sub btnMinimize_Click(sender As Object, e As EventArgs) Handles BtnMinimize.Click
+    Private Sub BtnMinimize_Click(sender As Object, e As EventArgs) Handles BtnMinimize.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+    Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         conn.Close()
         AuthLogin.Close()
     End Sub
 
-    Private Sub btnMaximize_Click(sender As Object, e As EventArgs) Handles BtnMaximize.Click
+    Private Sub BtnMaximize_Click(sender As Object, e As EventArgs) Handles BtnMaximize.Click
         If Me.WindowState = FormWindowState.Maximized Then
             Me.WindowState = FormWindowState.Normal
             Me.ClientSize = storedClientSize
