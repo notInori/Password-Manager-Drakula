@@ -1105,7 +1105,7 @@ Partial Class MainProgram
         '
         Me.Panel83.BackColor = System.Drawing.Color.Black
         Me.Panel83.Controls.Add(Me.Panel206)
-        Me.Panel83.Location = New System.Drawing.Point(10, 8)
+        Me.Panel83.Location = New System.Drawing.Point(10, 40)
         Me.Panel83.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel83.Name = "Panel83"
         Me.Panel83.Padding = New System.Windows.Forms.Padding(1)
@@ -1145,7 +1145,7 @@ Partial Class MainProgram
         '
         Me.Panel207.BackColor = System.Drawing.Color.Black
         Me.Panel207.Controls.Add(Me.Panel208)
-        Me.Panel207.Location = New System.Drawing.Point(10, 43)
+        Me.Panel207.Location = New System.Drawing.Point(10, 77)
         Me.Panel207.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel207.Name = "Panel207"
         Me.Panel207.Padding = New System.Windows.Forms.Padding(1)
@@ -1185,7 +1185,7 @@ Partial Class MainProgram
         '
         Me.Panel228.BackColor = System.Drawing.Color.Black
         Me.Panel228.Controls.Add(Me.Panel229)
-        Me.Panel228.Location = New System.Drawing.Point(10, 78)
+        Me.Panel228.Location = New System.Drawing.Point(10, 5)
         Me.Panel228.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel228.Name = "Panel228"
         Me.Panel228.Padding = New System.Windows.Forms.Padding(1)
