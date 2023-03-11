@@ -228,17 +228,30 @@ Public Class MainProgram
     Private Sub ChangeTab(sender As Object, e As EventArgs) Handles lblTabSel1.Click, lblTabSel2.Click
 
         'Hides selected tab indicator
-        For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
-            cntrl.Visible = False
-        Next
+        'For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
+        'cntrl.Visible = False
+        'Next
 
         'Darkens all tab indicator text
-        For Each lbl As Control In TblTabsContainer.Controls.OfType(Of Label)
-            lbl.ForeColor = Color.FromArgb(150, 150, 150)
+        For Each panel As Control In TblTabsContainer.Controls.OfType(Of Panel)
+            If panel.Tag <> "border" Then
+                panel.Padding = New Padding(0, 0, 0, 1)
+                For Each lbl As Control In panel.Controls.OfType(Of Label)
+                    If sender Is lbl Then
+                        lbl.ForeColor = accentColor
+                        lbl.BackColor = Color.FromArgb(31, 33, 45)
+                        lbl.Parent.Padding = New Padding(1, 1, 1, 0)
+                    Else
+                        lbl.ForeColor = Color.FromArgb(150, 150, 150)
+                        lbl.BackColor = Color.FromArgb(27, 28, 39)
+                    End If
+                Next
+            End If
         Next
 
         'Hightlights selected tab with accent color
         sender.ForeColor = accentColor
+        sender.BackColor = Color.FromArgb(31, 33, 45)
 
         'Undocks all tab panels and hides them
         For Each menuscreen As Control In Panel1.Controls.OfType(Of Panel)
@@ -250,11 +263,9 @@ Public Class MainProgram
         If sender Is lblTabSel1 Then
             pnlMainPage.Dock = DockStyle.Fill
             pnlMainPage.BringToFront()
-            pnlTabHighlight1.Visible = True
         ElseIf sender Is lblTabSel2 Then
             pnlSettingsPage.Dock = DockStyle.Fill
             pnlSettingsPage.BringToFront()
-            pnlTabHighlight2.Visible = True
         End If
 
         btnSave.Focus()
@@ -285,11 +296,6 @@ Public Class MainProgram
 
         'Update Color Picker UI Preview
         pnlColorPicker.BackColor = accentColor
-
-        'Tab Highlight Accent Updating
-        For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
-            cntrl.BackColor = accentColor
-        Next
 
         'Tab Label Accent Updating
         lblTabSel2.ForeColor = accentColor

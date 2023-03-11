@@ -213,6 +213,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\titlebar_background_drakula.png" />
+    <None Include="Resources\titlebar_background_drakulaMenu.png" />
     <Content Include="UserData.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
