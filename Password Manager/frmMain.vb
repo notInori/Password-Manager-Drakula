@@ -430,10 +430,8 @@ Public Class MainProgram
         If tbxAdminPassword.Text <> "" Then
             SaveConfig("UPDATE UserAuth SET PIN='" & tbxAdminPassword.Text & "' WHERE UID=1")
         End If
-
         If TbxAdminUsername.Text <> "" And tbxAdminPassword.Text <> "" Then
             Notifcation("New admin credentials have been updated successfully!")
-
         ElseIf TbxAdminUsername.Text <> "" Then
             Notifcation("New admin username has been updated successfully!")
         ElseIf tbxAdminPassword.Text <> "" Then
@@ -441,8 +439,6 @@ Public Class MainProgram
         Else
             Notifcation("Error: Both fields can not be empty!")
         End If
-
-
         TbxAdminUsername.Clear()
         tbxAdminPassword.Clear()
     End Sub
