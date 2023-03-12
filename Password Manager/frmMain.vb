@@ -19,6 +19,12 @@ Public Class MainProgram
     ReadOnly cDialog As New ColorDialog()
     Dim selectedUID As New Integer
 
+    'Variables Init'
+    Dim r As Integer
+    Dim b As Integer
+    Dim g As Integer
+    Dim data As Integer
+
     'Database Variables Init
     Dim myReader As OleDbDataReader
     ReadOnly conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
@@ -148,6 +154,49 @@ Public Class MainProgram
             Return New Rectangle(Me.ClientSize.Width - ImaginaryBorderSize, Me.ClientSize.Height - ImaginaryBorderSize, ImaginaryBorderSize, ImaginaryBorderSize)
         End If
 
+    End Function
+
+    'Functions
+
+    ' Convert an HLS value into an RGB value.
+    Private Sub HlsToRgb(ByVal H As Double, ByVal L As Double,
+        ByVal S As Double)
+        Dim p1 As Double
+        Dim p2 As Double
+
+        If L <= 0.5 Then
+            p2 = L * (1 + S)
+        Else
+            p2 = L + S - L * S
+        End If
+        p1 = 2 * L - p2
+        If S = 0 Then
+            r = L
+            g = L
+            b = L
+        Else
+            r = QqhToRgb(p1, p2, H + 120) * 255
+            g = QqhToRgb(p1, p2, H) * 255
+            b = QqhToRgb(p1, p2, H - 120) * 255
+        End If
+    End Sub
+
+    Private Function QqhToRgb(ByVal q1 As Double, ByVal q2 As _
+        Double, ByVal hue As Double) As Double
+        If hue > 360 Then
+            hue -= 360
+        ElseIf hue < 0 Then
+            hue += 360
+        End If
+        If hue < 60 Then
+            QqhToRgb = q1 + (q2 - q1) * hue / 60
+        ElseIf hue < 180 Then
+            QqhToRgb = q2
+        ElseIf hue < 240 Then
+            QqhToRgb = q1 + (q2 - q1) * (240 - hue) / 60
+        Else
+            QqhToRgb = q1
+        End If
     End Function
 
     'Titlebar Button Events'
@@ -301,6 +350,10 @@ Public Class MainProgram
         'Tab Label Accent Updating
         lblTabSel2.ForeColor = accentColor
 
+        If TmrRGB.Enabled Then
+            PnlRGBToggle.BackColor = accentColor
+        End If
+
     End Sub
 
     '---Notifications
@@ -342,6 +395,29 @@ Public Class MainProgram
             TbxWebsite.Text = SqlReadVAlue("SELECT Website FROM Passwords WHERE UID=" & selectedUID)
             TbxUsername.Text = SqlReadVAlue("SELECT Username FROM Passwords WHERE UID=" & selectedUID)
             TbxPassword.Text = SqlReadVAlue("SELECT [Password] FROM Passwords WHERE UID=" & selectedUID)
+        End If
+    End Sub
+
+    Private Sub TmrRGB_Tick(sender As Object, e As EventArgs) Handles TmrRGB.Tick
+        If Data > 360 Then
+            Data = 0
+        Else
+            Data += 1
+        End If
+        HlsToRgb(Data, 0.5, 0.5)
+        Me.BackColor = Color.FromArgb(r, g, b)
+
+    End Sub
+
+    Private Sub PnlRGBToggle_Click(sender As Object, e As EventArgs) Handles PnlRGBToggle.Click
+        If TmrRGB.Enabled = False Then
+            TmrRGB.Enabled = True
+            PnlRGBToggle.BackColor = accentColor
+        Else
+            TmrRGB.Enabled = False
+            PnlRGBToggle.BackColor = Color.FromArgb(27, 28, 39)
+            Me.BackColor = Color.FromArgb(98, 113, 165)
+            data = 0
         End If
     End Sub
 

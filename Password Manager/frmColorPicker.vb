@@ -7,7 +7,7 @@ Public Class ColorPicker
     Dim r As Integer = 255
     Dim g As Integer = 255
     Dim b As Integer = 255
-    Dim slidervalue As Integer
+    ReadOnly slidervalue As Integer
     Dim currentSlider As Object
     Dim hvalue As Integer = 0
     Dim svalue As Double = 0.5
@@ -29,7 +29,7 @@ Public Class ColorPicker
         'Sets Slider Positions
         Panel1.Width = hvalue / 360 * Panel27.Width
         Panel60.Width = svalue * Panel57.Width
-        Panel66.Width = lvalue & Panel65.Width
+        Panel66.Width = lvalue * Panel65.Width
     End Sub
 
     'Functions
@@ -63,9 +63,9 @@ Public Class ColorPicker
     Private Function QqhToRgb(ByVal q1 As Double, ByVal q2 As _
         Double, ByVal hue As Double) As Double
         If hue > 360 Then
-            hue = hue - 360
+            hue -= -360
         ElseIf hue < 0 Then
-            hue = hue + 360
+            hue += 360
         End If
         If hue < 60 Then
             QqhToRgb = q1 + (q2 - q1) * hue / 60
@@ -81,9 +81,9 @@ Public Class ColorPicker
     ' Convert an RGB value into an HLS value.
     Private Sub RgbToHls(ByVal R As Double, ByVal G As Double,
     ByVal B As Double)
-        R = R / 255
-        G = G / 255
-        B = B / 255
+        R /= 255
+        G /= 255
+        B /= 255
         Dim max As Double
         Dim min As Double
         Dim diff As Double
@@ -124,8 +124,8 @@ Public Class ColorPicker
                 hvalue = 4 + g_dist - r_dist
             End If
 
-            hvalue = hvalue * 60
-            If hvalue < 0 Then hvalue = hvalue + 360
+            hvalue *= 60
+            If hvalue < 0 Then hvalue += 360
         End If
     End Sub
 
@@ -148,7 +148,7 @@ Public Class ColorPicker
     End Sub
 
     'Detects When Slider Released
-    Private Sub slider(sender As Object, e As MouseEventArgs) Handles Panel1.MouseUp, Panel27.MouseUp, Panel57.MouseUp, Panel60.MouseUp, Panel66.MouseUp, Panel65.MouseUp
+    Private Sub StopSlider(sender As Object, e As MouseEventArgs) Handles Panel1.MouseUp, Panel27.MouseUp, Panel57.MouseUp, Panel60.MouseUp, Panel66.MouseUp, Panel65.MouseUp
         Timer1.Stop()
     End Sub
 
