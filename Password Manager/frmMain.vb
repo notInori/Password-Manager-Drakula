@@ -301,7 +301,6 @@ Public Class MainProgram
 
     Public Sub UpdateAccent()
         'Groupbox Topbar Color Updating
-        Console.WriteLine(accentColor)
         Panel8.BackColor = accentColor
         For Each menuscreen As Control In Panel1.Controls.OfType(Of Panel)
             For Each findGroupbox As Control In menuscreen.Controls.OfType(Of TableLayoutPanel)
