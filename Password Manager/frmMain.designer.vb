@@ -323,7 +323,7 @@ Partial Class MainProgram
         Me.Panel136 = New System.Windows.Forms.Panel()
         Me.Panel137 = New System.Windows.Forms.Panel()
         Me.Panel138 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TbxAdminUsername = New System.Windows.Forms.TextBox()
         Me.pnlBackground.SuspendLayout()
         Me.tblMain.SuspendLayout()
         Me.pnlTopBar.SuspendLayout()
@@ -4289,7 +4289,7 @@ Partial Class MainProgram
         'Panel138
         '
         Me.Panel138.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.Panel138.Controls.Add(Me.TextBox1)
+        Me.Panel138.Controls.Add(Me.TbxAdminUsername)
         Me.Panel138.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel138.Location = New System.Drawing.Point(1, 1)
         Me.Panel138.Margin = New System.Windows.Forms.Padding(0)
@@ -4298,17 +4298,17 @@ Partial Class MainProgram
         Me.Panel138.Size = New System.Drawing.Size(303, 24)
         Me.Panel138.TabIndex = 0
         '
-        'TextBox1
+        'TbxAdminUsername
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.ForeColor = System.Drawing.Color.White
-        Me.TextBox1.Location = New System.Drawing.Point(0, 2)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(0)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(304, 19)
-        Me.TextBox1.TabIndex = 0
+        Me.TbxAdminUsername.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.TbxAdminUsername.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TbxAdminUsername.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TbxAdminUsername.ForeColor = System.Drawing.Color.White
+        Me.TbxAdminUsername.Location = New System.Drawing.Point(0, 2)
+        Me.TbxAdminUsername.Margin = New System.Windows.Forms.Padding(0)
+        Me.TbxAdminUsername.Name = "TbxAdminUsername"
+        Me.TbxAdminUsername.Size = New System.Drawing.Size(304, 19)
+        Me.TbxAdminUsername.TabIndex = 0
         '
         'MainProgram
         '
@@ -4862,5 +4862,5 @@ Partial Class MainProgram
     Friend WithEvents Panel136 As Panel
     Friend WithEvents Panel137 As Panel
     Friend WithEvents Panel138 As Panel
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TbxAdminUsername As TextBox
 End Class

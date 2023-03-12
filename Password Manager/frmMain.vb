@@ -424,12 +424,26 @@ Public Class MainProgram
 
     'Save Admin Password Button
     Private Sub SaveAdminPassword(sender As Object, e As EventArgs) Handles btnSaveAdminPass.Click
+        If TbxAdminUsername.Text <> "" Then
+            SaveConfig("UPDATE UserAuth SET Username='" & TbxAdminUsername.Text & "' WHERE UID=1")
+        End If
         If tbxAdminPassword.Text <> "" Then
             SaveConfig("UPDATE UserAuth SET PIN='" & tbxAdminPassword.Text & "' WHERE UID=1")
-            Notifcation("New password has been set successfully!")
-        Else
-            Notifcation("Error: Field can not be empty.")
         End If
+
+        If TbxAdminUsername.Text <> "" And tbxAdminPassword.Text <> "" Then
+            Notifcation("New admin credentials have been updated successfully!")
+
+        ElseIf TbxAdminUsername.Text <> "" Then
+            Notifcation("New admin username has been updated successfully!")
+        ElseIf tbxAdminPassword.Text <> "" Then
+            Notifcation("New admin password has been updated successfully!")
+        Else
+            Notifcation("Error: Both fields can not be empty!")
+        End If
+
+
+        TbxAdminUsername.Clear()
         tbxAdminPassword.Clear()
     End Sub
 
