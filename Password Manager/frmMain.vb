@@ -1,5 +1,6 @@
 ﻿Imports System.CodeDom.Compiler
 Imports System.Data.OleDb
+Imports System.Security.Cryptography.X509Certificates
 
 Public Class MainProgram
 
@@ -273,7 +274,7 @@ Public Class MainProgram
 
     '---Change Colourisable Accents in UI
 
-    Private Sub UpdateAccent()
+    Public Sub UpdateAccent()
         'Groupbox Topbar Color Updating
         Panel8.BackColor = accentColor
         For Each menuscreen As Control In Panel1.Controls.OfType(Of Panel)
@@ -319,9 +320,12 @@ Public Class MainProgram
 
     'UI Accent Colour Picker
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles pnlColorPicker.Click
-        If (cDialog.ShowDialog() = DialogResult.OK) Then
-            accentColor = cDialog.Color ' update with user selected color.
-        End If
+        ColorPicker.colorpickerlocation = pnlColorPicker.PointToScreen(Point.Empty)
+        ColorPicker.Show()
+
+        'If (cDialog.ShowDialog() = DialogResult.OK) Then
+        'accentColor = cDialog.Color ' update with user selected color.
+        'End If
         UpdateAccent()
         SaveConfig("UPDATE UserConfig SET Accent=" & accentColor.ToArgb() & " WHERE UID=" & UID)
     End Sub

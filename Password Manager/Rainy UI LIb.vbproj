@@ -139,6 +139,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="frmColorPicker.designer.vb">
+      <DependentUpon>frmColorPicker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmColorPicker.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMain.designer.vb">
       <DependentUpon>frmMain.vb</DependentUpon>
     </Compile>
@@ -169,6 +175,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmColorPicker.resx">
+      <DependentUpon>frmColorPicker.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>

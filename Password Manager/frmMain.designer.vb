@@ -819,10 +819,10 @@ Partial Class MainProgram
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.pnlSettingsPage)
         Me.Panel1.Controls.Add(Me.pnlMainPage)
         Me.Panel1.Controls.Add(Me.pnlNotification)
         Me.Panel1.Controls.Add(Me.pnlConfirmation)
-        Me.Panel1.Controls.Add(Me.pnlSettingsPage)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(1, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
@@ -838,12 +838,11 @@ Partial Class MainProgram
         Me.pnlMainPage.Controls.Add(Me.TableLayoutPanel14)
         Me.pnlMainPage.Controls.Add(Me.Button2)
         Me.pnlMainPage.Cursor = System.Windows.Forms.Cursors.Default
-        Me.pnlMainPage.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlMainPage.Location = New System.Drawing.Point(0, 0)
+        Me.pnlMainPage.Location = New System.Drawing.Point(244, 441)
         Me.pnlMainPage.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlMainPage.Name = "pnlMainPage"
         Me.pnlMainPage.Padding = New System.Windows.Forms.Padding(5)
-        Me.pnlMainPage.Size = New System.Drawing.Size(894, 530)
+        Me.pnlMainPage.Size = New System.Drawing.Size(28, 25)
         Me.pnlMainPage.TabIndex = 0
         '
         'TableLayoutPanel42
@@ -3058,11 +3057,12 @@ Partial Class MainProgram
         Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel7)
         Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel4)
         Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel1)
-        Me.pnlSettingsPage.Location = New System.Drawing.Point(140, 479)
+        Me.pnlSettingsPage.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlSettingsPage.Location = New System.Drawing.Point(0, 0)
         Me.pnlSettingsPage.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlSettingsPage.Name = "pnlSettingsPage"
         Me.pnlSettingsPage.Padding = New System.Windows.Forms.Padding(5)
-        Me.pnlSettingsPage.Size = New System.Drawing.Size(25, 29)
+        Me.pnlSettingsPage.Size = New System.Drawing.Size(894, 530)
         Me.pnlSettingsPage.TabIndex = 0
         '
         'TableLayoutPanel7
