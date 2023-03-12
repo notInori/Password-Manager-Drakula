@@ -199,30 +199,6 @@ Public Class MainProgram
         End If
     End Function
 
-    'Titlebar Button Events'
-
-    Private Sub BtnMinimize_Click(sender As Object, e As EventArgs) Handles BtnMinimize.Click
-        Me.WindowState = FormWindowState.Minimized
-    End Sub
-
-    Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
-        conn.Close()
-        AuthLogin.Close()
-    End Sub
-
-    Private Sub BtnMaximize_Click(sender As Object, e As EventArgs) Handles BtnMaximize.Click
-        If Me.WindowState = FormWindowState.Maximized Then
-            Me.WindowState = FormWindowState.Normal
-            Me.ClientSize = storedClientSize
-            WindowsState = "normal"
-        Else
-            storedClientSize = Me.ClientSize
-            Me.MaximumSize = Maxscreen
-            Me.WindowState = FormWindowState.Maximized
-            WindowsState = "maximised"
-        End If
-    End Sub
-
     'Init WinForm
     Private Sub POSSystem_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Connect Database
@@ -357,6 +333,35 @@ Public Class MainProgram
 
         ColorPicker.updateAccent()
 
+    End Sub
+
+
+    '---Titlebar Button Events'
+
+    'Exit Button
+    Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        conn.Close()
+        AuthLogin.Close()
+    End Sub
+
+    'Minimize Button
+    Private Sub BtnMinimize_Click(sender As Object, e As EventArgs) Handles BtnMinimize.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+
+    'Maximize Button
+    Private Sub BtnMaximize_Click(sender As Object, e As EventArgs) Handles BtnMaximize.Click
+        If Me.WindowState = FormWindowState.Maximized Then
+            Me.WindowState = FormWindowState.Normal
+            Me.ClientSize = storedClientSize
+            WindowsState = "normal"
+        Else
+            storedClientSize = Me.ClientSize
+            Me.MaximumSize = Maxscreen
+            Me.WindowState = FormWindowState.Maximized
+            WindowsState = "maximised"
+        End If
     End Sub
 
     '---Notifications
