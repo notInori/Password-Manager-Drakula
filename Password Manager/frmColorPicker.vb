@@ -1,4 +1,5 @@
 ﻿Imports System.Data.OleDb
+Imports System.Runtime.Remoting
 Imports Microsoft.VisualBasic.Devices
 
 Public Class ColorPicker
@@ -186,6 +187,11 @@ Public Class ColorPicker
         MainProgram.UpdateAccent()
     End Sub
 
+    Public Sub updateAccent()
+        Panel1.BackColor = MainProgram.accentColor
+        Panel60.BackColor = MainProgram.accentColor
+        Panel66.BackColor = MainProgram.accentColor
+    End Sub
 
     'Auto Hide Colour Picker When Focus Lost
     Private Sub Form1_LostFocus(sender As Object, e As System.EventArgs) Handles Me.LostFocus

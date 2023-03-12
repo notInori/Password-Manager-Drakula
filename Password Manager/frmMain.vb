@@ -355,6 +355,8 @@ Public Class MainProgram
             PnlRGBToggle.BackColor = accentColor
         End If
 
+        ColorPicker.updateAccent()
+
     End Sub
 
     '---Notifications
