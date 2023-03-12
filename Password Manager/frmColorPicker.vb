@@ -4,9 +4,9 @@ Imports Microsoft.VisualBasic.Devices
 Public Class ColorPicker
 
     '---Init'
-    Dim r As Integer
-    Dim g As Integer
-    Dim b As Integer
+    Dim r As Integer = 255
+    Dim g As Integer = 255
+    Dim b As Integer = 255
     Dim slidervalue As Integer
     Dim currentSlider As Object
     Dim hvalue As Integer = 0
