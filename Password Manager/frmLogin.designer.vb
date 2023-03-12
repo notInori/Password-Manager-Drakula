@@ -323,11 +323,11 @@ Partial Class AuthLogin
         '
         Me.pnlNotification.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.pnlNotification.Controls.Add(Me.TableLayoutPanel3)
-        Me.pnlNotification.Location = New System.Drawing.Point(0, -12)
+        Me.pnlNotification.Location = New System.Drawing.Point(0, 279)
         Me.pnlNotification.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlNotification.Name = "pnlNotification"
         Me.pnlNotification.Padding = New System.Windows.Forms.Padding(5)
-        Me.pnlNotification.Size = New System.Drawing.Size(494, 301)
+        Me.pnlNotification.Size = New System.Drawing.Size(494, 10)
         Me.pnlNotification.TabIndex = 10
         '
         'TableLayoutPanel3
