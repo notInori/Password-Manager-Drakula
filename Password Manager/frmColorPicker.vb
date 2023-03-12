@@ -12,96 +12,30 @@ Public Class ColorPicker
     Dim hvalue As Integer = 0
     Dim svalue As Double = 0.5
     Dim lvalue As Double = 0.5
-    Public Shared colorpickerlocation As Point
 
-    '---Winforms Dragging
+    Public Shared colorpickerlocation As Point
 
     'Winforms Init' 
 
-    'Winforms Draggable Variables Init'
-    Private Property MoveForm As Boolean
-    Private Property MoveForm_MousePositiion As Point
+    Private Sub ColorPicker_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Location = New Point(colorpickerlocation.X - Me.Width + 31, colorpickerlocation.Y + 15) 'Set location relative to main program colorpicker control
+        RgbToHls(MainProgram.accentColor.R, MainProgram.accentColor.G, MainProgram.accentColor.B) 'Converts RGB back to HSL to set sliders
 
-    'Winforms Dragging Events
-    Private Sub WindowDragging_MouseDown(sender As Object, e As MouseEventArgs) Handles tblWindow.MouseDown, pnlBackground.MouseDown, pnlGroupBoxInner.MouseDown
-        If e.Button = MouseButtons.Left And Me.WindowState <> FormWindowState.Maximized Then
-            MoveForm = True
-            Me.Cursor = Cursors.Default
-            MoveForm_MousePositiion = e.Location
-        End If
-    End Sub
-
-    Private Sub WindowDragging_MouseUp(sender As Object, e As MouseEventArgs) Handles tblWindow.MouseUp, pnlBackground.MouseUp, pnlGroupBoxInner.MouseUp
-        If e.Button = MouseButtons.Left Then
-            MoveForm = False
-            Me.Cursor = Cursors.Default
-        End If
-    End Sub
-
-    Private Sub WindowDragging_MouseMove(sender As Object, e As MouseEventArgs) Handles tblWindow.MouseMove, pnlBackground.MouseMove, pnlGroupBoxInner.MouseMove
-        If MoveForm Then
-            Me.Location += (e.Location - MoveForm_MousePositiion)
-        End If
-    End Sub
-
-    '---Aplication Code
-
-    'User Auth Button
-    Private Sub AuthUser(sender As Object, e As EventArgs)
-    End Sub
-
-    'Titlebar Button Events'
-
-    'Exit Program
-    Private Sub WindowExit(sender As Object, e As EventArgs)
-        Close()
-    End Sub
-
-    Private Sub SliderDragging(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDown, Panel27.MouseDown, Panel57.MouseDown, Panel60.MouseDown, Panel66.MouseDown, Panel65.MouseDown
-
-        If sender.tag = "slider" Then
-
-            currentSlider = sender
-            Timer1.Start()
-        Else
-            For Each ctrl As Control In sender.Controls
-                If ctrl.Tag = "slider" Then
-                    currentSlider = ctrl
-                    Timer1.Start()
-                End If
-            Next
-        End If
-    End Sub
-
-    Private Sub slider(sender As Object, e As MouseEventArgs) Handles Panel1.MouseUp, Panel27.MouseUp, Panel57.MouseUp, Panel60.MouseUp, Panel66.MouseUp, Panel65.MouseUp
-        Timer1.Stop()
-    End Sub
-
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Dim mousePosition As Point = currentSlider.parent.PointToClient(Cursor.Position) ' get the position of the mouse cursor relative to the control
-        Dim mouseX As Integer = mousePosition.X ' get the X-coordinate of the mouse cursor relative to the control
-        If mouseX <= currentSlider.parent.Width Then
-            currentSlider.Width = mouseX
-        ElseIf mouseX <= 0 Then
-            currentSlider.Width = 0
-        Else
-            currentSlider.Width = currentSlider.parent.Width
-        End If
-
-        If currentSlider Is Panel1 Then
-            hvalue = currentSlider.Width / currentSlider.Parent.Width * 360
-        ElseIf currentSlider Is Panel60 Then
-            svalue = currentSlider.Width / currentSlider.Parent.Width + 0.0000000001
-        Else
-            lvalue = currentSlider.Width / currentSlider.Parent.Width
-        End If
+        'Update Labels of Sliders
         Label7.Text = hvalue
         Label3.Text = Math.Round(svalue * 100, 0)
         Label9.Text = Math.Round(lvalue * 100, 0)
-        HlsToRgb(hvalue, lvalue, svalue)
-        MainProgram.accentColor = Color.FromArgb(r, g, b)
-        MainProgram.UpdateAccent()
+
+        'Sets Slider Positions
+        Panel1.Width = hvalue / 360 * Panel27.Width
+        Panel60.Width = svalue * Panel57.Width
+        Panel66.Width = lvalue & Panel65.Width
     End Sub
+
+    'Functions
+
+    '---RGB <=> HSL conversion Function
+    'http://www.vb-helper.com/howto_rgb_to_hls.html
 
     ' Convert an HLS value into an RGB value.
     Private Sub HlsToRgb(ByVal H As Double, ByVal L As Double,
@@ -144,7 +78,6 @@ Public Class ColorPicker
         End If
     End Function
 
-    ' Convert an RGB value into an HLS value.
     ' Convert an RGB value into an HLS value.
     Private Sub RgbToHls(ByVal R As Double, ByVal G As Double,
     ByVal B As Double)
@@ -196,18 +129,67 @@ Public Class ColorPicker
         End If
     End Sub
 
+    '---Slider Code
+
+    'Detects when slider is held down
+    Private Sub SliderDragging(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDown, Panel27.MouseDown, Panel57.MouseDown, Panel60.MouseDown, Panel66.MouseDown, Panel65.MouseDown
+        'Locate Slider Panel
+        If sender.tag = "slider" Then 'If slider is clicked
+            currentSlider = sender
+            Timer1.Start()
+        Else
+            For Each ctrl As Control In sender.Controls 'If slider parent/slider track is clicked
+                If ctrl.Tag = "slider" Then
+                    currentSlider = ctrl
+                    Timer1.Start()
+                End If
+            Next
+        End If
+    End Sub
+
+    'Detects When Slider Released
+    Private Sub slider(sender As Object, e As MouseEventArgs) Handles Panel1.MouseUp, Panel27.MouseUp, Panel57.MouseUp, Panel60.MouseUp, Panel66.MouseUp, Panel65.MouseUp
+        Timer1.Stop()
+    End Sub
+
+    'Updates Slider Progress
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Dim mousePosition As Point = currentSlider.parent.PointToClient(Cursor.Position) ' Get the position of the mouse cursor relative to the control
+        Dim mouseX As Integer = mousePosition.X ' get the X-coordinate of the mouse cursor relative to the control
+
+        'Calcuate Percentage and Prevent Out of Bound Values
+        If mouseX <= currentSlider.parent.Width Then
+            currentSlider.Width = mouseX
+        ElseIf mouseX <= 0 Then
+            currentSlider.Width = 0
+        Else
+            currentSlider.Width = currentSlider.parent.Width
+        End If
+
+        'Detect Slide Being Used
+        If currentSlider Is Panel1 Then
+            hvalue = currentSlider.Width / currentSlider.Parent.Width * 360
+        ElseIf currentSlider Is Panel60 Then
+            svalue = currentSlider.Width / currentSlider.Parent.Width + 0.0000000001
+        Else
+            lvalue = currentSlider.Width / currentSlider.Parent.Width
+        End If
+
+        'Update Slide Labels
+        Label7.Text = hvalue
+        Label3.Text = Math.Round(svalue * 100, 0)
+        Label9.Text = Math.Round(lvalue * 100, 0)
+
+        'Calculate RGB value from HSL and Pass To Main Program
+        HlsToRgb(hvalue, lvalue, svalue)
+        MainProgram.accentColor = Color.FromArgb(r, g, b)
+        MainProgram.UpdateAccent()
+    End Sub
+
+
+    'Auto Hide Colour Picker When Focus Lost
     Private Sub Form1_LostFocus(sender As Object, e As System.EventArgs) Handles Me.LostFocus
         Me.Close()
     End Sub
 
-    Private Sub ColorPicker_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Location = New Point(colorpickerlocation.X - Me.Width + 31, colorpickerlocation.Y + 15)
-        RgbToHls(MainProgram.accentColor.R, MainProgram.accentColor.G, MainProgram.accentColor.B)
-        Label7.Text = hvalue
-        Label3.Text = Math.Round(svalue * 100, 0)
-        Label9.Text = Math.Round(lvalue * 100, 0)
-        Panel1.Width = hvalue / 360 * Panel27.Width
-        Panel60.Width = svalue * Panel57.Width
-        Panel66.Width = lvalue & Panel65.Width
-    End Sub
 End Class
