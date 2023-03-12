@@ -2374,7 +2374,7 @@ Partial Class MainProgram
         Me.TableLayoutPanel18.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel18.Controls.Add(Me.Panel143, 0, 0)
         Me.TableLayoutPanel18.Controls.Add(Me.Panel158, 0, 1)
-        Me.TableLayoutPanel18.Location = New System.Drawing.Point(352, 5)
+        Me.TableLayoutPanel18.Location = New System.Drawing.Point(355, 5)
         Me.TableLayoutPanel18.Margin = New System.Windows.Forms.Padding(5)
         Me.TableLayoutPanel18.Name = "TableLayoutPanel18"
         Me.TableLayoutPanel18.RowCount = 2
