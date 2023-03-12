@@ -188,7 +188,7 @@ Public Class ColorPicker
     End Sub
 
     Public Sub updateAccent()
-        Panel1.BackColor = MainProgram.accentColor
+        'Panel1.BackColor = MainProgram.accentColor
         'Panel60.BackColor = MainProgram.accentColor
         'Panel66.BackColor = MainProgram.accentColor
     End Sub
