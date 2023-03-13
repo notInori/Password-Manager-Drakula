@@ -21,3 +21,17 @@ A simple password manager.
 ##### Color Picker
 ![UI](https://user-images.githubusercontent.com/124441402/224800449-9beadcf2-fe01-4525-a36e-b2f7e339ac5f.png)
 
+## Installation
+
+### Pre-requisites
+- [Latest Release Build](https://github.com/notInori/Password-Manager-Drakula/releases/)
+- [Microsoft Access Database Engine 2016](https://www.microsoft.com/en-us/download/details.aspx?id=54920)  
+`Note: Make sure to choose the x64 version.`
+
+### Install
+- To install, extract the zip into a directory.
+
+## Using Password Manager
+
+### Starting The Program
+- Run `Password Manager.exe` to start the program and load the login window.
