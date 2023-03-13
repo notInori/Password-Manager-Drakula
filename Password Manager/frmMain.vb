@@ -502,12 +502,14 @@ Public Class MainProgram
             SaveConfig("INSERT INTO Passwords ([Account Name],Website,Username,[Password]) VALUES ('" & TbxAccountName.Text.ToString & "','" & TbxWebsite.Text.ToString & "','" & TbxUsername.Text.ToString & "','" & cipherText & "')")
             Notifcation("New entry " & TbxAccountName.Text.ToString & " has been successfully added!")
             LoadPasswords()
+            lbxUsernames.SelectedItem = SqlReadVAlue("SELECT [Account Name] FROM [Passwords] WHERE [Account Name]='" & TbxAccountName.Text.ToString & "'")
         ElseIf SqlReadVAlue("SELECT UID FROM Passwords WHERE [Account Name]='" & TbxAccountName.Text.ToString & "'") = Nothing Then
             Notifcation("Error: Account name is required!")
         Else
             Notifcation("Error: Entry " & TbxAccountName.Text.ToString & " already exists.")
             TbxAccountName.Clear()
         End If
+
     End Sub
 
     'Deletes Selected User
