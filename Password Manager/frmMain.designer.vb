@@ -2672,9 +2672,9 @@ Partial Class MainProgram
         Me.Label12.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.Label12.Name = "Label12"
         Me.Label12.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.Label12.Size = New System.Drawing.Size(176, 19)
+        Me.Label12.Size = New System.Drawing.Size(131, 19)
         Me.Label12.TabIndex = 0
-        Me.Label12.Text = "RGB Window Outline"
+        Me.Label12.Text = "Pro Gamer RGB"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Panel140
