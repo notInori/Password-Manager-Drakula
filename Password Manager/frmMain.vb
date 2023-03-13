@@ -357,6 +357,7 @@ Public Class MainProgram
         End If
 
         ColorPicker.updateAccent()
+        SaveConfig("UPDATE UserConfig SET Accent=" & accentColor.ToArgb() & " WHERE UID=" & UID)
 
     End Sub
 
@@ -409,15 +410,17 @@ Public Class MainProgram
         ColorPicker.colorpickerlocation = pnlColorPicker.PointToScreen(Point.Empty)
         If Not ColorPicker.IsHandleCreated Then
             ColorPicker.Show()
+
         End If
+        UpdateAccent()
 
         'Old Color Picker
         'If (cDialog.ShowDialog() = DialogResult.OK) Then
         'accentColor = cDialog.Color ' update with user selected color.
         'End If
 
-        UpdateAccent()
-        SaveConfig("UPDATE UserConfig SET Accent=" & accentColor.ToArgb() & " WHERE UID=" & UID)
+        'UpdateAccent()
+
     End Sub
 
     '---Application Code
