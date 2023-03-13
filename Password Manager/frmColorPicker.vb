@@ -66,7 +66,7 @@ Public Class ColorPicker
     Private Function QqhToRgb(ByVal q1 As Double, ByVal q2 As _
         Double, ByVal hue As Double) As Double
         If hue > 360 Then
-            hue -= -360
+            hue -= 360
         ElseIf hue < 0 Then
             hue += 360
         End If
