@@ -163,21 +163,23 @@ Public Class AuthLogin
             Me.Width += 10
             Application.DoEvents()
         End While
-        While Me.Height < 275
+        Me.Width = 500
+        If Me.Height < 275 Then
             Me.Height += 20
             Application.DoEvents()
-        End While
-        While Me.Height < 300
+
+        ElseIf Me.Height < 300 Then
             Me.Height += 5
             Application.DoEvents()
-        End While
-        While Me.Height < 309
+
+        ElseIf Me.Height < 309 Then
             Me.Height += 2
             Application.DoEvents()
-        End While
-        Me.Height = 310
-        tmrAnimation.Stop()
-        Me.TopMost = False
+        Else
+            Me.Height = 310
+            tmrAnimation.Stop()
+            Me.TopMost = False
+        End If
     End Sub
 
 End Class
