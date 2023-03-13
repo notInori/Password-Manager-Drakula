@@ -28,7 +28,7 @@ A simple password manager.
 - [Microsoft Access Database Engine 2016](https://www.microsoft.com/en-us/download/details.aspx?id=54920)  
 `Note: Make sure to choose the x64 version.`
 
-### Install
+### Installing
 - To install, extract the zip into a directory.
 
 ## Using Password Manager
