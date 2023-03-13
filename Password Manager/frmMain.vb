@@ -533,7 +533,7 @@ Public Class MainProgram
             SaveConfig("DELETE FROM Passwords WHERE UID=" & selectedUID)
             selectedUID = Nothing
             ClearUserDataFields(sender, e)
-            Notifcation("Entry " & TempAccountName & " Successfully Deleted!")
+            Notifcation("Entry " & TempAccountName & " successfully deleted!")
         End If
         LoadPasswords()
         lbxUsernames.SelectedItem = SqlReadVAlue("SELECT [Account Name] FROM [Passwords] WHERE UID=" & selectedUID)
