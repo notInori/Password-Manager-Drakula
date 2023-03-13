@@ -83,7 +83,7 @@ Partial Class ColorPicker
         Me.pnlBackground.Location = New System.Drawing.Point(1, 1)
         Me.pnlBackground.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlBackground.Name = "pnlBackground"
-        Me.pnlBackground.Size = New System.Drawing.Size(296, 212)
+        Me.pnlBackground.Size = New System.Drawing.Size(296, 155)
         Me.pnlBackground.TabIndex = 0
         '
         'tblWindow
@@ -98,8 +98,8 @@ Partial Class ColorPicker
         Me.tblWindow.Name = "tblWindow"
         Me.tblWindow.RowCount = 1
         Me.tblWindow.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tblWindow.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 239.0!))
-        Me.tblWindow.Size = New System.Drawing.Size(296, 212)
+        Me.tblWindow.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 212.0!))
+        Me.tblWindow.Size = New System.Drawing.Size(296, 155)
         Me.tblWindow.TabIndex = 2
         '
         'pnlGroupBoxInner
@@ -108,11 +108,12 @@ Partial Class ColorPicker
         Me.pnlGroupBoxInner.Controls.Add(Me.Panel61)
         Me.pnlGroupBoxInner.Controls.Add(Me.Panel53)
         Me.pnlGroupBoxInner.Controls.Add(Me.Panel6)
-        Me.pnlGroupBoxInner.Location = New System.Drawing.Point(5, 5)
-        Me.pnlGroupBoxInner.Margin = New System.Windows.Forms.Padding(5)
+        Me.pnlGroupBoxInner.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlGroupBoxInner.Location = New System.Drawing.Point(0, 0)
+        Me.pnlGroupBoxInner.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlGroupBoxInner.Name = "pnlGroupBoxInner"
         Me.pnlGroupBoxInner.Padding = New System.Windows.Forms.Padding(5)
-        Me.pnlGroupBoxInner.Size = New System.Drawing.Size(284, 202)
+        Me.pnlGroupBoxInner.Size = New System.Drawing.Size(296, 155)
         Me.pnlGroupBoxInner.TabIndex = 17
         '
         'Panel61
@@ -121,10 +122,10 @@ Partial Class ColorPicker
         Me.Panel61.Controls.Add(Me.Label9)
         Me.Panel61.Controls.Add(Me.Label10)
         Me.Panel61.Controls.Add(Me.Panel62)
-        Me.Panel61.Location = New System.Drawing.Point(10, 135)
+        Me.Panel61.Location = New System.Drawing.Point(10, 103)
         Me.Panel61.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel61.Name = "Panel61"
-        Me.Panel61.Size = New System.Drawing.Size(264, 54)
+        Me.Panel61.Size = New System.Drawing.Size(276, 44)
         Me.Panel61.TabIndex = 16
         '
         'Label9
@@ -132,7 +133,7 @@ Partial Class ColorPicker
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Consolas", 12.0!)
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(142, 0)
+        Me.Label9.Location = New System.Drawing.Point(154, 0)
         Me.Label9.Margin = New System.Windows.Forms.Padding(0)
         Me.Label9.Name = "Label9"
         Me.Label9.Padding = New System.Windows.Forms.Padding(0, 0, 5, 5)
@@ -164,7 +165,7 @@ Partial Class ColorPicker
         Me.Panel62.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel62.Name = "Panel62"
         Me.Panel62.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel62.Size = New System.Drawing.Size(264, 30)
+        Me.Panel62.Size = New System.Drawing.Size(276, 20)
         Me.Panel62.TabIndex = 11
         '
         'Panel63
@@ -176,7 +177,7 @@ Partial Class ColorPicker
         Me.Panel63.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel63.Name = "Panel63"
         Me.Panel63.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel63.Size = New System.Drawing.Size(262, 28)
+        Me.Panel63.Size = New System.Drawing.Size(274, 18)
         Me.Panel63.TabIndex = 9
         '
         'Panel64
@@ -188,7 +189,7 @@ Partial Class ColorPicker
         Me.Panel64.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel64.Name = "Panel64"
         Me.Panel64.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel64.Size = New System.Drawing.Size(260, 26)
+        Me.Panel64.Size = New System.Drawing.Size(272, 16)
         Me.Panel64.TabIndex = 10
         '
         'Panel65
@@ -200,7 +201,7 @@ Partial Class ColorPicker
         Me.Panel65.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel65.Name = "Panel65"
         Me.Panel65.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel65.Size = New System.Drawing.Size(258, 24)
+        Me.Panel65.Size = New System.Drawing.Size(270, 14)
         Me.Panel65.TabIndex = 10
         '
         'Panel66
@@ -209,7 +210,7 @@ Partial Class ColorPicker
         Me.Panel66.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel66.Location = New System.Drawing.Point(1, 1)
         Me.Panel66.Name = "Panel66"
-        Me.Panel66.Size = New System.Drawing.Size(10, 22)
+        Me.Panel66.Size = New System.Drawing.Size(10, 12)
         Me.Panel66.TabIndex = 0
         Me.Panel66.Tag = "slider"
         '
@@ -219,10 +220,10 @@ Partial Class ColorPicker
         Me.Panel53.Controls.Add(Me.Label3)
         Me.Panel53.Controls.Add(Me.Label8)
         Me.Panel53.Controls.Add(Me.Panel54)
-        Me.Panel53.Location = New System.Drawing.Point(10, 71)
+        Me.Panel53.Location = New System.Drawing.Point(10, 54)
         Me.Panel53.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel53.Name = "Panel53"
-        Me.Panel53.Size = New System.Drawing.Size(264, 54)
+        Me.Panel53.Size = New System.Drawing.Size(276, 44)
         Me.Panel53.TabIndex = 15
         '
         'Label3
@@ -230,7 +231,7 @@ Partial Class ColorPicker
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Consolas", 12.0!)
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(142, 0)
+        Me.Label3.Location = New System.Drawing.Point(154, 0)
         Me.Label3.Margin = New System.Windows.Forms.Padding(0)
         Me.Label3.Name = "Label3"
         Me.Label3.Padding = New System.Windows.Forms.Padding(0, 0, 5, 5)
@@ -262,7 +263,7 @@ Partial Class ColorPicker
         Me.Panel54.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel54.Name = "Panel54"
         Me.Panel54.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel54.Size = New System.Drawing.Size(264, 30)
+        Me.Panel54.Size = New System.Drawing.Size(276, 20)
         Me.Panel54.TabIndex = 11
         '
         'Panel55
@@ -274,7 +275,7 @@ Partial Class ColorPicker
         Me.Panel55.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel55.Name = "Panel55"
         Me.Panel55.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel55.Size = New System.Drawing.Size(262, 28)
+        Me.Panel55.Size = New System.Drawing.Size(274, 18)
         Me.Panel55.TabIndex = 9
         '
         'Panel56
@@ -286,7 +287,7 @@ Partial Class ColorPicker
         Me.Panel56.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel56.Name = "Panel56"
         Me.Panel56.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel56.Size = New System.Drawing.Size(260, 26)
+        Me.Panel56.Size = New System.Drawing.Size(272, 16)
         Me.Panel56.TabIndex = 10
         '
         'Panel57
@@ -298,7 +299,7 @@ Partial Class ColorPicker
         Me.Panel57.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel57.Name = "Panel57"
         Me.Panel57.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel57.Size = New System.Drawing.Size(258, 24)
+        Me.Panel57.Size = New System.Drawing.Size(270, 14)
         Me.Panel57.TabIndex = 10
         '
         'Panel60
@@ -307,7 +308,7 @@ Partial Class ColorPicker
         Me.Panel60.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel60.Location = New System.Drawing.Point(1, 1)
         Me.Panel60.Name = "Panel60"
-        Me.Panel60.Size = New System.Drawing.Size(10, 22)
+        Me.Panel60.Size = New System.Drawing.Size(10, 12)
         Me.Panel60.TabIndex = 0
         Me.Panel60.Tag = "slider"
         '
@@ -317,10 +318,10 @@ Partial Class ColorPicker
         Me.Panel6.Controls.Add(Me.Label7)
         Me.Panel6.Controls.Add(Me.Label1)
         Me.Panel6.Controls.Add(Me.Panel11)
-        Me.Panel6.Location = New System.Drawing.Point(10, 7)
+        Me.Panel6.Location = New System.Drawing.Point(10, 5)
         Me.Panel6.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(264, 54)
+        Me.Panel6.Size = New System.Drawing.Size(276, 44)
         Me.Panel6.TabIndex = 13
         '
         'Label7
@@ -328,7 +329,7 @@ Partial Class ColorPicker
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Consolas", 12.0!)
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(142, 0)
+        Me.Label7.Location = New System.Drawing.Point(154, 0)
         Me.Label7.Margin = New System.Windows.Forms.Padding(0)
         Me.Label7.Name = "Label7"
         Me.Label7.Padding = New System.Windows.Forms.Padding(0, 0, 5, 5)
@@ -360,7 +361,7 @@ Partial Class ColorPicker
         Me.Panel11.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel11.Name = "Panel11"
         Me.Panel11.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel11.Size = New System.Drawing.Size(264, 30)
+        Me.Panel11.Size = New System.Drawing.Size(276, 20)
         Me.Panel11.TabIndex = 11
         '
         'Panel12
@@ -372,7 +373,7 @@ Partial Class ColorPicker
         Me.Panel12.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel12.Name = "Panel12"
         Me.Panel12.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel12.Size = New System.Drawing.Size(262, 28)
+        Me.Panel12.Size = New System.Drawing.Size(274, 18)
         Me.Panel12.TabIndex = 9
         '
         'Panel13
@@ -384,7 +385,7 @@ Partial Class ColorPicker
         Me.Panel13.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel13.Name = "Panel13"
         Me.Panel13.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel13.Size = New System.Drawing.Size(260, 26)
+        Me.Panel13.Size = New System.Drawing.Size(272, 16)
         Me.Panel13.TabIndex = 10
         '
         'Panel27
@@ -396,7 +397,7 @@ Partial Class ColorPicker
         Me.Panel27.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel27.Name = "Panel27"
         Me.Panel27.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel27.Size = New System.Drawing.Size(258, 24)
+        Me.Panel27.Size = New System.Drawing.Size(270, 14)
         Me.Panel27.TabIndex = 10
         '
         'Panel1
@@ -405,7 +406,7 @@ Partial Class ColorPicker
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(1, 1)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(10, 22)
+        Me.Panel1.Size = New System.Drawing.Size(10, 12)
         Me.Panel1.TabIndex = 0
         Me.Panel1.Tag = "slider"
         '
@@ -417,7 +418,7 @@ Partial Class ColorPicker
         Me.pnlBlackOutline.Location = New System.Drawing.Point(1, 1)
         Me.pnlBlackOutline.Name = "pnlBlackOutline"
         Me.pnlBlackOutline.Padding = New System.Windows.Forms.Padding(1)
-        Me.pnlBlackOutline.Size = New System.Drawing.Size(298, 214)
+        Me.pnlBlackOutline.Size = New System.Drawing.Size(298, 157)
         Me.pnlBlackOutline.TabIndex = 1
         '
         'Timer1
@@ -429,7 +430,7 @@ Partial Class ColorPicker
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(113, Byte), Integer), CType(CType(165, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(300, 216)
+        Me.ClientSize = New System.Drawing.Size(300, 159)
         Me.Controls.Add(Me.pnlBlackOutline)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
