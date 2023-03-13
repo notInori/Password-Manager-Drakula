@@ -157,19 +157,19 @@ Public Class AuthLogin
         Me.TopMost = True
         Me.Focus()
         While Me.Width < 500
-            Me.Width += 10
+            Me.Width += 20
             Application.DoEvents()
         End While
         While Me.Height < 275
-            Me.Height += 10
+            Me.Height += 20
             Application.DoEvents()
         End While
         While Me.Height < 300
-            Me.Height += 2
+            Me.Height += 5
             Application.DoEvents()
         End While
         While Me.Height < 309
-            Me.Height += 1
+            Me.Height += 2
             Application.DoEvents()
         End While
         Me.Height = 310
