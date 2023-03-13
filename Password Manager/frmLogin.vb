@@ -112,7 +112,6 @@ Public Class AuthLogin
 
     'User Auth Button
     Private Sub AuthUser(sender As Object, e As EventArgs) Handles btnLogin.Click
-
         If AuthUser(CbxUsername.Text, MD5(TbxPassword.Text)) Then
             MainProgram.currentUser = CbxUsername.Text
             MainProgram.Show()
@@ -121,6 +120,7 @@ Public Class AuthLogin
             pnlNotification.BringToFront()
         End If
         If AuthUser(CbxUsername.Text, MD5(TbxPassword.Text)) Then
+            MainProgram.localPassword = TbxPassword.Text
             CbxUsername.Text = ""
             TbxPassword.Text = ""
             Me.Hide()

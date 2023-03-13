@@ -1,6 +1,7 @@
 ﻿Imports System.CodeDom.Compiler
 Imports System.Data.OleDb
 Imports System.Security.Cryptography.X509Certificates
+Imports System.Security.Cryptography
 
 Public Class MainProgram
 
@@ -18,6 +19,7 @@ Public Class MainProgram
     Public Shared accentColor As Color = Color.FromArgb(255, 255, 255)
     ReadOnly cDialog As New ColorDialog()
     Dim selectedUID As New Integer
+    Public localPassword As String
 
     'Variables Init'
     Dim r As Integer
@@ -421,8 +423,16 @@ Public Class MainProgram
             TbxAccountName.Text = lbxUsernames.SelectedItem.ToString
             TbxWebsite.Text = SqlReadVAlue("SELECT Website FROM Passwords WHERE UID=" & selectedUID)
             TbxUsername.Text = SqlReadVAlue("SELECT Username FROM Passwords WHERE UID=" & selectedUID)
-            TbxPassword.Text = SqlReadVAlue("SELECT [Password] FROM Passwords WHERE UID=" & selectedUID)
+            Dim wrapper As New Simple3Des(localPassword)
+            Dim hashedpassword As String = SqlReadVAlue("SELECT [Password] FROM Passwords WHERE UID=" & selectedUID)
+            Try
+                Dim plainText As String = wrapper.DecryptData(hashedpassword)
+                TbxPassword.Text = plainText
+            Catch ex As System.Security.Cryptography.CryptographicException
+                MsgBox("The data could not be decrypted with the password.")
+            End Try
         End If
+
     End Sub
 
     Private Sub TmrRGB_Tick(sender As Object, e As EventArgs) Handles TmrRGB.Tick
@@ -451,10 +461,12 @@ Public Class MainProgram
     'Save Changes to User's Username and Password
     Private Sub UpdateUserCredentials(sender As Object, e As EventArgs) Handles btnSave.Click
         If TbxAccountName.Text <> "" And lbxUsernames.SelectedItem <> Nothing And (SqlReadVAlue("SELECT [Account Name] FROM Passwords WHERE UID=" & selectedUID) = TbxAccountName.Text.ToString Or SqlReadVAlue("SELECT UID FROM Passwords WHERE [Account Name]='" & TbxAccountName.Text.ToString & "'") = Nothing) Then
+            Dim wrapper As New Simple3Des(localPassword)
+            Dim cipherText As String = wrapper.EncryptData(TbxPassword.Text.ToString)
             SaveConfig("UPDATE Passwords SET [Account Name]='" & TbxAccountName.Text & "' WHERE UID=" & selectedUID)
             SaveConfig("UPDATE Passwords SET Website='" & TbxWebsite.Text & "' WHERE UID=" & selectedUID)
             SaveConfig("UPDATE Passwords SET Username='" & TbxUsername.Text & "' WHERE UID=" & selectedUID)
-            SaveConfig("UPDATE Passwords SET [Password]='" & TbxPassword.Text & "' WHERE UID=" & selectedUID)
+            SaveConfig("UPDATE Passwords SET [Password]='" & cipherText & "' WHERE UID=" & selectedUID)
             Notifcation("New User Credentials for " & TbxAccountName.Text & " have been saved successfully!")
         ElseIf TbxAccountName.Text = "" Then
             Notifcation("Error: An account name is required!")
@@ -481,7 +493,9 @@ Public Class MainProgram
     'Adds New User To Database
     Private Sub AddNewUser(sender As Object, e As EventArgs) Handles BtnAddUser.Click
         If SqlReadVAlue("SELECT UID FROM Passwords WHERE ([Account Name]='" & TbxAccountName.Text.ToString & "')") = Nothing And TbxAccountName.Text.ToString <> Nothing Then
-            SaveConfig("INSERT INTO Passwords ([Account Name],Website,Username,[Password]) VALUES ('" & TbxAccountName.Text.ToString & "','" & TbxWebsite.Text.ToString & "','" & TbxUsername.Text.ToString & "','" & TbxPassword.Text.ToString & "')")
+            Dim wrapper As New Simple3Des(localPassword)
+            Dim cipherText As String = wrapper.EncryptData(TbxPassword.Text.ToString)
+            SaveConfig("INSERT INTO Passwords ([Account Name],Website,Username,[Password]) VALUES ('" & TbxAccountName.Text.ToString & "','" & TbxWebsite.Text.ToString & "','" & TbxUsername.Text.ToString & "','" & cipherText & "')")
             Notifcation("New entry " & TbxAccountName.Text.ToString & " has been successfully added!")
             LoadPasswords()
         ElseIf SqlReadVAlue("SELECT UID FROM Passwords WHERE [Account Name]='" & TbxAccountName.Text.ToString & "'") = Nothing Then
@@ -530,9 +544,38 @@ Public Class MainProgram
         If TbxAdminUsername.Text <> "" Then
             SaveConfig("UPDATE UserAuth SET Username='" & TbxAdminUsername.Text & "' WHERE UID=1")
         End If
+
+        Dim cmd2 As New OleDbCommand("SELECT UID FROM [PASSWORDS]", conn)
+        Dim myReader2 As OleDbDataReader = cmd2.ExecuteReader
+
+        'Setup encryption keys
+        Dim wrapper As New Simple3Des(localPassword)
+        Dim newWrapper As New Simple3Des(tbxAdminPassword.Text)
+
         If tbxAdminPassword.Text <> "" Then
-            Dim hashedpassword As String = MD5(tbxAdminPassword.Text)
+
+            'Decrypt all passwords
+            While myReader2.Read()
+                Console.WriteLine(myReader2("UID"))
+                Dim plainText As String = wrapper.DecryptData(SqlReadVAlue("SELECT [Password] FROM [Passwords] WHERE UID=" & myReader2("UID")))
+                SaveConfig("UPDATE Passwords SET [PASSWORD]='" & plainText & "' WHERE UID=" & myReader2("UID"))
+            End While
+
+            'Reload Database
+            myReader2.Close()
+            myReader2 = cmd2.ExecuteReader
+
+            'Re-encrypt all passwords
+            While myReader2.Read()
+                Dim NewPassword As String = newWrapper.EncryptData(SqlReadVAlue("SELECT [Password] FROM [Passwords] WHERE UID=" & myReader2("UID")))
+                SaveConfig("UPDATE Passwords SET [PASSWORD]='" & NewPassword & "' WHERE UID=" & myReader2("UID"))
+            End While
+
+            'Rehash and Save Password
+            localPassword = tbxAdminPassword.Text
+            Dim hashedpassword As String = MD5(localPassword)
             SaveConfig("UPDATE UserAuth SET PIN='" & hashedpassword & "' WHERE UID=1")
+
         End If
         If TbxAdminUsername.Text <> "" And tbxAdminPassword.Text <> "" Then
             Notifcation("New admin credentials have been updated successfully!")
@@ -554,4 +597,69 @@ Public Class MainProgram
         lblTitle.Text = programName & " | " & versionNumber & " | " & currentUser & " | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
     End Sub
 
+End Class
+
+Public NotInheritable Class Simple3Des
+    Private TripleDes As New TripleDESCryptoServiceProvider
+    Private Function TruncateHash(
+    ByVal key As String,
+    ByVal length As Integer) As Byte()
+
+        Dim sha1 As New SHA1CryptoServiceProvider
+
+        ' Hash the key.
+        Dim keyBytes() As Byte =
+            System.Text.Encoding.Unicode.GetBytes(key)
+        Dim hash() As Byte = sha1.ComputeHash(keyBytes)
+
+        ' Truncate or pad the hash.
+        ReDim Preserve hash(length - 1)
+        Return hash
+    End Function
+    Sub New(ByVal key As String)
+        ' Initialize the crypto provider.
+        TripleDes.Key = TruncateHash(key, TripleDes.KeySize \ 8)
+        TripleDes.IV = TruncateHash("", TripleDes.BlockSize \ 8)
+    End Sub
+    Public Function EncryptData(
+    ByVal plaintext As String) As String
+
+        ' Convert the plaintext string to a byte array.
+        Dim plaintextBytes() As Byte =
+            System.Text.Encoding.Unicode.GetBytes(plaintext)
+
+        ' Create the stream.
+        Dim ms As New System.IO.MemoryStream
+        ' Create the encoder to write to the stream.
+        Dim encStream As New CryptoStream(ms,
+            TripleDes.CreateEncryptor(),
+            System.Security.Cryptography.CryptoStreamMode.Write)
+
+        ' Use the crypto stream to write the byte array to the stream.
+        encStream.Write(plaintextBytes, 0, plaintextBytes.Length)
+        encStream.FlushFinalBlock()
+
+        ' Convert the encrypted stream to a printable string.
+        Return Convert.ToBase64String(ms.ToArray)
+    End Function
+    Public Function DecryptData(
+    ByVal encryptedtext As String) As String
+
+        ' Convert the encrypted text string to a byte array.
+        Dim encryptedBytes() As Byte = Convert.FromBase64String(encryptedtext)
+
+        ' Create the stream.
+        Dim ms As New System.IO.MemoryStream
+        ' Create the decoder to write to the stream.
+        Dim decStream As New CryptoStream(ms,
+        TripleDes.CreateDecryptor(),
+        System.Security.Cryptography.CryptoStreamMode.Write)
+
+        ' Use the crypto stream to write the byte array to the stream.
+        decStream.Write(encryptedBytes, 0, encryptedBytes.Length)
+        decStream.FlushFinalBlock()
+
+        ' Convert the plaintext stream to a string.
+        Return System.Text.Encoding.Unicode.GetString(ms.ToArray)
+    End Function
 End Class
