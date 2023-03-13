@@ -3,7 +3,7 @@ A simple password manager.
 
 ## Screenshots
 
-### Authentication Screen
+### Login Window
 ##### Main Screen
 ![UI](https://user-images.githubusercontent.com/124441402/224800343-877851ed-a419-4750-ab74-711dd8c61ae9.png)
 ##### Notification
