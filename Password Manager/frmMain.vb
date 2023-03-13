@@ -434,12 +434,12 @@ Public Class MainProgram
     End Sub
 
     Private Sub TmrRGB_Tick(sender As Object, e As EventArgs) Handles TmrRGB.Tick
-        If Data > 360 Then
-            Data = 0
+        If data > 360 Then
+            data = 0
         Else
-            Data += 1
+            data += 1
         End If
-        HlsToRgb(Data, 0.5, 0.5)
+        HlsToRgb(data, 0.5, 0.5)
         Me.BackColor = Color.FromArgb(r, g, b)
 
     End Sub
