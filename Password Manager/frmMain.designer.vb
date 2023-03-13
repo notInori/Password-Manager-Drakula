@@ -2096,9 +2096,9 @@ Partial Class MainProgram
         Me.Label9.Margin = New System.Windows.Forms.Padding(0)
         Me.Label9.Name = "Label9"
         Me.Label9.Padding = New System.Windows.Forms.Padding(0, 0, 5, 5)
-        Me.Label9.Size = New System.Drawing.Size(77, 24)
+        Me.Label9.Size = New System.Drawing.Size(86, 24)
         Me.Label9.TabIndex = 0
-        Me.Label9.Text = "Website"
+        Me.Label9.Text = "Website:"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Panel120
