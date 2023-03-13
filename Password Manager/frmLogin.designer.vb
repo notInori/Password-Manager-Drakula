@@ -786,9 +786,9 @@ Partial Class AuthLogin
         Me.Label33.Location = New System.Drawing.Point(0, 0)
         Me.Label33.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(117, 19)
+        Me.Label33.Size = New System.Drawing.Size(126, 19)
         Me.Label33.TabIndex = 9
-        Me.Label33.Text = "Program Name"
+        Me.Label33.Text = "Program Name:"
         Me.Label33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'tblMainGroupBox
