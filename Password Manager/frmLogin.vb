@@ -1,6 +1,5 @@
 ﻿Imports System.Data.OleDb
 
-
 Public Class AuthLogin
 
     '---Init'
