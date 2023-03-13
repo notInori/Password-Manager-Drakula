@@ -446,7 +446,7 @@ Partial Class AuthLogin
         '
         'Panel36
         '
-        Me.Panel36.BackColor = System.Drawing.Color.White
+        Me.Panel36.BackColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.Panel36.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel36.Location = New System.Drawing.Point(0, 0)
         Me.Panel36.Name = "Panel36"
@@ -540,7 +540,7 @@ Partial Class AuthLogin
         '
         'Panel43
         '
-        Me.Panel43.BackColor = System.Drawing.Color.White
+        Me.Panel43.BackColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.Panel43.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel43.Location = New System.Drawing.Point(1, 0)
         Me.Panel43.Name = "Panel43"
