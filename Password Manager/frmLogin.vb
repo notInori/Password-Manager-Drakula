@@ -164,14 +164,12 @@ Public Class AuthLogin
             Application.DoEvents()
         End While
         Me.Width = 500
-        If Me.Height < 275 Then
+        If Me.Height < 250 Then
             Me.Height += 20
             Application.DoEvents()
-
         ElseIf Me.Height < 300 Then
             Me.Height += 5
             Application.DoEvents()
-
         ElseIf Me.Height < 309 Then
             Me.Height += 2
             Application.DoEvents()
