@@ -4730,7 +4730,7 @@ Partial Class MainProgram
         Me.Controls.Add(Me.Panel6)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MinimumSize = New System.Drawing.Size(300, 400)
+        Me.MinimumSize = New System.Drawing.Size(934, 622)
         Me.Name = "MainProgram"
         Me.Padding = New System.Windows.Forms.Padding(2)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
