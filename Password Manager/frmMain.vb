@@ -413,14 +413,6 @@ Public Class MainProgram
 
         End If
         UpdateAccent()
-
-        'Old Color Picker
-        'If (cDialog.ShowDialog() = DialogResult.OK) Then
-        'accentColor = cDialog.Color ' update with user selected color.
-        'End If
-
-        'UpdateAccent()
-
     End Sub
 
     '---Application Code
