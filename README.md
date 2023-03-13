@@ -11,7 +11,7 @@ A simple password manager.
 
 ### Password Manager
 ##### Main Screen
-![UI](https://user-images.githubusercontent.com/124441402/224815712-ce9dceac-17ce-4585-8675-9596c95c62fe.png)
+![UI](https://user-images.githubusercontent.com/124441402/224857872-4ac0e4ae-842a-4fa8-91dd-e9bf29ba8a89.png)
 ##### Settings Screen
 ![UI](https://user-images.githubusercontent.com/124441402/224815733-71a99199-e32f-4e3f-8ec7-549e637a2ee6.png)
 ##### Color Picker
