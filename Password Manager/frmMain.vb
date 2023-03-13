@@ -401,16 +401,17 @@ Public Class MainProgram
     'UI Accent Colour Picker
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles pnlColorPicker.Click
         ColorPicker.colorpickerlocation = pnlColorPicker.PointToScreen(Point.Empty)
-        If ColorPicker.IsHandleCreated Then
-            ColorPicker.Close()
-        Else
+        If Not ColorPicker.IsHandleCreated Then
             ColorPicker.Show()
         End If
+
+        'Old Color Picker
         'If (cDialog.ShowDialog() = DialogResult.OK) Then
         'accentColor = cDialog.Color ' update with user selected color.
         'End If
+
         UpdateAccent()
-            SaveConfig("UPDATE UserConfig SET Accent=" & accentColor.ToArgb() & " WHERE UID=" & UID)
+        SaveConfig("UPDATE UserConfig SET Accent=" & accentColor.ToArgb() & " WHERE UID=" & UID)
     End Sub
 
     '---Application Code

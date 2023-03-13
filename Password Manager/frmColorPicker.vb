@@ -130,6 +130,15 @@ Public Class ColorPicker
         End If
     End Sub
 
+    'Wait Function Without Application Freeze
+    'https://stackoverflow.com/questions/15857893/wait-5-seconds-before-continuing-code-vb-net
+    Private Sub wait(ByVal seconds As Integer)
+        For i As Integer = 0 To seconds * 100
+            System.Threading.Thread.Sleep(10)
+            Application.DoEvents()
+        Next
+    End Sub
+
     '---Slider Code
 
     'Detects when slider is held down
@@ -195,6 +204,7 @@ Public Class ColorPicker
 
     'Auto Hide Colour Picker When Focus Lost
     Private Sub Form1_LostFocus(sender As Object, e As System.EventArgs) Handles Me.LostFocus
+        wait(0.1)
         Me.Close()
     End Sub
 
