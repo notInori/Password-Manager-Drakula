@@ -158,6 +158,26 @@ Public Class MainProgram
 
     'Functions
 
+    'MD5 Hash Algorithm 
+    'https://stackoverflow.com/questions/34637059/equivalent-password-hash-function-for-vb-net
+
+    Public Function MD5(ByVal pass As String) As String
+        Try
+            Dim MD5p As New System.Security.Cryptography.MD5CryptoServiceProvider
+            Dim baytlar As Byte() = System.Text.ASCIIEncoding.ASCII.GetBytes(pass)
+            Dim hash As Byte() = MD5p.ComputeHash(baytlar)
+            Dim kapasite As Integer = (hash.Length * 2 + (hash.Length / 8))
+            Dim sb As System.Text.StringBuilder = New System.Text.StringBuilder(kapasite)
+            Dim I As Integer
+            For I = 0 To hash.Length - 1
+                sb.Append(BitConverter.ToString(hash, I, 1))
+            Next I
+            Return sb.ToString().TrimEnd(New Char() {" "c})
+        Catch ex As Exception
+            Return "0"
+        End Try
+    End Function
+
     ' Convert an HLS value into an RGB value.
     Private Sub HlsToRgb(ByVal H As Double, ByVal L As Double,
         ByVal S As Double)
@@ -511,7 +531,8 @@ Public Class MainProgram
             SaveConfig("UPDATE UserAuth SET Username='" & TbxAdminUsername.Text & "' WHERE UID=1")
         End If
         If tbxAdminPassword.Text <> "" Then
-            SaveConfig("UPDATE UserAuth SET PIN='" & tbxAdminPassword.Text & "' WHERE UID=1")
+            Dim hashedpassword As String = MD5(tbxAdminPassword.Text)
+            SaveConfig("UPDATE UserAuth SET PIN='" & hashedpassword & "' WHERE UID=1")
         End If
         If TbxAdminUsername.Text <> "" And tbxAdminPassword.Text <> "" Then
             Notifcation("New admin credentials have been updated successfully!")

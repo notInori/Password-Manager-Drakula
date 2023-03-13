@@ -49,6 +49,28 @@ Public Class AuthLogin
         End If
     End Function
 
+    '---Functions 
+
+    'MD5 Hash Algorithm
+    'https://stackoverflow.com/questions/34637059/equivalent-password-hash-function-for-vb-net
+
+    Public Function MD5(ByVal pass As String) As String
+        Try
+            Dim MD5p As New System.Security.Cryptography.MD5CryptoServiceProvider
+            Dim baytlar As Byte() = System.Text.ASCIIEncoding.ASCII.GetBytes(pass)
+            Dim hash As Byte() = MD5p.ComputeHash(baytlar)
+            Dim kapasite As Integer = (hash.Length * 2 + (hash.Length / 8))
+            Dim sb As System.Text.StringBuilder = New System.Text.StringBuilder(kapasite)
+            Dim I As Integer
+            For I = 0 To hash.Length - 1
+                sb.Append(BitConverter.ToString(hash, I, 1))
+            Next I
+            Return sb.ToString().TrimEnd(New Char() {" "c})
+        Catch ex As Exception
+            Return "0"
+        End Try
+    End Function
+
     '---Winforms Dragging
 
     'Winforms Init' 
@@ -91,14 +113,14 @@ Public Class AuthLogin
     'User Auth Button
     Private Sub AuthUser(sender As Object, e As EventArgs) Handles btnLogin.Click
 
-        If AuthUser(CbxUsername.Text, TbxPassword.Text) Then
+        If AuthUser(CbxUsername.Text, MD5(TbxPassword.Text)) Then
             MainProgram.currentUser = CbxUsername.Text
             MainProgram.Show()
         Else
             pnlNotification.Dock = DockStyle.Fill
             pnlNotification.BringToFront()
         End If
-        If AuthUser(CbxUsername.Text, TbxPassword.Text) Then
+        If AuthUser(CbxUsername.Text, MD5(TbxPassword.Text)) Then
             CbxUsername.Text = ""
             TbxPassword.Text = ""
             Me.Hide()
