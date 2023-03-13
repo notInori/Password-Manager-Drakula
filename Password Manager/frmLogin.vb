@@ -153,6 +153,9 @@ Public Class AuthLogin
         Close()
     End Sub
 
+    '---Animations
+
+    'Window Opening Animation
     Private Sub tmrAnimation_Tick(sender As Object, e As EventArgs) Handles tmrAnimation.Tick
         Me.TopMost = True
         Me.Focus()
