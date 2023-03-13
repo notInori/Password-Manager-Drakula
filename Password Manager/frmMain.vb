@@ -231,6 +231,7 @@ Public Class MainProgram
         LoadUserConfig() 'Load User Data
         LoadPasswords() ' Load Passwords
         ChangeTab(lblTabSel1, e)
+
     End Sub
 
     '---Database Functions
@@ -259,6 +260,11 @@ Public Class MainProgram
     Private Sub LoadUserConfig()
         UID = CInt(SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & currentUser & "')"))
         accentColor = Color.FromArgb(SqlReadVAlue("SELECT Accent FROM UserConfig WHERE (UID=" & UID & ")"))
+        If SqlReadVAlue("SELECT RGB FROM UserConfig WHERE (UID=" & UID & ")").ToString = "True" Then
+            TmrRGB.Enabled = True
+        Else
+            TmrRGB.Enabled = False
+        End If
         UpdateAccent()
     End Sub
 
@@ -452,11 +458,13 @@ Public Class MainProgram
         If TmrRGB.Enabled = False Then
             TmrRGB.Enabled = True
             PnlRGBToggle.BackColor = accentColor
+            SaveConfig("UPDATE UserConfig SET RGB='True'" & " WHERE UID=" & UID)
         Else
             TmrRGB.Enabled = False
             PnlRGBToggle.BackColor = Color.FromArgb(27, 28, 39)
             Me.BackColor = Color.FromArgb(98, 113, 165)
             data = 0
+            SaveConfig("UPDATE UserConfig SET RGB='False'" & " WHERE UID=" & UID)
         End If
     End Sub
 
