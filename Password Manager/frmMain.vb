@@ -410,7 +410,6 @@ Public Class MainProgram
         ColorPicker.colorpickerlocation = pnlColorPicker.PointToScreen(Point.Empty)
         If Not ColorPicker.IsHandleCreated Then
             ColorPicker.Show()
-
         End If
         UpdateAccent()
     End Sub
