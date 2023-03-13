@@ -50,6 +50,15 @@ Public Class AuthLogin
 
     '---Functions 
 
+    'Wait Function Without Application Freeze
+    'https://stackoverflow.com/questions/15857893/wait-5-seconds-before-continuing-code-vb-net
+    Private Sub wait(ByVal seconds As Integer)
+        For i As Integer = 0 To seconds * 100
+            System.Threading.Thread.Sleep(10)
+            Application.DoEvents()
+        Next
+    End Sub
+
     'MD5 Hash Algorithm
     'https://stackoverflow.com/questions/34637059/equivalent-password-hash-function-for-vb-net
 
@@ -74,11 +83,14 @@ Public Class AuthLogin
 
     'Winforms Init' 
     Private Sub UserLogin_OnLoad(ByVal qsender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        loadUsernames()
+        Me.Height = 0
+        Me.Width = 0
+        LoadUsernames()
         lblCurrentVersion.Text = MainProgram.versionNumber
         lblShopName.Text = MainProgram.programName
         pnlWindowContents.Dock = DockStyle.Fill
         pnlWindowContents.BringToFront()
+        tmrAnimation.Start()
     End Sub
 
     'Winforms Draggable Variables Init'
@@ -139,6 +151,30 @@ Public Class AuthLogin
     Private Sub WindowExit(sender As Object, e As EventArgs) Handles btnExit.Click
         conn.Close()
         Close()
+    End Sub
+
+    Private Sub tmrAnimation_Tick(sender As Object, e As EventArgs) Handles tmrAnimation.Tick
+        Me.TopMost = True
+        Me.Focus()
+        While Me.Width < 500
+            Me.Width += 10
+            Application.DoEvents()
+        End While
+        While Me.Height < 275
+            Me.Height += 10
+            Application.DoEvents()
+        End While
+        While Me.Height < 300
+            Me.Height += 2
+            Application.DoEvents()
+        End While
+        While Me.Height < 309
+            Me.Height += 1
+            Application.DoEvents()
+        End While
+        Me.Height = 310
+        tmrAnimation.Stop()
+        Me.TopMost = False
     End Sub
 
 End Class

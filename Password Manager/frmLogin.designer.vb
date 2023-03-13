@@ -22,6 +22,7 @@ Partial Class AuthLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AuthLogin))
         Me.pnlBackground = New System.Windows.Forms.Panel()
         Me.tblWindow = New System.Windows.Forms.TableLayoutPanel()
@@ -113,6 +114,7 @@ Partial Class AuthLogin
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.btnDummy = New System.Windows.Forms.Button()
         Me.pnlBlackOutline = New System.Windows.Forms.Panel()
+        Me.tmrAnimation = New System.Windows.Forms.Timer(Me.components)
         Me.pnlBackground.SuspendLayout()
         Me.tblWindow.SuspendLayout()
         Me.pnlTopBar.SuspendLayout()
@@ -1309,6 +1311,10 @@ Partial Class AuthLogin
         Me.pnlBlackOutline.Size = New System.Drawing.Size(496, 306)
         Me.pnlBlackOutline.TabIndex = 1
         '
+        'tmrAnimation
+        '
+        Me.tmrAnimation.Interval = 1
+        '
         'AuthLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1484,4 +1490,5 @@ Partial Class AuthLogin
     Friend WithEvents Panel59 As Panel
     Friend WithEvents BtnContinue As Button
     Friend WithEvents Panel49 As Panel
+    Friend WithEvents tmrAnimation As Timer
 End Class

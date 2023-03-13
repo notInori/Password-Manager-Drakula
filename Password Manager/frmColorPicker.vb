@@ -19,6 +19,8 @@ Public Class ColorPicker
     'Winforms Init' 
 
     Private Sub ColorPicker_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        'Slider Init
         Me.Location = New Point(colorpickerlocation.X - Me.Width + 31, colorpickerlocation.Y + 15) 'Set location relative to main program colorpicker control
         RgbToHls(MainProgram.accentColor.R, MainProgram.accentColor.G, MainProgram.accentColor.B) 'Converts RGB back to HSL to set sliders
 
