@@ -5,16 +5,19 @@ A simple password manager.
 
 ### Authentication Screen
 ##### Main Screen
-![image](https://user-images.githubusercontent.com/124441402/224516967-e8674705-3d27-412d-b478-5adef6e3745a.png)
+![image](https://user-images.githubusercontent.com/124441402/224582167-5a91d5fe-eaeb-401c-9285-dd5b03247fbd.png)
 ##### Notification
-![image](https://user-images.githubusercontent.com/124441402/224516969-80f86713-b518-4d1f-8b29-c964de632f9b.png)
+![image](https://user-images.githubusercontent.com/124441402/224582171-80f82980-ee90-48fa-ac7a-4494cab5e19e.png)
 
 ### Staff POS Screen
 ##### Main Menu
-![image](https://user-images.githubusercontent.com/124441402/224516972-f3b9c9b5-886c-4982-8d4a-9efefb28ac76.png)
+![image](https://user-images.githubusercontent.com/124441402/224582179-326ed551-1b0b-40e9-ac76-f1ac49c9788c.png)
 ##### Settings Screen
-![image](https://user-images.githubusercontent.com/124441402/224516976-899993f5-239b-4642-91a2-14ed64774d98.png)
+![image](https://user-images.githubusercontent.com/124441402/224582183-ca1e3305-f837-476e-96b3-f75ecb3a0a90.png)
 ##### Confirmation
-![image](https://user-images.githubusercontent.com/124441402/224516980-9d8d7dcc-6595-445b-907c-d63dc0f82f6b.png)
+![image](https://user-images.githubusercontent.com/124441402/224582190-206dd164-e329-4785-82e0-b7cf49acf9b8.png)
 ##### Notification
-![image](https://user-images.githubusercontent.com/124441402/224516982-f5376b6c-e9f0-4005-9ef9-5b87b1644cc7.png)
+![image](https://user-images.githubusercontent.com/124441402/224582193-fa99f9f3-771c-4143-a424-76d0fff9c013.png)
+##### Color Picker
+![image](https://user-images.githubusercontent.com/124441402/224582202-8362aeaf-2c4f-4d03-a3c8-16d318b727f0.png)
+
