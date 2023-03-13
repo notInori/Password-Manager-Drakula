@@ -50,7 +50,7 @@ Public Class AuthLogin
 
     '---Functions 
 
-    'Wait Function Without Application Freeze
+    'Wait Function Without Freezing Application
     'https://stackoverflow.com/questions/15857893/wait-5-seconds-before-continuing-code-vb-net
     Private Sub wait(ByVal seconds As Integer)
         For i As Integer = 0 To seconds * 100
