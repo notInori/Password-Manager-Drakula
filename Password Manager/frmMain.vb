@@ -597,6 +597,9 @@ Public Class MainProgram
 
 End Class
 
+'---Encryption Container
+'https://learn.microsoft.com/en-us/dotnet/visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings
+
 Public NotInheritable Class Simple3Des
     Private TripleDes As New TripleDESCryptoServiceProvider
     Private Function TruncateHash(
