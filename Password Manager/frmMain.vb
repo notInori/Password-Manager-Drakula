@@ -1,6 +1,4 @@
-﻿Imports System.CodeDom.Compiler
-Imports System.Data.OleDb
-Imports System.Security.Cryptography.X509Certificates
+﻿Imports System.Data.OleDb
 Imports System.Security.Cryptography
 
 Public Class MainProgram
