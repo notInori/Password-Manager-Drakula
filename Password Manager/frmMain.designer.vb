@@ -900,7 +900,6 @@ Partial Class MainProgram
         Me.pnlMainPage.Controls.Add(Me.TableLayoutPanel14)
         Me.pnlMainPage.Controls.Add(Me.Button2)
         Me.pnlMainPage.Cursor = System.Windows.Forms.Cursors.Default
-        Me.pnlMainPage.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlMainPage.Location = New System.Drawing.Point(0, 0)
         Me.pnlMainPage.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlMainPage.Name = "pnlMainPage"
@@ -2070,7 +2069,7 @@ Partial Class MainProgram
         Me.TbxAccountName.Location = New System.Drawing.Point(0, 2)
         Me.TbxAccountName.Margin = New System.Windows.Forms.Padding(0)
         Me.TbxAccountName.Name = "TbxAccountName"
-        Me.TbxAccountName.Size = New System.Drawing.Size(442, 19)
+        Me.TbxAccountName.Size = New System.Drawing.Size(419, 19)
         Me.TbxAccountName.TabIndex = 0
         '
         'Panel119
@@ -2158,7 +2157,7 @@ Partial Class MainProgram
         Me.TbxWebsite.Location = New System.Drawing.Point(0, 2)
         Me.TbxWebsite.Margin = New System.Windows.Forms.Padding(0)
         Me.TbxWebsite.Name = "TbxWebsite"
-        Me.TbxWebsite.Size = New System.Drawing.Size(442, 19)
+        Me.TbxWebsite.Size = New System.Drawing.Size(419, 19)
         Me.TbxWebsite.TabIndex = 0
         '
         'Panel363
@@ -2246,7 +2245,7 @@ Partial Class MainProgram
         Me.TbxPassword.Location = New System.Drawing.Point(0, 2)
         Me.TbxPassword.Margin = New System.Windows.Forms.Padding(0)
         Me.TbxPassword.Name = "TbxPassword"
-        Me.TbxPassword.Size = New System.Drawing.Size(442, 19)
+        Me.TbxPassword.Size = New System.Drawing.Size(419, 19)
         Me.TbxPassword.TabIndex = 0
         '
         'Panel362
@@ -2334,7 +2333,7 @@ Partial Class MainProgram
         Me.TbxUsername.Location = New System.Drawing.Point(0, 2)
         Me.TbxUsername.Margin = New System.Windows.Forms.Padding(0)
         Me.TbxUsername.Name = "TbxUsername"
-        Me.TbxUsername.Size = New System.Drawing.Size(442, 19)
+        Me.TbxUsername.Size = New System.Drawing.Size(419, 19)
         Me.TbxUsername.TabIndex = 0
         '
         'Button2
