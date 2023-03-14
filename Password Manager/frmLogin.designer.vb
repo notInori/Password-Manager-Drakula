@@ -1241,7 +1241,7 @@ Partial Class AuthLogin
         Me.CbxUsername.ItemHeight = 19
         Me.CbxUsername.Location = New System.Drawing.Point(-2, -1)
         Me.CbxUsername.Name = "CbxUsername"
-        Me.CbxUsername.Size = New System.Drawing.Size(435, 27)
+        Me.CbxUsername.Size = New System.Drawing.Size(434, 27)
         Me.CbxUsername.TabIndex = 13
         '
         'Panel3
