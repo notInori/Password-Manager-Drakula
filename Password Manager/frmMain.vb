@@ -278,48 +278,48 @@ Public Class MainProgram
 
     'Tab Changing System
     Private Sub ChangeTab(sender As Object, e As EventArgs) Handles lblTabSel1.Click, lblTabSel2.Click
+        If sender.forecolor <> accentColor Then
+            'Hides selected tab indicator
+            'For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
+            'cntrl.Visible = False
+            'Next
 
-        'Hides selected tab indicator
-        'For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
-        'cntrl.Visible = False
-        'Next
+            'Darkens all tab indicator text
+            For Each panel As Control In TblTabsContainer.Controls.OfType(Of Panel)
+                If panel.Tag <> "border" Then
+                    panel.Padding = New Padding(0, 0, 0, 1)
+                    For Each lbl As Control In panel.Controls.OfType(Of Label)
+                        If sender Is lbl Then
+                            lbl.ForeColor = accentColor
+                            lbl.BackColor = Color.FromArgb(31, 33, 45)
+                            lbl.Parent.Padding = New Padding(1, 1, 1, 0)
+                        Else
+                            lbl.ForeColor = Color.FromArgb(150, 150, 150)
+                            lbl.BackColor = Color.FromArgb(27, 28, 39)
+                        End If
+                    Next
+                End If
+            Next
 
-        'Darkens all tab indicator text
-        For Each panel As Control In TblTabsContainer.Controls.OfType(Of Panel)
-            If panel.Tag <> "border" Then
-                panel.Padding = New Padding(0, 0, 0, 1)
-                For Each lbl As Control In panel.Controls.OfType(Of Label)
-                    If sender Is lbl Then
-                        lbl.ForeColor = accentColor
-                        lbl.BackColor = Color.FromArgb(31, 33, 45)
-                        lbl.Parent.Padding = New Padding(1, 1, 1, 0)
-                    Else
-                        lbl.ForeColor = Color.FromArgb(150, 150, 150)
-                        lbl.BackColor = Color.FromArgb(27, 28, 39)
-                    End If
-                Next
+            'Hightlights selected tab with accent color
+            sender.ForeColor = accentColor
+            sender.BackColor = Color.FromArgb(31, 33, 45)
+
+            'Undocks all tab panels and hides them
+            For Each menuscreen As Control In Panel1.Controls.OfType(Of Panel)
+                menuscreen.Dock = DockStyle.None
+                menuscreen.Height = 0
+            Next
+
+            'Docks the selected tab panel and accents selected tab indicator
+            If sender Is lblTabSel1 Then
+                pnlMainPage.Dock = DockStyle.Fill
+                pnlMainPage.BringToFront()
+            ElseIf sender Is lblTabSel2 Then
+                pnlSettingsPage.Dock = DockStyle.Fill
+                pnlSettingsPage.BringToFront()
             End If
-        Next
-
-        'Hightlights selected tab with accent color
-        sender.ForeColor = accentColor
-        sender.BackColor = Color.FromArgb(31, 33, 45)
-
-        'Undocks all tab panels and hides them
-        For Each menuscreen As Control In Panel1.Controls.OfType(Of Panel)
-            menuscreen.Dock = DockStyle.None
-            menuscreen.Height = 0
-        Next
-
-        'Docks the selected tab panel and accents selected tab indicator
-        If sender Is lblTabSel1 Then
-            pnlMainPage.Dock = DockStyle.Fill
-            pnlMainPage.BringToFront()
-        ElseIf sender Is lblTabSel2 Then
-            pnlSettingsPage.Dock = DockStyle.Fill
-            pnlSettingsPage.BringToFront()
         End If
-
         btnSave.Focus()
     End Sub
 
