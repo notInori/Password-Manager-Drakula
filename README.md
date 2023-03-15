@@ -15,7 +15,7 @@ A simple password manager.
 ##### Settings Screen
 ![UI](https://user-images.githubusercontent.com/124441402/224815733-71a99199-e32f-4e3f-8ec7-549e637a2ee6.png)
 ##### Color Picker
-![UI](https://user-images.githubusercontent.com/124441402/224815745-298f6455-14fd-4f10-8816-b8dcd9c142e7.png)
+![UI](https://user-images.githubusercontent.com/124441402/225423164-627c87ba-2186-40b7-a116-05e1f705dd22.png)
 ##### Confirmation
 ![UI](https://user-images.githubusercontent.com/124441402/224815762-5ee9b117-b19b-4fb5-98fa-0e912217ed20.png)
 ##### Notification
