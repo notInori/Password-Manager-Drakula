@@ -367,7 +367,7 @@ Public Class MainProgram
     'Exit Button
     Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         conn.Close()
-        AuthLogin.Close()
+        Application.Exit()
     End Sub
 
     'Minimize Button
