@@ -78,10 +78,12 @@ Public Class MainProgram
     End Sub
 
     Protected Overrides Sub WndProc(ByRef m As System.Windows.Forms.Message)
-        MyBase.WndProc(m)
-        If m.Msg = &H84 Then
+        Const WM_SYSCOMMAND As Integer = &H112
+        Const SC_CLOSE As Integer = &HF060
+        If m.Msg = WM_SYSCOMMAND AndAlso m.WParam.ToInt32() = SC_CLOSE Then
+            Application.Exit() 'Patch bug where process not killed due to main form being hidden
+        ElseIf m.Msg = &H84 Then
             Dim mp = Me.PointToClient(Cursor.Position)
-
             If TopLeft.Contains(mp) Then
                 m.Result = CType(HTTOPLEFT, IntPtr)
             ElseIf TopRight.Contains(mp) Then
@@ -99,6 +101,8 @@ Public Class MainProgram
             ElseIf Bottom.Contains(mp) Then
                 m.Result = CType(HTBOTTOM, IntPtr)
             End If
+        Else
+            MyBase.WndProc(m)
         End If
     End Sub
 
