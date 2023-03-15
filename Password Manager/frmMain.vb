@@ -110,21 +110,18 @@ Public Class MainProgram
         If Me.WindowState <> FormWindowState.Maximized Then
             Return New Rectangle(0, 0, Me.ClientSize.Width, ImaginaryBorderSize)
         End If
-
     End Function
 
     Shadows Function Left() As Rectangle
         If Me.WindowState <> FormWindowState.Maximized Then
             Return New Rectangle(0, 0, ImaginaryBorderSize, Me.ClientSize.Height)
         End If
-
     End Function
 
     Shadows Function Bottom() As Rectangle
         If Me.WindowState <> FormWindowState.Maximized Then
             Return New Rectangle(0, Me.ClientSize.Height - ImaginaryBorderSize, Me.ClientSize.Width, ImaginaryBorderSize)
         End If
-
     End Function
 
     Shadows Function Right() As Rectangle
@@ -137,7 +134,6 @@ Public Class MainProgram
         If Me.WindowState <> FormWindowState.Maximized Then
             Return New Rectangle(0, 0, ImaginaryBorderSize, ImaginaryBorderSize)
         End If
-
     End Function
 
     Shadows Function TopRight() As Rectangle
@@ -150,17 +146,15 @@ Public Class MainProgram
         If Me.WindowState <> FormWindowState.Maximized Then
             Return New Rectangle(0, Me.ClientSize.Height - ImaginaryBorderSize, ImaginaryBorderSize, ImaginaryBorderSize)
         End If
-
     End Function
 
     Shadows Function BottomRight() As Rectangle
         If Me.WindowState <> FormWindowState.Maximized Then
             Return New Rectangle(Me.ClientSize.Width - ImaginaryBorderSize, Me.ClientSize.Height - ImaginaryBorderSize, ImaginaryBorderSize, ImaginaryBorderSize)
         End If
-
     End Function
 
-    'Functions
+    '---Functions
 
     'MD5 Hash Algorithm 
     'https://stackoverflow.com/questions/34637059/equivalent-password-hash-function-for-vb-net
