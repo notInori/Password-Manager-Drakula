@@ -324,8 +324,7 @@ Public Class MainProgram
     '---Change Colourisable Accents in UI
 
     Public Sub UpdateAccent()
-        'Groupbox Topbar Color Updating
-        Panel8.BackColor = accentColor
+        'Groupbox Topbar
         For Each menuscreen As Control In Panel1.Controls.OfType(Of Panel)
             For Each findGroupbox As Control In menuscreen.Controls.OfType(Of TableLayoutPanel)
                 If findGroupbox.Tag = "groupbox" Then 'Finds groupboxes in menu panels
@@ -344,15 +343,16 @@ Public Class MainProgram
             Next
         Next
 
-        'Update Color Picker UI Preview
+        'Color Picker Preview
         pnlColorPicker.BackColor = accentColor
-
-        'Tab Label Accent Updating
-        lblTabSel2.ForeColor = accentColor
-
+        'Main Topbar
+        Panel8.BackColor = accentColor
+        'RGB Toggle
         If TmrRGB.Enabled Then
             PnlRGBToggle.BackColor = accentColor
         End If
+        'Tab Label Accent Updating
+        lblTabSel2.ForeColor = accentColor
 
         ColorPicker.updateAccent()
         SaveConfig("UPDATE UserConfig SET Accent=" & accentColor.ToArgb() & " WHERE UID=" & UID)
