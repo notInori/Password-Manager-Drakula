@@ -895,11 +895,12 @@ Partial Class MainProgram
         'pnlMainPage
         '
         Me.pnlMainPage.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(45, Byte), Integer))
-        Me.pnlMainPage.Controls.Add(Me.TableLayoutPanel42)
         Me.pnlMainPage.Controls.Add(Me.tblMainGroupBox)
         Me.pnlMainPage.Controls.Add(Me.TableLayoutPanel14)
+        Me.pnlMainPage.Controls.Add(Me.TableLayoutPanel42)
         Me.pnlMainPage.Controls.Add(Me.Button2)
         Me.pnlMainPage.Cursor = System.Windows.Forms.Cursors.Default
+        Me.pnlMainPage.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlMainPage.Location = New System.Drawing.Point(0, 0)
         Me.pnlMainPage.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlMainPage.Name = "pnlMainPage"
@@ -1181,10 +1182,10 @@ Partial Class MainProgram
         'Panel404
         '
         Me.Panel404.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.Panel404.Controls.Add(Me.Panel230)
+        Me.Panel404.Controls.Add(Me.Panel228)
         Me.Panel404.Controls.Add(Me.Panel83)
         Me.Panel404.Controls.Add(Me.Panel207)
-        Me.Panel404.Controls.Add(Me.Panel228)
+        Me.Panel404.Controls.Add(Me.Panel230)
         Me.Panel404.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel404.Location = New System.Drawing.Point(1, 0)
         Me.Panel404.Margin = New System.Windows.Forms.Padding(5)
@@ -1974,8 +1975,8 @@ Partial Class MainProgram
         Me.Panel190.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.Panel190.Controls.Add(Me.Panel124)
         Me.Panel190.Controls.Add(Me.Panel119)
-        Me.Panel190.Controls.Add(Me.Panel363)
         Me.Panel190.Controls.Add(Me.Panel362)
+        Me.Panel190.Controls.Add(Me.Panel363)
         Me.Panel190.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel190.Location = New System.Drawing.Point(1, 0)
         Me.Panel190.Margin = New System.Windows.Forms.Padding(5)
@@ -2355,10 +2356,10 @@ Partial Class MainProgram
         'pnlSettingsPage
         '
         Me.pnlSettingsPage.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(45, Byte), Integer))
-        Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel18)
-        Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel7)
-        Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel4)
         Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel1)
+        Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel4)
+        Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel7)
+        Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel18)
         Me.pnlSettingsPage.Location = New System.Drawing.Point(136, 484)
         Me.pnlSettingsPage.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlSettingsPage.Name = "pnlSettingsPage"
@@ -2713,6 +2714,7 @@ Partial Class MainProgram
         '
         'PnlRGBToggle
         '
+        Me.PnlRGBToggle.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton
         Me.PnlRGBToggle.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.PnlRGBToggle.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PnlRGBToggle.Location = New System.Drawing.Point(1, 1)
@@ -2996,8 +2998,8 @@ Partial Class MainProgram
         'Panel78
         '
         Me.Panel78.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.Panel78.Controls.Add(Me.Panel51)
         Me.Panel78.Controls.Add(Me.Panel317)
+        Me.Panel78.Controls.Add(Me.Panel51)
         Me.Panel78.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel78.Location = New System.Drawing.Point(1, 0)
         Me.Panel78.Margin = New System.Windows.Forms.Padding(5)
@@ -3008,6 +3010,7 @@ Partial Class MainProgram
         '
         'Panel51
         '
+        Me.Panel51.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.Panel51.BackColor = System.Drawing.Color.Transparent
         Me.Panel51.Controls.Add(Me.lblCurrentUser)
         Me.Panel51.Controls.Add(Me.Label7)
@@ -3019,6 +3022,7 @@ Partial Class MainProgram
         '
         'lblCurrentUser
         '
+        Me.lblCurrentUser.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.lblCurrentUser.AutoSize = True
         Me.lblCurrentUser.BackColor = System.Drawing.Color.Transparent
         Me.lblCurrentUser.Dock = System.Windows.Forms.DockStyle.Right
@@ -3034,6 +3038,7 @@ Partial Class MainProgram
         '
         'Label7
         '
+        Me.Label7.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Dock = System.Windows.Forms.DockStyle.Left
@@ -3083,7 +3088,7 @@ Partial Class MainProgram
         Me.BtnLogOut.Margin = New System.Windows.Forms.Padding(1)
         Me.BtnLogOut.Name = "BtnLogOut"
         Me.BtnLogOut.Size = New System.Drawing.Size(305, 26)
-        Me.BtnLogOut.TabIndex = 0
+        Me.BtnLogOut.TabIndex = 4
         Me.BtnLogOut.Text = "Log Out"
         Me.BtnLogOut.UseVisualStyleBackColor = False
         '
@@ -3361,9 +3366,9 @@ Partial Class MainProgram
         'Panel50
         '
         Me.Panel50.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.Panel50.Controls.Add(Me.Panel134)
         Me.Panel50.Controls.Add(Me.Panel289)
         Me.Panel50.Controls.Add(Me.pnlGroupUsernameTextbox)
+        Me.Panel50.Controls.Add(Me.Panel134)
         Me.Panel50.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel50.Location = New System.Drawing.Point(1, 0)
         Me.Panel50.Margin = New System.Windows.Forms.Padding(5)
@@ -3375,8 +3380,8 @@ Partial Class MainProgram
         'Panel134
         '
         Me.Panel134.AutoSize = True
-        Me.Panel134.Controls.Add(Me.Label11)
         Me.Panel134.Controls.Add(Me.Panel135)
+        Me.Panel134.Controls.Add(Me.Label11)
         Me.Panel134.Location = New System.Drawing.Point(10, 5)
         Me.Panel134.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel134.Name = "Panel134"
@@ -3456,7 +3461,7 @@ Partial Class MainProgram
         Me.TbxAdminUsername.Margin = New System.Windows.Forms.Padding(0)
         Me.TbxAdminUsername.Name = "TbxAdminUsername"
         Me.TbxAdminUsername.Size = New System.Drawing.Size(304, 19)
-        Me.TbxAdminUsername.TabIndex = 0
+        Me.TbxAdminUsername.TabIndex = 1
         '
         'Panel289
         '
@@ -3495,15 +3500,15 @@ Partial Class MainProgram
         Me.btnSaveAdminPass.Margin = New System.Windows.Forms.Padding(1)
         Me.btnSaveAdminPass.Name = "btnSaveAdminPass"
         Me.btnSaveAdminPass.Size = New System.Drawing.Size(305, 26)
-        Me.btnSaveAdminPass.TabIndex = 0
+        Me.btnSaveAdminPass.TabIndex = 3
         Me.btnSaveAdminPass.Text = "Save"
         Me.btnSaveAdminPass.UseVisualStyleBackColor = False
         '
         'pnlGroupUsernameTextbox
         '
         Me.pnlGroupUsernameTextbox.AutoSize = True
-        Me.pnlGroupUsernameTextbox.Controls.Add(Me.lblUsername)
         Me.pnlGroupUsernameTextbox.Controls.Add(Me.Panel280)
+        Me.pnlGroupUsernameTextbox.Controls.Add(Me.lblUsername)
         Me.pnlGroupUsernameTextbox.Location = New System.Drawing.Point(10, 64)
         Me.pnlGroupUsernameTextbox.Margin = New System.Windows.Forms.Padding(5)
         Me.pnlGroupUsernameTextbox.Name = "pnlGroupUsernameTextbox"
@@ -3583,7 +3588,7 @@ Partial Class MainProgram
         Me.tbxAdminPassword.Margin = New System.Windows.Forms.Padding(0)
         Me.tbxAdminPassword.Name = "tbxAdminPassword"
         Me.tbxAdminPassword.Size = New System.Drawing.Size(304, 19)
-        Me.tbxAdminPassword.TabIndex = 0
+        Me.tbxAdminPassword.TabIndex = 2
         '
         'TableLayoutPanel1
         '
@@ -3931,6 +3936,7 @@ Partial Class MainProgram
         '
         'pnlColorPicker
         '
+        Me.pnlColorPicker.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.pnlColorPicker.BackColor = System.Drawing.Color.DarkGray
         Me.pnlColorPicker.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlColorPicker.Location = New System.Drawing.Point(1, 1)
