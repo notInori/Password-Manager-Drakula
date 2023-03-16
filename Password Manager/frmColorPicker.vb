@@ -41,7 +41,7 @@ Public Class ColorPicker
     'http://www.vb-helper.com/howto_rgb_to_hls.html
 
     ' Convert an HLS value into an RGB value.
-    Private Sub HlsToRgb(ByVal H As Double, ByVal L As Double,
+    Public Function HlsToRgb(ByVal H As Double, ByVal L As Double,
         ByVal S As Double)
         Dim p1 As Double
         Dim p2 As Double
@@ -61,7 +61,8 @@ Public Class ColorPicker
             g = QqhToRgb(p1, p2, H) * 255
             b = QqhToRgb(p1, p2, H - 120) * 255
         End If
-    End Sub
+        Return Color.FromArgb(r, g, b)
+    End Function
 
     Private Function QqhToRgb(ByVal q1 As Double, ByVal q2 As _
         Double, ByVal hue As Double) As Double
@@ -193,8 +194,8 @@ Public Class ColorPicker
         Label9.Text = Math.Round(lvalue * 100, 0)
 
         'Calculate RGB value from HSL and Pass To Main Program
-        HlsToRgb(hvalue, lvalue, svalue)
-        MainProgram.accentColor = Color.FromArgb(r, g, b)
+
+        MainProgram.accentColor = HlsToRgb(hvalue, lvalue, svalue)
         MainProgram.UpdateAccent()
     End Sub
 

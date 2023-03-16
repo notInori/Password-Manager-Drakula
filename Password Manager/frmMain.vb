@@ -156,67 +156,6 @@ Public Class MainProgram
 
     '---Functions
 
-    'MD5 Hash Algorithm 
-    'https://stackoverflow.com/questions/34637059/equivalent-password-hash-function-for-vb-net
-
-    Public Shared Function MD5(ByVal pass As String) As String
-        Try
-            Dim MD5p As New System.Security.Cryptography.MD5CryptoServiceProvider
-            Dim baytlar As Byte() = System.Text.ASCIIEncoding.ASCII.GetBytes(pass)
-            Dim hash As Byte() = MD5p.ComputeHash(baytlar)
-            Dim kapasite As Integer = (hash.Length * 2 + (hash.Length / 8))
-            Dim sb As System.Text.StringBuilder = New System.Text.StringBuilder(kapasite)
-            Dim I As Integer
-            For I = 0 To hash.Length - 1
-                sb.Append(BitConverter.ToString(hash, I, 1))
-            Next I
-            Return sb.ToString().TrimEnd(New Char() {" "c})
-        Catch ex As Exception
-            Return "0"
-        End Try
-    End Function
-
-    ' Convert an HLS value into an RGB value.
-    Private Sub HlsToRgb(ByVal H As Double, ByVal L As Double,
-        ByVal S As Double)
-        Dim p1 As Double
-        Dim p2 As Double
-
-        If L <= 0.5 Then
-            p2 = L * (1 + S)
-        Else
-            p2 = L + S - L * S
-        End If
-        p1 = 2 * L - p2
-        If S = 0 Then
-            r = L
-            g = L
-            b = L
-        Else
-            r = QqhToRgb(p1, p2, H + 120) * 255
-            g = QqhToRgb(p1, p2, H) * 255
-            b = QqhToRgb(p1, p2, H - 120) * 255
-        End If
-    End Sub
-
-    Private Function QqhToRgb(ByVal q1 As Double, ByVal q2 As _
-        Double, ByVal hue As Double) As Double
-        If hue > 360 Then
-            hue -= 360
-        ElseIf hue < 0 Then
-            hue += 360
-        End If
-        If hue < 60 Then
-            QqhToRgb = q1 + (q2 - q1) * hue / 60
-        ElseIf hue < 180 Then
-            QqhToRgb = q2
-        ElseIf hue < 240 Then
-            QqhToRgb = q1 + (q2 - q1) * (240 - hue) / 60
-        Else
-            QqhToRgb = q1
-        End If
-    End Function
-
     'Init WinForm
     Private Sub POSSystem_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -429,8 +368,8 @@ Public Class MainProgram
         Else
             data += 1
         End If
-        HlsToRgb(data, 0.5, 0.5)
-        Me.BackColor = Color.FromArgb(r, g, b)
+
+        Me.BackColor = ColorPicker.HlsToRgb(data, 0.5, 0.5)
 
     End Sub
 
@@ -548,7 +487,6 @@ Public Class MainProgram
 
             'Decrypt all passwords
             While myReader2.Read()
-                Console.WriteLine(myReader2("UID"))
                 Dim plainText As String = wrapper.DecryptData(AuthLogin.SqlReadVAlue("SELECT [Password] FROM [Passwords] WHERE UID=" & myReader2("UID")))
                 SaveConfig("UPDATE Passwords SET [PASSWORD]='" & plainText & "' WHERE UID=" & myReader2("UID"))
             End While
@@ -565,7 +503,7 @@ Public Class MainProgram
 
             'Rehash and Save Password
             localPassword = tbxAdminPassword.Text
-            Dim hashedpassword As String = MD5(localPassword)
+            Dim hashedpassword As String = AuthLogin.MD5(localPassword)
             SaveConfig("UPDATE UserAuth SET PIN='" & hashedpassword & "' WHERE UID=1")
 
         End If
