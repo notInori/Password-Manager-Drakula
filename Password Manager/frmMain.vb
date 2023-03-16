@@ -237,7 +237,8 @@ Public Class MainProgram
                 pnlSettingsPage.BringToFront()
             End If
         End If
-        btnSave.Focus()
+        btnSave.Focus() 'Remove control focus
+
     End Sub
 
     '---Change Colourisable Accents in UI
@@ -466,7 +467,6 @@ Public Class MainProgram
         If TbxAdminUsername.Text <> "" Then
             SaveConfig("UPDATE UserAuth SET Username='" & TbxAdminUsername.Text & "' WHERE UID=1")
         End If
-
         Dim cmd2 As New OleDbCommand("SELECT UID FROM [PASSWORDS]", AuthLogin.conn)
         Dim myReader2 As OleDbDataReader = cmd2.ExecuteReader
 
@@ -498,6 +498,8 @@ Public Class MainProgram
             SaveConfig("UPDATE UserAuth SET PIN='" & hashedpassword & "' WHERE UID=1")
 
         End If
+
+        'Notify User Of Changes Made
         If TbxAdminUsername.Text <> "" And tbxAdminPassword.Text <> "" Then
             Notifcation("New admin credentials have been updated successfully!")
         ElseIf TbxAdminUsername.Text <> "" Then
@@ -514,7 +516,7 @@ Public Class MainProgram
     '---Watermark
 
     'Timer Tick Update
-    Private Sub TmrMain_Tick(sender As Object, e As EventArgs) Handles tmrMain.Tick
+    Private Sub DebugInfoUpdateOnTick(sender As Object, e As EventArgs) Handles tmrMain.Tick
         lblTitle.Text = programName & " | " & versionNumber & " | " & currentUser & " | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
     End Sub
 
