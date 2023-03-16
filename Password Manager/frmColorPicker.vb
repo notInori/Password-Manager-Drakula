@@ -126,7 +126,7 @@
             ElseIf G = max Then
                 hvalue = 2 + r_dist - b_dist
             Else
-                hvalue = 4 + g_dist - r_dist
+                hvalue = 4 + g_dist - r_dist 'This can generate wrong values sometimes
             End If
 
             hvalue = hvalue * 60
