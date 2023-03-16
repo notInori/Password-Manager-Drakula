@@ -200,10 +200,6 @@ Public Class MainProgram
     'Tab Changing System
     Private Sub ChangeTab(sender As Object, e As EventArgs) Handles lblTabSel1.Click, lblTabSel2.Click
         If sender.forecolor <> accentColor Then
-            'Hides selected tab indicator
-            'For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
-            'cntrl.Visible = False
-            'Next
 
             'Darkens all tab indicator text
             For Each panel As Control In TblTabsContainer.Controls.OfType(Of Panel)
