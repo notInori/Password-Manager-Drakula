@@ -10,7 +10,7 @@
     Dim b As Integer = 255
 
     'HSL Color Space
-    Dim hvalue As Integer = 0
+    Dim hvalue As Double = 0
     Dim svalue As Double = 0.5
     Dim lvalue As Double = 0.5
 
@@ -26,7 +26,7 @@
         RgbToHls(MainProgram.accentColor.R, MainProgram.accentColor.G, MainProgram.accentColor.B) 'Converts RGB back to HSL to set sliders
 
         'Update Labels of Sliders
-        Label7.Text = hvalue
+        Label7.Text = Math.Round(hvalue, 0)
         Label3.Text = Math.Round(svalue * 100, 0)
         Label9.Text = Math.Round(lvalue * 100, 0)
 
@@ -86,15 +86,15 @@
     ' Convert an RGB value into an HLS value.
     Private Sub RgbToHls(ByVal R As Double, ByVal G As Double,
     ByVal B As Double)
-        R /= 255
-        G /= 255
-        B /= 255
         Dim max As Double
         Dim min As Double
         Dim diff As Double
         Dim r_dist As Double
         Dim g_dist As Double
         Dim b_dist As Double
+        R = R / 255
+        G = G / 255
+        B = B / 255
 
         ' Get the maximum and minimum RGB components.
         max = R
@@ -108,7 +108,7 @@
         diff = max - min
         lvalue = (max + min) / 2
         If Math.Abs(diff) < 0.00001 Then
-            svalue = 0.0000000001
+            svalue = 0
             hvalue = 0   ' H is really undefined.
         Else
             If lvalue <= 0.5 Then
@@ -129,8 +129,8 @@
                 hvalue = 4 + g_dist - r_dist
             End If
 
-            hvalue *= 60
-            If hvalue < 0 Then hvalue += 360
+            hvalue = hvalue * 60
+            If hvalue < 0 Then hvalue = hvalue + 360
         End If
     End Sub
 
@@ -190,12 +190,11 @@
         End If
 
         'Update Slide Labels
-        Label7.Text = hvalue
+        Label7.Text = Math.Round(hvalue, 0)
         Label3.Text = Math.Round(svalue * 100, 0)
         Label9.Text = Math.Round(lvalue * 100, 0)
 
         'Calculate RGB value from HSL and Pass To Main Program
-
         MainProgram.accentColor = HlsToRgb(hvalue, lvalue, svalue)
         MainProgram.UpdateAccent()
     End Sub

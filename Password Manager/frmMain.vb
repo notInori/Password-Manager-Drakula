@@ -420,7 +420,7 @@ Public Class MainProgram
             Notifcation("Entry " & TempAccountName & " successfully deleted!")
         End If
         LoadAccounts()
-        lbxUsernames.SelectedItem = AuthLogin.SqlReadVAlue("SELECT [Account Name] FROM [Passwords] WHERE UID=" & selectedUID)
+        lbxUsernames.SelectedItem = AuthLogin.SqlReadValue("SELECT [Account Name] FROM [Passwords] WHERE UID=" & selectedUID)
     End Sub
 
     'Settings Tab 
@@ -449,7 +449,7 @@ Public Class MainProgram
 
             'Decrypt all passwords
             While myReader2.Read()
-                Dim plainText As String = wrapper.DecryptData(AuthLogin.SqlReadVAlue("SELECT [Password] FROM [Passwords] WHERE UID=" & myReader2("UID")))
+                Dim plainText As String = wrapper.DecryptData(AuthLogin.SqlReadValue("SELECT [Password] FROM [Passwords] WHERE UID=" & myReader2("UID")))
                 SaveConfig("UPDATE Passwords SET [PASSWORD]='" & plainText & "' WHERE UID=" & myReader2("UID"))
             End While
 
@@ -459,7 +459,7 @@ Public Class MainProgram
 
             'Re-encrypt all passwords
             While myReader2.Read()
-                Dim NewPassword As String = newWrapper.EncryptData(AuthLogin.SqlReadVAlue("SELECT [Password] FROM [Passwords] WHERE UID=" & myReader2("UID")))
+                Dim NewPassword As String = newWrapper.EncryptData(AuthLogin.SqlReadValue("SELECT [Password] FROM [Passwords] WHERE UID=" & myReader2("UID")))
                 SaveConfig("UPDATE Passwords SET [PASSWORD]='" & NewPassword & "' WHERE UID=" & myReader2("UID"))
             End While
 
