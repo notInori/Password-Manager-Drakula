@@ -344,7 +344,7 @@ Public Class MainProgram
                 Dim plainText As String = wrapper.DecryptData(hashedpassword)
                 TbxPassword.Text = plainText
             Catch ex As System.Security.Cryptography.CryptographicException
-                MsgBox("The data could not be decrypted with the password.")
+                Notifcation("Error: Passwords could not be decrypted.")
             End Try
         End If
 
