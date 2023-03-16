@@ -1,6 +1,4 @@
-﻿
-
-Public Class ColorPicker
+﻿Public Class ColorPicker
 
     '---Init'
 
@@ -210,7 +208,7 @@ Public Class ColorPicker
 
     'Auto Hide Colour Picker When Focus Lost
     Private Sub Form1_LostFocus(sender As Object, e As System.EventArgs) Handles Me.LostFocus
-        wait(0.1)
+        Wait(0.1)
         Me.Close()
     End Sub
 
