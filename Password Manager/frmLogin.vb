@@ -9,7 +9,7 @@ Public Class AuthLogin
     'Database Connection Variables
 
     'Database Path Location
-    Private localUserDataPath As String = ".\UserData.accdb"
+    Private ReadOnly localUserDataPath As String = ".\UserData.accdb"
     'Create Global Connection String For User Data
     Public conn As New OleDbConnection("Provider=Microsoft.Ace.Oledb.12.0;Data Source=" & localUserDataPath)
     'Init Reader

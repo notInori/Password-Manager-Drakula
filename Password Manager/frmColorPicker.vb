@@ -1,7 +1,4 @@
-﻿Imports System.Data.OleDb
-Imports System.Runtime.Remoting
-Imports Microsoft.VisualBasic.Devices
-
+﻿
 Public Class ColorPicker
 
     '---Init'
@@ -135,7 +132,7 @@ Public Class ColorPicker
 
     'Wait Function Without Application Freeze
     'https://stackoverflow.com/questions/15857893/wait-5-seconds-before-continuing-code-vb-net
-    Private Sub wait(ByVal seconds As Integer)
+    Private Sub Wait(ByVal seconds As Integer)
         For i As Integer = 0 To seconds * 100
             System.Threading.Thread.Sleep(10)
             Application.DoEvents()
@@ -199,7 +196,7 @@ Public Class ColorPicker
         MainProgram.UpdateAccent()
     End Sub
 
-    Public Sub updateAccent()
+    Public Sub UpdateAccent()
         Panel1.BackColor = MainProgram.accentColor
         Panel60.BackColor = MainProgram.accentColor
         Panel66.BackColor = MainProgram.accentColor
