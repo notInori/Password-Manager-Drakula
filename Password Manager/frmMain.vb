@@ -354,31 +354,6 @@ Public Class MainProgram
 
     End Sub
 
-    Private Sub TmrRGB_Tick(sender As Object, e As EventArgs) Handles TmrRGB.Tick
-        If data > 360 Then
-            data = 0
-        Else
-            data += 1
-        End If
-
-        Me.BackColor = ColorPicker.HlsToRgb(data, 0.5, 0.5)
-
-    End Sub
-
-    Private Sub PnlRGBToggle_Click(sender As Object, e As EventArgs) Handles PnlRGBToggle.Click
-        If TmrRGB.Enabled = False Then
-            TmrRGB.Enabled = True
-            PnlRGBToggle.BackColor = accentColor
-            SaveConfig("UPDATE UserConfig SET RGB='True'" & " WHERE UID=" & UID)
-        Else
-            TmrRGB.Enabled = False
-            PnlRGBToggle.BackColor = Color.FromArgb(27, 28, 39)
-            Me.BackColor = Color.FromArgb(98, 113, 165)
-            data = 0
-            SaveConfig("UPDATE UserConfig SET RGB='False'" & " WHERE UID=" & UID)
-        End If
-    End Sub
-
     'Save Changes to User's Username and Password
     Private Sub UpdateUserCredentials(sender As Object, e As EventArgs) Handles btnSave.Click
         If TbxAccountName.Text <> "" And lbxUsernames.SelectedItem <> Nothing And (AuthLogin.SqlReadValue("SELECT [Account Name] FROM Passwords WHERE UID=" & selectedUID) = TbxAccountName.Text.ToString Or AuthLogin.SqlReadValue("SELECT UID FROM Passwords WHERE [Account Name]='" & TbxAccountName.Text.ToString & "'") = Nothing) Then
@@ -513,13 +488,41 @@ Public Class MainProgram
         tbxAdminPassword.Clear()
     End Sub
 
-    '---Watermark
+    '---DebugInfo
 
     'Timer Tick Update
     Private Sub DebugInfoUpdateOnTick(sender As Object, e As EventArgs) Handles tmrMain.Tick
         lblTitle.Text = programName & " | " & versionNumber & " | " & currentUser & " | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
     End Sub
 
+
+    '---RGB Window 
+
+    'RGB Window Border Effect Update On Tick
+    Private Sub TmrRGB_Tick(sender As Object, e As EventArgs) Handles TmrRGB.Tick
+        If data > 360 Then
+            data = 0
+        Else
+            data += 1
+        End If
+        Me.BackColor = ColorPicker.HlsToRgb(data, 0.5, 0.5)
+
+    End Sub
+
+    'RGB Toggle Event
+    Private Sub PnlRGBToggle_Click(sender As Object, e As EventArgs) Handles PnlRGBToggle.Click
+        If TmrRGB.Enabled = False Then
+            TmrRGB.Enabled = True
+            PnlRGBToggle.BackColor = accentColor
+            SaveConfig("UPDATE UserConfig SET RGB='True'" & " WHERE UID=" & UID)
+        Else
+            TmrRGB.Enabled = False
+            PnlRGBToggle.BackColor = Color.FromArgb(27, 28, 39)
+            Me.BackColor = Color.FromArgb(98, 113, 165)
+            data = 0
+            SaveConfig("UPDATE UserConfig SET RGB='False'" & " WHERE UID=" & UID)
+        End If
+    End Sub
 End Class
 
 '---Encryption Container
