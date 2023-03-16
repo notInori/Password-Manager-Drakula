@@ -345,6 +345,8 @@ Public Class MainProgram
                 TbxPassword.Text = plainText
             Catch ex As System.Security.Cryptography.CryptographicException
                 Notifcation("Error: Passwords could not be decrypted.")
+            Catch ex As FormatException
+                Notifcation("Error: Password entry is corrupt.")
             End Try
         End If
 
