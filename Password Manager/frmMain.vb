@@ -324,7 +324,6 @@ Public Class MainProgram
 
     'UI Accent Colour Picker
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles pnlColorPicker.Click
-        ColorPicker.colorpickerlocation = pnlColorPicker.PointToScreen(Point.Empty)
         If Not ColorPicker.IsHandleCreated Then
             ColorPicker.Show()
         End If

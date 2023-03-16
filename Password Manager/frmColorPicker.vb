@@ -3,22 +3,27 @@
 Public Class ColorPicker
 
     '---Init'
+
+    'Init Color Variables
+
+    'RGB Color Space
     Dim r As Integer = 255
     Dim g As Integer = 255
     Dim b As Integer = 255
-    ReadOnly slidervalue As Integer
-    Dim currentSlider As Object
+
+    'HSL Color Space
     Dim hvalue As Integer = 0
     Dim svalue As Double = 0.5
     Dim lvalue As Double = 0.5
 
-    Public Shared colorpickerlocation As Point
+    'Init Slider State Variables
+    Dim currentSlider As Object 'Current Slider Being Dragged
 
     'Winforms Init' 
-
     Private Sub ColorPicker_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'Slider Init
+        Dim colorpickerlocation As Point = MainProgram.pnlColorPicker.PointToScreen(Point.Empty)
         Me.Location = New Point(colorpickerlocation.X - Me.Width + 31, colorpickerlocation.Y + 15) 'Set location relative to main program colorpicker control
         RgbToHls(MainProgram.accentColor.R, MainProgram.accentColor.G, MainProgram.accentColor.B) 'Converts RGB back to HSL to set sliders
 
