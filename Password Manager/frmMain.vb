@@ -6,11 +6,11 @@ Public Class MainProgram
     '---Init'
 
     'Client Info Config
-    Public Shared ReadOnly programName As String = "Password Manager"
-    Public Shared ReadOnly versionNumber As String = "[Dev Build]"
+    Public ReadOnly programName As String = "Password Manager"
+    Public ReadOnly versionNumber As String = "[Dev Build]"
 
     'Client Info Variables
-    Public Shared currentUser As String = "[USER]"
+    Public currentUser As String = "[USER]"
     Dim UID As Integer
 
     'Variables Init'
@@ -27,7 +27,7 @@ Public Class MainProgram
 
     'Database Variables Init
     Dim myReader As OleDbDataReader
-    ReadOnly conn As New OleDbConnection(AuthLogin.UserDataConnectionString)
+    Dim conn As OleDbConnection = AuthLogin.conn
 
     '---Winforms Init' 
 
@@ -159,7 +159,7 @@ Public Class MainProgram
     'MD5 Hash Algorithm 
     'https://stackoverflow.com/questions/34637059/equivalent-password-hash-function-for-vb-net
 
-    Public Function MD5(ByVal pass As String) As String
+    Public Shared Function MD5(ByVal pass As String) As String
         Try
             Dim MD5p As New System.Security.Cryptography.MD5CryptoServiceProvider
             Dim baytlar As Byte() = System.Text.ASCIIEncoding.ASCII.GetBytes(pass)
@@ -219,8 +219,7 @@ Public Class MainProgram
 
     'Init WinForm
     Private Sub POSSystem_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'Connect Database
-        conn.Open()
+
         'Init Tab System
         For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel)
             cntrl.Width = 0
@@ -234,16 +233,6 @@ Public Class MainProgram
 
     '---Database Functions
 
-    'Read Value from Database
-    Public Function SqlReadVAlue(command As String)
-        Dim cmd As New OleDbCommand(command, conn)
-        myReader = cmd.ExecuteReader
-        While myReader.Read()
-            Return myReader.GetValue(0)
-        End While
-        Return Nothing
-    End Function
-
     'Load Passwords
     Private Sub LoadPasswords()
         Dim cmd As New OleDbCommand("SELECT [Account Name] FROM Passwords", conn)
@@ -256,9 +245,9 @@ Public Class MainProgram
 
     'Load User Configs
     Private Sub LoadUserConfig()
-        UID = CInt(SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & currentUser & "')"))
-        accentColor = Color.FromArgb(SqlReadVAlue("SELECT Accent FROM UserConfig WHERE (UID=" & UID & ")"))
-        If SqlReadVAlue("SELECT RGB FROM UserConfig WHERE (UID=" & UID & ")").ToString = "True" Then
+        UID = CInt(AuthLogin.SqlReadVAlue("SELECT UID FROM UserAuth WHERE (Username='" & currentUser & "')"))
+        accentColor = Color.FromArgb(AuthLogin.SqlReadVAlue("SELECT Accent FROM UserConfig WHERE (UID=" & UID & ")"))
+        If AuthLogin.SqlReadVAlue("SELECT RGB FROM UserConfig WHERE (UID=" & UID & ")").ToString = "True" Then
             TmrRGB.Enabled = True
         Else
             TmrRGB.Enabled = False
@@ -373,7 +362,6 @@ Public Class MainProgram
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-
     'Maximize Button
     Private Sub BtnMaximize_Click(sender As Object, e As EventArgs) Handles BtnMaximize.Click
         If Me.WindowState = FormWindowState.Maximized Then
@@ -419,12 +407,12 @@ Public Class MainProgram
     'Load selected User's Data
     Private Sub LoadSelectedUserInfo(sender As Object, e As EventArgs) Handles lbxUsernames.SelectedValueChanged
         If lbxUsernames.SelectedItem <> "" Then
-            selectedUID = SqlReadVAlue("SELECT UID FROM Passwords WHERE ([Account Name]='" & lbxUsernames.SelectedItem.ToString & "')")
+            selectedUID = AuthLogin.SqlReadVAlue("SELECT UID FROM Passwords WHERE ([Account Name]='" & lbxUsernames.SelectedItem.ToString & "')")
             TbxAccountName.Text = lbxUsernames.SelectedItem.ToString
-            TbxWebsite.Text = SqlReadVAlue("SELECT Website FROM Passwords WHERE UID=" & selectedUID)
-            TbxUsername.Text = SqlReadVAlue("SELECT Username FROM Passwords WHERE UID=" & selectedUID)
+            TbxWebsite.Text = AuthLogin.SqlReadVAlue("SELECT Website FROM Passwords WHERE UID=" & selectedUID)
+            TbxUsername.Text = AuthLogin.SqlReadVAlue("SELECT Username FROM Passwords WHERE UID=" & selectedUID)
             Dim wrapper As New Simple3Des(localPassword)
-            Dim hashedpassword As String = SqlReadVAlue("SELECT [Password] FROM Passwords WHERE UID=" & selectedUID)
+            Dim hashedpassword As String = AuthLogin.SqlReadVAlue("SELECT [Password] FROM Passwords WHERE UID=" & selectedUID)
             Try
                 Dim plainText As String = wrapper.DecryptData(hashedpassword)
                 TbxPassword.Text = plainText
@@ -462,7 +450,7 @@ Public Class MainProgram
 
     'Save Changes to User's Username and Password
     Private Sub UpdateUserCredentials(sender As Object, e As EventArgs) Handles btnSave.Click
-        If TbxAccountName.Text <> "" And lbxUsernames.SelectedItem <> Nothing And (SqlReadVAlue("SELECT [Account Name] FROM Passwords WHERE UID=" & selectedUID) = TbxAccountName.Text.ToString Or SqlReadVAlue("SELECT UID FROM Passwords WHERE [Account Name]='" & TbxAccountName.Text.ToString & "'") = Nothing) Then
+        If TbxAccountName.Text <> "" And lbxUsernames.SelectedItem <> Nothing And (AuthLogin.SqlReadVAlue("SELECT [Account Name] FROM Passwords WHERE UID=" & selectedUID) = TbxAccountName.Text.ToString Or AuthLogin.SqlReadVAlue("SELECT UID FROM Passwords WHERE [Account Name]='" & TbxAccountName.Text.ToString & "'") = Nothing) Then
             Dim wrapper As New Simple3Des(localPassword)
             Dim cipherText As String = wrapper.EncryptData(TbxPassword.Text.ToString)
             SaveConfig("UPDATE Passwords SET [Account Name]='" & TbxAccountName.Text & "' WHERE UID=" & selectedUID)
@@ -473,13 +461,13 @@ Public Class MainProgram
         ElseIf TbxAccountName.Text = "" Then
             Notifcation("Error: An account name is required!")
             LoadSelectedUserInfo(sender, e)
-        ElseIf SqlReadVAlue("SELECT UID FROM Passwords WHERE [Account Name]='" & TbxAccountName.Text.ToString & "'") <> Nothing Then
+        ElseIf AuthLogin.SqlReadVAlue("SELECT UID FROM Passwords WHERE [Account Name]='" & TbxAccountName.Text.ToString & "'") <> Nothing Then
             Notifcation("Error: This account name is already in use!")
         Else
             Notifcation("Error: An entry must be selected.")
         End If
         LoadPasswords()
-        lbxUsernames.SelectedItem = SqlReadVAlue("SELECT [Account Name] FROM [Passwords] WHERE UID=" & selectedUID)
+        lbxUsernames.SelectedItem = AuthLogin.SqlReadVAlue("SELECT [Account Name] FROM [Passwords] WHERE UID=" & selectedUID)
     End Sub
 
     'Clears User Data Fields
@@ -494,14 +482,14 @@ Public Class MainProgram
 
     'Adds New User To Database
     Private Sub AddNewUser(sender As Object, e As EventArgs) Handles BtnAddUser.Click
-        If SqlReadVAlue("SELECT UID FROM Passwords WHERE ([Account Name]='" & TbxAccountName.Text.ToString & "')") = Nothing And TbxAccountName.Text.ToString <> Nothing Then
+        If AuthLogin.SqlReadVAlue("SELECT UID FROM Passwords WHERE ([Account Name]='" & TbxAccountName.Text.ToString & "')") = Nothing And TbxAccountName.Text.ToString <> Nothing Then
             Dim wrapper As New Simple3Des(localPassword)
             Dim cipherText As String = wrapper.EncryptData(TbxPassword.Text.ToString)
             SaveConfig("INSERT INTO Passwords ([Account Name],Website,Username,[Password]) VALUES ('" & TbxAccountName.Text.ToString & "','" & TbxWebsite.Text.ToString & "','" & TbxUsername.Text.ToString & "','" & cipherText & "')")
             Notifcation("New entry " & TbxAccountName.Text.ToString & " has been successfully added!")
             LoadPasswords()
-            lbxUsernames.SelectedItem = SqlReadVAlue("SELECT [Account Name] FROM [Passwords] WHERE [Account Name]='" & TbxAccountName.Text.ToString & "'")
-        ElseIf SqlReadVAlue("SELECT UID FROM Passwords WHERE [Account Name]='" & TbxAccountName.Text.ToString & "'") = Nothing Then
+            lbxUsernames.SelectedItem = AuthLogin.SqlReadVAlue("SELECT [Account Name] FROM [Passwords] WHERE [Account Name]='" & TbxAccountName.Text.ToString & "'")
+        ElseIf AuthLogin.SqlReadVAlue("SELECT UID FROM Passwords WHERE [Account Name]='" & TbxAccountName.Text.ToString & "'") = Nothing Then
             Notifcation("Error: Account name is required!")
         Else
             Notifcation("Error: Entry " & TbxAccountName.Text.ToString & " already exists.")
@@ -523,14 +511,14 @@ Public Class MainProgram
             pnlConfirmation.Height = 0
         End If
         If sender Is BtnContinueAction Then
-            Dim TempAccountName As String = SqlReadVAlue("SELECT [Account Name] FROM Passwords WHERE UID=" & selectedUID)
+            Dim TempAccountName As String = AuthLogin.SqlReadVAlue("SELECT [Account Name] FROM Passwords WHERE UID=" & selectedUID)
             SaveConfig("DELETE FROM Passwords WHERE UID=" & selectedUID)
             selectedUID = Nothing
             ClearUserDataFields(sender, e)
             Notifcation("Entry " & TempAccountName & " successfully deleted!")
         End If
         LoadPasswords()
-        lbxUsernames.SelectedItem = SqlReadVAlue("SELECT [Account Name] FROM [Passwords] WHERE UID=" & selectedUID)
+        lbxUsernames.SelectedItem = AuthLogin.SqlReadVAlue("SELECT [Account Name] FROM [Passwords] WHERE UID=" & selectedUID)
     End Sub
 
     'Settings Tab 
@@ -561,7 +549,7 @@ Public Class MainProgram
             'Decrypt all passwords
             While myReader2.Read()
                 Console.WriteLine(myReader2("UID"))
-                Dim plainText As String = wrapper.DecryptData(SqlReadVAlue("SELECT [Password] FROM [Passwords] WHERE UID=" & myReader2("UID")))
+                Dim plainText As String = wrapper.DecryptData(AuthLogin.SqlReadVAlue("SELECT [Password] FROM [Passwords] WHERE UID=" & myReader2("UID")))
                 SaveConfig("UPDATE Passwords SET [PASSWORD]='" & plainText & "' WHERE UID=" & myReader2("UID"))
             End While
 
@@ -571,7 +559,7 @@ Public Class MainProgram
 
             'Re-encrypt all passwords
             While myReader2.Read()
-                Dim NewPassword As String = newWrapper.EncryptData(SqlReadVAlue("SELECT [Password] FROM [Passwords] WHERE UID=" & myReader2("UID")))
+                Dim NewPassword As String = newWrapper.EncryptData(AuthLogin.SqlReadVAlue("SELECT [Password] FROM [Passwords] WHERE UID=" & myReader2("UID")))
                 SaveConfig("UPDATE Passwords SET [PASSWORD]='" & NewPassword & "' WHERE UID=" & myReader2("UID"))
             End While
 

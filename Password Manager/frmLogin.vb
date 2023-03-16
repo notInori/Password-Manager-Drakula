@@ -7,12 +7,13 @@ Public Class AuthLogin
     '---Setting Database Path
 
     'Database Connection Variables
-    ReadOnly conn As New OleDbConnection(UserDataConnectionString)
-    Dim myReader As OleDbDataReader
+
     'Database Path Location
-    Public Shared localUserDataPath As String = ".\UserData.accdb"
+    Private localUserDataPath As String = ".\UserData.accdb"
     'Create Global Connection String For User Data
-    Public Shared UserDataConnectionString As String = "Provider=Microsoft.Ace.Oledb.12.0;Data Source=" & AuthLogin.localUserDataPath
+    Public conn As New OleDbConnection("Provider=Microsoft.Ace.Oledb.12.0;Data Source=" & localUserDataPath)
+    'Init Reader
+    Dim myReader As OleDbDataReader
 
     '---Database Functions
 
@@ -48,37 +49,6 @@ Public Class AuthLogin
         End If
     End Function
 
-    '---Functions 
-
-    'Wait Function Without Freezing Application
-    'https://stackoverflow.com/questions/15857893/wait-5-seconds-before-continuing-code-vb-net
-    Private Sub wait(ByVal seconds As Integer)
-        For i As Integer = 0 To seconds * 100
-            System.Threading.Thread.Sleep(10)
-            Application.DoEvents()
-        Next
-    End Sub
-
-    'MD5 Hash Algorithm
-    'https://stackoverflow.com/questions/34637059/equivalent-password-hash-function-for-vb-net
-
-    Public Function MD5(ByVal pass As String) As String
-        Try
-            Dim MD5p As New System.Security.Cryptography.MD5CryptoServiceProvider
-            Dim baytlar As Byte() = System.Text.ASCIIEncoding.ASCII.GetBytes(pass)
-            Dim hash As Byte() = MD5p.ComputeHash(baytlar)
-            Dim kapasite As Integer = (hash.Length * 2 + (hash.Length / 8))
-            Dim sb As System.Text.StringBuilder = New System.Text.StringBuilder(kapasite)
-            Dim I As Integer
-            For I = 0 To hash.Length - 1
-                sb.Append(BitConverter.ToString(hash, I, 1))
-            Next I
-            Return sb.ToString().TrimEnd(New Char() {" "c})
-        Catch ex As Exception
-            Return "0"
-        End Try
-    End Function
-
     '---Winforms Dragging
 
     'Winforms Init' 
@@ -90,6 +60,8 @@ Public Class AuthLogin
         lblShopName.Text = MainProgram.programName
         pnlWindowContents.Dock = DockStyle.Fill
         pnlWindowContents.BringToFront()
+        Me.TopMost = True
+        Me.Focus()
         tmrAnimation.Start()
     End Sub
 
@@ -123,20 +95,18 @@ Public Class AuthLogin
 
     'User Auth Button
     Private Sub AuthUser(sender As Object, e As EventArgs) Handles btnLogin.Click
-        If AuthUser(CbxUsername.Text, MD5(TbxPassword.Text)) Then
+        If AuthUser(CbxUsername.Text, MainProgram.MD5(TbxPassword.Text)) Then
             MainProgram.currentUser = CbxUsername.Text
+            MainProgram.localPassword = TbxPassword.Text
             MainProgram.Show()
+            CbxUsername.ResetText()
+            TbxPassword.Clear()
+            Me.Hide()
         Else
             pnlNotification.Dock = DockStyle.Fill
             pnlNotification.BringToFront()
         End If
-        If AuthUser(CbxUsername.Text, MD5(TbxPassword.Text)) Then
-            MainProgram.localPassword = TbxPassword.Text
-            CbxUsername.Text = ""
-            TbxPassword.Text = ""
-            Me.Hide()
-            conn.Close()
-        End If
+
     End Sub
 
     'Dismiss Notification Button
@@ -157,8 +127,6 @@ Public Class AuthLogin
 
     'Window Opening Animation
     Private Sub tmrAnimation_Tick(sender As Object, e As EventArgs) Handles tmrAnimation.Tick
-        Me.TopMost = True
-        Me.Focus()
         While Me.Width < 500
             Me.Width += 10
             Application.DoEvents()
