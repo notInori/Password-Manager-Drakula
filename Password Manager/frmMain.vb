@@ -19,9 +19,6 @@ Public Class MainProgram
     Public localPassword As String
 
     'Variables Init'
-    Dim r As Integer
-    Dim b As Integer
-    Dim g As Integer
     Dim data As Integer
 
     'Database Variables Init
