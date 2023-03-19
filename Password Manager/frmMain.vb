@@ -26,30 +26,17 @@ Public Class MainProgram
 
     '---Winforms Init' 
 
-    'Winforms Variable Init'
-    Private Property MoveForm As Boolean
-    Private Property MoveForm_MousePositiion As Point
-
     'Winforms Dragging Events
-    Private Sub WindowDragging_MouseDown(sender As Object, e As MouseEventArgs) Handles pnlTitleIcons.MouseDown, lblTitle.MouseDown
-        If e.Button = MouseButtons.Left And Me.WindowState <> FormWindowState.Maximized Then
-            MoveForm = True
-            Me.Cursor = Cursors.Default
-            MoveForm_MousePositiion = e.Location
-        End If
+    Private Sub WindowDragging_MouseDown(sender As Object, e As MouseEventArgs) Handles lblTitle.MouseDown
+        WindowMouseHandling.HandleMouseDown(Me, e)
     End Sub
 
-    Private Sub WindowDragging_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlTitleIcons.MouseUp, lblTitle.MouseUp
-        If e.Button = MouseButtons.Left Then
-            MoveForm = False
-            Me.Cursor = Cursors.Default
-        End If
+    Private Sub WindowDragging_MouseUp(sender As Object, e As MouseEventArgs) Handles lblTitle.MouseUp
+        WindowMouseHandling.HandleMouseUp(Me, e)
     End Sub
 
-    Private Sub WindowDragging_MouseMove(sender As Object, e As MouseEventArgs) Handles pnlTitleIcons.MouseMove, lblTitle.MouseMove
-        If MoveForm Then
-            Me.Location += (e.Location - MoveForm_MousePositiion)
-        End If
+    Private Sub WindowDragging_MouseMove(sender As Object, e As MouseEventArgs) Handles lblTitle.MouseMove
+        WindowMouseHandling.HandleMouseMove(Me, e)
     End Sub
 
     '---Resizable Windows 
