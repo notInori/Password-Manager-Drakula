@@ -78,9 +78,9 @@ Class Authorisation
 
     '---Functions
 
-    Public Function GenerateUID()
+    Public Sub GenerateUID()
         _UID = CInt(database.SqlReadValue("SELECT UID FROM UserAuth WHERE (Username='" & _username & "')"))
-    End Function
+    End Sub
 
     'MD5 Hash Algorithm 
     'https://stackoverflow.com/questions/34637059/equivalent-password-hash-function-for-vb-net

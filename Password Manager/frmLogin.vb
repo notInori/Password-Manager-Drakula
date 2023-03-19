@@ -93,7 +93,7 @@ Public Class AuthLogin
         Authorisation.Username = CbxUsername.Text
         Authorisation.Password = TbxPassword.Text
         If Authorisation.AuthUser Then
-            MainProgram = New MainProgram(Authorisation.Username, Authorisation.Password)
+            MainProgram = New MainProgram(Authorisation.Username, Authorisation.Password, New EventArgs())
             MainProgram.Show()
             CbxUsername.ResetText()
             TbxPassword.Clear()

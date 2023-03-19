@@ -140,7 +140,7 @@ Public Class MainProgram
 
     '---Functions
 
-    Public Sub New(g_username As String, g_password As String)
+    Public Sub New(g_username As String, g_password As String, ByVal e As EventArgs)
         Authorisation.Username = g_username
         Authorisation.Password = g_password
         Authorisation.GenerateUID()
@@ -148,7 +148,7 @@ Public Class MainProgram
     End Sub
 
     'Init WinForm
-    Private Sub POSSystem_Load() Handles MyBase.Load
+    Private Sub POSSystem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel) 'Init Tab System
             cntrl.Width = 0
@@ -156,7 +156,7 @@ Public Class MainProgram
         lblCurrentUser.Text = Authorisation.Username
         LoadUserConfig() 'Load User Data
         LoadAccounts() ' Load Passwords
-        'ChangeTab(lblTabSel1, e)
+        ChangeTab(lblTabSel1, e)
 
     End Sub
 
@@ -164,12 +164,10 @@ Public Class MainProgram
 
     'Load Passwords
     Private Sub LoadAccounts()
-        Dim cmd As New OleDbCommand("SELECT [Account Name] FROM Passwords", AuthLogin.conn)
-        myReader = cmd.ExecuteReader
-        lbxUsernames.Items.Clear()
-        While myReader.Read
-            lbxUsernames.Items.Add(myReader("Account Name"))
-        End While
+        Dim accounts As Object = database.SqlReadColumn("SELECT [Account Name] FROM Passwords")
+        For Each item As String In accounts
+            lbxUsernames.Items.Add(item)
+        Next
     End Sub
 
     'Load User Configs
