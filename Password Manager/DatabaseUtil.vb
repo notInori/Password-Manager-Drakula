@@ -1,5 +1,6 @@
 ﻿Imports System.Data.OleDb
 
+
 Class DatabaseUtil
     Private conn As New OleDbConnection("Provider=Microsoft.Ace.Oledb.12.0;Data Source=" & ".\UserData.accdb")
 
@@ -11,26 +12,33 @@ Class DatabaseUtil
         Dim cmd As New OleDbCommand(command, conn)
         Dim DatabaseValuesArray As New List(Of Object)
         Using myReader As OleDbDataReader = cmd.ExecuteReader()
-            If myReader.FieldCount > 1 Then
-                While myReader.Read()
-                    DatabaseValuesArray.Add(myReader(0))
-                End While
-                Return DatabaseValuesArray.ToArray
-            ElseIf myReader.FieldCount = 1 Then
-                While myReader.Read()
-                    DatabaseValuesArray.Add(myReader(0))
-                End While
-                Return DatabaseValuesArray.ToArray
-            End If
+            Dim value As String = ""
+            While myReader.Read()
+                value = myReader(0)
+            End While
+            Return value
+        End Using
+        Return Nothing
+    End Function
+
+    Public Function SqlReadColumn(command As String)
+        Dim cmd As New OleDbCommand(command, conn)
+        Dim DatabaseValuesArray As New List(Of Object)
+        Using myReader As OleDbDataReader = cmd.ExecuteReader()
+            While myReader.Read()
+                DatabaseValuesArray.Add(myReader(0))
+            End While
+            Return DatabaseValuesArray.ToArray
         End Using
         Return Nothing
     End Function
 End Class
 
 Class Authorisation
-    Dim database As New DatabaseUtil
-    Private _username As String
+    ReadOnly database As New DatabaseUtil
+    Public _username As String
     Private _password As String
+    Private _UID As Integer
 
     Public Property Username As String
         Get
@@ -50,13 +58,29 @@ Class Authorisation
         End Set
     End Property
 
+    Public ReadOnly Property UID As Integer
+        Get
+            Return _UID
+        End Get
+    End Property
+
     '---Init 
 
-    Public Sub New(username As String, password As String)
+    Public Sub New(g_username As String, g_password As String)
+        If g_username <> Nothing Then
+            _username = g_username
+        End If
+        If g_username <> Nothing Then
+            _password = g_password
+        End If
 
     End Sub
 
     '---Functions
+
+    Public Function GenerateUID()
+        _UID = CInt(database.SqlReadValue("SELECT UID FROM UserAuth WHERE (Username='" & _username & "')"))
+    End Function
 
     'MD5 Hash Algorithm 
     'https://stackoverflow.com/questions/34637059/equivalent-password-hash-function-for-vb-net
@@ -78,9 +102,10 @@ Class Authorisation
         End Try
     End Function
 
-    Private Function AuthUser(ByVal username As String, ByVal password As String)
-        Dim storedPassword = database.SqlReadValue("SELECT PIN FROM UserAuth WHERE (Username='" & username & "')")
-        If password = CStr(_password) And CStr(_password) <> "" Then
+    Public Function AuthUser()
+        Dim DatabasePassword As String = database.SqlReadValue("SELECT PIN FROM UserAuth WHERE Username='" & _username & "'")
+        If MD5(CStr(_password)) = DatabasePassword And CStr(_password) <> "" Then
+
             Return True 'Returns true if combination of username and password is correct
         Else
             Return False 'Returns false if combination is inccorrect or fields are empty

@@ -21,9 +21,9 @@
     Private Sub ColorPicker_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'Slider Init
-        Dim colorpickerlocation As Point = MainProgram.pnlColorPicker.PointToScreen(Point.Empty)
+        Dim colorpickerlocation As Point = AuthLogin.MainProgram.pnlColorPicker.PointToScreen(Point.Empty)
         Me.Location = New Point(colorpickerlocation.X - Me.Width + 31, colorpickerlocation.Y + 15) 'Set location relative to main program colorpicker control
-        RgbToHls(MainProgram.accentColor.R, MainProgram.accentColor.G, MainProgram.accentColor.B) 'Converts RGB back to HSL to set sliders
+        RgbToHls(AuthLogin.MainProgram.accentColor.R, AuthLogin.MainProgram.accentColor.G, AuthLogin.MainProgram.accentColor.B) 'Converts RGB back to HSL to set sliders
 
         'Update Labels of Sliders
         Label7.Text = Math.Round(hvalue, 0)
@@ -195,14 +195,14 @@
         Label9.Text = Math.Round(lvalue * 100, 0)
 
         'Calculate RGB value from HSL and Pass To Main Program
-        MainProgram.accentColor = HlsToRgb(hvalue, lvalue, svalue)
-        MainProgram.UpdateAccent()
+        AuthLogin.MainProgram.accentColor = HlsToRgb(hvalue, lvalue, svalue)
+        AuthLogin.MainProgram.UpdateAccent()
     End Sub
 
     Public Sub UpdateAccent()
-        Panel1.BackColor = MainProgram.accentColor
-        Panel60.BackColor = MainProgram.accentColor
-        Panel66.BackColor = MainProgram.accentColor
+        Panel1.BackColor = AuthLogin.MainProgram.accentColor
+        Panel60.BackColor = AuthLogin.MainProgram.accentColor
+        Panel66.BackColor = AuthLogin.MainProgram.accentColor
     End Sub
 
     'Auto Hide Colour Picker When Focus Lost

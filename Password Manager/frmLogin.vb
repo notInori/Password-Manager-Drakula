@@ -4,6 +4,8 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Public Class AuthLogin
 
     Dim database As New DatabaseUtil
+    Dim Authorisation As New Authorisation(Nothing, Nothing)
+    Public Shared MainProgram
     '---Init'
 
     '---Setting Database Path
@@ -20,33 +22,16 @@ Public Class AuthLogin
     '---Database Functions
 
     'Read From Database
-    Public Function SqlReadValue(command As String)
-        Dim cmd As New OleDbCommand(command, conn)
-        myReader = cmd.ExecuteReader
-        While myReader.Read()
-            Return myReader.GetValue(0)
-        End While
-        Return Nothing
-    End Function
 
     'Load Usernames
     Public Sub LoadUsernames()
         'CbxUsername.Items.Clear()
-        Dim Usernames As Object() = database.SqlReadValue("SELECT Username FROM UserAuth")
+        Dim Usernames As Object() = database.SqlReadColumn("SELECT Username FROM UserAuth")
         For Each item As String In Usernames
             CbxUsername.Items.Add(item)
         Next
+        CbxUsername.SelectedIndex = 0
     End Sub
-
-    'Authenticates the User
-    Private Function AuthUser(ByVal username As String, ByVal password As String)
-        Dim storedPassword = SqlReadValue("SELECT PIN FROM UserAuth WHERE (Username='" & username & "')")
-        If password = CStr(storedPassword) And CStr(storedPassword) <> "" Then
-            Return True 'Returns true if combination of username and password is correct
-        Else
-            Return False 'Returns false if combination is inccorrect or fields are empty
-        End If
-    End Function
 
     '---Functions
 
@@ -77,8 +62,8 @@ Public Class AuthLogin
         Me.Height = 0
         Me.Width = 0
         LoadUsernames()
-        lblCurrentVersion.Text = MainProgram.versionNumber
-        lblShopName.Text = MainProgram.programName
+        'lblCurrentVersion.Text = MainProgram.versionNumber
+        'lblShopName.Text = MainProgram.programName
         pnlWindowContents.Dock = DockStyle.Fill
         pnlWindowContents.BringToFront()
         Me.TopMost = True
@@ -105,9 +90,10 @@ Public Class AuthLogin
 
     'User Auth Button
     Private Sub AuthUser(sender As Object, e As EventArgs) Handles btnLogin.Click
-        If AuthUser(CbxUsername.Text, MD5(TbxPassword.Text)) Then
-            MainProgram.currentUser = CbxUsername.Text
-            MainProgram.localPassword = TbxPassword.Text
+        Authorisation.Username = CbxUsername.Text
+        Authorisation.Password = TbxPassword.Text
+        If Authorisation.AuthUser Then
+            MainProgram = New MainProgram(Authorisation.Username, Authorisation.Password)
             MainProgram.Show()
             CbxUsername.ResetText()
             TbxPassword.Clear()
