@@ -1,9 +1,7 @@
 ﻿Imports System.Data.OleDb
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class AuthLogin
 
-    Dim database As New DatabaseUtil
     '---Init'
 
     '---Setting Database Path
@@ -31,11 +29,14 @@ Public Class AuthLogin
 
     'Load Usernames
     Public Sub LoadUsernames()
-        'CbxUsername.Items.Clear()
-        Dim Usernames As Object() = database.SqlReadValue("SELECT Username FROM UserAuth")
-        For Each item As String In Usernames
-            CbxUsername.Items.Add(item)
-        Next
+        conn.Open()
+        CbxUsername.Items.Clear()
+        Dim cmd As New OleDbCommand("SELECT Username FROM UserAuth", conn)
+        myReader = cmd.ExecuteReader
+        While myReader.Read
+            CbxUsername.Items.Add(myReader("Username"))
+            CbxUsername.SelectedText = myReader(0)
+        End While
     End Sub
 
     'Authenticates the User
@@ -86,19 +87,30 @@ Public Class AuthLogin
         tmrAnimation.Start()
     End Sub
 
-    '---Winforms Init
+    'Winforms Draggable Variables Init'
+    Private Property MoveForm As Boolean
+    Private Property MoveForm_MousePositiion As Point
 
     'Winforms Dragging Events
     Private Sub WindowDragging_MouseDown(sender As Object, e As MouseEventArgs) Handles lblTitle.MouseDown
-        WindowMouseHandling.HandleMouseDown(Me, e)
+        If e.Button = MouseButtons.Left And Me.WindowState <> FormWindowState.Maximized Then
+            MoveForm = True
+            Me.Cursor = Cursors.Default
+            MoveForm_MousePositiion = e.Location
+        End If
     End Sub
 
     Private Sub WindowDragging_MouseUp(sender As Object, e As MouseEventArgs) Handles lblTitle.MouseUp
-        WindowMouseHandling.HandleMouseUp(Me, e)
+        If e.Button = MouseButtons.Left Then
+            MoveForm = False
+            Me.Cursor = Cursors.Default
+        End If
     End Sub
 
     Private Sub WindowDragging_MouseMove(sender As Object, e As MouseEventArgs) Handles lblTitle.MouseMove
-        WindowMouseHandling.HandleMouseMove(Me, e)
+        If MoveForm Then
+            Me.Location += (e.Location - MoveForm_MousePositiion)
+        End If
     End Sub
 
     '---Aplication Code
