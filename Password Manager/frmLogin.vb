@@ -60,7 +60,7 @@ Public Class AuthLogin
             Dim baytlar As Byte() = System.Text.ASCIIEncoding.ASCII.GetBytes(pass)
             Dim hash As Byte() = MD5p.ComputeHash(baytlar)
             Dim kapasite As Integer = (hash.Length * 2 + (hash.Length / 8))
-            Dim sb As System.Text.StringBuilder = New System.Text.StringBuilder(kapasite)
+            Dim sb As New System.Text.StringBuilder(kapasite)
             Dim I As Integer
             For I = 0 To hash.Length - 1
                 sb.Append(BitConverter.ToString(hash, I, 1))
@@ -148,7 +148,7 @@ Public Class AuthLogin
     '---Animations
 
     'Window Opening Animation
-    Private Sub tmrAnimation_Tick(sender As Object, e As EventArgs) Handles tmrAnimation.Tick
+    Private Sub TmrAnimation_Tick(sender As Object, e As EventArgs) Handles tmrAnimation.Tick
         While Me.Width < 500
             Me.Width += 10
         End While
