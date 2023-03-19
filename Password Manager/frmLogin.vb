@@ -151,23 +151,20 @@ Public Class AuthLogin
     Private Sub tmrAnimation_Tick(sender As Object, e As EventArgs) Handles tmrAnimation.Tick
         While Me.Width < 500
             Me.Width += 10
-            Application.DoEvents()
         End While
         Me.Width = 500
         If Me.Height < 250 Then
             Me.Height += 20
-            Application.DoEvents()
         ElseIf Me.Height < 300 Then
             Me.Height += 5
-            Application.DoEvents()
         ElseIf Me.Height < 309 Then
             Me.Height += 2
-            Application.DoEvents()
         Else
             Me.Height = 310
             tmrAnimation.Stop()
             Me.TopMost = False
         End If
+        Application.DoEvents()
     End Sub
 
 End Class
