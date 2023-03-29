@@ -55,9 +55,6 @@ Public Class MainProgram
     '---Resizable Windows 
 
     'Reisizeable Window Variables
-    Private Property Fullscreen
-    Private Property Maxscreen
-    Dim WindowsState As String = "normal"
     Dim storedClientSize As Size
     Const ImaginaryBorderSize As Integer = 16
     Private Const HTLEFT As Integer = 10, HTRIGHT As Integer = 11, HTTOP As Integer = 12, HTTOPLEFT As Integer = 13, HTTOPRIGHT As Integer = 14, HTBOTTOM As Integer = 15, HTBOTTOMLEFT As Integer = 16, HTBOTTOMRIGHT As Integer = 17
@@ -153,6 +150,7 @@ Public Class MainProgram
 
     'Init WinForm
     Private Sub POSSystem_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Me.MaximumSize = Screen.FromRectangle(Me.Bounds).WorkingArea.Size
         For Each cntrl As Control In TblTabsContainer.Controls.OfType(Of Panel) 'Init Tab System
             cntrl.Width = 0
         Next
@@ -295,12 +293,9 @@ Public Class MainProgram
         If Me.WindowState = FormWindowState.Maximized Then
             Me.WindowState = FormWindowState.Normal
             Me.ClientSize = storedClientSize
-            WindowsState = "normal"
         Else
             storedClientSize = Me.ClientSize
-            Me.MaximumSize = Maxscreen
             Me.WindowState = FormWindowState.Maximized
-            WindowsState = "maximised"
         End If
     End Sub
 
