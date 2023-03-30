@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("POS System")>
-<Assembly: AssemblyDescription("A simple POS System for windows.")>
+<Assembly: AssemblyTitle("Password Manager")>
+<Assembly: AssemblyDescription("A simple password manager made with RainyUI for windows.")>
 <Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("POS System")>
+<Assembly: AssemblyProduct("Password Manager")>
 <Assembly: AssemblyCopyright("Nicholas Su ©  2022")>
 <Assembly: AssemblyTrademark("")>
 
