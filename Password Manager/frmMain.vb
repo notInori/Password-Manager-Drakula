@@ -420,6 +420,22 @@ Public Class MainProgram
         lbxUsernames.SelectedItem = AuthLogin.SqlReadValue("SELECT [Account Name] FROM [Passwords] WHERE UID=" & selectedUID)
     End Sub
 
+    'Account Filter
+    Private Sub btn_filterSearch_Click(sender As Object, e As EventArgs) Handles btn_filterSearch.Click
+        Dim searchQuery As String = tbx_filterquery.Text
+        Dim cmd As New OleDbCommand("SELECT [Account Name] FROM Passwords WHERE [Account Name] LIKE '%" + searchQuery + "%' OR [Website] LIKE '%" + searchQuery + "%'", AuthLogin.conn)
+        myReader = cmd.ExecuteReader
+        lbxUsernames.Items.Clear()
+        While myReader.Read
+            lbxUsernames.Items.Add(myReader("Account Name"))
+        End While
+    End Sub
+
+    'Reset Filter
+    Private Sub Btn_FIlterClear_Click(sender As Object, e As EventArgs) Handles Btn_FIlterClear.Click
+        LoadAccounts()
+    End Sub
+
     'Settings Tab 
 
     'User Logout Button
