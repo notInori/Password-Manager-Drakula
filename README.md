@@ -35,3 +35,6 @@ A simple password manager.
 
 ### Starting The Program
 - Run `Password Manager.exe` to start the program and load the login window.
+- Log into the password manager with the default credentials.  
+  Username: `Inori`
+  Password: `1234`
