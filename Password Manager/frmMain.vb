@@ -7,7 +7,7 @@ Public Class MainProgram
 
     'Client Info Config
     Public ReadOnly programName As String = "Password Manager"
-    Public ReadOnly versionNumber As String = "[Dev Build]"
+    Public ReadOnly versionNumber As String = "v0.2 [BETA]"
 
     'Client Info Variables
     Public currentUser As String = "[USER]"
@@ -155,6 +155,7 @@ Public Class MainProgram
             cntrl.Width = 0
         Next
         lblCurrentUser.Text = currentUser
+        lblCurrentVersion.Text = versionNumber
         LoadUserConfig() 'Load User Data
         LoadAccounts() ' Load Passwords
         ChangeTab(lblTabSel1, e)
@@ -495,13 +496,6 @@ Public Class MainProgram
         End If
         TbxAdminUsername.Clear()
         tbxAdminPassword.Clear()
-    End Sub
-
-    '---DebugInfo
-
-    'Timer Tick Update
-    Private Sub DebugInfoUpdateOnTick(sender As Object, e As EventArgs) Handles tmrMain.Tick
-        lblTitle.Text = programName & " | " & versionNumber & " | " & currentUser & " | " & DateTime.Now.ToString("HH:mm:ss") & " | " & DateTime.Now.ToString("dd MMM. yyyy")
     End Sub
 
 
