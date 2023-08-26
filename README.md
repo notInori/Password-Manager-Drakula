@@ -5,21 +5,24 @@ A simple password manager.
 
 ### Login Window
 ##### Main Screen
-![UI](https://user-images.githubusercontent.com/124441402/224857737-80140e2b-35c3-4938-ae53-61b05c259a81.png)
+![image](https://github.com/notInori/Password-Manager-Drakula/assets/124441402/c952aec4-ee59-4cb3-b0e9-41d90b5c9750)
+
 ##### Notification
-![UI](https://user-images.githubusercontent.com/124441402/224800366-b871ee03-cf61-4b41-88f6-24214edfc3da.png)
+![image](https://github.com/notInori/Password-Manager-Drakula/assets/124441402/3265aded-5bbc-4497-93a5-6b83c605acd2)
+
 
 ### Password Manager
 ##### Main Screen
-![UI](https://user-images.githubusercontent.com/124441402/224857872-4ac0e4ae-842a-4fa8-91dd-e9bf29ba8a89.png)
+![image](https://github.com/notInori/Password-Manager-Drakula/assets/124441402/44c68c52-fa1f-43d2-ae4e-e519a8cf65e9)
 ##### Settings Screen
-![UI](https://user-images.githubusercontent.com/124441402/224815733-71a99199-e32f-4e3f-8ec7-549e637a2ee6.png)
+![image](https://github.com/notInori/Password-Manager-Drakula/assets/124441402/4e9baccf-9211-4d2e-be60-b9ed51a1e044)
 ##### Color Picker
-![UI](https://user-images.githubusercontent.com/124441402/225423164-627c87ba-2186-40b7-a116-05e1f705dd22.png)
+![image](https://github.com/notInori/Password-Manager-Drakula/assets/124441402/3522e3c2-b0f8-4be7-9d05-7dc110feac68)
 ##### Confirmation
-![UI](https://user-images.githubusercontent.com/124441402/224815762-5ee9b117-b19b-4fb5-98fa-0e912217ed20.png)
+![image](https://github.com/notInori/Password-Manager-Drakula/assets/124441402/f8170a12-1f25-4362-8fd9-ee2370444c06)
 ##### Notification
-![UI](https://user-images.githubusercontent.com/124441402/224815770-16c821a7-744d-498d-9580-de97376bce4b.png)
+![image](https://github.com/notInori/Password-Manager-Drakula/assets/124441402/24a6666e-5d3b-4d45-9154-f6624d64c0c6)
+
 
 ## Installation
 
