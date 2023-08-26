@@ -946,9 +946,9 @@ Partial Class MainProgram
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.Panel1.Controls.Add(Me.pnlMainPage)
-        Me.Panel1.Controls.Add(Me.pnlSettingsPage)
         Me.Panel1.Controls.Add(Me.pnlNotification)
         Me.Panel1.Controls.Add(Me.pnlConfirmation)
+        Me.Panel1.Controls.Add(Me.pnlSettingsPage)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(1, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
@@ -4518,15 +4518,17 @@ Partial Class MainProgram
         '
         Me.pnlNotification.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.pnlNotification.Controls.Add(Me.TableLayoutPanel10)
-        Me.pnlNotification.Location = New System.Drawing.Point(93, 484)
+        Me.pnlNotification.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlNotification.Location = New System.Drawing.Point(0, 0)
         Me.pnlNotification.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlNotification.Name = "pnlNotification"
         Me.pnlNotification.Padding = New System.Windows.Forms.Padding(5)
-        Me.pnlNotification.Size = New System.Drawing.Size(28, 29)
+        Me.pnlNotification.Size = New System.Drawing.Size(894, 530)
         Me.pnlNotification.TabIndex = 0
         '
         'TableLayoutPanel10
         '
+        Me.TableLayoutPanel10.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TableLayoutPanel10.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel10.ColumnCount = 1
         Me.TableLayoutPanel10.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
@@ -4878,15 +4880,17 @@ Partial Class MainProgram
         '
         Me.pnlConfirmation.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.pnlConfirmation.Controls.Add(Me.TableLayoutPanel13)
-        Me.pnlConfirmation.Location = New System.Drawing.Point(47, 484)
+        Me.pnlConfirmation.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlConfirmation.Location = New System.Drawing.Point(0, 0)
         Me.pnlConfirmation.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlConfirmation.Name = "pnlConfirmation"
         Me.pnlConfirmation.Padding = New System.Windows.Forms.Padding(5)
-        Me.pnlConfirmation.Size = New System.Drawing.Size(23, 29)
+        Me.pnlConfirmation.Size = New System.Drawing.Size(894, 530)
         Me.pnlConfirmation.TabIndex = 0
         '
         'TableLayoutPanel13
         '
+        Me.TableLayoutPanel13.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TableLayoutPanel13.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel13.ColumnCount = 1
         Me.TableLayoutPanel13.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
