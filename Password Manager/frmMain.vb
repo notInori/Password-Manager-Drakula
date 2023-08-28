@@ -268,8 +268,13 @@ Public Class MainProgram
         If TmrRGB.Enabled Then
             PnlRGBToggle.BackColor = accentColor
         End If
+        'Reveal Passwords Toggle
         If revealPasswords = True Then
             PnlRevealPassToggle.BackColor = accentColor
+        End If
+        'Reveal Admin Passwords Toggle
+        If Not tbxAdminPassword.UseSystemPasswordChar Then
+            PnlRevealAdminPassToggle.BackColor = accentColor
         End If
         'Tab Label Accent Updating
         lblTabSel2.ForeColor = accentColor
@@ -438,6 +443,10 @@ Public Class MainProgram
         End If
     End Sub
 
+    Private Sub RevealPasswordsToggle(sender As Object, e As MouseEventArgs) Handles PnlRevealPassToggle.MouseDown
+
+    End Sub
+
     'Copy Password to Clipboard
 
     Private Sub CopyPasswordToClip(sender As Object, e As EventArgs) Handles BtnCopyPassword.Click
@@ -476,6 +485,17 @@ Public Class MainProgram
         AuthLogin.LoadUsernames()
     End Sub
 
+    'Reveal Admin Password
+    Private Sub RevealAdminPassword() Handles PnlRevealAdminPassToggle.MouseDown, Panel222.MouseDown, Panel221.MouseDown
+        If tbxAdminPassword.UseSystemPasswordChar Then
+            tbxAdminPassword.UseSystemPasswordChar = False
+            PnlRevealAdminPassToggle.BackColor = accentColor
+        Else
+            tbxAdminPassword.UseSystemPasswordChar = True
+            PnlRevealAdminPassToggle.BackColor = Color.FromArgb(27, 28, 39)
+        End If
+    End Sub
+
     'Save Admin Password Button
     Private Sub SaveAdminPassword(sender As Object, e As EventArgs) Handles btnSaveAdminPass.Click
         If TbxAdminUsername.Text <> "" Then
@@ -511,6 +531,9 @@ Public Class MainProgram
             Dim hashedpassword As String = AuthLogin.MD5(localPassword)
             SaveConfig("UPDATE UserAuth SET PIN='" & hashedpassword & "' WHERE UID=1")
 
+            tbxAdminPassword.UseSystemPasswordChar = True
+            PnlRevealAdminPassToggle.BackColor = Color.FromArgb(27, 28, 39)
+
         End If
 
         'Notify User Of Changes Made
@@ -542,7 +565,7 @@ Public Class MainProgram
     End Sub
 
     'RGB Toggle Event
-    Private Sub PnlRGBToggle_Click(sender As Object, e As EventArgs) Handles PnlRGBToggle.Click
+    Private Sub PnlRGBToggle_Click(sender As Object, e As EventArgs) Handles PnlRGBToggle.MouseDown
         If TmrRGB.Enabled = False Then
             TmrRGB.Enabled = True
             PnlRGBToggle.BackColor = accentColor
