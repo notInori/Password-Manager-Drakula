@@ -17,6 +17,7 @@ Public Class MainProgram
     Public accentColor As Color = Color.FromArgb(255, 255, 255)
     Dim selectedUID As New Integer
     Public localPassword As String
+    Dim revealPasswords As Boolean = False
 
     'Variables Init'
     Dim data As Integer
@@ -267,6 +268,9 @@ Public Class MainProgram
         If TmrRGB.Enabled Then
             PnlRGBToggle.BackColor = accentColor
         End If
+        If revealPasswords = True Then
+            PnlRevealPassToggle.BackColor = accentColor
+        End If
         'Tab Label Accent Updating
         lblTabSel2.ForeColor = accentColor
 
@@ -303,8 +307,8 @@ Public Class MainProgram
     '---Notifications
 
     'Full screen notifications
-    Private Sub Notifcation(notifcationText As String)
-        lblNotifcationInfo.Text = notifcationText
+    Private Sub Notification(NotificationText As String)
+        lblNotificationInfo.Text = NotificationText
         pnlNotification.Dock = DockStyle.Fill
         pnlNotification.BringToFront()
     End Sub
@@ -340,9 +344,9 @@ Public Class MainProgram
                 Dim plainText As String = wrapper.DecryptData(hashedpassword)
                 TbxPassword.Text = plainText
             Catch ex As System.Security.Cryptography.CryptographicException
-                Notifcation("Error: Passwords could not be decrypted.")
+                Notification("Error: Passwords could not be decrypted.")
             Catch ex As FormatException
-                Notifcation("Error: Password entry is corrupt.")
+                Notification("Error: Password entry is corrupt.")
             End Try
         End If
 
@@ -357,14 +361,14 @@ Public Class MainProgram
             SaveConfig("UPDATE Passwords SET Website='" & TbxWebsite.Text & "' WHERE UID=" & selectedUID)
             SaveConfig("UPDATE Passwords SET Username='" & TbxUsername.Text & "' WHERE UID=" & selectedUID)
             SaveConfig("UPDATE Passwords SET [Password]='" & cipherText & "' WHERE UID=" & selectedUID)
-            Notifcation("New User Credentials for " & TbxAccountName.Text & " have been saved successfully!")
+            Notification("New User Credentials for " & TbxAccountName.Text & " have been saved successfully!")
         ElseIf TbxAccountName.Text = "" Then
-            Notifcation("Error: An account name is required!")
+            Notification("Error: An account name is required!")
             LoadSelectedUserInfo(sender, e)
         ElseIf AuthLogin.SqlReadValue("SELECT UID FROM Passwords WHERE [Account Name]='" & TbxAccountName.Text.ToString & "'") <> Nothing Then
-            Notifcation("Error: This account name is already in use!")
+            Notification("Error: This account name is already in use!")
         Else
-            Notifcation("Error: An entry must be selected.")
+            Notification("Error: An entry must be selected.")
         End If
         LoadAccounts()
         lbxUsernames.SelectedItem = AuthLogin.SqlReadValue("SELECT [Account Name] FROM [Passwords] WHERE UID=" & selectedUID)
@@ -386,13 +390,13 @@ Public Class MainProgram
             Dim wrapper As New Simple3Des(localPassword)
             Dim cipherText As String = wrapper.EncryptData(TbxPassword.Text.ToString)
             SaveConfig("INSERT INTO Passwords ([Account Name],Website,Username,[Password]) VALUES ('" & TbxAccountName.Text.ToString & "','" & TbxWebsite.Text.ToString & "','" & TbxUsername.Text.ToString & "','" & cipherText & "')")
-            Notifcation("New entry " & TbxAccountName.Text.ToString & " has been successfully added!")
+            Notification("New entry " & TbxAccountName.Text.ToString & " has been successfully added!")
             LoadAccounts()
             lbxUsernames.SelectedItem = AuthLogin.SqlReadValue("SELECT [Account Name] FROM [Passwords] WHERE [Account Name]='" & TbxAccountName.Text.ToString & "'")
         ElseIf AuthLogin.SqlReadValue("SELECT UID FROM Passwords WHERE [Account Name]='" & TbxAccountName.Text.ToString & "'") = Nothing Then
-            Notifcation("Error: Account name is required!")
+            Notification("Error: Account name is required!")
         Else
-            Notifcation("Error: Entry " & TbxAccountName.Text.ToString & " already exists.")
+            Notification("Error: Entry " & TbxAccountName.Text.ToString & " already exists.")
             TbxAccountName.Clear()
         End If
 
@@ -405,7 +409,7 @@ Public Class MainProgram
             pnlConfirmation.Dock = DockStyle.Fill
             pnlConfirmation.BringToFront()
         ElseIf sender Is BtnDelete Then
-            Notifcation("Error: An entry must be selected!")
+            Notification("Error: An entry must be selected!")
         ElseIf sender Is BtnContinueAction Or sender Is BtnCancelAction Then
             pnlConfirmation.Dock = DockStyle.None
             pnlConfirmation.Height = 0
@@ -415,10 +419,35 @@ Public Class MainProgram
             SaveConfig("DELETE FROM Passwords WHERE UID=" & selectedUID)
             selectedUID = Nothing
             ClearUserDataFields(sender, e)
-            Notifcation("Entry " & TempAccountName & " successfully deleted!")
+            Notification("Entry " & TempAccountName & " successfully deleted!")
         End If
         LoadAccounts()
         lbxUsernames.SelectedItem = AuthLogin.SqlReadValue("SELECT [Account Name] FROM [Passwords] WHERE UID=" & selectedUID)
+    End Sub
+
+    'Reveal Passwords Toggle
+    Private Sub RevealPasswordsToggle(sender As Object, e As EventArgs) Handles PnlRevealPassToggle.Click
+        If revealPasswords = True Then
+            revealPasswords = False
+            PnlRevealPassToggle.BackColor = Color.FromArgb(27, 28, 39)
+            TbxPassword.UseSystemPasswordChar = True
+        Else
+            revealPasswords = True
+            PnlRevealPassToggle.BackColor = accentColor
+            TbxPassword.UseSystemPasswordChar = False
+        End If
+    End Sub
+
+    'Copy Password to Clipboard
+
+    Private Sub CopyPasswordToClip(sender As Object, e As EventArgs) Handles BtnCopyPassword.Click
+        If TbxPassword.Text <> Nothing Then
+            My.Computer.Clipboard.SetText(TbxPassword.Text)
+            Notification("Password was copied successfully!")
+        Else
+            Notification("Error: Failed to copy password to clipboard!")
+        End If
+
     End Sub
 
     'Account Filter
@@ -486,13 +515,13 @@ Public Class MainProgram
 
         'Notify User Of Changes Made
         If TbxAdminUsername.Text <> "" And tbxAdminPassword.Text <> "" Then
-            Notifcation("New admin credentials have been updated successfully!")
+            Notification("New admin credentials have been updated successfully!")
         ElseIf TbxAdminUsername.Text <> "" Then
-            Notifcation("New admin username has been updated successfully!")
+            Notification("New admin username has been updated successfully!")
         ElseIf tbxAdminPassword.Text <> "" Then
-            Notifcation("New admin password has been updated successfully!")
+            Notification("New admin password has been updated successfully!")
         Else
-            Notifcation("Error: Both fields can not be empty!")
+            Notification("Error: Both fields can not be empty!")
         End If
         TbxAdminUsername.Clear()
         tbxAdminPassword.Clear()

@@ -134,6 +134,15 @@ Partial Class MainProgram
         Me.Panel188 = New System.Windows.Forms.Panel()
         Me.Panel189 = New System.Windows.Forms.Panel()
         Me.Panel190 = New System.Windows.Forms.Panel()
+        Me.Panel218 = New System.Windows.Forms.Panel()
+        Me.Panel219 = New System.Windows.Forms.Panel()
+        Me.BtnCopyPassword = New System.Windows.Forms.Button()
+        Me.Panel213 = New System.Windows.Forms.Panel()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Panel214 = New System.Windows.Forms.Panel()
+        Me.Panel215 = New System.Windows.Forms.Panel()
+        Me.Panel216 = New System.Windows.Forms.Panel()
+        Me.PnlRevealPassToggle = New System.Windows.Forms.Panel()
         Me.Panel124 = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel125 = New System.Windows.Forms.Panel()
@@ -354,7 +363,7 @@ Partial Class MainProgram
         Me.Panel97 = New System.Windows.Forms.Panel()
         Me.Panel98 = New System.Windows.Forms.Panel()
         Me.pnlnotiflabel = New System.Windows.Forms.Panel()
-        Me.lblNotifcationInfo = New System.Windows.Forms.Label()
+        Me.lblNotificationInfo = New System.Windows.Forms.Label()
         Me.Panel394 = New System.Windows.Forms.Panel()
         Me.Panel395 = New System.Windows.Forms.Panel()
         Me.btnContinueNotification = New System.Windows.Forms.Button()
@@ -467,6 +476,12 @@ Partial Class MainProgram
         Me.Panel188.SuspendLayout()
         Me.Panel189.SuspendLayout()
         Me.Panel190.SuspendLayout()
+        Me.Panel218.SuspendLayout()
+        Me.Panel219.SuspendLayout()
+        Me.Panel213.SuspendLayout()
+        Me.Panel214.SuspendLayout()
+        Me.Panel215.SuspendLayout()
+        Me.Panel216.SuspendLayout()
         Me.Panel124.SuspendLayout()
         Me.Panel125.SuspendLayout()
         Me.Panel126.SuspendLayout()
@@ -946,9 +961,9 @@ Partial Class MainProgram
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.Panel1.Controls.Add(Me.pnlMainPage)
+        Me.Panel1.Controls.Add(Me.pnlSettingsPage)
         Me.Panel1.Controls.Add(Me.pnlNotification)
         Me.Panel1.Controls.Add(Me.pnlConfirmation)
-        Me.Panel1.Controls.Add(Me.pnlSettingsPage)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(1, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
@@ -2050,6 +2065,8 @@ Partial Class MainProgram
         'Panel190
         '
         Me.Panel190.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Panel190.Controls.Add(Me.Panel218)
+        Me.Panel190.Controls.Add(Me.Panel213)
         Me.Panel190.Controls.Add(Me.Panel124)
         Me.Panel190.Controls.Add(Me.Panel119)
         Me.Panel190.Controls.Add(Me.Panel362)
@@ -2061,6 +2078,120 @@ Partial Class MainProgram
         Me.Panel190.Padding = New System.Windows.Forms.Padding(5)
         Me.Panel190.Size = New System.Drawing.Size(444, 314)
         Me.Panel190.TabIndex = 0
+        '
+        'Panel218
+        '
+        Me.Panel218.BackColor = System.Drawing.Color.Black
+        Me.Panel218.Controls.Add(Me.Panel219)
+        Me.Panel218.Location = New System.Drawing.Point(10, 274)
+        Me.Panel218.Margin = New System.Windows.Forms.Padding(5)
+        Me.Panel218.Name = "Panel218"
+        Me.Panel218.Padding = New System.Windows.Forms.Padding(1)
+        Me.Panel218.Size = New System.Drawing.Size(424, 30)
+        Me.Panel218.TabIndex = 3
+        '
+        'Panel219
+        '
+        Me.Panel219.BackColor = System.Drawing.Color.FromArgb(CType(CType(124, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.Panel219.Controls.Add(Me.BtnCopyPassword)
+        Me.Panel219.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel219.Location = New System.Drawing.Point(1, 1)
+        Me.Panel219.Name = "Panel219"
+        Me.Panel219.Padding = New System.Windows.Forms.Padding(1)
+        Me.Panel219.Size = New System.Drawing.Size(422, 28)
+        Me.Panel219.TabIndex = 0
+        '
+        'BtnCopyPassword
+        '
+        Me.BtnCopyPassword.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.BtnCopyPassword.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnCopyPassword.FlatAppearance.BorderSize = 0
+        Me.BtnCopyPassword.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.BtnCopyPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(62, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(91, Byte), Integer))
+        Me.BtnCopyPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCopyPassword.Font = New System.Drawing.Font("Consolas", 12.0!)
+        Me.BtnCopyPassword.ForeColor = System.Drawing.Color.White
+        Me.BtnCopyPassword.Location = New System.Drawing.Point(1, 1)
+        Me.BtnCopyPassword.Margin = New System.Windows.Forms.Padding(1)
+        Me.BtnCopyPassword.Name = "BtnCopyPassword"
+        Me.BtnCopyPassword.Size = New System.Drawing.Size(420, 26)
+        Me.BtnCopyPassword.TabIndex = 0
+        Me.BtnCopyPassword.Text = "Copy Password To Clipboard"
+        Me.BtnCopyPassword.UseVisualStyleBackColor = False
+        '
+        'Panel213
+        '
+        Me.Panel213.BackColor = System.Drawing.Color.Transparent
+        Me.Panel213.Controls.Add(Me.Label16)
+        Me.Panel213.Controls.Add(Me.Panel214)
+        Me.Panel213.Location = New System.Drawing.Point(10, 251)
+        Me.Panel213.Margin = New System.Windows.Forms.Padding(5)
+        Me.Panel213.Name = "Panel213"
+        Me.Panel213.Size = New System.Drawing.Size(309, 19)
+        Me.Panel213.TabIndex = 2
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.BackColor = System.Drawing.Color.Transparent
+        Me.Label16.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Label16.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.White
+        Me.Label16.Location = New System.Drawing.Point(19, 0)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
+        Me.Label16.Size = New System.Drawing.Size(149, 19)
+        Me.Label16.TabIndex = 0
+        Me.Label16.Text = "Reveal Password"
+        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Panel214
+        '
+        Me.Panel214.BackColor = System.Drawing.Color.Black
+        Me.Panel214.Controls.Add(Me.Panel215)
+        Me.Panel214.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel214.Location = New System.Drawing.Point(0, 0)
+        Me.Panel214.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel214.Name = "Panel214"
+        Me.Panel214.Padding = New System.Windows.Forms.Padding(1)
+        Me.Panel214.Size = New System.Drawing.Size(19, 19)
+        Me.Panel214.TabIndex = 0
+        '
+        'Panel215
+        '
+        Me.Panel215.BackColor = System.Drawing.Color.FromArgb(CType(CType(124, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(167, Byte), Integer))
+        Me.Panel215.Controls.Add(Me.Panel216)
+        Me.Panel215.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel215.Location = New System.Drawing.Point(1, 1)
+        Me.Panel215.Name = "Panel215"
+        Me.Panel215.Padding = New System.Windows.Forms.Padding(1)
+        Me.Panel215.Size = New System.Drawing.Size(17, 17)
+        Me.Panel215.TabIndex = 0
+        '
+        'Panel216
+        '
+        Me.Panel216.BackColor = System.Drawing.Color.Black
+        Me.Panel216.Controls.Add(Me.PnlRevealPassToggle)
+        Me.Panel216.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel216.Location = New System.Drawing.Point(1, 1)
+        Me.Panel216.Margin = New System.Windows.Forms.Padding(1)
+        Me.Panel216.Name = "Panel216"
+        Me.Panel216.Padding = New System.Windows.Forms.Padding(1)
+        Me.Panel216.Size = New System.Drawing.Size(15, 15)
+        Me.Panel216.TabIndex = 0
+        '
+        'PnlRevealPassToggle
+        '
+        Me.PnlRevealPassToggle.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton
+        Me.PnlRevealPassToggle.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.PnlRevealPassToggle.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PnlRevealPassToggle.Location = New System.Drawing.Point(1, 1)
+        Me.PnlRevealPassToggle.Margin = New System.Windows.Forms.Padding(1)
+        Me.PnlRevealPassToggle.Name = "PnlRevealPassToggle"
+        Me.PnlRevealPassToggle.Padding = New System.Windows.Forms.Padding(1)
+        Me.PnlRevealPassToggle.Size = New System.Drawing.Size(13, 13)
+        Me.PnlRevealPassToggle.TabIndex = 0
         '
         'Panel124
         '
@@ -2413,6 +2544,7 @@ Partial Class MainProgram
         Me.TbxPassword.Name = "TbxPassword"
         Me.TbxPassword.Size = New System.Drawing.Size(419, 19)
         Me.TbxPassword.TabIndex = 0
+        Me.TbxPassword.UseSystemPasswordChar = True
         '
         'TableLayoutPanel42
         '
@@ -2883,11 +3015,12 @@ Partial Class MainProgram
         Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel4)
         Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel7)
         Me.pnlSettingsPage.Controls.Add(Me.TableLayoutPanel18)
-        Me.pnlSettingsPage.Location = New System.Drawing.Point(136, 484)
+        Me.pnlSettingsPage.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlSettingsPage.Location = New System.Drawing.Point(0, 0)
         Me.pnlSettingsPage.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlSettingsPage.Name = "pnlSettingsPage"
         Me.pnlSettingsPage.Padding = New System.Windows.Forms.Padding(5)
-        Me.pnlSettingsPage.Size = New System.Drawing.Size(26, 29)
+        Me.pnlSettingsPage.Size = New System.Drawing.Size(894, 530)
         Me.pnlSettingsPage.TabIndex = 0
         '
         'TableLayoutPanel1
@@ -4814,27 +4947,27 @@ Partial Class MainProgram
         'pnlnotiflabel
         '
         Me.pnlnotiflabel.AutoSize = True
-        Me.pnlnotiflabel.Controls.Add(Me.lblNotifcationInfo)
+        Me.pnlnotiflabel.Controls.Add(Me.lblNotificationInfo)
         Me.pnlnotiflabel.Location = New System.Drawing.Point(10, 8)
         Me.pnlnotiflabel.Margin = New System.Windows.Forms.Padding(5)
         Me.pnlnotiflabel.Name = "pnlnotiflabel"
         Me.pnlnotiflabel.Size = New System.Drawing.Size(448, 94)
         Me.pnlnotiflabel.TabIndex = 0
         '
-        'lblNotifcationInfo
+        'lblNotificationInfo
         '
-        Me.lblNotifcationInfo.BackColor = System.Drawing.Color.Transparent
-        Me.lblNotifcationInfo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.lblNotifcationInfo.Font = New System.Drawing.Font("Consolas", 12.0!)
-        Me.lblNotifcationInfo.ForeColor = System.Drawing.Color.White
-        Me.lblNotifcationInfo.Location = New System.Drawing.Point(0, 0)
-        Me.lblNotifcationInfo.Margin = New System.Windows.Forms.Padding(0)
-        Me.lblNotifcationInfo.Name = "lblNotifcationInfo"
-        Me.lblNotifcationInfo.Padding = New System.Windows.Forms.Padding(0, 0, 5, 5)
-        Me.lblNotifcationInfo.Size = New System.Drawing.Size(448, 94)
-        Me.lblNotifcationInfo.TabIndex = 0
-        Me.lblNotifcationInfo.Text = "[Notification Text]"
-        Me.lblNotifcationInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblNotificationInfo.BackColor = System.Drawing.Color.Transparent
+        Me.lblNotificationInfo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.lblNotificationInfo.Font = New System.Drawing.Font("Consolas", 12.0!)
+        Me.lblNotificationInfo.ForeColor = System.Drawing.Color.White
+        Me.lblNotificationInfo.Location = New System.Drawing.Point(0, 0)
+        Me.lblNotificationInfo.Margin = New System.Windows.Forms.Padding(0)
+        Me.lblNotificationInfo.Name = "lblNotificationInfo"
+        Me.lblNotificationInfo.Padding = New System.Windows.Forms.Padding(0, 0, 5, 5)
+        Me.lblNotificationInfo.Size = New System.Drawing.Size(448, 94)
+        Me.lblNotificationInfo.TabIndex = 0
+        Me.lblNotificationInfo.Text = "[Notification Text]"
+        Me.lblNotificationInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel394
         '
@@ -5395,6 +5528,13 @@ Partial Class MainProgram
         Me.Panel189.ResumeLayout(False)
         Me.Panel190.ResumeLayout(False)
         Me.Panel190.PerformLayout()
+        Me.Panel218.ResumeLayout(False)
+        Me.Panel219.ResumeLayout(False)
+        Me.Panel213.ResumeLayout(False)
+        Me.Panel213.PerformLayout()
+        Me.Panel214.ResumeLayout(False)
+        Me.Panel215.ResumeLayout(False)
+        Me.Panel216.ResumeLayout(False)
         Me.Panel124.ResumeLayout(False)
         Me.Panel124.PerformLayout()
         Me.Panel125.ResumeLayout(False)
@@ -5870,7 +6010,7 @@ Partial Class MainProgram
     Friend WithEvents Panel97 As Panel
     Friend WithEvents Panel98 As Panel
     Friend WithEvents pnlnotiflabel As Panel
-    Friend WithEvents lblNotifcationInfo As Label
+    Friend WithEvents lblNotificationInfo As Label
     Friend WithEvents Panel124 As Panel
     Friend WithEvents Label10 As Label
     Friend WithEvents Panel125 As Panel
@@ -5968,4 +6108,13 @@ Partial Class MainProgram
     Friend WithEvents Panel212 As Panel
     Friend WithEvents lblCurrentVersion As Label
     Friend WithEvents Label17 As Label
+    Friend WithEvents Panel218 As Panel
+    Friend WithEvents Panel219 As Panel
+    Friend WithEvents BtnCopyPassword As Button
+    Friend WithEvents Panel213 As Panel
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Panel214 As Panel
+    Friend WithEvents Panel215 As Panel
+    Friend WithEvents Panel216 As Panel
+    Friend WithEvents PnlRevealPassToggle As Panel
 End Class
