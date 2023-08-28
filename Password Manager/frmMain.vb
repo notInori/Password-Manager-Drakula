@@ -459,6 +459,19 @@ Public Class MainProgram
 
     End Sub
 
+    'Unhide password in field when edited
+
+    'Private Sub TbxPassword_KeyDown(sender As Object, ByVal e As KeyPressEventArgs) Handles TbxPassword.KeyPress
+    '    If TbxPassword.UseSystemPasswordChar = True Then
+    '        TbxPassword.UseSystemPasswordChar = False
+    '        TbxPassword.Text += e.KeyChar
+    '        TbxPassword.SelectionStart = Me.Text.Length
+    '        TbxPassword.Select()
+    '        revealPasswords = True
+    '        PnlRevealPassToggle.BackColor = accentColor
+    '    End If
+    'End Sub
+
     'Account Filter
     Private Sub btn_filterSearch_Click(sender As Object, e As EventArgs) Handles btn_filterSearch.Click
         Dim searchQuery As String = tbx_filterquery.Text
