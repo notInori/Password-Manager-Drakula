@@ -970,8 +970,8 @@ Partial Class MainProgram
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.pnlSettingsPage)
         Me.Panel1.Controls.Add(Me.pnlMainPage)
+        Me.Panel1.Controls.Add(Me.pnlSettingsPage)
         Me.Panel1.Controls.Add(Me.pnlNotification)
         Me.Panel1.Controls.Add(Me.pnlConfirmation)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
