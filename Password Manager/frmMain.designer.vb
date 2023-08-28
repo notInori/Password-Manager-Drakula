@@ -5511,7 +5511,7 @@ Partial Class MainProgram
         '
         'TmrRGB
         '
-        Me.TmrRGB.Interval = 1
+        Me.TmrRGB.Interval = 30
         '
         'MainProgram
         '

@@ -558,7 +558,7 @@ Public Class MainProgram
         If data > 360 Then
             data = 0
         Else
-            data += 1
+            data += 2
         End If
         Me.BackColor = ColorPicker.HlsToRgb(data, 0.5, 0.5)
 
