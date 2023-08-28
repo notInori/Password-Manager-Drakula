@@ -1157,6 +1157,7 @@ Partial Class AuthLogin
         Me.TbxPassword.Name = "TbxPassword"
         Me.TbxPassword.Size = New System.Drawing.Size(430, 19)
         Me.TbxPassword.TabIndex = 0
+        Me.TbxPassword.UseSystemPasswordChar = True
         '
         'pnlGroupUsernameTextbox
         '

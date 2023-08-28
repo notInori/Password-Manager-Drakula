@@ -473,6 +473,7 @@ Public Class MainProgram
     'Reset Filter
     Private Sub Btn_FIlterClear_Click(sender As Object, e As EventArgs) Handles Btn_FIlterClear.Click
         LoadAccounts()
+        tbx_filterquery.Clear()
     End Sub
 
     'Settings Tab 
