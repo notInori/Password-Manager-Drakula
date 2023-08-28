@@ -426,7 +426,7 @@ Public Class MainProgram
     End Sub
 
     'Reveal Passwords Toggle
-    Private Sub RevealPasswordsToggle(sender As Object, e As EventArgs) Handles PnlRevealPassToggle.Click
+    Private Sub RevealPasswordsToggle(sender As Object, e As EventArgs) Handles PnlRevealPassToggle.MouseDown
         If revealPasswords = True Then
             revealPasswords = False
             PnlRevealPassToggle.BackColor = Color.FromArgb(27, 28, 39)
