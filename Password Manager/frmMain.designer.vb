@@ -1137,7 +1137,7 @@ Partial Class MainProgram
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(63, 20)
         Me.Label14.TabIndex = 0
-        Me.Label14.Text = "Filter"
+        Me.Label14.Text = "Search"
         '
         'TableLayoutPanel24
         '
