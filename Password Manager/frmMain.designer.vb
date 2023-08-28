@@ -3046,7 +3046,7 @@ Partial Class MainProgram
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(335, 52)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(350, 52)
         Me.TableLayoutPanel1.TabIndex = 0
         Me.TableLayoutPanel1.Tag = "groupbox"
         '
@@ -3060,7 +3060,7 @@ Partial Class MainProgram
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(335, 20)
+        Me.Panel3.Size = New System.Drawing.Size(350, 20)
         Me.Panel3.TabIndex = 0
         '
         'TableLayoutPanel2
@@ -3078,7 +3078,7 @@ Partial Class MainProgram
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.99999!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(268, 20)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(283, 20)
         Me.TableLayoutPanel2.TabIndex = 0
         '
         'Panel5
@@ -3090,7 +3090,7 @@ Partial Class MainProgram
         Me.Panel5.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Padding = New System.Windows.Forms.Padding(0, 0, 1, 0)
-        Me.Panel5.Size = New System.Drawing.Size(268, 10)
+        Me.Panel5.Size = New System.Drawing.Size(283, 10)
         Me.Panel5.TabIndex = 0
         '
         'Panel10
@@ -3102,7 +3102,7 @@ Partial Class MainProgram
         Me.Panel10.Location = New System.Drawing.Point(0, 0)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Padding = New System.Windows.Forms.Padding(0, 0, 1, 0)
-        Me.Panel10.Size = New System.Drawing.Size(267, 10)
+        Me.Panel10.Size = New System.Drawing.Size(282, 10)
         Me.Panel10.TabIndex = 0
         '
         'Panel11
@@ -3114,7 +3114,7 @@ Partial Class MainProgram
         Me.Panel11.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel11.Name = "Panel11"
         Me.Panel11.Padding = New System.Windows.Forms.Padding(0, 1, 1, 0)
-        Me.Panel11.Size = New System.Drawing.Size(266, 10)
+        Me.Panel11.Size = New System.Drawing.Size(281, 10)
         Me.Panel11.TabIndex = 0
         '
         'Panel12
@@ -3123,7 +3123,7 @@ Partial Class MainProgram
         Me.Panel12.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel12.Location = New System.Drawing.Point(0, 1)
         Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(265, 9)
+        Me.Panel12.Size = New System.Drawing.Size(280, 9)
         Me.Panel12.TabIndex = 0
         '
         'Panel13
@@ -3133,7 +3133,7 @@ Partial Class MainProgram
         Me.Panel13.Location = New System.Drawing.Point(0, 8)
         Me.Panel13.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel13.Name = "Panel13"
-        Me.Panel13.Size = New System.Drawing.Size(268, 1)
+        Me.Panel13.Size = New System.Drawing.Size(283, 1)
         Me.Panel13.TabIndex = 0
         '
         'Panel18
@@ -3145,7 +3145,7 @@ Partial Class MainProgram
         Me.Panel18.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel18.Name = "Panel18"
         Me.Panel18.Padding = New System.Windows.Forms.Padding(0, 0, 1, 0)
-        Me.Panel18.Size = New System.Drawing.Size(268, 1)
+        Me.Panel18.Size = New System.Drawing.Size(283, 1)
         Me.Panel18.TabIndex = 0
         '
         'Panel19
@@ -3154,7 +3154,7 @@ Partial Class MainProgram
         Me.Panel19.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel19.Location = New System.Drawing.Point(0, 0)
         Me.Panel19.Name = "Panel19"
-        Me.Panel19.Size = New System.Drawing.Size(267, 1)
+        Me.Panel19.Size = New System.Drawing.Size(282, 1)
         Me.Panel19.TabIndex = 0
         Me.Panel19.Tag = "colorise"
         '
@@ -3277,7 +3277,7 @@ Partial Class MainProgram
         Me.Panel27.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel27.Name = "Panel27"
         Me.Panel27.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel27.Size = New System.Drawing.Size(335, 32)
+        Me.Panel27.Size = New System.Drawing.Size(350, 32)
         Me.Panel27.TabIndex = 0
         '
         'Panel28
@@ -3289,7 +3289,7 @@ Partial Class MainProgram
         Me.Panel28.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel28.Name = "Panel28"
         Me.Panel28.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel28.Size = New System.Drawing.Size(333, 31)
+        Me.Panel28.Size = New System.Drawing.Size(348, 31)
         Me.Panel28.TabIndex = 0
         '
         'Panel29
@@ -3301,7 +3301,7 @@ Partial Class MainProgram
         Me.Panel29.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel29.Name = "Panel29"
         Me.Panel29.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel29.Size = New System.Drawing.Size(331, 30)
+        Me.Panel29.Size = New System.Drawing.Size(346, 30)
         Me.Panel29.TabIndex = 0
         '
         'Panel30
@@ -3313,7 +3313,7 @@ Partial Class MainProgram
         Me.Panel30.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel30.Name = "Panel30"
         Me.Panel30.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel30.Size = New System.Drawing.Size(329, 29)
+        Me.Panel30.Size = New System.Drawing.Size(344, 29)
         Me.Panel30.TabIndex = 0
         '
         'Panel31
@@ -3324,7 +3324,7 @@ Partial Class MainProgram
         Me.Panel31.Location = New System.Drawing.Point(10, 3)
         Me.Panel31.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel31.Name = "Panel31"
-        Me.Panel31.Size = New System.Drawing.Size(309, 19)
+        Me.Panel31.Size = New System.Drawing.Size(324, 19)
         Me.Panel31.TabIndex = 0
         '
         'Label3
@@ -3347,7 +3347,7 @@ Partial Class MainProgram
         Me.Panel337.BackColor = System.Drawing.Color.Black
         Me.Panel337.Controls.Add(Me.Panel338)
         Me.Panel337.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel337.Location = New System.Drawing.Point(274, 0)
+        Me.Panel337.Location = New System.Drawing.Point(289, 0)
         Me.Panel337.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel337.Name = "Panel337"
         Me.Panel337.Padding = New System.Windows.Forms.Padding(1)
@@ -3402,7 +3402,7 @@ Partial Class MainProgram
         Me.TableLayoutPanel4.RowCount = 2
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(335, 214)
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(350, 214)
         Me.TableLayoutPanel4.TabIndex = 0
         Me.TableLayoutPanel4.Tag = "groupbox"
         '
@@ -3416,7 +3416,7 @@ Partial Class MainProgram
         Me.Panel32.Location = New System.Drawing.Point(0, 0)
         Me.Panel32.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel32.Name = "Panel32"
-        Me.Panel32.Size = New System.Drawing.Size(335, 20)
+        Me.Panel32.Size = New System.Drawing.Size(350, 20)
         Me.Panel32.TabIndex = 0
         '
         'TableLayoutPanel5
@@ -3434,7 +3434,7 @@ Partial Class MainProgram
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.99999!))
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1.0!))
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel5.Size = New System.Drawing.Size(160, 20)
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(175, 20)
         Me.TableLayoutPanel5.TabIndex = 0
         '
         'Panel33
@@ -3446,7 +3446,7 @@ Partial Class MainProgram
         Me.Panel33.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel33.Name = "Panel33"
         Me.Panel33.Padding = New System.Windows.Forms.Padding(0, 0, 1, 0)
-        Me.Panel33.Size = New System.Drawing.Size(160, 10)
+        Me.Panel33.Size = New System.Drawing.Size(175, 10)
         Me.Panel33.TabIndex = 0
         '
         'Panel34
@@ -3458,7 +3458,7 @@ Partial Class MainProgram
         Me.Panel34.Location = New System.Drawing.Point(0, 0)
         Me.Panel34.Name = "Panel34"
         Me.Panel34.Padding = New System.Windows.Forms.Padding(0, 0, 1, 0)
-        Me.Panel34.Size = New System.Drawing.Size(159, 10)
+        Me.Panel34.Size = New System.Drawing.Size(174, 10)
         Me.Panel34.TabIndex = 0
         '
         'Panel35
@@ -3470,7 +3470,7 @@ Partial Class MainProgram
         Me.Panel35.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel35.Name = "Panel35"
         Me.Panel35.Padding = New System.Windows.Forms.Padding(0, 1, 1, 0)
-        Me.Panel35.Size = New System.Drawing.Size(158, 10)
+        Me.Panel35.Size = New System.Drawing.Size(173, 10)
         Me.Panel35.TabIndex = 0
         '
         'Panel36
@@ -3479,7 +3479,7 @@ Partial Class MainProgram
         Me.Panel36.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel36.Location = New System.Drawing.Point(0, 1)
         Me.Panel36.Name = "Panel36"
-        Me.Panel36.Size = New System.Drawing.Size(157, 9)
+        Me.Panel36.Size = New System.Drawing.Size(172, 9)
         Me.Panel36.TabIndex = 0
         '
         'Panel37
@@ -3489,7 +3489,7 @@ Partial Class MainProgram
         Me.Panel37.Location = New System.Drawing.Point(0, 8)
         Me.Panel37.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel37.Name = "Panel37"
-        Me.Panel37.Size = New System.Drawing.Size(160, 1)
+        Me.Panel37.Size = New System.Drawing.Size(175, 1)
         Me.Panel37.TabIndex = 0
         '
         'Panel38
@@ -3501,7 +3501,7 @@ Partial Class MainProgram
         Me.Panel38.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel38.Name = "Panel38"
         Me.Panel38.Padding = New System.Windows.Forms.Padding(0, 0, 1, 0)
-        Me.Panel38.Size = New System.Drawing.Size(160, 1)
+        Me.Panel38.Size = New System.Drawing.Size(175, 1)
         Me.Panel38.TabIndex = 0
         '
         'Panel39
@@ -3510,7 +3510,7 @@ Partial Class MainProgram
         Me.Panel39.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel39.Location = New System.Drawing.Point(0, 0)
         Me.Panel39.Name = "Panel39"
-        Me.Panel39.Size = New System.Drawing.Size(159, 1)
+        Me.Panel39.Size = New System.Drawing.Size(174, 1)
         Me.Panel39.TabIndex = 0
         Me.Panel39.Tag = "colorise"
         '
@@ -3633,7 +3633,7 @@ Partial Class MainProgram
         Me.Panel47.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel47.Name = "Panel47"
         Me.Panel47.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel47.Size = New System.Drawing.Size(335, 194)
+        Me.Panel47.Size = New System.Drawing.Size(350, 194)
         Me.Panel47.TabIndex = 0
         '
         'Panel48
@@ -3645,7 +3645,7 @@ Partial Class MainProgram
         Me.Panel48.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel48.Name = "Panel48"
         Me.Panel48.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel48.Size = New System.Drawing.Size(333, 193)
+        Me.Panel48.Size = New System.Drawing.Size(348, 193)
         Me.Panel48.TabIndex = 0
         '
         'Panel49
@@ -3657,7 +3657,7 @@ Partial Class MainProgram
         Me.Panel49.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel49.Name = "Panel49"
         Me.Panel49.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel49.Size = New System.Drawing.Size(331, 192)
+        Me.Panel49.Size = New System.Drawing.Size(346, 192)
         Me.Panel49.TabIndex = 0
         '
         'Panel50
@@ -3672,7 +3672,7 @@ Partial Class MainProgram
         Me.Panel50.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel50.Name = "Panel50"
         Me.Panel50.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel50.Size = New System.Drawing.Size(329, 191)
+        Me.Panel50.Size = New System.Drawing.Size(344, 191)
         Me.Panel50.TabIndex = 0
         '
         'Panel217
@@ -3683,7 +3683,7 @@ Partial Class MainProgram
         Me.Panel217.Location = New System.Drawing.Point(10, 123)
         Me.Panel217.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel217.Name = "Panel217"
-        Me.Panel217.Size = New System.Drawing.Size(309, 19)
+        Me.Panel217.Size = New System.Drawing.Size(324, 19)
         Me.Panel217.TabIndex = 3
         '
         'Label18
@@ -3758,7 +3758,7 @@ Partial Class MainProgram
         Me.Panel289.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel289.Name = "Panel289"
         Me.Panel289.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel289.Size = New System.Drawing.Size(309, 30)
+        Me.Panel289.Size = New System.Drawing.Size(325, 30)
         Me.Panel289.TabIndex = 0
         '
         'Panel290
@@ -3769,7 +3769,7 @@ Partial Class MainProgram
         Me.Panel290.Location = New System.Drawing.Point(1, 1)
         Me.Panel290.Name = "Panel290"
         Me.Panel290.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel290.Size = New System.Drawing.Size(307, 28)
+        Me.Panel290.Size = New System.Drawing.Size(323, 28)
         Me.Panel290.TabIndex = 0
         '
         'btnSaveAdminPass
@@ -3785,7 +3785,7 @@ Partial Class MainProgram
         Me.btnSaveAdminPass.Location = New System.Drawing.Point(1, 1)
         Me.btnSaveAdminPass.Margin = New System.Windows.Forms.Padding(1)
         Me.btnSaveAdminPass.Name = "btnSaveAdminPass"
-        Me.btnSaveAdminPass.Size = New System.Drawing.Size(305, 26)
+        Me.btnSaveAdminPass.Size = New System.Drawing.Size(321, 26)
         Me.btnSaveAdminPass.TabIndex = 3
         Me.btnSaveAdminPass.Text = "Save"
         Me.btnSaveAdminPass.UseVisualStyleBackColor = False
@@ -3798,7 +3798,7 @@ Partial Class MainProgram
         Me.pnlGroupUsernameTextbox.Location = New System.Drawing.Point(10, 64)
         Me.pnlGroupUsernameTextbox.Margin = New System.Windows.Forms.Padding(5)
         Me.pnlGroupUsernameTextbox.Name = "pnlGroupUsernameTextbox"
-        Me.pnlGroupUsernameTextbox.Size = New System.Drawing.Size(309, 54)
+        Me.pnlGroupUsernameTextbox.Size = New System.Drawing.Size(324, 54)
         Me.pnlGroupUsernameTextbox.TabIndex = 0
         '
         'Panel280
@@ -3810,7 +3810,7 @@ Partial Class MainProgram
         Me.Panel280.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel280.Name = "Panel280"
         Me.Panel280.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel280.Size = New System.Drawing.Size(309, 30)
+        Me.Panel280.Size = New System.Drawing.Size(324, 30)
         Me.Panel280.TabIndex = 0
         '
         'Panel281
@@ -3822,7 +3822,7 @@ Partial Class MainProgram
         Me.Panel281.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel281.Name = "Panel281"
         Me.Panel281.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel281.Size = New System.Drawing.Size(307, 28)
+        Me.Panel281.Size = New System.Drawing.Size(322, 28)
         Me.Panel281.TabIndex = 0
         '
         'Panel282
@@ -3834,7 +3834,7 @@ Partial Class MainProgram
         Me.Panel282.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel282.Name = "Panel282"
         Me.Panel282.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel282.Size = New System.Drawing.Size(305, 26)
+        Me.Panel282.Size = New System.Drawing.Size(320, 26)
         Me.Panel282.TabIndex = 0
         '
         'Panel283
@@ -3846,7 +3846,7 @@ Partial Class MainProgram
         Me.Panel283.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel283.Name = "Panel283"
         Me.Panel283.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel283.Size = New System.Drawing.Size(303, 24)
+        Me.Panel283.Size = New System.Drawing.Size(318, 24)
         Me.Panel283.TabIndex = 0
         '
         'tbxAdminPassword
@@ -3858,7 +3858,7 @@ Partial Class MainProgram
         Me.tbxAdminPassword.Location = New System.Drawing.Point(0, 2)
         Me.tbxAdminPassword.Margin = New System.Windows.Forms.Padding(0)
         Me.tbxAdminPassword.Name = "tbxAdminPassword"
-        Me.tbxAdminPassword.Size = New System.Drawing.Size(304, 19)
+        Me.tbxAdminPassword.Size = New System.Drawing.Size(319, 19)
         Me.tbxAdminPassword.TabIndex = 2
         Me.tbxAdminPassword.UseSystemPasswordChar = True
         '
@@ -3885,7 +3885,7 @@ Partial Class MainProgram
         Me.Panel134.Location = New System.Drawing.Point(10, 5)
         Me.Panel134.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel134.Name = "Panel134"
-        Me.Panel134.Size = New System.Drawing.Size(309, 54)
+        Me.Panel134.Size = New System.Drawing.Size(324, 54)
         Me.Panel134.TabIndex = 1
         '
         'Panel135
@@ -3897,7 +3897,7 @@ Partial Class MainProgram
         Me.Panel135.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel135.Name = "Panel135"
         Me.Panel135.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel135.Size = New System.Drawing.Size(309, 30)
+        Me.Panel135.Size = New System.Drawing.Size(324, 30)
         Me.Panel135.TabIndex = 0
         '
         'Panel136
@@ -3909,7 +3909,7 @@ Partial Class MainProgram
         Me.Panel136.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel136.Name = "Panel136"
         Me.Panel136.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel136.Size = New System.Drawing.Size(307, 28)
+        Me.Panel136.Size = New System.Drawing.Size(322, 28)
         Me.Panel136.TabIndex = 0
         '
         'Panel137
@@ -3921,7 +3921,7 @@ Partial Class MainProgram
         Me.Panel137.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel137.Name = "Panel137"
         Me.Panel137.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel137.Size = New System.Drawing.Size(305, 26)
+        Me.Panel137.Size = New System.Drawing.Size(320, 26)
         Me.Panel137.TabIndex = 0
         '
         'Panel138
@@ -3933,7 +3933,7 @@ Partial Class MainProgram
         Me.Panel138.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel138.Name = "Panel138"
         Me.Panel138.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel138.Size = New System.Drawing.Size(303, 24)
+        Me.Panel138.Size = New System.Drawing.Size(318, 24)
         Me.Panel138.TabIndex = 0
         '
         'TbxAdminUsername
@@ -3945,7 +3945,7 @@ Partial Class MainProgram
         Me.TbxAdminUsername.Location = New System.Drawing.Point(0, 2)
         Me.TbxAdminUsername.Margin = New System.Windows.Forms.Padding(0)
         Me.TbxAdminUsername.Name = "TbxAdminUsername"
-        Me.TbxAdminUsername.Size = New System.Drawing.Size(304, 19)
+        Me.TbxAdminUsername.Size = New System.Drawing.Size(319, 19)
         Me.TbxAdminUsername.TabIndex = 1
         '
         'Label11
@@ -3976,7 +3976,7 @@ Partial Class MainProgram
         Me.TableLayoutPanel7.RowCount = 2
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel7.Size = New System.Drawing.Size(335, 122)
+        Me.TableLayoutPanel7.Size = New System.Drawing.Size(350, 122)
         Me.TableLayoutPanel7.TabIndex = 0
         Me.TableLayoutPanel7.Tag = "groupbox"
         '
@@ -3990,7 +3990,7 @@ Partial Class MainProgram
         Me.Panel52.Location = New System.Drawing.Point(0, 0)
         Me.Panel52.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel52.Name = "Panel52"
-        Me.Panel52.Size = New System.Drawing.Size(335, 20)
+        Me.Panel52.Size = New System.Drawing.Size(350, 20)
         Me.Panel52.TabIndex = 0
         '
         'TableLayoutPanel8
@@ -4008,7 +4008,7 @@ Partial Class MainProgram
         Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.99999!))
         Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1.0!))
         Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel8.Size = New System.Drawing.Size(241, 20)
+        Me.TableLayoutPanel8.Size = New System.Drawing.Size(256, 20)
         Me.TableLayoutPanel8.TabIndex = 0
         '
         'Panel53
@@ -4020,7 +4020,7 @@ Partial Class MainProgram
         Me.Panel53.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel53.Name = "Panel53"
         Me.Panel53.Padding = New System.Windows.Forms.Padding(0, 0, 1, 0)
-        Me.Panel53.Size = New System.Drawing.Size(241, 10)
+        Me.Panel53.Size = New System.Drawing.Size(256, 10)
         Me.Panel53.TabIndex = 0
         '
         'Panel54
@@ -4032,7 +4032,7 @@ Partial Class MainProgram
         Me.Panel54.Location = New System.Drawing.Point(0, 0)
         Me.Panel54.Name = "Panel54"
         Me.Panel54.Padding = New System.Windows.Forms.Padding(0, 0, 1, 0)
-        Me.Panel54.Size = New System.Drawing.Size(240, 10)
+        Me.Panel54.Size = New System.Drawing.Size(255, 10)
         Me.Panel54.TabIndex = 0
         '
         'Panel59
@@ -4044,7 +4044,7 @@ Partial Class MainProgram
         Me.Panel59.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel59.Name = "Panel59"
         Me.Panel59.Padding = New System.Windows.Forms.Padding(0, 1, 1, 0)
-        Me.Panel59.Size = New System.Drawing.Size(239, 10)
+        Me.Panel59.Size = New System.Drawing.Size(254, 10)
         Me.Panel59.TabIndex = 0
         '
         'Panel64
@@ -4053,7 +4053,7 @@ Partial Class MainProgram
         Me.Panel64.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel64.Location = New System.Drawing.Point(0, 1)
         Me.Panel64.Name = "Panel64"
-        Me.Panel64.Size = New System.Drawing.Size(238, 9)
+        Me.Panel64.Size = New System.Drawing.Size(253, 9)
         Me.Panel64.TabIndex = 0
         '
         'Panel65
@@ -4063,7 +4063,7 @@ Partial Class MainProgram
         Me.Panel65.Location = New System.Drawing.Point(0, 8)
         Me.Panel65.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel65.Name = "Panel65"
-        Me.Panel65.Size = New System.Drawing.Size(241, 1)
+        Me.Panel65.Size = New System.Drawing.Size(256, 1)
         Me.Panel65.TabIndex = 0
         '
         'Panel66
@@ -4075,7 +4075,7 @@ Partial Class MainProgram
         Me.Panel66.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel66.Name = "Panel66"
         Me.Panel66.Padding = New System.Windows.Forms.Padding(0, 0, 1, 0)
-        Me.Panel66.Size = New System.Drawing.Size(241, 1)
+        Me.Panel66.Size = New System.Drawing.Size(256, 1)
         Me.Panel66.TabIndex = 0
         '
         'Panel67
@@ -4084,7 +4084,7 @@ Partial Class MainProgram
         Me.Panel67.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel67.Location = New System.Drawing.Point(0, 0)
         Me.Panel67.Name = "Panel67"
-        Me.Panel67.Size = New System.Drawing.Size(240, 1)
+        Me.Panel67.Size = New System.Drawing.Size(255, 1)
         Me.Panel67.TabIndex = 0
         Me.Panel67.Tag = "colorise"
         '
@@ -4207,7 +4207,7 @@ Partial Class MainProgram
         Me.Panel75.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel75.Name = "Panel75"
         Me.Panel75.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel75.Size = New System.Drawing.Size(335, 102)
+        Me.Panel75.Size = New System.Drawing.Size(350, 102)
         Me.Panel75.TabIndex = 0
         '
         'Panel76
@@ -4219,7 +4219,7 @@ Partial Class MainProgram
         Me.Panel76.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel76.Name = "Panel76"
         Me.Panel76.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel76.Size = New System.Drawing.Size(333, 101)
+        Me.Panel76.Size = New System.Drawing.Size(348, 101)
         Me.Panel76.TabIndex = 0
         '
         'Panel77
@@ -4231,7 +4231,7 @@ Partial Class MainProgram
         Me.Panel77.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel77.Name = "Panel77"
         Me.Panel77.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel77.Size = New System.Drawing.Size(331, 100)
+        Me.Panel77.Size = New System.Drawing.Size(346, 100)
         Me.Panel77.TabIndex = 0
         '
         'Panel78
@@ -4245,7 +4245,7 @@ Partial Class MainProgram
         Me.Panel78.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel78.Name = "Panel78"
         Me.Panel78.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel78.Size = New System.Drawing.Size(329, 99)
+        Me.Panel78.Size = New System.Drawing.Size(344, 99)
         Me.Panel78.TabIndex = 0
         '
         'Panel212
@@ -4257,7 +4257,7 @@ Partial Class MainProgram
         Me.Panel212.Location = New System.Drawing.Point(10, 30)
         Me.Panel212.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel212.Name = "Panel212"
-        Me.Panel212.Size = New System.Drawing.Size(309, 24)
+        Me.Panel212.Size = New System.Drawing.Size(324, 24)
         Me.Panel212.TabIndex = 1
         '
         'lblCurrentVersion
@@ -4268,7 +4268,7 @@ Partial Class MainProgram
         Me.lblCurrentVersion.Dock = System.Windows.Forms.DockStyle.Right
         Me.lblCurrentVersion.Font = New System.Drawing.Font("Consolas", 12.0!)
         Me.lblCurrentVersion.ForeColor = System.Drawing.Color.White
-        Me.lblCurrentVersion.Location = New System.Drawing.Point(219, 0)
+        Me.lblCurrentVersion.Location = New System.Drawing.Point(234, 0)
         Me.lblCurrentVersion.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.lblCurrentVersion.Name = "lblCurrentVersion"
         Me.lblCurrentVersion.Size = New System.Drawing.Size(90, 19)
@@ -4300,7 +4300,7 @@ Partial Class MainProgram
         Me.Panel317.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel317.Name = "Panel317"
         Me.Panel317.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel317.Size = New System.Drawing.Size(309, 30)
+        Me.Panel317.Size = New System.Drawing.Size(324, 30)
         Me.Panel317.TabIndex = 0
         '
         'Panel318
@@ -4311,7 +4311,7 @@ Partial Class MainProgram
         Me.Panel318.Location = New System.Drawing.Point(1, 1)
         Me.Panel318.Name = "Panel318"
         Me.Panel318.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel318.Size = New System.Drawing.Size(307, 28)
+        Me.Panel318.Size = New System.Drawing.Size(322, 28)
         Me.Panel318.TabIndex = 0
         '
         'BtnLogOut
@@ -4327,7 +4327,7 @@ Partial Class MainProgram
         Me.BtnLogOut.Location = New System.Drawing.Point(1, 1)
         Me.BtnLogOut.Margin = New System.Windows.Forms.Padding(1)
         Me.BtnLogOut.Name = "BtnLogOut"
-        Me.BtnLogOut.Size = New System.Drawing.Size(305, 26)
+        Me.BtnLogOut.Size = New System.Drawing.Size(320, 26)
         Me.BtnLogOut.TabIndex = 4
         Me.BtnLogOut.Text = "Log Out"
         Me.BtnLogOut.UseVisualStyleBackColor = False
@@ -4341,7 +4341,7 @@ Partial Class MainProgram
         Me.Panel51.Location = New System.Drawing.Point(10, 5)
         Me.Panel51.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel51.Name = "Panel51"
-        Me.Panel51.Size = New System.Drawing.Size(309, 24)
+        Me.Panel51.Size = New System.Drawing.Size(324, 24)
         Me.Panel51.TabIndex = 0
         '
         'lblCurrentUser
@@ -4352,7 +4352,7 @@ Partial Class MainProgram
         Me.lblCurrentUser.Dock = System.Windows.Forms.DockStyle.Right
         Me.lblCurrentUser.Font = New System.Drawing.Font("Consolas", 12.0!)
         Me.lblCurrentUser.ForeColor = System.Drawing.Color.White
-        Me.lblCurrentUser.Location = New System.Drawing.Point(246, 0)
+        Me.lblCurrentUser.Location = New System.Drawing.Point(261, 0)
         Me.lblCurrentUser.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.lblCurrentUser.Name = "lblCurrentUser"
         Me.lblCurrentUser.Size = New System.Drawing.Size(63, 19)
@@ -4383,13 +4383,13 @@ Partial Class MainProgram
         Me.TableLayoutPanel18.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel18.Controls.Add(Me.Panel143, 0, 0)
         Me.TableLayoutPanel18.Controls.Add(Me.Panel158, 0, 1)
-        Me.TableLayoutPanel18.Location = New System.Drawing.Point(355, 5)
+        Me.TableLayoutPanel18.Location = New System.Drawing.Point(370, 5)
         Me.TableLayoutPanel18.Margin = New System.Windows.Forms.Padding(5)
         Me.TableLayoutPanel18.Name = "TableLayoutPanel18"
         Me.TableLayoutPanel18.RowCount = 2
         Me.TableLayoutPanel18.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel18.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel18.Size = New System.Drawing.Size(335, 52)
+        Me.TableLayoutPanel18.Size = New System.Drawing.Size(350, 52)
         Me.TableLayoutPanel18.TabIndex = 1
         Me.TableLayoutPanel18.Tag = "groupbox"
         '
@@ -4403,7 +4403,7 @@ Partial Class MainProgram
         Me.Panel143.Location = New System.Drawing.Point(0, 0)
         Me.Panel143.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel143.Name = "Panel143"
-        Me.Panel143.Size = New System.Drawing.Size(335, 20)
+        Me.Panel143.Size = New System.Drawing.Size(350, 20)
         Me.Panel143.TabIndex = 0
         '
         'TableLayoutPanel20
@@ -4421,7 +4421,7 @@ Partial Class MainProgram
         Me.TableLayoutPanel20.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.99999!))
         Me.TableLayoutPanel20.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1.0!))
         Me.TableLayoutPanel20.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel20.Size = New System.Drawing.Size(187, 20)
+        Me.TableLayoutPanel20.Size = New System.Drawing.Size(202, 20)
         Me.TableLayoutPanel20.TabIndex = 0
         '
         'Panel144
@@ -4433,7 +4433,7 @@ Partial Class MainProgram
         Me.Panel144.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel144.Name = "Panel144"
         Me.Panel144.Padding = New System.Windows.Forms.Padding(0, 0, 1, 0)
-        Me.Panel144.Size = New System.Drawing.Size(187, 10)
+        Me.Panel144.Size = New System.Drawing.Size(202, 10)
         Me.Panel144.TabIndex = 0
         '
         'Panel145
@@ -4445,7 +4445,7 @@ Partial Class MainProgram
         Me.Panel145.Location = New System.Drawing.Point(0, 0)
         Me.Panel145.Name = "Panel145"
         Me.Panel145.Padding = New System.Windows.Forms.Padding(0, 0, 1, 0)
-        Me.Panel145.Size = New System.Drawing.Size(186, 10)
+        Me.Panel145.Size = New System.Drawing.Size(201, 10)
         Me.Panel145.TabIndex = 0
         '
         'Panel146
@@ -4457,7 +4457,7 @@ Partial Class MainProgram
         Me.Panel146.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel146.Name = "Panel146"
         Me.Panel146.Padding = New System.Windows.Forms.Padding(0, 1, 1, 0)
-        Me.Panel146.Size = New System.Drawing.Size(185, 10)
+        Me.Panel146.Size = New System.Drawing.Size(200, 10)
         Me.Panel146.TabIndex = 0
         '
         'Panel147
@@ -4466,7 +4466,7 @@ Partial Class MainProgram
         Me.Panel147.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel147.Location = New System.Drawing.Point(0, 1)
         Me.Panel147.Name = "Panel147"
-        Me.Panel147.Size = New System.Drawing.Size(184, 9)
+        Me.Panel147.Size = New System.Drawing.Size(199, 9)
         Me.Panel147.TabIndex = 0
         '
         'Panel148
@@ -4476,7 +4476,7 @@ Partial Class MainProgram
         Me.Panel148.Location = New System.Drawing.Point(0, 8)
         Me.Panel148.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel148.Name = "Panel148"
-        Me.Panel148.Size = New System.Drawing.Size(187, 1)
+        Me.Panel148.Size = New System.Drawing.Size(202, 1)
         Me.Panel148.TabIndex = 0
         '
         'Panel149
@@ -4488,7 +4488,7 @@ Partial Class MainProgram
         Me.Panel149.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel149.Name = "Panel149"
         Me.Panel149.Padding = New System.Windows.Forms.Padding(0, 0, 1, 0)
-        Me.Panel149.Size = New System.Drawing.Size(187, 1)
+        Me.Panel149.Size = New System.Drawing.Size(202, 1)
         Me.Panel149.TabIndex = 0
         '
         'Panel150
@@ -4497,7 +4497,7 @@ Partial Class MainProgram
         Me.Panel150.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel150.Location = New System.Drawing.Point(0, 0)
         Me.Panel150.Name = "Panel150"
-        Me.Panel150.Size = New System.Drawing.Size(186, 1)
+        Me.Panel150.Size = New System.Drawing.Size(201, 1)
         Me.Panel150.TabIndex = 0
         Me.Panel150.Tag = "colorise"
         '
@@ -4620,7 +4620,7 @@ Partial Class MainProgram
         Me.Panel158.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel158.Name = "Panel158"
         Me.Panel158.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel158.Size = New System.Drawing.Size(335, 32)
+        Me.Panel158.Size = New System.Drawing.Size(350, 32)
         Me.Panel158.TabIndex = 0
         '
         'Panel159
@@ -4632,7 +4632,7 @@ Partial Class MainProgram
         Me.Panel159.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel159.Name = "Panel159"
         Me.Panel159.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel159.Size = New System.Drawing.Size(333, 31)
+        Me.Panel159.Size = New System.Drawing.Size(348, 31)
         Me.Panel159.TabIndex = 0
         '
         'Panel160
@@ -4644,7 +4644,7 @@ Partial Class MainProgram
         Me.Panel160.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel160.Name = "Panel160"
         Me.Panel160.Padding = New System.Windows.Forms.Padding(1, 0, 1, 1)
-        Me.Panel160.Size = New System.Drawing.Size(331, 30)
+        Me.Panel160.Size = New System.Drawing.Size(346, 30)
         Me.Panel160.TabIndex = 0
         '
         'Panel161
@@ -4656,7 +4656,7 @@ Partial Class MainProgram
         Me.Panel161.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel161.Name = "Panel161"
         Me.Panel161.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel161.Size = New System.Drawing.Size(329, 29)
+        Me.Panel161.Size = New System.Drawing.Size(344, 29)
         Me.Panel161.TabIndex = 0
         '
         'Panel139
