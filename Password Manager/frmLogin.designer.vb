@@ -276,7 +276,7 @@ Partial Class AuthLogin
         Me.lblTitle.Padding = New System.Windows.Forms.Padding(5)
         Me.lblTitle.Size = New System.Drawing.Size(459, 30)
         Me.lblTitle.TabIndex = 14
-        Me.lblTitle.Text = "Best Loader $$$"
+        Me.lblTitle.Text = "Password Manager - Login"
         Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'btnExit

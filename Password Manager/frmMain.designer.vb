@@ -892,10 +892,10 @@ Partial Class MainProgram
         '
         Me.Panel130.BackColor = System.Drawing.Color.FromArgb(CType(CType(124, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(167, Byte), Integer))
         Me.Panel130.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel130.Location = New System.Drawing.Point(150, 23)
+        Me.Panel130.Location = New System.Drawing.Point(195, 23)
         Me.Panel130.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel130.Name = "Panel130"
-        Me.Panel130.Size = New System.Drawing.Size(746, 1)
+        Me.Panel130.Size = New System.Drawing.Size(701, 1)
         Me.Panel130.TabIndex = 1
         Me.Panel130.Tag = "border"
         '
@@ -908,7 +908,7 @@ Partial Class MainProgram
         Me.Panel131.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel131.Name = "Panel131"
         Me.Panel131.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel131.Size = New System.Drawing.Size(57, 24)
+        Me.Panel131.Size = New System.Drawing.Size(102, 24)
         Me.Panel131.TabIndex = 3
         '
         'lblTabSel1
@@ -922,9 +922,9 @@ Partial Class MainProgram
         Me.lblTabSel1.Margin = New System.Windows.Forms.Padding(1)
         Me.lblTabSel1.Name = "lblTabSel1"
         Me.lblTabSel1.Padding = New System.Windows.Forms.Padding(5, 2, 5, 2)
-        Me.lblTabSel1.Size = New System.Drawing.Size(55, 23)
+        Me.lblTabSel1.Size = New System.Drawing.Size(100, 23)
         Me.lblTabSel1.TabIndex = 0
-        Me.lblTabSel1.Text = "Main"
+        Me.lblTabSel1.Text = "Passwords"
         Me.lblTabSel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel133
@@ -932,7 +932,7 @@ Partial Class MainProgram
         Me.Panel133.AutoSize = True
         Me.Panel133.BackColor = System.Drawing.Color.FromArgb(CType(CType(124, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(167, Byte), Integer))
         Me.Panel133.Controls.Add(Me.lblTabSel2)
-        Me.Panel133.Location = New System.Drawing.Point(57, 0)
+        Me.Panel133.Location = New System.Drawing.Point(102, 0)
         Me.Panel133.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel133.Name = "Panel133"
         Me.Panel133.Padding = New System.Windows.Forms.Padding(1)
