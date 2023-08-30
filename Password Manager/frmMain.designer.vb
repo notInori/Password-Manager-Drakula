@@ -2235,11 +2235,11 @@ Partial Class MainProgram
         '
         Me.Panel125.BackColor = System.Drawing.Color.Black
         Me.Panel125.Controls.Add(Me.Panel126)
-        Me.Panel125.Location = New System.Drawing.Point(-1, 27)
+        Me.Panel125.Location = New System.Drawing.Point(0, 27)
         Me.Panel125.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel125.Name = "Panel125"
         Me.Panel125.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel125.Size = New System.Drawing.Size(425, 30)
+        Me.Panel125.Size = New System.Drawing.Size(424, 30)
         Me.Panel125.TabIndex = 0
         '
         'Panel126
@@ -2251,7 +2251,7 @@ Partial Class MainProgram
         Me.Panel126.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel126.Name = "Panel126"
         Me.Panel126.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel126.Size = New System.Drawing.Size(423, 28)
+        Me.Panel126.Size = New System.Drawing.Size(422, 28)
         Me.Panel126.TabIndex = 0
         '
         'Panel127
@@ -2263,7 +2263,7 @@ Partial Class MainProgram
         Me.Panel127.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel127.Name = "Panel127"
         Me.Panel127.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel127.Size = New System.Drawing.Size(421, 26)
+        Me.Panel127.Size = New System.Drawing.Size(420, 26)
         Me.Panel127.TabIndex = 0
         '
         'Panel128
@@ -2275,7 +2275,7 @@ Partial Class MainProgram
         Me.Panel128.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel128.Name = "Panel128"
         Me.Panel128.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel128.Size = New System.Drawing.Size(419, 24)
+        Me.Panel128.Size = New System.Drawing.Size(418, 24)
         Me.Panel128.TabIndex = 0
         '
         'TbxAccountName
@@ -2323,11 +2323,11 @@ Partial Class MainProgram
         '
         Me.Panel120.BackColor = System.Drawing.Color.Black
         Me.Panel120.Controls.Add(Me.Panel121)
-        Me.Panel120.Location = New System.Drawing.Point(-1, 27)
+        Me.Panel120.Location = New System.Drawing.Point(0, 27)
         Me.Panel120.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel120.Name = "Panel120"
         Me.Panel120.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel120.Size = New System.Drawing.Size(425, 30)
+        Me.Panel120.Size = New System.Drawing.Size(424, 30)
         Me.Panel120.TabIndex = 0
         '
         'Panel121
@@ -2339,7 +2339,7 @@ Partial Class MainProgram
         Me.Panel121.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel121.Name = "Panel121"
         Me.Panel121.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel121.Size = New System.Drawing.Size(423, 28)
+        Me.Panel121.Size = New System.Drawing.Size(422, 28)
         Me.Panel121.TabIndex = 0
         '
         'Panel122
@@ -2351,7 +2351,7 @@ Partial Class MainProgram
         Me.Panel122.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel122.Name = "Panel122"
         Me.Panel122.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel122.Size = New System.Drawing.Size(421, 26)
+        Me.Panel122.Size = New System.Drawing.Size(420, 26)
         Me.Panel122.TabIndex = 0
         '
         'Panel123
@@ -2363,7 +2363,7 @@ Partial Class MainProgram
         Me.Panel123.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel123.Name = "Panel123"
         Me.Panel123.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel123.Size = New System.Drawing.Size(419, 24)
+        Me.Panel123.Size = New System.Drawing.Size(418, 24)
         Me.Panel123.TabIndex = 0
         '
         'TbxWebsite
@@ -2411,11 +2411,11 @@ Partial Class MainProgram
         '
         Me.Panel55.BackColor = System.Drawing.Color.Black
         Me.Panel55.Controls.Add(Me.Panel56)
-        Me.Panel55.Location = New System.Drawing.Point(-1, 27)
+        Me.Panel55.Location = New System.Drawing.Point(0, 27)
         Me.Panel55.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel55.Name = "Panel55"
         Me.Panel55.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel55.Size = New System.Drawing.Size(425, 30)
+        Me.Panel55.Size = New System.Drawing.Size(424, 30)
         Me.Panel55.TabIndex = 0
         '
         'Panel56
@@ -2427,7 +2427,7 @@ Partial Class MainProgram
         Me.Panel56.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel56.Name = "Panel56"
         Me.Panel56.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel56.Size = New System.Drawing.Size(423, 28)
+        Me.Panel56.Size = New System.Drawing.Size(422, 28)
         Me.Panel56.TabIndex = 0
         '
         'Panel57
@@ -2439,7 +2439,7 @@ Partial Class MainProgram
         Me.Panel57.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel57.Name = "Panel57"
         Me.Panel57.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel57.Size = New System.Drawing.Size(421, 26)
+        Me.Panel57.Size = New System.Drawing.Size(420, 26)
         Me.Panel57.TabIndex = 0
         '
         'Panel58
@@ -2451,7 +2451,7 @@ Partial Class MainProgram
         Me.Panel58.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel58.Name = "Panel58"
         Me.Panel58.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel58.Size = New System.Drawing.Size(419, 24)
+        Me.Panel58.Size = New System.Drawing.Size(418, 24)
         Me.Panel58.TabIndex = 0
         '
         'TbxUsername
@@ -2499,11 +2499,11 @@ Partial Class MainProgram
         '
         Me.Panel60.BackColor = System.Drawing.Color.Black
         Me.Panel60.Controls.Add(Me.Panel61)
-        Me.Panel60.Location = New System.Drawing.Point(-1, 27)
+        Me.Panel60.Location = New System.Drawing.Point(0, 27)
         Me.Panel60.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel60.Name = "Panel60"
         Me.Panel60.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel60.Size = New System.Drawing.Size(425, 30)
+        Me.Panel60.Size = New System.Drawing.Size(424, 30)
         Me.Panel60.TabIndex = 0
         '
         'Panel61
@@ -2515,7 +2515,7 @@ Partial Class MainProgram
         Me.Panel61.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel61.Name = "Panel61"
         Me.Panel61.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel61.Size = New System.Drawing.Size(423, 28)
+        Me.Panel61.Size = New System.Drawing.Size(422, 28)
         Me.Panel61.TabIndex = 0
         '
         'Panel62
@@ -2527,7 +2527,7 @@ Partial Class MainProgram
         Me.Panel62.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel62.Name = "Panel62"
         Me.Panel62.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel62.Size = New System.Drawing.Size(421, 26)
+        Me.Panel62.Size = New System.Drawing.Size(420, 26)
         Me.Panel62.TabIndex = 0
         '
         'Panel63
@@ -2539,7 +2539,7 @@ Partial Class MainProgram
         Me.Panel63.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel63.Name = "Panel63"
         Me.Panel63.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel63.Size = New System.Drawing.Size(419, 24)
+        Me.Panel63.Size = New System.Drawing.Size(418, 24)
         Me.Panel63.TabIndex = 0
         '
         'TbxPassword
