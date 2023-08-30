@@ -1288,11 +1288,11 @@ Partial Class MainProgram
         '
         Me.Panel210.BackColor = System.Drawing.Color.Black
         Me.Panel210.Controls.Add(Me.Panel211)
-        Me.Panel210.Location = New System.Drawing.Point(9, 102)
+        Me.Panel210.Location = New System.Drawing.Point(10, 102)
         Me.Panel210.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel210.Name = "Panel210"
         Me.Panel210.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel210.Size = New System.Drawing.Size(389, 30)
+        Me.Panel210.Size = New System.Drawing.Size(388, 30)
         Me.Panel210.TabIndex = 2
         '
         'Panel211
@@ -1303,7 +1303,7 @@ Partial Class MainProgram
         Me.Panel211.Location = New System.Drawing.Point(1, 1)
         Me.Panel211.Name = "Panel211"
         Me.Panel211.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel211.Size = New System.Drawing.Size(387, 28)
+        Me.Panel211.Size = New System.Drawing.Size(386, 28)
         Me.Panel211.TabIndex = 0
         '
         'Btn_FIlterClear
@@ -1319,7 +1319,7 @@ Partial Class MainProgram
         Me.Btn_FIlterClear.Location = New System.Drawing.Point(1, 1)
         Me.Btn_FIlterClear.Margin = New System.Windows.Forms.Padding(1)
         Me.Btn_FIlterClear.Name = "Btn_FIlterClear"
-        Me.Btn_FIlterClear.Size = New System.Drawing.Size(385, 26)
+        Me.Btn_FIlterClear.Size = New System.Drawing.Size(384, 26)
         Me.Btn_FIlterClear.TabIndex = 0
         Me.Btn_FIlterClear.Text = "Reset"
         Me.Btn_FIlterClear.UseVisualStyleBackColor = False
@@ -1328,11 +1328,11 @@ Partial Class MainProgram
         '
         Me.Panel205.BackColor = System.Drawing.Color.Black
         Me.Panel205.Controls.Add(Me.Panel209)
-        Me.Panel205.Location = New System.Drawing.Point(9, 67)
+        Me.Panel205.Location = New System.Drawing.Point(10, 67)
         Me.Panel205.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel205.Name = "Panel205"
         Me.Panel205.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel205.Size = New System.Drawing.Size(389, 30)
+        Me.Panel205.Size = New System.Drawing.Size(388, 30)
         Me.Panel205.TabIndex = 1
         '
         'Panel209
@@ -1343,7 +1343,7 @@ Partial Class MainProgram
         Me.Panel209.Location = New System.Drawing.Point(1, 1)
         Me.Panel209.Name = "Panel209"
         Me.Panel209.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel209.Size = New System.Drawing.Size(387, 28)
+        Me.Panel209.Size = New System.Drawing.Size(386, 28)
         Me.Panel209.TabIndex = 0
         '
         'btn_filterSearch
@@ -1359,7 +1359,7 @@ Partial Class MainProgram
         Me.btn_filterSearch.Location = New System.Drawing.Point(1, 1)
         Me.btn_filterSearch.Margin = New System.Windows.Forms.Padding(1)
         Me.btn_filterSearch.Name = "btn_filterSearch"
-        Me.btn_filterSearch.Size = New System.Drawing.Size(385, 26)
+        Me.btn_filterSearch.Size = New System.Drawing.Size(384, 26)
         Me.btn_filterSearch.TabIndex = 0
         Me.btn_filterSearch.Text = "Search"
         Me.btn_filterSearch.UseVisualStyleBackColor = False
@@ -1396,11 +1396,11 @@ Partial Class MainProgram
         '
         Me.Panel201.BackColor = System.Drawing.Color.Black
         Me.Panel201.Controls.Add(Me.Panel202)
-        Me.Panel201.Location = New System.Drawing.Point(-1, 27)
+        Me.Panel201.Location = New System.Drawing.Point(0, 27)
         Me.Panel201.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel201.Name = "Panel201"
         Me.Panel201.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel201.Size = New System.Drawing.Size(389, 30)
+        Me.Panel201.Size = New System.Drawing.Size(388, 30)
         Me.Panel201.TabIndex = 0
         '
         'Panel202
@@ -1412,7 +1412,7 @@ Partial Class MainProgram
         Me.Panel202.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel202.Name = "Panel202"
         Me.Panel202.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel202.Size = New System.Drawing.Size(387, 28)
+        Me.Panel202.Size = New System.Drawing.Size(386, 28)
         Me.Panel202.TabIndex = 0
         '
         'Panel203
@@ -1424,7 +1424,7 @@ Partial Class MainProgram
         Me.Panel203.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel203.Name = "Panel203"
         Me.Panel203.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel203.Size = New System.Drawing.Size(385, 26)
+        Me.Panel203.Size = New System.Drawing.Size(384, 26)
         Me.Panel203.TabIndex = 0
         '
         'Panel204
@@ -1436,7 +1436,7 @@ Partial Class MainProgram
         Me.Panel204.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel204.Name = "Panel204"
         Me.Panel204.Padding = New System.Windows.Forms.Padding(1)
-        Me.Panel204.Size = New System.Drawing.Size(383, 24)
+        Me.Panel204.Size = New System.Drawing.Size(382, 24)
         Me.Panel204.TabIndex = 0
         '
         'tbx_filterquery
