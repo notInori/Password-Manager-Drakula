@@ -7,7 +7,7 @@ Public Class MainProgram
 
     'Client Info Config
     Public ReadOnly programName As String = "Password Manager"
-    Public ReadOnly versionNumber As String = "v0.3-beta"
+    Public ReadOnly versionNumber As String = "v0.4-developer-build"
 
     'Client Info Variables
     Public currentUser As String = "[USER]"
