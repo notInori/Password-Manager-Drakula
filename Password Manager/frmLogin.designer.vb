@@ -1328,7 +1328,7 @@ Partial Class AuthLogin
         Me.Name = "AuthLogin"
         Me.Padding = New System.Windows.Forms.Padding(2)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Loader"
+        Me.Text = "Login"
         Me.pnlBackground.ResumeLayout(False)
         Me.tblWindow.ResumeLayout(False)
         Me.tblWindow.PerformLayout()
