@@ -75,7 +75,7 @@ Public Class MainProgram
         Const SC_CLOSE As Integer = &HF060
         If m.Msg = WM_SYSCOMMAND AndAlso m.WParam.ToInt32() = SC_CLOSE Then
             Application.Exit() 'Patch bug where process not killed due to main form being hidden
-        ElseIf m.Msg = &H84 Then
+        ElseIf m.Msg = &H84 And Me.WindowState <> FormWindowState.Maximized Then
             Dim mp = Me.PointToClient(Cursor.Position)
             If TopLeft.Contains(mp) Then
                 m.Result = CType(HTTOPLEFT, IntPtr)
@@ -100,51 +100,35 @@ Public Class MainProgram
     End Sub
 
     Shadows Function Top() As Rectangle
-        If Me.WindowState <> FormWindowState.Maximized Then
-            Return New Rectangle(0, 0, Me.ClientSize.Width, ImaginaryBorderSize)
-        End If
+        Return New Rectangle(0, 0, Me.ClientSize.Width, ImaginaryBorderSize)
     End Function
 
     Shadows Function Left() As Rectangle
-        If Me.WindowState <> FormWindowState.Maximized Then
-            Return New Rectangle(0, 0, ImaginaryBorderSize, Me.ClientSize.Height)
-        End If
+        Return New Rectangle(0, 0, ImaginaryBorderSize, Me.ClientSize.Height)
     End Function
 
     Shadows Function Bottom() As Rectangle
-        If Me.WindowState <> FormWindowState.Maximized Then
-            Return New Rectangle(0, Me.ClientSize.Height - ImaginaryBorderSize, Me.ClientSize.Width, ImaginaryBorderSize)
-        End If
+        Return New Rectangle(0, Me.ClientSize.Height - ImaginaryBorderSize, Me.ClientSize.Width, ImaginaryBorderSize)
     End Function
 
     Shadows Function Right() As Rectangle
-        If Me.WindowState <> FormWindowState.Maximized Then
-            Return New Rectangle(Me.ClientSize.Width - ImaginaryBorderSize, 0, ImaginaryBorderSize, Me.ClientSize.Height)
-        End If
+        Return New Rectangle(Me.ClientSize.Width - ImaginaryBorderSize, 0, ImaginaryBorderSize, Me.ClientSize.Height)
     End Function
 
     Shadows Function TopLeft() As Rectangle
-        If Me.WindowState <> FormWindowState.Maximized Then
-            Return New Rectangle(0, 0, ImaginaryBorderSize, ImaginaryBorderSize)
-        End If
+        Return New Rectangle(0, 0, ImaginaryBorderSize, ImaginaryBorderSize)
     End Function
 
     Shadows Function TopRight() As Rectangle
-        If Me.WindowState <> FormWindowState.Maximized Then
-            Return New Rectangle(Me.ClientSize.Width - ImaginaryBorderSize, 0, ImaginaryBorderSize, ImaginaryBorderSize)
-        End If
+        Return New Rectangle(Me.ClientSize.Width - ImaginaryBorderSize, 0, ImaginaryBorderSize, ImaginaryBorderSize)
     End Function
 
     Shadows Function BottomLeft() As Rectangle
-        If Me.WindowState <> FormWindowState.Maximized Then
-            Return New Rectangle(0, Me.ClientSize.Height - ImaginaryBorderSize, ImaginaryBorderSize, ImaginaryBorderSize)
-        End If
+        Return New Rectangle(0, Me.ClientSize.Height - ImaginaryBorderSize, ImaginaryBorderSize, ImaginaryBorderSize)
     End Function
 
     Shadows Function BottomRight() As Rectangle
-        If Me.WindowState <> FormWindowState.Maximized Then
-            Return New Rectangle(Me.ClientSize.Width - ImaginaryBorderSize, Me.ClientSize.Height - ImaginaryBorderSize, ImaginaryBorderSize, ImaginaryBorderSize)
-        End If
+        Return New Rectangle(Me.ClientSize.Width - ImaginaryBorderSize, Me.ClientSize.Height - ImaginaryBorderSize, ImaginaryBorderSize, ImaginaryBorderSize)
     End Function
 
     '---Functions
